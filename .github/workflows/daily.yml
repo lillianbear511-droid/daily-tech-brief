@@ -39,6 +39,25 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: python pipeline/compose.py --dry-run
 
+      # edge-tts and ffmpeg are the two things that only fail on the runner,
+      # never on a laptop. Say so before 7am rather than at 7am.
+      - name: Dry run - voice toolchain check
+        if: inputs.dry_run == true
+        run: |
+          python - <<'PY'
+          import sys, tempfile
+          from pathlib import Path
+          sys.path.insert(0, "pipeline")
+          import generate as g
+          out = Path(tempfile.mkdtemp()) / "probe.mp3"
+          g.tts_edge("This is a voice check for the daily brief.", out,
+                     g.DEFAULT_VOICE, g.DEFAULT_RATE)
+          secs = g.duration_seconds(out)
+          print(f"edge-tts ok · {out.stat().st_size} bytes · {secs}s")
+          assert secs > 1, "ffprobe could not read the mp3"
+          print("ffprobe ok")
+          PY
+
       # daily.py refuses to rebuild a day that already exists, so a re-run of
       # this workflow never overwrites a brief you have already read.
       - name: Pick, rewrite, voices, data
