@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FAF9F7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Brief">
+<meta name="format-detection" content="telephone=no">
+<title>Daily Tech Brief</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root"><div class="skeleton">Loading today's brief…</div></div>
+
+<nav id="tabs" hidden>
+  <div class="tabbar">
+    <button class="tab" data-tab="today">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M3 7v4M7 4v10M11 2v14M15 6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>TODAY</span>
+    </button>
+    <button class="tab" data-tab="progress">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M2 12.5L6.5 8l3 3L15.5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15.5" cy="5" r="1.7" fill="currentColor"/></svg>
+      <span>PROGRESS</span>
+    </button>
+    <button class="tab" data-tab="words">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M4.5 2.5h9a1 1 0 0 1 1 1v12l-5.5-3.7-5.5 3.7v-12a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span>WORDS</span>
+    </button>
+  </div>
+</nav>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

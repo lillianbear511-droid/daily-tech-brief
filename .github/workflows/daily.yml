@@ -1,0 +1,56 @@
+name: daily brief
+
+on:
+  schedule:
+    # 23:05 UTC = 07:05 Asia/Shanghai. GitHub cron is UTC and often runs late;
+    # 5 minutes of slack keeps the card near 7am rather than 7:20.
+    - cron: "5 23 * * *"
+  workflow_dispatch:        # manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -r requirements.txt
+
+      - name: Compose script
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: python pipeline/compose.py
+
+      - name: Voices + data
+        run: python pipeline/generate.py
+
+      - name: Commit
+        run: |
+          git config user.name  "daily-brief bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data audio content
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "brief: $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Push to Feishu
+        if: always()
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          APP_URL: ${{ secrets.APP_URL }}
+        run: python pipeline/push_feishu.py
