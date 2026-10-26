@@ -20,6 +20,7 @@ import json
 import os
 import sys
 import urllib.request
+from datetime import date as date_cls
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,13 +28,21 @@ DATA = ROOT / "data"
 
 
 def env(key, default=""):
+    """Environment first, then .env. Commented lines never win, and a
+    trailing '# note' is stripped so a value typed by hand still parses."""
     if os.environ.get(key):
         return os.environ[key]
     envfile = ROOT / ".env"
     if envfile.exists():
         for line in envfile.read_text().splitlines():
-            if line.strip().startswith(key + "="):
-                return line.split("=", 1)[1].strip().strip('"').strip("'")
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            if stripped.startswith(key + "="):
+                val = stripped.split("=", 1)[1]
+                if " #" in val:
+                    val = val.split(" #", 1)[0]
+                return val.strip().strip('"').strip("'")
     return default
 
 
@@ -90,20 +99,42 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--text-only", action="store_true")
+    ap.add_argument("--strict-today", action="store_true",
+                    help="only push today's own brief; skip silently if it was "
+                         "never built. Prevents the scheduled job from re-pushing "
+                         "yesterday's card when composing fails.")
+    ap.add_argument("--alert", default=None,
+                    help="send a plain failure notice instead of a brief, then exit")
     args = ap.parse_args()
+
+    app_url = env("APP_URL").rstrip("/")
+
+    if args.alert:
+        if not app_url:
+            sys.exit("APP_URL is not set.")
+        res = post({"msg_type": "text", "content": {
+            "text": f"Daily brief did not run today — {args.alert}\n"
+                    f"Last available: {app_url}"}})
+        print("Alert pushed.", res.get("msg_type", ""))
+        return
 
     index = json.loads((DATA / "index.json").read_text())
     days = index.get("days", [])
     if not days:
         sys.exit("No days in data/index.json yet. Run generate.py first.")
 
-    date = args.date or days[0]["date"]
+    date = args.date or (date_cls.today().isoformat() if args.strict_today
+                         else days[0]["date"])
     path = DATA / f"{date}.json"
     if not path.exists():
+        if args.strict_today:
+            # Nothing was built for today. Sending the previous day's card again
+            # would look like fresh content, so stay quiet.
+            print(f"No brief for {date}; nothing pushed.")
+            return
         sys.exit(f"missing {path}")
     day = json.loads(path.read_text())
 
-    app_url = env("APP_URL").rstrip("/")
     if not app_url:
         sys.exit("APP_URL is not set. Add it to .env:\n"
                  "  APP_URL=https://your-name.github.io/daily-tech-brief")

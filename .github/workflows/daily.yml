@@ -6,6 +6,11 @@ on:
     # 5 minutes of slack keeps the card near 7am rather than 7:20.
     - cron: "5 23 * * *"
   workflow_dispatch:        # manual run from the Actions tab
+    inputs:
+      dry_run:
+        description: "Test story picking + rewrite only (no audio, no commit, no push)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -26,17 +31,26 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -q -r requirements.txt
 
-      - name: Compose script
+      - name: Dry run - pick and rewrite only
+        if: inputs.dry_run == true
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
-        run: python pipeline/compose.py
+        run: python pipeline/compose.py --dry-run
 
-      - name: Voices + data
-        run: python pipeline/generate.py
+      # daily.py refuses to rebuild a day that already exists, so a re-run of
+      # this workflow never overwrites a brief you have already read.
+      - name: Pick, rewrite, voices, data
+        if: inputs.dry_run != true
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: python pipeline/daily.py --skip-push
 
       - name: Commit
+        if: inputs.dry_run != true
         run: |
           git config user.name  "daily-brief bot"
           git config user.email "bot@users.noreply.github.com"
@@ -49,8 +63,16 @@ jobs:
           fi
 
       - name: Push to Feishu
-        if: always()
+        if: inputs.dry_run != true
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-        run: python pipeline/push_feishu.py
+        run: python pipeline/push_feishu.py --strict-today
+
+      # A silent failure here means no brief and no explanation, so say so.
+      - name: Report failure
+        if: failure() && inputs.dry_run != true
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          APP_URL: ${{ secrets.APP_URL }}
+        run: python pipeline/push_feishu.py --alert "the 07:05 build failed, see the Actions log"
