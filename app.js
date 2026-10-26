@@ -559,12 +559,6 @@ function sShadow(arg) {
   waveHost = wave;
   timeHost = document.getElementById('tc3');
   document.getElementById('splay').onclick = e => togglePlay(s.audio, e.currentTarget);
-  const zhBtn = document.getElementById('zhT');
-  if (zhBtn) zhBtn.onclick = () => {
-    const on = zhBtn.classList.toggle('on');
-    document.getElementById('zhc').classList.toggle('hide', !on);
-    save('zh', on);
-  };
 
   let recording = false, t0 = 0, tickTimer = 0;
   const liveBars = [...document.getElementById('live').children];
@@ -927,7 +921,6 @@ function sNotes() {
   const d = S.day;
   const terms = d.terms || [];
   const grammar = d.grammar || [];
-  const zhOn = load('zh', true);
 
   root.innerHTML = `
   <div class="screen solo">
@@ -966,23 +959,15 @@ function sNotes() {
     <div class="stack gap-10" style="margin-top:22px">
       <div class="row">
         <div class="eyebrow">全文对照</div>
-        <button class="zh-toggle${zhOn ? ' on' : ''}" id="zhAll"><i></i>中文</button>
       </div>
       <div class="card flat stack gap-14">
         ${d.sentences.map(s => `<div class="pair">
           <div class="e">${s.text}</div>
-          <div class="c${zhOn ? '' : ' hide'}">${s.zh || ''}</div>
+          <div class="c">${s.zh || ''}</div>
         </div>`).join('')}
       </div>
     </div>
   </div>`;
-
-  document.getElementById('zhAll').onclick = e => {
-    const btn = e.currentTarget;
-    const on = btn.classList.toggle('on');
-    document.querySelectorAll('.pair .c').forEach(el => el.classList.toggle('hide', !on));
-    save('zh', on);
-  };
 }
 
 /* ---------------------------------------------------------------- boot */
