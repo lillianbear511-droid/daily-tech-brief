@@ -1,4 +1,11 @@
+# ── secrets: none of these ever leave this machine ──
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── junk ──
 __pycache__/
 *.pyc
 .DS_Store

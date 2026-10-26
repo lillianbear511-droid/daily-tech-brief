@@ -1,0 +1,145 @@
+{
+ "date": "2026-10-26",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+ "headline": "Apollo economist: AI gives no financial payoff outside tech",
+ "audio": "audio/2026-10-26-full.mp3",
+ "duration": 76.3,
+ "wpm": 127.4,
+ "script": "AI has delivered zero financial payoff to big companies outside the tech industry. That is the finding of Torsten Slok, the chief economist at Apollo Global Management. He looked at a group he calls the S and P four ninety-three. That means the S and P five hundred minus seven tech giants, including Alphabet, Amazon, Apple, Meta, Microsoft, Nvidia and Tesla. In that group, profit margins and revenue per worker look flat. There is no evidence that AI is improving productivity. Slok said companies have made massive investments despite all the hype. He is skeptical that non-tech firms are simply lagging behind the tech giants. He argued it will be tough to turn cheap intelligence into higher revenue growth. He wrote that AI may be a great calculator, but in business, intelligence is mostly judgment. He added that AI does not understand accountability, trust, culture, or fairness. Recent studies also found that AI has not yet delivered significant productivity gains.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "AI has delivered zero financial payoff to big companies outside the tech industry.",
+   "audio": "audio/2026-10-26-s1.mp3",
+   "duration": 6.4,
+   "focus": "Link the final t in 'delivered' into 'zero'."
+  },
+  {
+   "id": 2,
+   "text": "That is the finding of Torsten Slok, the chief economist at Apollo Global Management.",
+   "audio": "audio/2026-10-26-s2.mp3",
+   "duration": 6.4,
+   "focus": "Stress the first syllable in 'economist'."
+  },
+  {
+   "id": 3,
+   "text": "He looked at a group he calls the S and P four ninety-three.",
+   "audio": "audio/2026-10-26-s3.mp3",
+   "duration": 4.4,
+   "focus": "Say the th sound clearly in 'three'."
+  },
+  {
+   "id": 4,
+   "text": "That means the S and P five hundred minus seven tech giants, including Alphabet, Amazon, Apple, Meta, Microsoft, Nvidia and Tesla.",
+   "audio": "audio/2026-10-26-s4.mp3",
+   "duration": 12.0,
+   "focus": "Stress 'giants' and keep the final ts crisp."
+  },
+  {
+   "id": 5,
+   "text": "In that group, profit margins and revenue per worker look flat.",
+   "audio": "audio/2026-10-26-s5.mp3",
+   "duration": 5.1,
+   "focus": "Keep the final t in 'flat' audible."
+  },
+  {
+   "id": 6,
+   "text": "There is no evidence that AI is improving productivity.",
+   "audio": "audio/2026-10-26-s6.mp3",
+   "duration": 4.2,
+   "focus": "Stress the second syllable in 'improving'."
+  },
+  {
+   "id": 7,
+   "text": "Slok said companies have made massive investments despite all the hype.",
+   "audio": "audio/2026-10-26-s7.mp3",
+   "duration": 5.4,
+   "focus": "Link 'made' into 'massive' smoothly."
+  },
+  {
+   "id": 8,
+   "text": "He is skeptical that non-tech firms are simply lagging behind the tech giants.",
+   "audio": "audio/2026-10-26-s8.mp3",
+   "duration": 5.6,
+   "focus": "Stress the first syllable in 'skeptical'."
+  },
+  {
+   "id": 9,
+   "text": "He argued it will be tough to turn cheap intelligence into higher revenue growth.",
+   "audio": "audio/2026-10-26-s9.mp3",
+   "duration": 5.6,
+   "focus": ""
+  },
+  {
+   "id": 10,
+   "text": "He wrote that AI may be a great calculator, but in business, intelligence is mostly judgment.",
+   "audio": "audio/2026-10-26-s10.mp3",
+   "duration": 7.5,
+   "focus": "Stress the first syllable in 'calculator'."
+  },
+  {
+   "id": 11,
+   "text": "He added that AI does not understand accountability, trust, culture, or fairness.",
+   "audio": "audio/2026-10-26-s11.mp3",
+   "duration": 6.9,
+   "focus": ""
+  },
+  {
+   "id": 12,
+   "text": "Recent studies also found that AI has not yet delivered significant productivity gains.",
+   "audio": "audio/2026-10-26-s12.mp3",
+   "duration": 6.8,
+   "focus": "Link 'not' into 'yet' without a pause."
+  }
+ ],
+ "terms": [
+  {
+   "word": "profit margins",
+   "gloss": "money kept from each sale"
+  },
+  {
+   "word": "revenue per worker",
+   "gloss": "sales divided by employee count"
+  },
+  {
+   "word": "productivity",
+   "gloss": "output produced per unit of work"
+  },
+  {
+   "word": "S&P 493",
+   "gloss": "big firms minus seven tech giants"
+  },
+  {
+   "word": "accountability",
+   "gloss": "being answerable for your decisions"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Slok find about profit margins in the S&P 493?",
+   "options": [
+    "They are rising fast",
+    "They appear flat",
+    "They fell sharply"
+   ],
+   "answer": 1,
+   "explain": "The script says profit margins and revenue per worker look flat in that group."
+  },
+  {
+   "q": "What does Slok say AI does not understand?",
+   "options": [
+    "Numbers and math",
+    "Calculators and tools",
+    "Accountability and trust"
+   ],
+   "answer": 2,
+   "explain": "Near the end, the script lists accountability, trust, culture, and fairness."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

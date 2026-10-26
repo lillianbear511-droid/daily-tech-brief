@@ -1,0 +1,69 @@
+{
+ "headline": "Apollo economist: AI gives no financial payoff outside tech",
+ "script": "AI has delivered zero financial payoff to big companies outside the tech industry. That is the finding of Torsten Slok, the chief economist at Apollo Global Management. He looked at a group he calls the S and P four ninety-three. That means the S and P five hundred minus seven tech giants, including Alphabet, Amazon, Apple, Meta, Microsoft, Nvidia and Tesla. In that group, profit margins and revenue per worker look flat. There is no evidence that AI is improving productivity. Slok said companies have made massive investments despite all the hype. He is skeptical that non-tech firms are simply lagging behind the tech giants. He argued it will be tough to turn cheap intelligence into higher revenue growth. He wrote that AI may be a great calculator, but in business, intelligence is mostly judgment. He added that AI does not understand accountability, trust, culture, or fairness. Recent studies also found that AI has not yet delivered significant productivity gains.",
+ "terms": [
+  {
+   "word": "profit margins",
+   "gloss": "money kept from each sale"
+  },
+  {
+   "word": "revenue per worker",
+   "gloss": "sales divided by employee count"
+  },
+  {
+   "word": "productivity",
+   "gloss": "output produced per unit of work"
+  },
+  {
+   "word": "S&P 493",
+   "gloss": "big firms minus seven tech giants"
+  },
+  {
+   "word": "accountability",
+   "gloss": "being answerable for your decisions"
+  }
+ ],
+ "focus": [
+  "Link the final t in 'delivered' into 'zero'.",
+  "Stress the first syllable in 'economist'.",
+  "Say the th sound clearly in 'three'.",
+  "Stress 'giants' and keep the final ts crisp.",
+  "Keep the final t in 'flat' audible.",
+  "Stress the second syllable in 'improving'.",
+  "Link 'made' into 'massive' smoothly.",
+  "Stress the first syllable in 'skeptical'.",
+  "",
+  "Stress the first syllable in 'calculator'.",
+  "",
+  "Link 'not' into 'yet' without a pause."
+ ],
+ "questions": [
+  {
+   "q": "What did Slok find about profit margins in the S&P 493?",
+   "options": [
+    "They are rising fast",
+    "They appear flat",
+    "They fell sharply"
+   ],
+   "answer": 1,
+   "explain": "The script says profit margins and revenue per worker look flat in that group."
+  },
+  {
+   "q": "What does Slok say AI does not understand?",
+   "options": [
+    "Numbers and math",
+    "Calculators and tools",
+    "Accountability and trust"
+   ],
+   "answer": 2,
+   "explain": "Near the end, the script lists accountability, trust, culture, and fairness."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/"
+}
