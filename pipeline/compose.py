@@ -52,6 +52,13 @@ SKIP = ("raises", "funding", "valuation", "acquires", "acquisition", "ipo", "lay
         "book", "author", "memoir", "essay", "biography", "opinion", "column",
         "obituary", "takes aim at", "we need to talk")
 
+# Shopping listicles ("the hottest AI gadgets you should know about") read like
+# news but are product recommendations, not events. No score can rescue them.
+LISTICLE = ("hottest", "you should know", "gadgets", "buying guide", "we tested",
+            "our favorite", "our pick", "top picks", "worth buying", "worth the",
+            "roundup", "shopping", "price drop", "we recommend", "most popular",
+            "wishlist", "gifts for", "deal of the day")
+
 # Topics worth hearing about — raises the score, does not gate.
 BOOST = ("ai", "model", "chip", "chipmaker", "data center", "datacenter", "robot",
          "security", "privacy", "browser", "open source", "satellite", "battery",
@@ -71,6 +78,12 @@ POLITICS = ("republican", "democrat", "trump", "biden", "harris", "election",
             "senate", "congress", "white house", "supreme court", "gop",
             "ukraine", "russia", "israel", "gaza", "hamas", "military strike",
             "sanctions", "nato", "immigration", "abortion", "partisan")
+
+# Buyer's-guide phrasing. Several of these in one body means the piece is a
+# recommendation list wearing a news headline.
+SHOPPING = ("you should know", "we tested", "our favorite", "you can buy",
+            "best overall", "worth the price", "buy now", "starting at $",
+            "available for $", "we recommend", "our pick", "the best")
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 
@@ -190,7 +203,11 @@ def is_off_topic(text: str) -> bool:
     low = text.lower()
     entertainment = sum(1 for k in OFFTOPIC if k in low)
     politics = sum(1 for k in POLITICS if k in low)
-    return entertainment >= 2 or politics >= 3
+    # A title can look like news while the body is a buyer's guide, so check
+    # the prose too. Threshold is high because honest business reporting also
+    # mentions prices.
+    shopping = sum(1 for k in SHOPPING if k in low)
+    return entertainment >= 2 or politics >= 3 or shopping >= 4
 
 
 def pick_story():
@@ -205,10 +222,17 @@ def pick_story():
         items += got
 
     seen = used_urls()
-    fresh, stale = [], 0
+    fresh, stale, dropped = [], 0, {"skip": 0, "politics": 0, "listicle": 0}
     for i in items:
         low = i["title"].lower()
-        if any(k in low for k in SKIP) or any(k in low for k in POLITICS):
+        if any(k in low for k in SKIP):
+            dropped["skip"] += 1
+            continue
+        if any(k in low for k in POLITICS):
+            dropped["politics"] += 1
+            continue
+        if any(k in low for k in LISTICLE):
+            dropped["listicle"] += 1
             continue
         if i["url"] in seen:
             stale += 1
@@ -220,6 +244,8 @@ def pick_story():
                 continue
         fresh.append(i)
 
+    print(f"  dropped {dropped['skip']} off-format, {dropped['politics']} political, "
+          f"{dropped['listicle']} shopping listicles")
     if stale:
         print(f"  skipped {stale} already-used or older-than-48h stories")
     if not fresh:
