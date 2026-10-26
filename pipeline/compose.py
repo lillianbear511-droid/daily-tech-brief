@@ -278,10 +278,28 @@ def article_text(item) -> str:
     return item["body"][:4000]
 
 
+def page_title(url: str) -> str:
+    """Real headline for a manual --url run.
+
+    Without this the URL itself is handed to the model as the title, which
+    quietly poisons the rewrite.
+    """
+    try:
+        page = fetch(url).decode("utf-8", "ignore")
+        m = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.S | re.I)
+        raw = strip_tags(m.group(1)) if m else ""
+        # Drop the site suffix most outlets append: "Foo | The Verge".
+        raw = re.split(r"\s+[|\u2013\u2014-]\s+", raw)[0].strip()
+        return raw[:120]
+    except Exception:                              # noqa: BLE001
+        return ""
+
+
 # ---------------------------------------------------------------- LLM
 
 PROMPT = """You write scripts for a daily English listening drill. The reader is a
-fluent non-native speaker who wants to understand tech news at natural speed.
+fluent Chinese speaker who wants to follow tech news at natural speed and needs
+a Chinese version to check himself against.
 
 Rewrite the article below as spoken American English.
 
@@ -296,15 +314,32 @@ RULES
 - Neutral tone. No hype, no "game-changer", no em dashes chained together.
 - Facts must come only from the article. Never invent a number, date or name.
 
+Every sentence is one entry in "lines", and carries three fields:
+- en: the English sentence.
+- zh: a natural Simplified Chinese translation. Translate the meaning, not the
+  words, and write it the way a Chinese news reader would say it. Keep company
+  names, products and market terms in their normal Chinese form (S&P 500 ->
+  标普500). Do not invent content that is not in the English. Exactly one
+  sentence in, one sentence out — never merge two lines or split one.
+- focus: one short pronunciation tip (max 12 words), or "" if the sentence is
+  plain. Only point at a feature the spelling reveals: the th sound, a final
+  consonant that Chinese speakers drop, v versus w, l versus r, the -ed or -s
+  ending, or two words that link. Never say which syllable is stressed — you
+  cannot check that, and a wrong stress tip teaches the wrong rhythm. Never
+  claim a "th" in a word that has no "th". A wrong tip is worse than no tip,
+  because the reader will practise the wrong thing.
+
 Also produce:
-- terms: the 3-5 technical terms, each with a 6-word plain-English gloss.
-- focus: one short pronunciation tip per sentence (max 12 words), or "" if boring.
-  Target sounds non-native speakers actually miss: th, r/l, final consonants,
-  word stress on three-syllable words, linking between words.
-  The tip must point at something present in that exact sentence. Check the
-  spelling before naming a sound — never claim a "th" in a word without "th".
-  If a sentence has nothing worth flagging, return "". A wrong tip is worse
-  than no tip, because the reader will practise the wrong thing.
+- terms: the 3-5 technical terms, each with word, zh (the Chinese term a
+  Chinese reader would recognise) and note (one short Chinese sentence saying
+  what it means here).
+- grammar: 2 or 3 points. Each has line (the 1-based sentence number it comes
+  from), point (name the structure, e.g. "现在完成时 have delivered") and note (one
+  Chinese sentence: why this structure is used here and what a Chinese speaker
+  tends to get wrong with it). Pick structures a Chinese learner genuinely
+  stumbles on: tense choice, articles, prepositions, relative clauses,
+  participle phrases, inversion, countable versus uncountable nouns. Skip
+  anything a fluent reader already knows — three real points beat five trivial ones.
 - questions: exactly 2 comprehension questions, 3 options each, one correct.
   They must be answerable from the audio alone, not from world knowledge.
 - explain: one sentence saying where in the script the answer sits.
@@ -312,9 +347,11 @@ Also produce:
 Return JSON only, no prose, in exactly this shape:
 {{
   "headline": "under 60 chars, plain, no clickbait",
-  "script": "the spoken script",
-  "terms": [{{"word": "thermal", "gloss": "about heat"}}],
-  "focus": ["tip for sentence 1", "tip for sentence 2"],
+  "lines": [
+    {{"en": "the English sentence", "zh": "中文译文", "focus": "tip or empty string"}}
+  ],
+  "terms": [{{"word": "thermal", "zh": "散热的", "note": "指靠流动空气带走热量，而不是用风扇。"}}],
+  "grammar": [{{"line": 4, "point": "现在完成时 have delivered", "note": "强调到目前为止的结果，中文习惯说“已经”而容易漏掉 have。"}}],
   "questions": [
     {{"q": "...", "options": ["a","b","c"], "answer": 0, "explain": "..."}},
     {{"q": "...", "options": ["a","b","c"], "answer": 2, "explain": "..."}}
@@ -397,23 +434,75 @@ def clean_focus(focus, script):
                 keep = False                   # claims a th in a word without th
             elif not words and "th" not in low:
                 keep = False
+        # Syllable position cannot be verified from spelling alone, and the
+        # model gets it wrong ("ultimately" is stressed on the first, not the
+        # second). A guessed stress tip teaches the wrong rhythm.
+        if keep and re.search(r"\u91cd\u97f3\u5728\u7b2c[0-9\u4e00\u4e8c\u4e09\u56db\u4e94\u516d]|"
+                              r"[Ss]tress(?:ed)? on the ", tip):
+            keep = False
         out.append(tip if keep else "")
     return out
 
 
+CJK = re.compile(r"[\u4e00-\u9fff]")
+
+
 def validate(meta: dict):
     problems = []
-    words = len(re.findall(r"[A-Za-z']+", meta["script"]))
+    lines = meta.get("lines") or []
+    script = meta.get("script") or " ".join(l.get("en", "") for l in lines)
+    words = len(re.findall(r"[A-Za-z']+", script))
     if not 148 <= words <= 195:
         problems.append(f"script is {words} words, wanted 155-185")
-    if not 3 <= len(meta.get("terms", [])) <= 6:
-        problems.append(f"{len(meta.get('terms', []))} terms, wanted 3-5")
-    if len(meta.get("questions", [])) != 2:
+    if not lines:
+        problems.append("no lines returned")
+    elif not 10 <= len(lines) <= 14:
+        problems.append(f"{len(lines)} sentences, wanted 11-13")
+    bare = [i + 1 for i, l in enumerate(lines) if not CJK.search(l.get("zh") or "")]
+    if bare:
+        problems.append(f"no Chinese on sentence(s) {bare[:6]}")
+    terms = meta.get("terms") or []
+    if not 3 <= len(terms) <= 6:
+        problems.append(f"{len(terms)} terms, wanted 3-5")
+    thin = [t.get("word", "?") for t in terms if not CJK.search(t.get("zh") or "")]
+    if thin:
+        problems.append(f"terms without a Chinese gloss: {thin[:4]}")
+    if len(meta.get("questions") or []) != 2:
         problems.append("needs exactly 2 questions")
-    for q in meta.get("questions", []):
-        if len(q.get("options", [])) != 3 or not 0 <= q.get("answer", -1) < 3:
+    for q in meta.get("questions") or []:
+        if len(q.get("options") or []) != 3 or not 0 <= q.get("answer", -1) < 3:
             problems.append(f"bad question: {q.get('q', '?')[:40]}")
+    for g in meta.get("grammar") or []:
+        idx = g.get("line")
+        if not isinstance(idx, int) or not 1 <= idx <= max(1, len(lines)):
+            problems.append(f"grammar points at line {idx}, out of range")
+        elif not CJK.search(g.get("note") or ""):
+            problems.append(f"grammar note is not Chinese: {str(g.get('point'))[:30]}")
     return problems, words
+
+
+def normalise(meta: dict):
+    """One canonical shape before anything else touches the data.
+
+    Sentences now carry their own translation and tip, so nothing is paired by
+    position afterwards — an off-by-one can no longer put a Chinese line under
+    the wrong English one.
+    """
+    lines = []
+    for item in meta.get("lines") or []:
+        en = (item.get("en") or "").strip()
+        if not en:
+            continue
+        tip = (item.get("focus") or "").strip()
+        # Check each tip against its own sentence, not the whole script.
+        lines.append({"en": en,
+                      "zh": (item.get("zh") or "").strip(),
+                      "focus": clean_focus([tip], en)[0]})
+    meta["lines"] = lines
+    meta["script"] = " ".join(l["en"] for l in lines)
+    meta["grammar"] = [g for g in (meta.get("grammar") or [])
+                       if isinstance(g.get("line"), int) and 1 <= g["line"] <= len(lines)]
+    return meta
 
 
 def compose_script(story, body):
@@ -421,14 +510,15 @@ def compose_script(story, body):
     a script that is 25 words short makes the audio feel clipped, and the model
     usually complies when told plainly what it produced."""
     prompt = PROMPT.format(title=story["title"], source=story["source"], body=body)
-    meta = ask_llm(prompt)
+    meta = normalise(ask_llm(prompt))
     problems, words = validate(meta)
     if not 148 <= words <= 195:
         print(f"  ! {words} words — asking once more with a hard instruction")
         retry = (prompt + f"\n\n---\nYOUR PREVIOUS ATTEMPT WAS {words} WORDS. "
                  "That is outside the required 155-185. Rewrite it as 11 to 13 "
-                 "sentences totalling 155-185 words. Keep every fact identical.")
-        again = ask_llm(retry)
+                 "sentences totalling 155-185 words. Keep every fact identical, "
+                 "and give every sentence its Chinese translation again.")
+        again = normalise(ask_llm(retry))
         problems2, words2 = validate(again)
         if abs(words2 - 170) < abs(words - 170):
             meta, problems, words = again, problems2, words2
@@ -443,7 +533,13 @@ def main():
     args = ap.parse_args()
 
     if args.url:
-        story = {"source": "MANUAL", "title": args.url, "url": args.url, "body": "", "chars": 0}
+        # Label a manual run by its real outlet, not by "MANUAL" — the source
+        # line is shown on the card and in the push message.
+        from urllib.parse import urlparse
+        host = urlparse(args.url).netloc.replace("www.", "")
+        outlet = host.split(".")[0].upper() if host else "MANUAL"
+        story = {"source": outlet, "title": page_title(args.url) or args.url,
+                 "url": args.url, "body": "", "chars": 0}
         body = article_text({**story, "chars": 0})
     else:
         # Walk down the ranking until a story has enough prose to rewrite.
@@ -472,7 +568,6 @@ def main():
     meta["source"] = story["source"].upper()
     meta["source_url"] = story["url"]
     meta.setdefault("recall_prompts", ["What changed?", "Why does it matter?", "Who is affected?"])
-    meta["focus"] = clean_focus(meta.get("focus"), meta["script"])
 
     if problems:
         print("  ! quality checks:")
@@ -480,16 +575,24 @@ def main():
             print("    -", p)
 
     if args.dry_run:
-        print("\n" + "=" * 60)
+        print("\n" + "=" * 62)
         print(meta["headline"], f"({words} words)\n")
-        print(meta["script"])
-        print("=" * 60)
+        for i, line in enumerate(meta["lines"], 1):
+            print(f"{i:2}. {line['en']}")
+            print(f"    {line['zh'] or '(没有译文)'}")
+        print()
+        for t in meta["terms"]:
+            print(f"· {t['word']} — {t.get('zh', '')}  {t.get('note', '')}")
+        for g in meta.get("grammar", []):
+            print(f"¶ 第{g['line']}句 {g.get('point')} — {g.get('note')}")
+        print("=" * 62)
         return
 
     CONTENT.mkdir(parents=True, exist_ok=True)
     out = CONTENT / f"{args.date}.json"
     out.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"\nWrote {out.relative_to(ROOT)} · {words} words · {len(meta['terms'])} terms")
+    print(f"\nWrote {out.relative_to(ROOT)} · {words} words · {len(meta['terms'])} terms "
+          f"· {len(meta.get('grammar', []))} grammar notes")
 
 
 if __name__ == "__main__":

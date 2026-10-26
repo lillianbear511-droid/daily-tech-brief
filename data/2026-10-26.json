@@ -2,139 +2,181 @@
  "date": "2026-10-26",
  "source": "TECHCRUNCH",
  "source_url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
- "headline": "Apollo economist: AI gives no financial payoff outside tech",
+ "headline": "Apollo Economist: AI Gives No Financial Payoff Outside Tech",
  "audio": "audio/2026-10-26-full.mp3",
- "duration": 76.3,
- "wpm": 127.4,
- "script": "AI has delivered zero financial payoff to big companies outside the tech industry. That is the finding of Torsten Slok, the chief economist at Apollo Global Management. He looked at a group he calls the S and P four ninety-three. That means the S and P five hundred minus seven tech giants, including Alphabet, Amazon, Apple, Meta, Microsoft, Nvidia and Tesla. In that group, profit margins and revenue per worker look flat. There is no evidence that AI is improving productivity. Slok said companies have made massive investments despite all the hype. He is skeptical that non-tech firms are simply lagging behind the tech giants. He argued it will be tough to turn cheap intelligence into higher revenue growth. He wrote that AI may be a great calculator, but in business, intelligence is mostly judgment. He added that AI does not understand accountability, trust, culture, or fairness. Recent studies also found that AI has not yet delivered significant productivity gains.",
+ "duration": 88.9,
+ "wpm": 122.2,
+ "script": "AI has not helped the bottom line of big companies outside the tech industry. That is the finding of a recent note from Apollo Global Management's chief economist. Torsten Slok looks at what he calls the S&P 493. That means the S&P 500 minus seven big tech companies, including Apple, Amazon and Nvidia. He finds that profit margins and revenue per worker look flat. There is no evidence that AI is improving productivity at these companies. Slok says the technology has delivered zero financial payoff to corporate America outside tech. He is skeptical that non-tech companies are simply lagging behind the tech giants. He argues it will be tough to turn cheap intelligence into higher revenue growth and profit margins. He writes that AI may be a great calculator, but in business intelligence is mostly judgment. He adds that AI does not understand accountability, trust, culture, unwritten rules, ethical trade-offs or fairness. Those things shape reputational risk and ultimately drive revenue growth and profit margins. Recent studies have also found that AI has yet to deliver significant productivity gains.",
  "sentences": [
   {
    "id": 1,
-   "text": "AI has delivered zero financial payoff to big companies outside the tech industry.",
+   "text": "AI has not helped the bottom line of big companies outside the tech industry.",
+   "zh": "人工智能并未改善科技行业以外大型公司的利润。",
    "audio": "audio/2026-10-26-s1.mp3",
-   "duration": 6.4,
-   "focus": "Link the final t in 'delivered' into 'zero'."
+   "duration": 5.4,
+   "focus": "has not 连读，t 音轻"
   },
   {
    "id": 2,
-   "text": "That is the finding of Torsten Slok, the chief economist at Apollo Global Management.",
+   "text": "That is the finding of a recent note from Apollo Global Management's chief economist.",
+   "zh": "这是阿波罗全球管理公司首席经济学家最近一份报告得出的结论。",
    "audio": "audio/2026-10-26-s2.mp3",
-   "duration": 6.4,
-   "focus": "Stress the first syllable in 'economist'."
+   "duration": 6.0,
+   "focus": "Global 的 b 和 l 要连读"
   },
   {
    "id": 3,
-   "text": "He looked at a group he calls the S and P four ninety-three.",
+   "text": "Torsten Slok looks at what he calls the S&P 493.",
+   "zh": "托斯滕·斯洛克研究的是他所说的“标普493”。",
    "audio": "audio/2026-10-26-s3.mp3",
-   "duration": 4.4,
-   "focus": "Say the th sound clearly in 'three'."
+   "duration": 4.7,
+   "focus": "looks at 连读，s 和 a 相接"
   },
   {
    "id": 4,
-   "text": "That means the S and P five hundred minus seven tech giants, including Alphabet, Amazon, Apple, Meta, Microsoft, Nvidia and Tesla.",
+   "text": "That means the S&P 500 minus seven big tech companies, including Apple, Amazon and Nvidia.",
+   "zh": "也就是标普500指数去掉苹果、亚马逊、英伟达等七家大型科技公司。",
    "audio": "audio/2026-10-26-s4.mp3",
-   "duration": 12.0,
-   "focus": "Stress 'giants' and keep the final ts crisp."
+   "duration": 8.5,
+   "focus": "minus 的 s 别丢掉"
   },
   {
    "id": 5,
-   "text": "In that group, profit margins and revenue per worker look flat.",
+   "text": "He finds that profit margins and revenue per worker look flat.",
+   "zh": "他发现利润率和人均收入基本持平。",
    "audio": "audio/2026-10-26-s5.mp3",
-   "duration": 5.1,
-   "focus": "Keep the final t in 'flat' audible."
+   "duration": 4.5,
+   "focus": "finds that 连读，d 和 t 相接"
   },
   {
    "id": 6,
-   "text": "There is no evidence that AI is improving productivity.",
+   "text": "There is no evidence that AI is improving productivity at these companies.",
+   "zh": "没有证据表明人工智能正在提高这些公司的生产率。",
    "audio": "audio/2026-10-26-s6.mp3",
-   "duration": 4.2,
-   "focus": "Stress the second syllable in 'improving'."
+   "duration": 5.4,
+   "focus": "evidence 的 v 要咬唇"
   },
   {
    "id": 7,
-   "text": "Slok said companies have made massive investments despite all the hype.",
+   "text": "Slok says the technology has delivered zero financial payoff to corporate America outside tech.",
+   "zh": "斯洛克说，这项技术给科技行业以外的美国企业带来了零财务回报。",
    "audio": "audio/2026-10-26-s7.mp3",
-   "duration": 5.4,
-   "focus": "Link 'made' into 'massive' smoothly."
+   "duration": 7.4,
+   "focus": "delivered 的 -ed 发 d 音"
   },
   {
    "id": 8,
-   "text": "He is skeptical that non-tech firms are simply lagging behind the tech giants.",
+   "text": "He is skeptical that non-tech companies are simply lagging behind the tech giants.",
+   "zh": "他对非科技公司只是落后于科技巨头这种说法表示怀疑。",
    "audio": "audio/2026-10-26-s8.mp3",
-   "duration": 5.6,
-   "focus": "Stress the first syllable in 'skeptical'."
+   "duration": 5.8,
+   "focus": "skeptical 的 sk 连读"
   },
   {
    "id": 9,
-   "text": "He argued it will be tough to turn cheap intelligence into higher revenue growth.",
+   "text": "He argues it will be tough to turn cheap intelligence into higher revenue growth and profit margins.",
+   "zh": "他认为，要把廉价智能转化为更高的收入增长和利润率将很困难。",
    "audio": "audio/2026-10-26-s9.mp3",
-   "duration": 5.6,
-   "focus": ""
+   "duration": 7.3,
+   "focus": "turn into 连读，n 和 i 相接"
   },
   {
    "id": 10,
-   "text": "He wrote that AI may be a great calculator, but in business, intelligence is mostly judgment.",
+   "text": "He writes that AI may be a great calculator, but in business intelligence is mostly judgment.",
+   "zh": "他写道，人工智能也许是个很好的计算器，但在商业中，智能主要是判断力。",
    "audio": "audio/2026-10-26-s10.mp3",
-   "duration": 7.5,
-   "focus": "Stress the first syllable in 'calculator'."
+   "duration": 7.2,
+   "focus": "but in 连读，t 和 i 相接"
   },
   {
    "id": 11,
-   "text": "He added that AI does not understand accountability, trust, culture, or fairness.",
+   "text": "He adds that AI does not understand accountability, trust, culture, unwritten rules, ethical trade-offs or fairness.",
+   "zh": "他补充说，人工智能不理解问责、信任、文化、不成文规则、伦理取舍或公平。",
    "audio": "audio/2026-10-26-s11.mp3",
-   "duration": 6.9,
-   "focus": ""
+   "duration": 9.7,
+   "focus": "does not 连读，s 和 n 相接"
   },
   {
    "id": 12,
-   "text": "Recent studies also found that AI has not yet delivered significant productivity gains.",
+   "text": "Those things shape reputational risk and ultimately drive revenue growth and profit margins.",
+   "zh": "这些因素塑造声誉风险，并最终推动收入增长和利润率。",
    "audio": "audio/2026-10-26-s12.mp3",
+   "duration": 7.4,
+   "focus": "ultimately 的 -ly 别吞掉"
+  },
+  {
+   "id": 13,
+   "text": "Recent studies have also found that AI has yet to deliver significant productivity gains.",
+   "zh": "最近的研究也发现，人工智能尚未带来显著的生产率提升。",
+   "audio": "audio/2026-10-26-s13.mp3",
    "duration": 6.8,
-   "focus": "Link 'not' into 'yet' without a pause."
+   "focus": "has yet 连读，s 和 y 相接"
   }
  ],
  "terms": [
   {
-   "word": "profit margins",
-   "gloss": "money kept from each sale"
+   "word": "bottom line",
+   "zh": "利润",
+   "note": "指公司最终赚到的钱，也就是净利润。"
+  },
+  {
+   "word": "profit margin",
+   "zh": "利润率",
+   "note": "指利润占收入的比例，反映赚钱效率。"
   },
   {
    "word": "revenue per worker",
-   "gloss": "sales divided by employee count"
+   "zh": "人均收入",
+   "note": "指公司总收入除以员工人数，用来衡量效率。"
   },
   {
    "word": "productivity",
-   "gloss": "output produced per unit of work"
+   "zh": "生产率",
+   "note": "指单位投入能产出多少，这里指员工创造的价值。"
   },
   {
    "word": "S&P 493",
-   "gloss": "big firms minus seven tech giants"
+   "zh": "标普493",
+   "note": "指标普500指数去掉七家大型科技公司后的493家。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has not helped",
+   "note": "强调从过去到现在的持续结果，中文常漏掉 has，直接说“没有帮助”。"
   },
   {
-   "word": "accountability",
-   "gloss": "being answerable for your decisions"
+   "line": 6,
+   "point": "there is no evidence that 同位语从句",
+   "note": "that 引导说明 evidence 的内容，中文习惯说“没有证据表明”，容易漏掉 that。"
+  },
+  {
+   "line": 12,
+   "point": "现在分词短语 shaping and driving",
+   "note": "分词短语作伴随说明，中文要拆成两个短句，不能直接照搬成“塑造着”。"
   }
  ],
  "questions": [
   {
-   "q": "What did Slok find about profit margins in the S&P 493?",
+   "q": "What did Slok find about profit margins at non-tech companies?",
    "options": [
     "They are rising fast",
-    "They appear flat",
-    "They fell sharply"
+    "They look flat",
+    "They are falling sharply"
    ],
    "answer": 1,
-   "explain": "The script says profit margins and revenue per worker look flat in that group."
+   "explain": "答案在第五句，他说利润率和人均收入基本持平。"
   },
   {
    "q": "What does Slok say AI does not understand?",
    "options": [
-    "Numbers and math",
-    "Calculators and tools",
-    "Accountability and trust"
+    "Calculations and data",
+    "Accountability and trust",
+    "Revenue and margins"
    ],
-   "answer": 2,
-   "explain": "Near the end, the script lists accountability, trust, culture, and fairness."
+   "answer": 1,
+   "explain": "答案在第十一句，他列举了问责、信任、文化等。"
   }
  ],
  "recall_prompts": [

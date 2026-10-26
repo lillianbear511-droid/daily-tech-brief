@@ -210,7 +210,7 @@ window.addEventListener('hashchange', route);
 function go(path) { location.hash = '#/' + path; }
 
 function setTab(name) {
-  const practice = ['listen', 'shadow', 'recall'].includes(name);
+  const practice = ['listen', 'shadow', 'recall', 'notes', 'detail'].includes(name);
   tabsEl.hidden = practice;
   tabsEl.querySelectorAll('.tab').forEach(t =>
     t.classList.toggle('on', t.dataset.tab === name));
@@ -223,7 +223,7 @@ function render(name, arg) {
   audio.onDone = null;
   waveHost = null; waveBars = []; timeHost = null;
   setTab(name);
-  const map = { today: sToday, listen: sListen, shadow: sShadow, recall: sRecall, progress: sProgress, words: sWords };
+  const map = { today: sToday, listen: sListen, shadow: sShadow, recall: sRecall, progress: sProgress, words: sWords, notes: sNotes };
   (map[name] || sToday)(arg);
 }
 
@@ -235,6 +235,9 @@ function dateLabel(iso) {
 }
 
 /* -------- TODAY -------- */
+const hasNotes = d => !!(d.terms?.length || d.grammar?.length
+  || d.sentences?.some(s => s.zh));
+
 function sToday() {
   const d = S.day, p = dp(d.date);
   const st = streakInfo();
@@ -289,6 +292,14 @@ function sToday() {
       </div>
     </div>
 
+    ${hasNotes(d) ? `<button class="row-item" style="margin-top:14px" id="notes">
+      <div style="flex:1">
+        <div class="t">Language notes · 中文对照</div>
+        <div class="d">${d.terms.length} 个词汇 · ${(d.grammar || []).length} 条语法 · ${d.sentences.length} 句译文</div>
+      </div>
+      <svg width="12" height="12" viewBox="0 0 12 12"><path d="M4 1.5L8.5 6 4 10.5" stroke="#C4C0B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </button>` : ''}
+
     ${st.count > 1 ? `<div class="row-item" style="margin-top:18px" id="recap">
       <div><div class="sub" style="font-size:9px;letter-spacing:1.4px;font-weight:600;color:var(--faint)">YESTERDAY</div>
       <div class="t" style="margin-top:4px;font-weight:400;color:#4A4744">${st.days[st.days.length - 2].done ? 'Completed' : 'Missed'} · ${S.needs.length} word${S.needs.length === 1 ? '' : 's'} to retry</div></div>
@@ -329,6 +340,7 @@ function sToday() {
   };
   document.querySelectorAll('#terms .tchip').forEach(b => b.onclick = () => speak(b.dataset.w));
   document.getElementById('recap')?.addEventListener('click', () => go('progress'));
+  document.getElementById('notes')?.addEventListener('click', () => go('notes'));
 
   document.getElementById('start').onclick = () => {
     if (!p.listen?.answered) go('listen');
@@ -483,6 +495,7 @@ function sShadow(arg) {
   const idx = Math.min(Math.max(1, +arg || 1), d.sentences.length);
   const s = d.sentences[idx - 1];
   const rating = p.shadow?.[s.id];
+  const gram = (d.grammar || []).filter(x => x.line === s.id);
 
   root.innerHTML = `
   <div class="screen solo">
@@ -501,7 +514,13 @@ function sShadow(arg) {
     <div class="card stack gap-14" style="margin-top:18px">
       <div class="eyebrow">Sentence ${pad(s.id)} · ${fmt(s.duration)}</div>
       <div class="sentence">${s.text}</div>
+      ${s.zh ? `<div class="zh">${s.zh}</div>` : ''}
       ${s.focus ? `<div class="focus"><i class="d"></i><span>${s.focus}</span></div>` : ''}
+      ${gram.map(g => `<div class="lang-item" style="padding-top:11px;border-top:1px dashed var(--line)">
+        <div class="at">语法</div>
+        <div class="k" style="margin-top:3px">${g.point}</div>
+        <div class="n">${g.note}</div>
+      </div>`).join('')}
     </div>
 
     <div class="row" style="margin-top:14px;justify-content:flex-start;gap:10px">
@@ -540,6 +559,12 @@ function sShadow(arg) {
   waveHost = wave;
   timeHost = document.getElementById('tc3');
   document.getElementById('splay').onclick = e => togglePlay(s.audio, e.currentTarget);
+  const zhBtn = document.getElementById('zhT');
+  if (zhBtn) zhBtn.onclick = () => {
+    const on = zhBtn.classList.toggle('on');
+    document.getElementById('zhc').classList.toggle('hide', !on);
+    save('zh', on);
+  };
 
   let recording = false, t0 = 0, tickTimer = 0;
   const liveBars = [...document.getElementById('live').children];
@@ -863,13 +888,13 @@ function sWords() {
         return `<button class="row-item" data-w="${w.word}">
           <div style="flex:1">
             <div class="t">${w.word}</div>
-            <div class="d">${w.phonetic || ''} · ${w.pos || ''}</div>
+            <div class="d">${w.zh || w.phonetic || w.pos || ''}</div>
           </div>
           ${d ? '<span class="badge">DUE</span>' : '<svg width="12" height="12" viewBox="0 0 12 12"><path d="M4 1.5L8.5 6 4 10.5" stroke="#C4C0B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'}
         </button>`;
       }).join('') : `<div class="empty" style="padding:14px 0 6px">Not saved yet — these are today's key terms.</div>
         ${(S.day.terms || []).map(t => `<button class="row-item" data-preview="${t.word}" style="width:100%">
-          <div style="flex:1"><div class="t">${t.word}</div><div class="d">${t.phonetic || ''} · ${t.pos || ''}</div></div>
+          <div style="flex:1"><div class="t">${t.word}</div><div class="d">${t.zh || ''}</div></div>
           <span class="badge">TODAY</span>
         </button>`).join('')}
         <div class="empty" style="padding-top:12px">Finish today's practice to add them to your list.</div>`}
@@ -885,7 +910,7 @@ function sWords() {
       speak(w.word);
       const gap = dayDiff(w.last || w.added, todayISO());
       if (gap >= 1) { w.last = todayISO(); w.box = Math.min((w.box || 0) + 1, INTERVALS.length - 1); save('words', S.words); }
-      toast(`${w.word} — ${w.gloss}`);
+      toast(`${w.word} — ${w.zh || w.gloss || ''}`);
     };
   });
   document.querySelectorAll('[data-preview]').forEach(b => {
@@ -895,6 +920,69 @@ function sWords() {
     due.slice(0, 8).forEach((w, i) => setTimeout(() => speak(w.word), i * 1800));
     toast('Listen and repeat — ' + due.length + ' words');
   });
+}
+
+/* ---------------------------------------------------------------- notes */
+function sNotes() {
+  const d = S.day;
+  const terms = d.terms || [];
+  const grammar = d.grammar || [];
+  const zhOn = load('zh', true);
+
+  root.innerHTML = `
+  <div class="screen solo">
+    <div class="topbar">
+      <button class="back" data-go="today">
+        <svg viewBox="0 0 18 18"><path d="M11 3.5L5.5 9 11 14.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Notes
+      </button>
+      <div class="eyebrow">${d.sentences.length} 句 · ${fmt(d.duration)}</div>
+    </div>
+
+    <h1 class="h1" style="margin-top:16px">语言点</h1>
+    <div class="sub" style="margin-top:8px">先盲听，再对照。第一遍就看中文，练不出耳朵。</div>
+
+    <div class="stack gap-10" style="margin-top:26px">
+      <div class="eyebrow">词汇 · ${terms.length}</div>
+      <div class="card flat stack gap-14">
+        ${terms.map(t => `<div class="lang-item">
+          <div class="k">${t.word}<em>${t.zh || ''}</em></div>
+          <div class="n">${t.note || t.gloss || ''}</div>
+        </div>`).join('') || '<div class="sub">今天没有词汇。</div>'}
+      </div>
+    </div>
+
+    <div class="stack gap-10" style="margin-top:22px">
+      <div class="eyebrow">语法 · ${grammar.length}</div>
+      <div class="card flat stack gap-14">
+        ${grammar.map(g => `<div class="lang-item">
+          <div class="at">第 ${pad(g.line)} 句</div>
+          <div class="k">${g.point}</div>
+          <div class="n">${g.note}</div>
+        </div>`).join('') || '<div class="sub">今天没有语法点。</div>'}
+      </div>
+    </div>
+
+    <div class="stack gap-10" style="margin-top:22px">
+      <div class="row">
+        <div class="eyebrow">全文对照</div>
+        <button class="zh-toggle${zhOn ? ' on' : ''}" id="zhAll"><i></i>中文</button>
+      </div>
+      <div class="card flat stack gap-14">
+        ${d.sentences.map(s => `<div class="pair">
+          <div class="e">${s.text}</div>
+          <div class="c${zhOn ? '' : ' hide'}">${s.zh || ''}</div>
+        </div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+
+  document.getElementById('zhAll').onclick = e => {
+    const btn = e.currentTarget;
+    const on = btn.classList.toggle('on');
+    document.querySelectorAll('.pair .c').forEach(el => el.classList.toggle('hide', !on));
+    save('zh', on);
+  };
 }
 
 /* ---------------------------------------------------------------- boot */

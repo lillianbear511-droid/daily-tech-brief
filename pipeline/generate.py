@@ -19,8 +19,10 @@ import asyncio
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date as date_cls
@@ -35,6 +37,16 @@ AUDIO = ROOT / "audio"
 DEFAULT_VOICE = "en-US-AndrewNeural"
 DEFAULT_RATE = "-18%"         # slower than news pace, lands near 130 wpm
 FALLBACK_SAY_VOICE = "Samantha"
+
+# edge-tts can only return audio-24khz-48kbitrate-mono-mp3 from the free
+# endpoint, and at that rate the sibilants quantise into a hiss that reads as
+# electrical noise on a phone speaker. We cannot ask for a better format, so
+# every clip is rebuilt at 44.1 kHz / 96 kbps: the upsampled stream gives the
+# decoder room to work and stops a second layer of artefacts being added.
+OUT_SR = 44100
+OUT_BITRATE = "96k"
+GAP_MS = 220                  # breath between sentences, in the full audio only
+FADE = 0.01                   # kills the clicks at each clip's first sample
 
 FEEDS = {
     "The Verge": "https://www.theverge.com/rss/index.xml",
@@ -117,12 +129,58 @@ def duration_seconds(path: Path) -> float:
         return 0.0
 
 
-def concat_mp3(parts, out_mp3: Path):
-    lst = out_mp3.with_suffix(".txt")
-    lst.write_text("".join(f"file '{p.resolve()}'\n" for p in parts), encoding="utf-8")
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat",
-                    "-safe", "0", "-i", str(lst), "-c", "copy", str(out_mp3)], check=True)
-    lst.unlink(missing_ok=True)
+def _ffmpeg(args):
+    proc = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *args],
+                          capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise RuntimeError(f"ffmpeg failed: {proc.stderr.strip()[:300]}")
+
+
+def _to_wav(raw: Path, wav: Path):
+    """Raw TTS clip -> clean 44.1 kHz mono PCM, faded at both ends."""
+    _ffmpeg(["-i", str(raw),
+             "-af", (f"highpass=f=70,"
+                     f"afade=t=in:st=0:d={FADE},"
+                     f"areverse,afade=t=in:st=0:d={FADE},areverse"),
+             "-ar", str(OUT_SR), "-ac", "1", "-c:a", "pcm_s16le", str(wav)])
+
+
+def _silence_wav(wav: Path):
+    _ffmpeg(["-f", "lavfi", "-i", f"anullsrc=r={OUT_SR}:cl=mono",
+             "-t", f"{GAP_MS / 1000}", "-c:a", "pcm_s16le", str(wav)])
+
+
+def _wav_to_mp3(wav: Path, mp3: Path):
+    _ffmpeg(["-i", str(wav), "-c:a", "libmp3lame", "-b:a", OUT_BITRATE,
+             "-ar", str(OUT_SR), "-ac", "1", str(mp3)])
+
+
+def join_wavs(wavs, out_mp3: Path):
+    """Join prepared PCM clips with a short breath between, encode once.
+
+    Never copy mp3 frames to do this: each clip's encoder padding survives a
+    copy and lands on the next sentence as a click.
+    """
+    work = Path(tempfile.mkdtemp(prefix="dtb-"))
+    try:
+        silence = work / "gap.wav"
+        _silence_wav(silence)
+        seq = []
+        for i, w in enumerate(wavs):
+            if i:
+                seq.append(silence)
+            seq.append(w)
+        args = []
+        for p in seq:
+            args += ["-i", str(p)]
+        chain = "".join(f"[{i}:a]" for i in range(len(seq)))
+        args += ["-filter_complex", f"{chain}concat=n={len(seq)}:v=0:a=1[out]",
+                 "-map", "[out]", "-c:a", "pcm_s16le",
+                 "-ar", str(OUT_SR), "-ac", "1", str(work / "joined.wav")]
+        _ffmpeg(args)
+        _wav_to_mp3(work / "joined.wav", out_mp3)
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
 
 
 # ---------------------------------------------------------------- build
@@ -133,32 +191,42 @@ def build(day: str, voice: str, rate: str) -> dict:
         sys.exit(f"missing {src}\nCreate the article script first, then re-run.")
 
     meta = json.loads(src.read_text(encoding="utf-8"))
-    sentences = split_sentences(meta["script"])
-    focus = meta.get("focus") or [""] * len(sentences)
-    if len(focus) < len(sentences):
-        focus += [""] * (len(sentences) - len(focus))
+    lines = normalise_lines(meta)
+    script = meta.get("script") or " ".join(l["en"] for l in lines)
+    words = word_count(script)
 
     AUDIO.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(parents=True, exist_ok=True)
 
-    print(f"[{day}] {len(sentences)} sentences, {word_count(meta['script'])} words")
-    seg_paths, seg_meta = [], []
-    for i, (text, tip) in enumerate(zip(sentences, focus), start=1):
-        out = AUDIO / f"{day}-s{i}.mp3"
-        engine = speak(text, out, voice, rate)
-        dur = duration_seconds(out)
-        seg_paths.append(out)
-        seg_meta.append({
-            "id": i,
-            "text": text,
-            "audio": f"audio/{out.name}",
-            "duration": dur,
-            "focus": tip,
-        })
-        print(f"   s{i:<2} {dur:>5.1f}s  {engine:<4}  {text[:58]}")
+    print(f"[{day}] {len(lines)} sentences, {words} words")
+    rawdir = Path(tempfile.mkdtemp(prefix="dtb-say-"))
+    seg_meta, wavs = [], []
+    try:
+        for i, line in enumerate(lines, start=1):
+            raw = rawdir / f"s{i}.mp3"
+            engine = speak(line["en"], raw, voice, rate)
+            wav = rawdir / f"s{i}.wav"
+            _to_wav(raw, wav)              # 44.1 kHz, faded, clipped clean
+            wavs.append(wav)
+            out = AUDIO / f"{day}-s{i}.mp3"
+            _wav_to_mp3(wav, out)
+            dur = duration_seconds(out)
+            seg_meta.append({
+                "id": i,
+                "text": line["en"],
+                "zh": line["zh"],
+                "audio": f"audio/{out.name}",
+                "duration": dur,
+                "focus": line["focus"],
+            })
+            print(f"   s{i:<2} {dur:>5.1f}s  {engine:<4}  {line['en'][:52]}")
+        # Join while the PCM clips still exist — they are the source of truth,
+        # the per-sentence mp3s are just what the phone streams.
+        full = AUDIO / f"{day}-full.mp3"
+        join_wavs(wavs, full)
+    finally:
+        shutil.rmtree(rawdir, ignore_errors=True)
 
-    full = AUDIO / f"{day}-full.mp3"
-    concat_mp3(seg_paths, full)
     total = duration_seconds(full)
 
     payload = {
@@ -168,11 +236,12 @@ def build(day: str, voice: str, rate: str) -> dict:
         "headline": meta["headline"],
         "audio": f"audio/{full.name}",
         "duration": total,
-        "wpm": round(word_count(meta["script"]) / (total / 60), 1) if total else 0,
-        "script": meta["script"],
+        "wpm": round(words / (total / 60), 1) if total else 0,
+        "script": script,
         "sentences": seg_meta,
-        "terms": meta["terms"],
-        "questions": meta["questions"],
+        "terms": meta.get("terms", []),
+        "grammar": meta.get("grammar", []),
+        "questions": meta.get("questions", []),
         "recall_prompts": meta.get("recall_prompts", ["What changed?", "Why does it matter?", "Who is affected?"]),
     }
     (DATA / f"{day}.json").write_text(
@@ -181,6 +250,34 @@ def build(day: str, voice: str, rate: str) -> dict:
     rebuild_index()
     print(f"[{day}] done · {total:.0f}s full audio · {payload['wpm']} wpm")
     return payload
+
+
+def normalise_lines(meta: dict):
+    """One shape for every day, old files included.
+
+    New scripts arrive as `lines: [{en, zh, focus}]`, which keeps translation
+    and tip glued to the sentence they belong to. Older files only have a
+    `script` paragraph plus a parallel `focus` list, so fall back to splitting
+    and zipping — never silently lose a sentence.
+    """
+    lines = []
+    for item in meta.get("lines") or []:
+        en = (item.get("en") or "").strip()
+        if not en:
+            continue
+        lines.append({"en": en,
+                      "zh": (item.get("zh") or "").strip(),
+                      "focus": (item.get("focus") or "").strip()})
+    if lines:
+        return lines
+
+    sentences = split_sentences(meta.get("script", ""))
+    focus = meta.get("focus") or []
+    zh = meta.get("translation") or []
+    return [{"en": s,
+             "zh": zh[i].strip() if i < len(zh) else "",
+             "focus": focus[i].strip() if i < len(focus) else ""}
+            for i, s in enumerate(sentences)]
 
 
 def rebuild_index():

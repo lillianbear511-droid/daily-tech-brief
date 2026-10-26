@@ -2,7 +2,7 @@
    - Shell (html/css/js): network-first, so a new build shows up on the first open.
    - Media (audio/icons): cache-first, so practice works on the subway.
    Cache is never wiped on activate, so offline keeps working across updates. */
-const V = 'dtb-v5';
+const V = 'dtb-v6';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './manifest.json',
   './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png',
