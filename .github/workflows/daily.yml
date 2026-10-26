@@ -18,6 +18,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # 23:05 UTC is 07:05 the NEXT day in Shanghai. Without this the runner's
+    # date.today() returns the UTC date, so the job would rebuild (or skip)
+    # yesterday's brief and mail it again every single morning.
+    env:
+      TZ: Asia/Shanghai
     steps:
       - uses: actions/checkout@v4
 
@@ -37,7 +42,9 @@ jobs:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
-        run: python pipeline/compose.py --dry-run
+        run: |
+          python -c "from datetime import date, datetime, timezone; print('runner sees today as', date.today().isoformat(), '| utc', datetime.now(timezone.utc).isoformat(timespec='minutes'), '| local', datetime.now().isoformat(timespec='minutes'))"
+          python pipeline/compose.py --dry-run
 
       # edge-tts and ffmpeg are the two things that only fail on the runner,
       # never on a laptop. Say so before 7am rather than at 7am.
