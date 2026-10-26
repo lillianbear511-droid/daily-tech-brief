@@ -48,6 +48,9 @@ FEEDS = [
 SKIP = ("raises", "funding", "valuation", "acquires", "acquisition", "ipo", "layoff",
         "review:", "hands-on", "best ", "deal", "lawsuit", "stock", "earnings",
         "podcast", "newsletter", "how to ", "tips", "gift guide",
+        # multi-story digests: one link that jumps between three topics is
+        # impossible to shadow out loud
+        "the download:", "digest", "roundup",
         # book reviews and opinion columns read as culture, not news
         "book", "author", "memoir", "essay", "biography", "opinion", "column",
         "obituary", "takes aim at", "we need to talk")
