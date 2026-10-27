@@ -1,0 +1,141 @@
+{
+ "headline": "Nvidia backs Indian startup Simplismart in $14M round",
+ "lines": [
+  {
+   "en": "Nvidia has backed the Indian startup Simplismart in a fourteen million dollar funding round.",
+   "zh": "英伟达参与了对印度初创公司Simplismart一轮1400万美元融资的投资。",
+   "focus": "final -rt in Simplismart"
+  },
+  {
+   "en": "The company makes software that helps businesses run AI models with fewer GPUs.",
+   "zh": "该公司开发的软件能帮助企业用更少的GPU运行AI模型。",
+   "focus": "v versus w in software"
+  },
+  {
+   "en": "GPUs are the chips that do the heavy computing for AI.",
+   "zh": "GPU是为人工智能承担繁重计算任务的芯片。",
+   "focus": "final -ps in chips"
+  },
+  {
+   "en": "The round was led by Dallas Venture Capital, with Accel, Shastra VC, and Micromax joining.",
+   "zh": "本轮由Dallas Venture Capital领投，Accel、Shastra VC和Micromax参投。",
+   "focus": "linking led by"
+  },
+  {
+   "en": "The deal values the four-year-old startup at about one hundred million dollars.",
+   "zh": "这轮交易对这家成立四年的初创公司估值约1亿美元。",
+   "focus": "final -ed in valued"
+  },
+  {
+   "en": "Companies now spend heavily on GPUs, but running models reliably and cheaply at scale is still hard.",
+   "zh": "企业如今在GPU上投入巨大，但要大规模、可靠且低成本地运行模型仍然很难。",
+   "focus": ""
+  },
+  {
+   "en": "Different workloads need different trade-offs between speed, cost, and performance.",
+   "zh": "不同的工作负载需要在速度、成本和性能之间做不同的权衡。",
+   "focus": "final -s in workloads"
+  },
+  {
+   "en": "Simplismart says its software automates much of that setup work for customers.",
+   "zh": "Simplismart表示，其软件为客户自动完成了大量这类配置工作。",
+   "focus": "final -t in automates"
+  },
+  {
+   "en": "The software sits between the AI models and the computing infrastructure they run on.",
+   "zh": "这款软件位于AI模型与其运行所依赖的计算基础设施之间。",
+   "focus": "linking sits between"
+  },
+  {
+   "en": "It adjusts how models are deployed so they meet each customer's needs.",
+   "zh": "它调整模型的部署方式，以满足每个客户的需求。",
+   "focus": "final -s in adjusts"
+  },
+  {
+   "en": "The startup says it cut GPU serving costs by fifty-six percent for the video platform InVideo.",
+   "zh": "这家初创公司称，它为视频平台InVideo将GPU服务成本降低了56%。",
+   "focus": "th in fifty"
+  },
+  {
+   "en": "Its annualized revenue run rate grew fourteen-fold in six months to an eight-figure sum.",
+   "zh": "其年化营收运行率在六个月内增长了14倍，达到八位数。",
+   "focus": "final -d in grew"
+  }
+ ],
+ "terms": [
+  {
+   "word": "GPU",
+   "zh": "图形处理器",
+   "note": "这里指为AI计算提供算力的芯片。"
+  },
+  {
+   "word": "inference",
+   "zh": "推理",
+   "note": "指模型训练完成后实际处理请求、给出结果的过程。"
+  },
+  {
+   "word": "fine-tune",
+   "zh": "微调",
+   "note": "指在已有模型基础上用特定数据继续训练，使其更贴合用途。"
+  },
+  {
+   "word": "serverless",
+   "zh": "无服务器",
+   "note": "指用户不用自己管理服务器，按需调用算力的服务模式。"
+  },
+  {
+   "word": "annualized revenue run rate",
+   "zh": "年化营收运行率",
+   "note": "按近期收入推算出的全年营收规模。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has backed",
+   "note": "强调投资已经完成并对现在有影响，中文常只译成“投资了”，容易漏掉 has。"
+  },
+  {
+   "line": 4,
+   "point": "被动语态 was led by",
+   "note": "主语 the round 是动作承受者，中文习惯说“由……领投”，容易误写成主动句。"
+  },
+  {
+   "line": 9,
+   "point": "定语从句 they run on",
+   "note": "省略了关系代词 that，中文学习者容易漏掉介词 on，或把从句误当独立句。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What does Simplismart's software mainly help companies do?",
+   "options": [
+    "Build new GPU chips",
+    "Run AI models more efficiently",
+    "Sell cloud servers"
+   ],
+   "answer": 1,
+   "explain": "答案在第二句，软件帮助企业用更少的GPU运行AI模型。"
+  },
+  {
+   "q": "By how much did Simplismart cut InVideo's GPU serving costs?",
+   "options": [
+    "Fourteen percent",
+    "Fifty-six percent",
+    "One hundred percent"
+   ],
+   "answer": 1,
+   "explain": "答案在第十一句，明确提到降低了56%。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Nvidia has backed the Indian startup Simplismart in a fourteen million dollar funding round. The company makes software that helps businesses run AI models with fewer GPUs. GPUs are the chips that do the heavy computing for AI. The round was led by Dallas Venture Capital, with Accel, Shastra VC, and Micromax joining. The deal values the four-year-old startup at about one hundred million dollars. Companies now spend heavily on GPUs, but running models reliably and cheaply at scale is still hard. Different workloads need different trade-offs between speed, cost, and performance. Simplismart says its software automates much of that setup work for customers. The software sits between the AI models and the computing infrastructure they run on. It adjusts how models are deployed so they meet each customer's needs. The startup says it cut GPU serving costs by fifty-six percent for the video platform InVideo. Its annualized revenue run rate grew fourteen-fold in six months to an eight-figure sum.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus/",
+ "date": "2026-10-28",
+ "slot": "pm"
+}

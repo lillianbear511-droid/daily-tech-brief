@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-27T10:53:11",
+ "updated": "2026-10-28T01:56:04",
  "days": [
+  {
+   "id": "2026-10-28-pm",
+   "date": "2026-10-28",
+   "slot": "pm",
+   "headline": "Nvidia backs Indian startup Simplismart in $14M round",
+   "source": "TECHCRUNCH",
+   "duration": 79.8,
+   "sentences": 12
+  },
   {
    "id": "2026-10-27-pm",
    "date": "2026-10-27",
