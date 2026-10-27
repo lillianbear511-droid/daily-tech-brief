@@ -5,7 +5,7 @@ Daily Tech Brief — preflight check.
   python3 pipeline/check.py              # everything
   python3 pipeline/check.py --skip-push  # do not send a Feishu message
 
-Answers one question: will tomorrow's 07:05 run actually work?
+Answers one question: will the next 07:05 or 20:05 run actually work?
 Checks the five things that break in practice — the API key, the balance,
 the Feishu bot, the RSS sources, and the GitHub secrets.
 """
@@ -204,7 +204,7 @@ def check_feishu(send):
 
     payload = {
         "msg_type": "text",
-        "content": {"text": "Daily Tech Brief · 连接测试\n看到这条说明机器人通了，明天 07:05 会推第一条。"},
+        "content": {"text": "Daily Tech Brief · 连接测试\n看到这条说明机器人通了，每天 07:05 和 20:05 各推一条。"},
     }
     req = urllib.request.Request(
         hook, data=json.dumps(payload).encode(),
@@ -276,7 +276,7 @@ def check_secrets():
         if name in have:
             line(OK, "secret " + name, "set")
         else:
-            line(BAD, "secret " + name, "missing — the 07:05 run will fail")
+            line(BAD, "secret " + name, "missing — the scheduled runs will fail")
     return {"LLM_API_KEY", "FEISHU_WEBHOOK"} <= have
 
 
@@ -298,8 +298,8 @@ def main():
     ok = all(results)
     print()
     if ok:
-        print("\033[32mAll clear.\033[0m Tomorrow's run will work. "
-              "Try it now: python3 pipeline/daily.py\n")
+        print("\033[32mAll clear.\033[0m The scheduled runs will work. "
+              "Try it now: python3 pipeline/daily.py --slot pm\n")
     else:
         print("\033[31mSomething is off.\033[0m Fix the red lines above, then run this again.\n")
     return 0 if ok else 1
