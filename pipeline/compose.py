@@ -90,6 +90,18 @@ POLITICS = ("republican", "democrat", "trump", "biden", "harris", "election",
             "espionage", "spy", "spying", "spied", "exfiltrat", "beijing",
             "kremlin", "pentagon", "state-sponsored", "export control")
 
+# One mention is enough to reject the piece. These are named political actors
+# and offices, not topics: seeing one means the body has drifted from
+# technology into a political argument even when the headline still sounds
+# technical. A piece headlined "data centers need more power" that then
+# explains what an administration wants is exactly this case — POLITICS alone
+# misses it, because three separate triggers are required.
+# Policy words (tariff, fossil fuel, renewable energy) are deliberately absent:
+# chip tariffs and AI power demand are legitimate technology stories, and they
+# are already weighed by the three-trigger rule below.
+POLITICS_HARD = ("trump", "biden", "white house", "oval office",
+                 "kremlin", "pentagon", "presidential")
+
 # Buyer's-guide phrasing. Several of these in one body means the piece is a
 # recommendation list wearing a news headline.
 SHOPPING = ("you should know", "we tested", "our favorite", "you can buy",
@@ -218,6 +230,8 @@ def is_off_topic(text: str) -> bool:
     # the prose too. Threshold is high because honest business reporting also
     # mentions prices.
     shopping = sum(1 for k in SHOPPING if k in low)
+    if any(k in low for k in POLITICS_HARD):
+        return True
     return entertainment >= 2 or politics >= 3 or shopping >= 4
 
 
