@@ -70,10 +70,9 @@ def build_card(day: dict, app_url: str) -> dict:
     link = f"{app_url}/?d={day['id']}#/today"
     mins = max(1, round(day.get("duration", 60) / 60))
     terms = " · ".join(t["word"] for t in day.get("terms", [])[:3])
-    title = (f"{slots.label(slot, english=True)} · {slots.label(slot)}"
-             if slot else "Today's brief · 90 sec")
     # The morning card should not look like the evening one in the chat list;
     # without the slot in the header both read as "today's brief".
+    title = {"am": "Morning brief", "pm": "Evening brief"}.get(slot, "Today's brief")
     kicker = f"{day['date']} · {slots.label(slot)}" if slot else day["date"]
 
     return {
@@ -82,7 +81,7 @@ def build_card(day: dict, app_url: str) -> dict:
             "config": {"wide_screen_mode": True, "enable_forward": True},
             "header": {
                 "template": HEADER.get(slot, "orange"),
-                "title": {"tag": "plain_text", "content": f"{title} · 90 sec"},
+                "title": {"tag": "plain_text", "content": title},
             },
             "elements": [
                 {"tag": "div",
