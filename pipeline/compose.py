@@ -80,7 +80,12 @@ OFFTOPIC = ("box office", "box-office", "hollywood", "the film", "the movie",
 POLITICS = ("republican", "democrat", "trump", "biden", "harris", "election",
             "senate", "congress", "white house", "supreme court", "gop",
             "ukraine", "russia", "israel", "gaza", "hamas", "military strike",
-            "sanctions", "nato", "immigration", "abortion", "partisan")
+            "sanctions", "nato", "immigration", "abortion", "partisan",
+            # Stories that frame a normal technical finding as cross-border
+            # espionage. They read as geopolitics, not as technology, and the
+            # tone is wrong for a listening drill.
+            "espionage", "spy", "spying", "spied", "exfiltrat", "beijing",
+            "kremlin", "pentagon", "state-sponsored", "export control")
 
 # Buyer's-guide phrasing. Several of these in one body means the piece is a
 # recommendation list wearing a news headline.

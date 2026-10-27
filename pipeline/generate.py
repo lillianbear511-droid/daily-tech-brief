@@ -23,6 +23,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date as date_cls
@@ -106,14 +107,33 @@ def tts_say(text: str, out_mp3: Path, wpm: int = 148):
 
 
 def speak(text: str, out_mp3: Path, voice: str, rate: str, allow_fallback=True):
-    try:
-        tts_edge(text, out_mp3, voice, rate)
-        if out_mp3.exists() and out_mp3.stat().st_size > 1000:
-            return "edge"
-    except Exception as exc:                       # noqa: BLE001
-        print(f"    edge-tts failed ({exc.__class__.__name__}), falling back to say")
-    if not allow_fallback:
-        raise RuntimeError("TTS failed")
+    """Synthesise one line, retrying transient failures.
+
+    edge-tts hits a websocket endpoint that intermittently answers
+    NoAudioReceived when it is throttling — the same word usually works two
+    seconds later. One failure used to abort the whole build, so retry first
+    and only then decide the service is really down.
+    """
+    last = None
+    for attempt, wait in enumerate((0, 2.5, 6.0), start=1):
+        if wait:
+            time.sleep(wait)
+        try:
+            out_mp3.unlink(missing_ok=True)
+            tts_edge(text, out_mp3, voice, rate)
+            # NoAudioReceived can still leave a 0-byte or header-only file.
+            if out_mp3.exists() and out_mp3.stat().st_size > 1000:
+                return "edge" if attempt == 1 else f"edge*{attempt}"
+            last = f"empty audio ({out_mp3.stat().st_size if out_mp3.exists() else 0} bytes)"
+        except Exception as exc:                   # noqa: BLE001
+            last = f"{exc.__class__.__name__}: {exc}"
+        print(f"    TTS attempt {attempt} failed — {last}")
+
+    # macOS-only offline engine. On Linux runners `say` does not exist, so
+    # calling it turned a retryable hiccup into FileNotFoundError.
+    if not allow_fallback or sys.platform != "darwin" or not shutil.which("say"):
+        raise RuntimeError(f"edge-tts failed after 3 attempts — {last}")
+    print("    falling back to say")
     tts_say(text, out_mp3)
     return "say"
 
