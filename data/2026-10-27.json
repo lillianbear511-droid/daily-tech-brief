@@ -1,0 +1,182 @@
+{
+ "date": "2026-10-27",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+ "headline": "OpenAI turns coding tools into dots assistant",
+ "audio": "audio/2026-10-27-full.mp3",
+ "duration": 93.6,
+ "wpm": 123.7,
+ "script": "OpenAI released dots, an always-on personal assistant, at its developer day in late September. An always-on assistant keeps working in the background even when you are not asking it to. The startup Instinct became an overnight sensation, and Meta heavily marketed its assistant, Muse. The assistant is available in the ChatGPT desktop and mobile apps to Pro tier subscribers or higher. Plans start at one hundred dollars a month. Once connected to your calendar, email, computer and other tools, the agent tries to help you get work done. You could achieve much of dots' functionality with OpenAI's Codex app, its coding tool. But that requires more work and hand-holding. Making the technology feel intuitive meant repackaging the models' functionality into something more accessible. Even the name, a play on the negative space inside OpenAI's logo, is meant to feel ubiquitous. A persistent agent does not need prompting, which means more token usage for OpenAI. In testing, the assistant's ability to think ahead is apparent and often useful, but it is not quite there yet. It will flag calendar conflicts and upcoming deadlines, but not necessarily in the most timely fashion.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "OpenAI released dots, an always-on personal assistant, at its developer day in late September.",
+   "zh": "OpenAI在九月下旬的开发者日上发布了dots，一款始终在线的个人助理。",
+   "audio": "audio/2026-10-27-s1.mp3",
+   "duration": 8.2,
+   "focus": "link released dots: releasedots"
+  },
+  {
+   "id": 2,
+   "text": "An always-on assistant keeps working in the background even when you are not asking it to.",
+   "zh": "始终在线的助理即使在你没有要求时也会在后台持续工作。",
+   "audio": "audio/2026-10-27-s2.mp3",
+   "duration": 6.2,
+   "focus": "final -s in keeps"
+  },
+  {
+   "id": 3,
+   "text": "The startup Instinct became an overnight sensation, and Meta heavily marketed its assistant, Muse.",
+   "zh": "初创公司Instinct一夜爆红，Meta也大力推广其助理Muse。",
+   "audio": "audio/2026-10-27-s3.mp3",
+   "duration": 8.2,
+   "focus": "th in The and overnight"
+  },
+  {
+   "id": 4,
+   "text": "The assistant is available in the ChatGPT desktop and mobile apps to Pro tier subscribers or higher.",
+   "zh": "该助理在ChatGPT桌面端和移动应用中向Pro及以上订阅用户开放。",
+   "audio": "audio/2026-10-27-s4.mp3",
+   "duration": 8.3,
+   "focus": "v in available"
+  },
+  {
+   "id": 5,
+   "text": "Plans start at one hundred dollars a month.",
+   "zh": "套餐起价为每月一百美元。",
+   "audio": "audio/2026-10-27-s5.mp3",
+   "duration": 3.0,
+   "focus": "final -s in dollars"
+  },
+  {
+   "id": 6,
+   "text": "Once connected to your calendar, email, computer and other tools, the agent tries to help you get work done.",
+   "zh": "一旦连接到你的日历、邮件、电脑和其他工具，这个代理就会帮你完成工作。",
+   "audio": "audio/2026-10-27-s6.mp3",
+   "duration": 8.4,
+   "focus": "link Once it: Onceit"
+  },
+  {
+   "id": 7,
+   "text": "You could achieve much of dots' functionality with OpenAI's Codex app, its coding tool.",
+   "zh": "用OpenAI的编程工具Codex应用，你可以实现dots的大部分功能。",
+   "audio": "audio/2026-10-27-s7.mp3",
+   "duration": 6.6,
+   "focus": "final -s in dots'"
+  },
+  {
+   "id": 8,
+   "text": "But that requires more work and hand-holding.",
+   "zh": "但那需要更多的工作和手把手的指导。",
+   "audio": "audio/2026-10-27-s8.mp3",
+   "duration": 3.3,
+   "focus": "final -d in hand-holding"
+  },
+  {
+   "id": 9,
+   "text": "Making the technology feel intuitive meant repackaging the models' functionality into something more accessible.",
+   "zh": "让技术感觉直观，意味着把模型的功能重新包装成更易用的东西。",
+   "audio": "audio/2026-10-27-s9.mp3",
+   "duration": 8.5,
+   "focus": "th in something"
+  },
+  {
+   "id": 10,
+   "text": "Even the name, a play on the negative space inside OpenAI's logo, is meant to feel ubiquitous.",
+   "zh": "就连这个名字——玩的是OpenAI标志内部负空间的梗——也是为了让人感觉无处不在。",
+   "audio": "audio/2026-10-27-s10.mp3",
+   "duration": 8.2,
+   "focus": "v in negative"
+  },
+  {
+   "id": 11,
+   "text": "A persistent agent does not need prompting, which means more token usage for OpenAI.",
+   "zh": "持久代理不需要提示，这对OpenAI意味着更多的token用量。",
+   "audio": "audio/2026-10-27-s11.mp3",
+   "duration": 6.2,
+   "focus": "final -g in prompting"
+  },
+  {
+   "id": 12,
+   "text": "In testing, the assistant's ability to think ahead is apparent and often useful, but it is not quite there yet.",
+   "zh": "在测试中，该助理的前瞻思考能力很明显，也常常有用，但还不够完善。",
+   "audio": "audio/2026-10-27-s12.mp3",
+   "duration": 8.6,
+   "focus": "th in think"
+  },
+  {
+   "id": 13,
+   "text": "It will flag calendar conflicts and upcoming deadlines, but not necessarily in the most timely fashion.",
+   "zh": "它会标记日历冲突和即将到来的截止日期，但不一定最及时。",
+   "audio": "audio/2026-10-27-s13.mp3",
+   "duration": 7.8,
+   "focus": "final -s in conflicts"
+  }
+ ],
+ "terms": [
+  {
+   "word": "always-on",
+   "zh": "始终在线",
+   "note": "指助理在后台持续运行，不需要用户每次唤醒。"
+  },
+  {
+   "word": "agent",
+   "zh": "代理",
+   "note": "指能自主执行任务的AI程序，而不只是回答问题。"
+  },
+  {
+   "word": "token",
+   "zh": "词元",
+   "note": "模型处理文本的基本单位，用量越多成本越高。"
+  },
+  {
+   "word": "prompting",
+   "zh": "提示",
+   "note": "指用户给AI下达指令的动作。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 6,
+   "point": "Once connected 过去分词作状语",
+   "note": "连词加过去分词表示“一旦被连接”，中文习惯说“一旦连接”而容易漏掉被动含义。"
+  },
+  {
+   "line": 9,
+   "point": "动名词作主语 Making... meant",
+   "note": "动名词短语作主语时谓语用单数，中文没有这种主谓一致要求。"
+  },
+  {
+   "line": 11,
+   "point": "非限制性定语从句 which means",
+   "note": "which指代前面整句话，中文常拆成两句，容易误用that。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is dots?",
+   "options": [
+    "A coding tool for engineers",
+    "An always-on personal assistant",
+    "A calendar app"
+   ],
+   "answer": 1,
+   "explain": "第一句直接说明dots是始终在线的个人助理。"
+  },
+  {
+   "q": "What does a persistent agent mean for OpenAI?",
+   "options": [
+    "Less token usage",
+    "More token usage",
+    "No token usage"
+   ],
+   "answer": 1,
+   "explain": "第十一句说明持久代理意味着OpenAI的token用量更多。"
+  }
+ ],
+ "recall_prompts": [
+  "What is dots?",
+  "Who can use it?",
+  "What does it do?"
+ ]
+}
