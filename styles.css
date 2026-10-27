@@ -123,6 +123,12 @@ button{font-family:inherit;border:0;background:none;color:inherit;padding:0;curs
 }
 .row-item .t{font-size:12px;font-weight:600}
 .row-item .d{font-size:10px;color:var(--faint);margin-top:3px}
+/* same-day issue switcher: sits in the date line so it costs no vertical space */
+.swap{
+  font-size:10px;font-weight:600;color:#C4573A;background:var(--warm);
+  border:0;border-radius:20px;padding:4px 9px;line-height:1.2;white-space:nowrap;
+}
+.swap::after{content:' ›'}
 .badge{font-size:9px;font-weight:600;letter-spacing:.6px;padding:6px 7px;border-radius:7px;background:var(--warm);color:#C4573A}
 .badge.ok{background:#EAF3DE;color:#3B6D11}
 

@@ -2,11 +2,21 @@ name: daily brief
 
 on:
   schedule:
-    # 23:05 UTC = 07:05 Asia/Shanghai. GitHub cron is UTC and often runs late;
-    # 5 minutes of slack keeps the card near 7am rather than 7:20.
+    # Two issues a day. GitHub cron is UTC and often starts hours late, so each
+    # one keeps a few minutes of slack and the slot is decided by the cron that
+    # fired — not by the clock, which would drift across the boundary.
+    #
+    # 23:05 UTC = 07:05 Asia/Shanghai — morning issue
     - cron: "5 23 * * *"
+    # 12:05 UTC = 20:05 Asia/Shanghai — evening issue
+    - cron: "5 12 * * *"
   workflow_dispatch:        # manual run from the Actions tab
     inputs:
+      slot:
+        description: "Which issue to build"
+        type: choice
+        options: [auto, am, pm, none]
+        default: auto
       dry_run:
         description: "Test story picking + rewrite only (no audio, no commit, no push)"
         type: boolean
@@ -18,9 +28,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 23:05 UTC is 07:05 the NEXT day in Shanghai. Without this the runner's
-    # date.today() returns the UTC date, so the job would rebuild (or skip)
-    # yesterday's brief and mail it again every single morning.
+    # Without this the runner's date.today() returns the UTC date, so the
+    # 23:05 UTC job would rebuild yesterday's issue and mail it every morning.
     env:
       TZ: Asia/Shanghai
     steps:
@@ -30,6 +39,21 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+
+      # The cron that fired says which issue this is. A manual run defaults to
+      # "auto", which the scripts read off the local hour.
+      - name: Resolve issue slot
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            case "${{ github.event.schedule }}" in
+              "5 12 * * *") echo "slot=pm" >> "$GITHUB_OUTPUT" ;;
+              *)            echo "slot=am" >> "$GITHUB_OUTPUT" ;;
+            esac
+          else
+            echo "slot=${{ inputs.slot || 'auto' }}" >> "$GITHUB_OUTPUT"
+          fi
+          echo "Building slot: $(grep slot= "$GITHUB_OUTPUT" | cut -d= -f2)"
 
       - name: Install
         run: |
@@ -44,7 +68,7 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: |
           python -c "from datetime import date, datetime, timezone; print('runner sees today as', date.today().isoformat(), '| utc', datetime.now(timezone.utc).isoformat(timespec='minutes'), '| local', datetime.now().isoformat(timespec='minutes'))"
-          python pipeline/compose.py --dry-run
+          python pipeline/compose.py --dry-run --slot ${{ steps.slot.outputs.slot }}
 
       # edge-tts and ffmpeg are the two things that only fail on the runner,
       # never on a laptop. Say so before 7am rather than at 7am.
@@ -65,18 +89,22 @@ jobs:
           print("ffprobe ok")
           PY
 
-      # daily.py refuses to rebuild a day that already exists, so a re-run of
-      # this workflow never overwrites a brief you have already read.
+      # daily.py refuses to rebuild an issue that already exists, so a re-run of
+      # this workflow never overwrites a brief you have already read — and the
+      # morning job cannot touch the evening one.
       - name: Pick, rewrite, voices, data
         if: inputs.dry_run != true
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
-        run: python pipeline/daily.py --skip-push
+          SLOT: ${{ steps.slot.outputs.slot }}
+        run: python pipeline/daily.py --skip-push --slot "$SLOT"
 
       - name: Commit
         if: inputs.dry_run != true
+        env:
+          SLOT: ${{ steps.slot.outputs.slot }}
         run: |
           git config user.name  "daily-brief bot"
           git config user.email "bot@users.noreply.github.com"
@@ -84,7 +112,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing new"
           else
-            git commit -m "brief: $(date -u +%Y-%m-%d)"
+            git commit -m "brief: $(date +%Y-%m-%d) ${SLOT}"
             git push
           fi
 
@@ -93,7 +121,8 @@ jobs:
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-        run: python pipeline/push_feishu.py --strict-today
+          SLOT: ${{ steps.slot.outputs.slot }}
+        run: python pipeline/push_feishu.py --strict-today --slot "$SLOT"
 
       # A silent failure here means no brief and no explanation, so say so.
       - name: Report failure
@@ -101,4 +130,5 @@ jobs:
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-        run: python pipeline/push_feishu.py --alert "the 07:05 build failed, see the Actions log"
+          SLOT: ${{ steps.slot.outputs.slot }}
+        run: python pipeline/push_feishu.py --alert "the ${SLOT} issue did not build, see the Actions log"

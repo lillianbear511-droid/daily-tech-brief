@@ -37,6 +37,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import slots  # noqa: E402  (shares the am/pm slug rules with the other steps)
+
 FEEDS = [
     ("TechCrunch", "https://techcrunch.com/feed/"),
     ("The Verge", "https://www.theverge.com/rss/index.xml"),
@@ -537,9 +540,19 @@ def compose_script(story, body):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=date_cls.today().isoformat())
+    ap.add_argument("--slot", default="auto",
+                    help="am / pm / auto (pick by local hour) / none (single daily issue)")
     ap.add_argument("--url", default=None, help="force a specific article")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+
+    # Two issues share a date, so the file name carries the slot. used_urls()
+    # already scans every content/*.json, which means the evening run cannot
+    # pick the story the morning run used.
+    slot = slots.resolve(args.slot)
+    slug = slots.make(args.date, slot)
+    if slot:
+        print(f"Issue: {slug} ({slots.label(slot, english=True)})")
 
     if args.url:
         # Label a manual run by its real outlet, not by "MANUAL" — the source
@@ -576,6 +589,8 @@ def main():
 
     meta["source"] = story["source"].upper()
     meta["source_url"] = story["url"]
+    meta["date"] = args.date
+    meta["slot"] = slot
     meta.setdefault("recall_prompts", ["What changed?", "Why does it matter?", "Who is affected?"])
 
     if problems:
@@ -585,7 +600,7 @@ def main():
 
     if args.dry_run:
         print("\n" + "=" * 62)
-        print(meta["headline"], f"({words} words)\n")
+        print(f"[{slug}] {meta['headline']} ({words} words)\n")
         for i, line in enumerate(meta["lines"], 1):
             print(f"{i:2}. {line['en']}")
             print(f"    {line['zh'] or '(没有译文)'}")
@@ -598,7 +613,7 @@ def main():
         return
 
     CONTENT.mkdir(parents=True, exist_ok=True)
-    out = CONTENT / f"{args.date}.json"
+    out = CONTENT / f"{slug}.json"
     out.write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"\nWrote {out.relative_to(ROOT)} · {words} words · {len(meta['terms'])} terms "
           f"· {len(meta.get('grammar', []))} grammar notes")

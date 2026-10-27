@@ -1,7 +1,8 @@
 # Daily Tech Brief
 
-One tech story a day, rewritten into ~170 words of spoken American English, cut into
-sentences, and played back four ways: warm up → blind listen → shadow → recall.
+Two tech stories a day — a morning issue and an evening one — each rewritten into
+~170 words of spoken American English, cut into sentences, and played back four ways:
+warm up → blind listen → shadow → recall.
 
 Live: https://lillianbear511-droid.github.io/daily-tech-brief/
 
@@ -13,15 +14,20 @@ Recording needs HTTPS, which Pages provides. Over a LAN IP the mic is blocked by
 ```
 index.html  app.js  styles.css  sw.js  manifest.json   the app (no build step)
 icons/                                                 home screen icons
-data/<date>.json  data/index.json                      one practice unit per day
-audio/<date>-*.mp3                                     full audio + one file per sentence
-content/<date>.json                                    the rewritten script, before TTS
+data/<date>-am.json  data/<date>-pm.json               one practice unit per issue
+data/index.json                                        list of issues, newest first
+audio/<date>-am-s1.mp3  audio/<date>-am-full.mp3       full audio + one file per sentence
+content/<date>-am.json                                 the rewritten script, before TTS
+pipeline/slots.py      am/pm slug rules shared by every step
 pipeline/compose.py    RSS → pick a story → LLM rewrite
 pipeline/generate.py   script → sentences → TTS → data/*.json + audio/
 pipeline/push_feishu.py  one card to a Feishu group bot
 pipeline/daily.py      all three, in order
 pipeline/deploy.sh     publish to GitHub Pages
 ```
+
+A file named `data/2026-10-24.json` (no slot) is a day from before the evening issue
+existed. Everything still reads it: it just has one issue instead of two.
 
 ## Three things to fill in
 
@@ -49,28 +55,38 @@ Feishu webhook: group → Settings → Bots → Add bot → Custom bot → copy 
 ```
 python3 -m pip install -r requirements.txt
 
-python3 pipeline/daily.py                    # today: pick, rewrite, voice, push
-python3 pipeline/daily.py --skip-push        # no card, just build the day
+python3 pipeline/daily.py                    # this hour's issue: pick, rewrite, voice, push
+python3 pipeline/daily.py --slot pm          # force the evening issue
+python3 pipeline/daily.py --skip-push        # no card, just build it
 python3 pipeline/compose.py --dry-run        # see the script before committing to it
 bash pipeline/deploy.sh                      # publish
 ```
 
+`--slot` takes `am`, `pm`, `auto` (default — morning before 14:00, evening after) or
+`none` for a single daily issue.
+
 ## Daily job
 
-`.github/workflows/daily.yml` runs at 07:05 Asia/Shanghai: pick → rewrite → voice →
-commit → push card. Nothing runs on your machine.
+`.github/workflows/daily.yml` runs twice: 07:05 and 20:05 Asia/Shanghai. Each run picks
+a story the other issue did not use, rewrites it, records it, commits, and pushes one
+card. Nothing runs on your machine.
 
-GitHub cron is UTC and sometimes starts a few minutes late. If the card is landing too
-late or too early, edit the `cron:` line.
+The slot comes from the cron that fired, not from the clock, because GitHub cron is UTC
+and sometimes starts hours late. A manual run defaults to `auto`; pick `am` or `pm` in
+the dispatch form to be explicit.
+
+Re-running is safe: `daily.py` refuses to rebuild an issue that already exists, so the
+morning job can never overwrite the evening one.
 
 ## Known limits
 
-- **Audio lives in git.** 48 kbps mono, roughly 0.8 MB per day, ~290 MB per year. Fine
-  for a year; after that, prune `audio/` older than 90 days and keep `data/`.
+- **Audio lives in git.** 96 kbps mono, roughly 1.5 MB per issue, ~3 MB a day, ~1 GB a
+  year now that there are two. Fine for a year or so; after that, prune `audio/` older
+  than 90 days and keep `data/`.
 - **iOS kills recording when you leave the screen.** Not fixable. The app says so on the
   record screen.
 - **No pronunciation scoring.** You rate each sentence by ear — clear / close / retry.
   Real phoneme scoring needs Azure Pronunciation Assessment, which needs a paid key.
   Fake scores are worse than no scores.
-- **One story per day, chosen by rules.** `SKIP` and `BOOST` in `compose.py` steer it.
+- **One story per issue, chosen by rules.** `SKIP` and `BOOST` in `compose.py` steer it.
   If it keeps picking things you don't care about, edit those two tuples.

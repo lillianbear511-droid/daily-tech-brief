@@ -32,11 +32,23 @@ const S = {
   words: load('words', {}),
   needs: load('needs', []),
 };
-const dp = date => {
-  const p = (S.progress[date] ||= {});
+
+/* Two issues can share a date, so progress is keyed by issue id
+   (2026-10-27-pm) and not by date. Files written before the second issue
+   existed have no id/slot — for those the id falls back to the date, which is
+   exactly the key their progress was already stored under. */
+const SLOT_ZH = { am: '早间', pm: '晚间' };
+function normalize(d) {
+  d.id = d.id || d.date;
+  d.slot = d.slot || '';
+  return d;
+}
+const dp = id => {
+  const p = (S.progress[id] ||= {});
   p.listen ||= {}; p.shadow ||= {}; p.recall ||= {}; p.done ??= false;
   return p;
 };
+const sameDay = date => S.index.filter(x => x.date === date);
 
 /* ---------------------------------------------------------------- audio */
 const audio = new Audio();
@@ -186,11 +198,21 @@ function speak(text) {
 
 /* ---------------------------------------------------------------- streak */
 function streakInfo() {
+  // One bar per day, not per issue: a day with a morning and an evening brief
+  // is finished only when both are. Days that predate the second issue fall
+  // back to the bare-date key their progress was written under.
+  const idsByDate = {};
+  for (const x of S.index) (idsByDate[x.date] ||= []).push(x.id);
+
   const days = [];
   for (let i = 13; i >= 0; i--) {
     const d = new Date(); d.setDate(d.getDate() - i);
     const key = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-    days.push({ date: key, done: !!S.progress[key]?.done });
+    const ids = idsByDate[key] || [];
+    const done = ids.length
+      ? ids.every(id => !!S.progress[id]?.done)
+      : !!S.progress[key]?.done;
+    days.push({ date: key, done });
   }
   let n = 0;
   for (let i = days.length - 1; i >= 0; i--) { if (days[i].done) n++; else break; }
@@ -239,7 +261,7 @@ const hasNotes = d => !!(d.terms?.length || d.grammar?.length
   || d.sentences?.some(s => s.zh));
 
 function sToday() {
-  const d = S.day, p = dp(d.date);
+  const d = S.day, p = dp(d.id);
   const st = streakInfo();
   const rated = Object.keys(p.shadow || {}).length;
   const steps = [
@@ -252,12 +274,21 @@ function sToday() {
     : (rated < d.sentences.length ? `Shadow · sentence ${rated + 1} of ${d.sentences.length}`
     : (!p.recall?.done ? 'Finish with recall' : 'Practice again'));
 
+  // The other issue of the same day, if the evening brief has been built yet.
+  const sibs = sameDay(d.date).filter(x => x.id !== d.id);
+  const slotZh = SLOT_ZH[d.slot] || '';
+  const title = d.slot === 'am' ? 'Morning brief'
+    : (d.slot === 'pm' ? 'Evening brief' : "Today's brief");
+
   root.innerHTML = `
   <div class="screen">
     <div class="hd">
       <div class="stack gap-6">
-        <div class="eyebrow">${dateLabel(d.date)}</div>
-        <h1 class="h1">Today's brief</h1>
+        <div class="row" style="align-items:center;gap:8px;justify-content:flex-start">
+          <span class="eyebrow">${dateLabel(d.date)}${slotZh ? ` · ${slotZh}` : ''}</span>
+          ${sibs.length ? `<button class="swap" data-sib="${sibs[0].id}">看${SLOT_ZH[sibs[0].slot] || '另一期'}</button>` : ''}
+        </div>
+        <h1 class="h1">${title}</h1>
       </div>
       <div class="chip"><i class="dot"></i>${st.count > 0 ? `${st.count} DAY${st.count > 1 ? 'S' : ''}` : 'DAY 1'}</div>
     </div>
@@ -341,6 +372,8 @@ function sToday() {
   document.querySelectorAll('#terms .tchip').forEach(b => b.onclick = () => speak(b.dataset.w));
   document.getElementById('recap')?.addEventListener('click', () => go('progress'));
   document.getElementById('notes')?.addEventListener('click', () => go('notes'));
+  document.querySelector('[data-sib]')?.addEventListener('click',
+    e => switchIssue(e.currentTarget.dataset.sib));
 
   document.getElementById('start').onclick = () => {
     if (!p.listen?.answered) go('listen');
@@ -352,7 +385,7 @@ function sToday() {
 
 /* -------- LISTEN -------- */
 function sListen() {
-  const d = S.day, p = dp(d.date);
+  const d = S.day, p = dp(d.id);
   const plays = p.listen?.plays || 0;
   const answered = !!p.listen?.answered;
   const picked = p.listen?.picks || [];
@@ -401,7 +434,7 @@ function sListen() {
     }
     const started = togglePlay(d.audio, playBtn);
     if (started && !answered) {
-      dp(d.date).listen.plays = (p.listen.plays || 0) + 1;
+      dp(d.id).listen.plays = (p.listen.plays || 0) + 1;
       save('progress', S.progress);
     }
   };
@@ -479,7 +512,7 @@ function sListen() {
     if (picks[qi] < 0) return toast('Pick an answer first');
     if (qi < total - 1) { qi++; renderOne(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
     const correct = d.questions.filter((q, i) => picks[i] === q.answer).length;
-    dp(d.date).listen = { ...p.listen, answered: true, picks, correct, plays: p.listen.plays || 0 };
+    dp(d.id).listen = { ...p.listen, answered: true, picks, correct, plays: p.listen.plays || 0 };
     save('progress', S.progress);
     buzz(12);
     renderReview();
@@ -491,7 +524,7 @@ function sListen() {
 
 /* -------- SHADOW -------- */
 function sShadow(arg) {
-  const d = S.day, p = dp(d.date);
+  const d = S.day, p = dp(d.id);
   const idx = Math.min(Math.max(1, +arg || 1), d.sentences.length);
   const s = d.sentences[idx - 1];
   const rating = p.shadow?.[s.id];
@@ -625,16 +658,16 @@ function sShadow(arg) {
     document.querySelectorAll('.rate').forEach(b => {
       b.onclick = () => {
         const r = b.dataset.r;
-        dp(d.date).shadow[s.id] = r;
+        dp(d.id).shadow[s.id] = r;
         save('progress', S.progress);
         if (r === 'r') {
-          if (!S.needs.some(n => n.date === d.date && n.sid === s.id)) {
-            S.needs.unshift({ date: d.date, sid: s.id, text: s.text.slice(0, 70), focus: s.focus || '' });
+          if (!S.needs.some(n => (n.id || n.date) === d.id && n.sid === s.id)) {
+            S.needs.unshift({ id: d.id, date: d.date, sid: s.id, text: s.text.slice(0, 70), focus: s.focus || '' });
             S.needs = S.needs.slice(0, 40);
             save('needs', S.needs);
           }
         } else {
-          S.needs = S.needs.filter(n => !(n.date === d.date && n.sid === s.id));
+          S.needs = S.needs.filter(n => !((n.id || n.date) === d.id && n.sid === s.id));
           save('needs', S.needs);
         }
         document.querySelectorAll('.rate').forEach(x => x.classList.remove('sel'));
@@ -666,7 +699,7 @@ function sShadow(arg) {
   document.getElementById('next').onclick = () => {
     if (idx === d.sentences.length) {
       addWords(d);
-      dp(d.date).done = true;
+      dp(d.id).done = true;
       save('progress', S.progress);
       go('recall');
       toast('Day marked complete');
@@ -678,7 +711,7 @@ function sShadow(arg) {
 
 /* -------- RECALL -------- */
 function sRecall() {
-  const d = S.day, p = dp(d.date);
+  const d = S.day, p = dp(d.id);
   root.innerHTML = `
   <div class="screen solo">
     <div class="topbar">
@@ -753,8 +786,8 @@ function sRecall() {
           </div>`;
         const u = rec.url;
         document.getElementById('ownPlay').onclick = () => new Audio(u).play();
-        dp(d.date).recall = { done: true, secs: Math.round(secs) };
-        dp(d.date).done = true;
+        dp(d.id).recall = { done: true, secs: Math.round(secs) };
+        dp(d.id).done = true;
         save('progress', S.progress);
         addWords(d);
         const fin = document.getElementById('finish');
@@ -765,7 +798,7 @@ function sRecall() {
   };
 
   document.getElementById('finish').onclick = () => {
-    dp(d.date).done = true;
+    dp(d.id).done = true;
     save('progress', S.progress);
     addWords(d);
     buzz(14);
@@ -783,7 +816,7 @@ function sProgress() {
   const retry = all.filter(r => r === 'r').length;
   const total = all.length || 1;
 
-  const todayP = S.progress[S.day?.date || todayISO()] || {};
+  const todayP = S.progress[S.day?.id || todayISO()] || {};
   const startedToday = !!todayP.listen?.answered || Object.keys(todayP.shadow || {}).length > 0;
   const headline = st.count > 0 ? `${st.count} day${st.count > 1 ? 's' : ''} in`
     : (startedToday ? 'Finish day one' : 'Day one starts now');
@@ -831,14 +864,16 @@ function sProgress() {
     </div>
 
     <div class="stack gap-10" style="margin-top:20px">
-      <div class="eyebrow">Days practiced</div>
-      ${S.index.length ? `<div class="rows">${S.index.slice(0, 6).map(d => {
-        const done = S.progress[d.date]?.done;
-        return `<div class="row-item">
-          <div><div class="t">${d.headline}</div><div class="d">${d.date} · ${fmt(d.duration)} · ${d.sentences} sentences</div></div>
+      <div class="eyebrow">Issues</div>
+      ${S.index.length ? `<div class="rows">${S.index.slice(0, 8).map(d => {
+        const done = S.progress[d.id]?.done;
+        const tag = SLOT_ZH[d.slot];
+        return `<button class="row-item" style="width:100%" data-open="${d.id}">
+          <div style="flex:1;text-align:left"><div class="t">${d.headline}</div>
+          <div class="d">${d.date}${tag ? ` · ${tag}` : ''} · ${fmt(d.duration)} · ${d.sentences} sentences</div></div>
           <span class="badge ${done ? 'ok' : ''}">${done ? 'DONE' : 'OPEN'}</span>
-        </div>`;
-      }).join('')}</div>` : `<div class="empty">No days yet.</div>`}
+        </button>`;
+      }).join('')}</div>` : `<div class="empty">No issues yet.</div>`}
     </div>
 
     <div class="row-item" style="margin-top:22px" id="toWords">
@@ -856,6 +891,8 @@ function sProgress() {
   </div>`;
 
   document.getElementById('toWords').onclick = () => go('words');
+  document.querySelectorAll('[data-open]').forEach(b =>
+    b.onclick = () => switchIssue(b.dataset.open, 'today'));
 }
 /* -------- WORDS -------- */
 function sWords() {
@@ -970,23 +1007,75 @@ function sNotes() {
   </div>`;
 }
 
-/* ---------------------------------------------------------------- boot */
-async function boot() {
-  try {
-    const idx = await fetch('data/index.json', { cache: 'no-store' }).then(r => r.json());
-    S.index = idx.days || [];
-  } catch { S.index = []; }
+/* Progress used to be keyed by date. Now that a day can hold two issues it is
+   keyed by issue id, so any progress recorded before this change gets moved
+   onto that day's morning issue once — otherwise today would look untouched. */
+function migrateProgress() {
+  let moved = 0;
+  for (const d of S.index) {
+    if (d.slot !== 'am') continue;
+    const legacy = S.progress[d.date];
+    if (legacy && !S.progress[d.id]) {
+      S.progress[d.id] = legacy;
+      delete S.progress[d.date];
+      moved++;
+    }
+  }
+  if (moved) save('progress', S.progress);
+}
 
-  const q = new URLSearchParams(location.search).get('d');
-  const target = q || S.index[0]?.date || todayISO();
+/* ---------------------------------------------------------------- boot */
+const fetchIssue = id => fetch(`data/${id}.json`, { cache: 'no-store' })
+  .then(r => { if (!r.ok) throw 0; return r.json(); });
+
+/* Swap between the two issues of one day without leaving the app. The URL
+   keeps ?d= pointed at whatever is on screen, so a reload or a shared link
+   opens the issue being read rather than the newest one. */
+async function switchIssue(id, then) {
+  if (!id || id === S.day?.id) { if (then) go(then); return; }
   try {
-    S.day = await fetch(`data/${target}.json`).then(r => { if (!r.ok) throw 0; return r.json(); });
+    S.day = normalize(await fetchIssue(id));
   } catch {
-    root.innerHTML = `<div class="empty">No brief for ${target} yet.<br><br>Run <code>python3 pipeline/generate.py --date ${target}</code> and reload.</div>`;
+    toast('That issue is not available');
     return;
   }
   document.title = S.day.headline;
-  dp(S.day.date);
+  const url = new URL(location.href);
+  url.searchParams.set('d', S.day.id);
+  history.replaceState(null, '', url);
+  dp(S.day.id);
+  if (then) go(then); else route();
+  prefetchAudio(S.day);
+}
+
+async function boot() {
+  try {
+    const idx = await fetch('data/index.json', { cache: 'no-store' }).then(r => r.json());
+    S.index = (idx.days || []).map(normalize);
+  } catch { S.index = []; }
+  migrateProgress();
+
+  const q = new URLSearchParams(location.search).get('d');
+  const fallback = S.index[0]?.id || todayISO();
+  let target = q || fallback;
+  let loaded = null;
+  try {
+    loaded = await fetchIssue(target);
+  } catch {
+    // A card for an issue that was never published (or a stale link) should
+    // still land somewhere readable rather than on a dead page.
+    if (q && fallback !== q) {
+      try { target = fallback; loaded = await fetchIssue(target); } catch { /* stay */ }
+    }
+  }
+  if (!loaded) {
+    root.innerHTML = `<div class="empty">No brief for ${target} yet.<br><br>Run <code>python3 pipeline/daily.py</code> and reload.</div>`;
+    return;
+  }
+
+  S.day = normalize(loaded);
+  document.title = S.day.headline;
+  dp(S.day.id);
   bindBack();
   route();
   prefetchAudio(S.day);

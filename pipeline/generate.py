@@ -35,6 +35,9 @@ CONTENT = ROOT / "content"
 DATA = ROOT / "data"
 AUDIO = ROOT / "audio"
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import slots  # noqa: E402  (am/pm slugs shared with compose + push)
+
 DEFAULT_VOICE = "en-US-AndrewNeural"
 DEFAULT_RATE = "-18%"         # slower than news pace, lands near 130 wpm
 FALLBACK_SAY_VOICE = "Samantha"
@@ -205,8 +208,10 @@ def join_wavs(wavs, out_mp3: Path):
 
 # ---------------------------------------------------------------- build
 
-def build(day: str, voice: str, rate: str) -> dict:
-    src = CONTENT / f"{day}.json"
+def build(slug: str, voice: str, rate: str) -> dict:
+    """slug is 'YYYY-MM-DD-am' / '-pm', or a bare date for a legacy day."""
+    date_part, slot = slots.parse(slug)
+    src = CONTENT / f"{slug}.json"
     if not src.exists():
         sys.exit(f"missing {src}\nCreate the article script first, then re-run.")
 
@@ -218,7 +223,7 @@ def build(day: str, voice: str, rate: str) -> dict:
     AUDIO.mkdir(parents=True, exist_ok=True)
     DATA.mkdir(parents=True, exist_ok=True)
 
-    print(f"[{day}] {len(lines)} sentences, {words} words")
+    print(f"[{slug}] {len(lines)} sentences, {words} words")
     rawdir = Path(tempfile.mkdtemp(prefix="dtb-say-"))
     seg_meta, wavs = [], []
     try:
@@ -228,7 +233,7 @@ def build(day: str, voice: str, rate: str) -> dict:
             wav = rawdir / f"s{i}.wav"
             _to_wav(raw, wav)              # 44.1 kHz, faded, clipped clean
             wavs.append(wav)
-            out = AUDIO / f"{day}-s{i}.mp3"
+            out = AUDIO / f"{slug}-s{i}.mp3"
             _wav_to_mp3(wav, out)
             dur = duration_seconds(out)
             seg_meta.append({
@@ -242,7 +247,7 @@ def build(day: str, voice: str, rate: str) -> dict:
             print(f"   s{i:<2} {dur:>5.1f}s  {engine:<4}  {line['en'][:52]}")
         # Join while the PCM clips still exist — they are the source of truth,
         # the per-sentence mp3s are just what the phone streams.
-        full = AUDIO / f"{day}-full.mp3"
+        full = AUDIO / f"{slug}-full.mp3"
         join_wavs(wavs, full)
     finally:
         shutil.rmtree(rawdir, ignore_errors=True)
@@ -250,7 +255,9 @@ def build(day: str, voice: str, rate: str) -> dict:
     total = duration_seconds(full)
 
     payload = {
-        "date": day,
+        "id": slug,
+        "date": date_part,
+        "slot": slot,
         "source": meta["source"],
         "source_url": meta.get("source_url", ""),
         "headline": meta["headline"],
@@ -264,11 +271,11 @@ def build(day: str, voice: str, rate: str) -> dict:
         "questions": meta.get("questions", []),
         "recall_prompts": meta.get("recall_prompts", ["What changed?", "Why does it matter?", "Who is affected?"]),
     }
-    (DATA / f"{day}.json").write_text(
+    (DATA / f"{slug}.json").write_text(
         json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
 
     rebuild_index()
-    print(f"[{day}] done · {total:.0f}s full audio · {payload['wpm']} wpm")
+    print(f"[{slug}] done · {total:.0f}s full audio · {payload['wpm']} wpm")
     return payload
 
 
@@ -309,18 +316,29 @@ def rebuild_index():
             d = json.loads(f.read_text(encoding="utf-8"))
         except Exception:                          # noqa: BLE001
             continue
+        # Files written before the second daily issue existed have no id/slot,
+        # and their name is just the date — accept them as a one-issue day.
+        slug = d.get("id") or f.stem
+        try:
+            date_part, slot = slots.parse(slug)
+        except ValueError:
+            print(f"  ! skipping {f.name}: not a brief file")
+            continue
         days.append({
-            "date": d["date"],
+            "id": slug,
+            "date": date_part,
+            "slot": slot,
             "headline": d["headline"],
             "source": d["source"],
             "duration": d.get("duration", 0),
             "sentences": len(d.get("sentences", [])),
         })
-    days.sort(key=lambda x: x["date"], reverse=True)
+    # Newest first; inside one day the evening issue is the later one.
+    days.sort(key=lambda x: (x["date"], x["slot"]), reverse=True)
     (DATA / "index.json").write_text(
         json.dumps({"updated": datetime.now().isoformat(timespec="seconds"),
                     "days": days}, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"index.json · {len(days)} day(s)")
+    print(f"index.json · {len(days)} issue(s)")
 
 
 # ---------------------------------------------------------------- feed helper
@@ -351,7 +369,10 @@ def list_feeds():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", default=None, help="YYYY-MM-DD (default: today)")
+    ap.add_argument("--date", default=None,
+                    help="YYYY-MM-DD, or a full slug like 2026-10-27-pm")
+    ap.add_argument("--slot", default="auto",
+                    help="am / pm / auto (pick by local hour) / none (single daily issue)")
     ap.add_argument("--voice", default=DEFAULT_VOICE)
     ap.add_argument("--rate", default=DEFAULT_RATE, help="e.g. -8%% or +0%%")
     ap.add_argument("--list-feeds", action="store_true")
@@ -365,8 +386,12 @@ def main():
         rebuild_index()
         return
 
-    day = args.date or date_cls.today().isoformat()
-    build(day, args.voice, args.rate)
+    raw = args.date or date_cls.today().isoformat()
+    if re.search(r"-(?:am|pm)$", raw):        # already a slug, do not double it
+        slug = raw
+    else:
+        slug = slots.make(raw, slots.resolve(args.slot))
+    build(slug, args.voice, args.rate)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,184 @@
+{
+ "id": "2026-10-27-pm",
+ "date": "2026-10-27",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+ "headline": "OpenAI Reports Three Science Discoveries",
+ "audio": "audio/2026-10-27-pm-full.mp3",
+ "duration": 87.4,
+ "wpm": 111.9,
+ "script": "OpenAI announced three major discoveries in math, computer science, and physics. This comes less than a month after it released hundreds of math manuscripts. The company says those papers contained solutions to long-standing math questions. This time, external experts called shepherds guided the computer science and physics results. For the math problem, OpenAI says these experts advised releasing the AI output directly. The results were added to GitHub today. One result is a proof about local smoothing for the Euclidean wave equation. It uses an auxiliary partial differential equation to establish Sogge's local smoothing. It also yields the Kakeya maximal and dimension conjectures and Stein's spherical restriction estimates. Another result claims the Exponential Time Hypothesis is false. The paper gives a deterministic algorithm that exactly counts satisfying assignments of fixed-width CNF formulas. An independent group led by Russell Impagliazzo, Ramamohan Paturi, and Ryan Williams will examine and explain the proof. At the group's request, OpenAI is making the materials public immediately.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "OpenAI announced three major discoveries in math, computer science, and physics.",
+   "zh": "OpenAI宣布在数学、计算机科学和物理学领域取得三项重大发现。",
+   "audio": "audio/2026-10-27-pm-s1.mp3",
+   "duration": 6.7,
+   "focus": "final -s in discoveries"
+  },
+  {
+   "id": 2,
+   "text": "This comes less than a month after it released hundreds of math manuscripts.",
+   "zh": "这距离它发布数百份数学手稿还不到一个月。",
+   "audio": "audio/2026-10-27-pm-s2.mp3",
+   "duration": 5.2,
+   "focus": "link less than"
+  },
+  {
+   "id": 3,
+   "text": "The company says those papers contained solutions to long-standing math questions.",
+   "zh": "该公司称这些论文包含了对长期存在的数学问题的解答。",
+   "audio": "audio/2026-10-27-pm-s3.mp3",
+   "duration": 6.1,
+   "focus": "th in those"
+  },
+  {
+   "id": 4,
+   "text": "This time, external experts called shepherds guided the computer science and physics results.",
+   "zh": "这一次，被称为“牧羊人”的外部专家指导了计算机科学和物理学的研究结果。",
+   "audio": "audio/2026-10-27-pm-s4.mp3",
+   "duration": 6.6,
+   "focus": "final -s in experts"
+  },
+  {
+   "id": 5,
+   "text": "For the math problem, OpenAI says these experts advised releasing the AI output directly.",
+   "zh": "对于数学问题，OpenAI表示这些专家建议直接发布人工智能的输出结果。",
+   "audio": "audio/2026-10-27-pm-s5.mp3",
+   "duration": 7.3,
+   "focus": "v in advised"
+  },
+  {
+   "id": 6,
+   "text": "The results were added to GitHub today.",
+   "zh": "这些结果今天被添加到了GitHub上。",
+   "audio": "audio/2026-10-27-pm-s6.mp3",
+   "duration": 2.8,
+   "focus": "link added to"
+  },
+  {
+   "id": 7,
+   "text": "One result is a proof about local smoothing for the Euclidean wave equation.",
+   "zh": "其中一项成果是关于欧几里得波动方程局部平滑性的证明。",
+   "audio": "audio/2026-10-27-pm-s7.mp3",
+   "duration": 5.8,
+   "focus": "th in Euclidean"
+  },
+  {
+   "id": 8,
+   "text": "It uses an auxiliary partial differential equation to establish Sogge's local smoothing.",
+   "zh": "它使用一个辅助偏微分方程来建立Sogge的局部平滑性。",
+   "audio": "audio/2026-10-27-pm-s8.mp3",
+   "duration": 6.6,
+   "focus": "link uses an"
+  },
+  {
+   "id": 9,
+   "text": "It also yields the Kakeya maximal and dimension conjectures and Stein's spherical restriction estimates.",
+   "zh": "它还推导出了Kakeya极大猜想和维数猜想以及Stein的球面限制估计。",
+   "audio": "audio/2026-10-27-pm-s9.mp3",
+   "duration": 8.0,
+   "focus": "final -s in estimates"
+  },
+  {
+   "id": 10,
+   "text": "Another result claims the Exponential Time Hypothesis is false.",
+   "zh": "另一项成果声称指数时间假说是错误的。",
+   "audio": "audio/2026-10-27-pm-s10.mp3",
+   "duration": 5.5,
+   "focus": "th in Hypothesis"
+  },
+  {
+   "id": 11,
+   "text": "The paper gives a deterministic algorithm that exactly counts satisfying assignments of fixed-width CNF formulas.",
+   "zh": "该论文给出了一种确定性算法，可以精确计算固定宽度CNF公式的可满足赋值。",
+   "audio": "audio/2026-10-27-pm-s11.mp3",
+   "duration": 8.8,
+   "focus": "link counts satisfying"
+  },
+  {
+   "id": 12,
+   "text": "An independent group led by Russell Impagliazzo, Ramamohan Paturi, and Ryan Williams will examine and explain the proof.",
+   "zh": "由Russell Impagliazzo、Ramamohan Paturi和Ryan Williams领导的一个独立小组将审查并解释该证明。",
+   "audio": "audio/2026-10-27-pm-s12.mp3",
+   "duration": 9.5,
+   "focus": "link led by"
+  },
+  {
+   "id": 13,
+   "text": "At the group's request, OpenAI is making the materials public immediately.",
+   "zh": "应小组的要求，OpenAI正在立即公开这些材料。",
+   "audio": "audio/2026-10-27-pm-s13.mp3",
+   "duration": 5.8,
+   "focus": "link at the"
+  }
+ ],
+ "terms": [
+  {
+   "word": "shepherds",
+   "zh": "牧羊人",
+   "note": "这里指指导研究结果的外部专家。"
+  },
+  {
+   "word": "auxiliary partial differential equation",
+   "zh": "辅助偏微分方程",
+   "note": "一种帮助证明主要结果的辅助数学方程。"
+  },
+  {
+   "word": "deterministic algorithm",
+   "zh": "确定性算法",
+   "note": "每一步都唯一确定、不会随机选择的算法。"
+  },
+  {
+   "word": "Exponential Time Hypothesis",
+   "zh": "指数时间假说",
+   "note": "计算机科学中关于某些问题无法在指数时间以内解决的猜想。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "less than a month after",
+   "note": "用“less than”修饰时间，中文常说“不到一个月”，注意不要漏掉after。"
+  },
+  {
+   "line": 4,
+   "point": "called shepherds (过去分词短语作定语)",
+   "note": "过去分词短语放在名词后修饰，中文习惯前置翻译为“被称为……的”。"
+  },
+  {
+   "line": 11,
+   "point": "that exactly counts (定语从句)",
+   "note": "定语从句修饰algorithm，中文常把从句放在名词前，注意that不能省略。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How many major discoveries did OpenAI announce?",
+   "options": [
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "answer": 1,
+   "explain": "第一句提到three major discoveries。"
+  },
+  {
+   "q": "Who will examine and explain the proof about the Exponential Time Hypothesis?",
+   "options": [
+    "OpenAI researchers",
+    "External shepherds",
+    "An independent group led by three scientists"
+   ],
+   "answer": 2,
+   "explain": "倒数第二句提到由Russell Impagliazzo等人领导的独立小组将审查并解释该证明。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
