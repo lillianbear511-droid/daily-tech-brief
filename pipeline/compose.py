@@ -326,6 +326,10 @@ Every sentence is one entry in "lines", and carries three fields:
   names, products and market terms in their normal Chinese form (S&P 500 ->
   标普500). Do not invent content that is not in the English. Exactly one
   sentence in, one sentence out — never merge two lines or split one.
+  Use one rendering per term for the whole script. In particular: agent is
+  智能体 (never 代理, which reads as "proxy server"), always-on / persistent is
+  常驻, prompting is 提示词. A reader comparing the English and the Chinese
+  should see the same word translated the same way every time.
 - focus: one short pronunciation tip (max 12 words), or "" if the sentence is
   plain. Only point at a feature the spelling reveals: the th sound, a final
   consonant that Chinese speakers drop, v versus w, l versus r, the -ed or -s
