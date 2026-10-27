@@ -28,7 +28,7 @@
   },
   {
    "en": "Once connected to your calendar, email, computer and other tools, the agent tries to help you get work done.",
-   "zh": "一旦连接到你的日历、邮件、电脑和其他工具，这个代理就会帮你完成工作。",
+   "zh": "一旦连接到你的日历、邮件、电脑等工具，这个智能体就会试着帮你把工作做完。",
    "focus": "link Once it: Onceit"
   },
   {
@@ -53,7 +53,7 @@
   },
   {
    "en": "A persistent agent does not need prompting, which means more token usage for OpenAI.",
-   "zh": "持久代理不需要提示，这对OpenAI意味着更多的token用量。",
+   "zh": "常驻的智能体不需要你每次输入提示词，这意味着OpenAI的token消耗会更多。",
    "focus": "final -g in prompting"
   },
   {
