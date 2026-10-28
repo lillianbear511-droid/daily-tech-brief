@@ -1,0 +1,146 @@
+{
+ "headline": "OpenAI models refute a core computer science assumption",
+ "lines": [
+  {
+   "en": "OpenAI released solutions to three major math problems that have long puzzled researchers.",
+   "zh": "OpenAI 公布了三道长期困扰研究人员的重大数学难题的解答。",
+   "focus": "final -s in problems, researchers"
+  },
+  {
+   "en": "One solution was a surprise rejection of the Exponential Time Hypothesis, a lasting assumption in computer science.",
+   "zh": "其中一项解答出人意料地推翻了指数时间假说，这是计算机科学中一个长期存在的假设。",
+   "focus": "th in Hypothesis, three"
+  },
+  {
+   "en": "That assumption shapes how we understand what is hard to compute.",
+   "zh": "这个假设影响着我们如何理解哪些问题难以计算。",
+   "focus": "link hard to compute"
+  },
+  {
+   "en": "Scientific communities reacted with both excitement and dismay.",
+   "zh": "科学界的反应既有兴奋，也有不安。",
+   "focus": "final -ed in reacted, excited"
+  },
+  {
+   "en": "Anthropic mathematician Levent Alpöge suggested OpenAI based its solutions on earlier work.",
+   "zh": "Anthropic 的数学家莱文特·阿尔珀格认为，OpenAI 的解答建立在已有工作的基础上。",
+   "focus": "final -d in based, suggested"
+  },
+  {
+   "en": "Hours later, Anthropic released its own refutation of the hypothesis.",
+   "zh": "几小时后，Anthropic 也发布了自己对该假说的反驳。",
+   "focus": "th in Anthropic, hypothesis"
+  },
+  {
+   "en": "OpenAI handled each of the three fields differently this time.",
+   "zh": "这一次，OpenAI 对三个领域分别采取了不同的处理方式。",
+   "focus": "th in three, differently"
+  },
+  {
+   "en": "Mathematicians got the work on GitHub, while computer scientists formed a working group.",
+   "zh": "数学家拿到的是放在 GitHub 上的成果，而计算机科学家则成立了一个工作组。",
+   "focus": "link got the"
+  },
+  {
+   "en": "That group asked for public proofs and for OpenAI to fund a conference.",
+   "zh": "该工作组要求公开证明，并要求 OpenAI 资助一场会议。",
+   "focus": "final -s in proofs, asks"
+  },
+  {
+   "en": "Physicists formed a group to decide how their result will be released.",
+   "zh": "物理学家也成立了一个小组，来决定他们的结果将如何发布。",
+   "focus": "final -s in physicists, results"
+  },
+  {
+   "en": "MIT professor Ryan Williams is organizing his field's response to the finding.",
+   "zh": "麻省理工学院教授瑞安·威廉姆斯正在组织他所在领域对这项发现的回应。",
+   "focus": "v versus w in Williams"
+  },
+  {
+   "en": "He had criticized OpenAI's earlier proof release as a denial-of-service attack on mathematicians.",
+   "zh": "他曾批评 OpenAI 早先发布证明的做法是对数学家的拒绝服务攻击。",
+   "focus": "final -ed in criticized, released"
+  },
+  {
+   "en": "Still, he agreed to work with the labs to guide ideas vital to the field.",
+   "zh": "尽管如此，他还是同意与这些实验室合作，引导对该领域至关重要的想法。",
+   "focus": "link agreed to"
+  }
+ ],
+ "terms": [
+  {
+   "word": "Exponential Time Hypothesis",
+   "zh": "指数时间假说",
+   "note": "计算机科学中关于某些问题无法快速求解的假设。"
+  },
+  {
+   "word": "refutation",
+   "zh": "反驳",
+   "note": "用论证或证据证明某个说法不成立。"
+  },
+  {
+   "word": "computational complexity",
+   "zh": "计算复杂性",
+   "note": "研究解决问题需要多少计算资源的领域。"
+  },
+  {
+   "word": "P versus NP",
+   "zh": "P与NP问题",
+   "note": "问的是容易验证答案的问题是否也容易求解。"
+  },
+  {
+   "word": "cryptographic systems",
+   "zh": "密码系统",
+   "note": "依靠破解难度来保护信息的加密技术。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "同位语 a lasting assumption",
+   "note": "用名词短语解释前面的假说，中文常另起一句，容易丢掉这层解释关系。"
+  },
+  {
+   "line": 5,
+   "point": "过去分词 based ... on",
+   "note": "base A on B 的被动形式，中文说“基于”，容易漏掉 be 动词。"
+  },
+  {
+   "line": 12,
+   "point": "过去完成时 had criticized",
+   "note": "表示在另一个过去动作之前已发生，中文用“曾”表达，容易误用一般过去时。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did OpenAI release?",
+   "options": [
+    "Solutions to three math problems",
+    "A new cryptography standard",
+    "A conference schedule"
+   ],
+   "answer": 0,
+   "explain": "答案在第一条。"
+  },
+  {
+   "q": "What did the computer scientists' group ask for?",
+   "options": [
+    "Private access only",
+    "Public proofs and a funded conference",
+    "A ban on AI proofs"
+   ],
+   "answer": 1,
+   "explain": "答案在第九条。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "OpenAI released solutions to three major math problems that have long puzzled researchers. One solution was a surprise rejection of the Exponential Time Hypothesis, a lasting assumption in computer science. That assumption shapes how we understand what is hard to compute. Scientific communities reacted with both excitement and dismay. Anthropic mathematician Levent Alpöge suggested OpenAI based its solutions on earlier work. Hours later, Anthropic released its own refutation of the hypothesis. OpenAI handled each of the three fields differently this time. Mathematicians got the work on GitHub, while computer scientists formed a working group. That group asked for public proofs and for OpenAI to fund a conference. Physicists formed a group to decide how their result will be released. MIT professor Ryan Williams is organizing his field's response to the finding. He had criticized OpenAI's earlier proof release as a denial-of-service attack on mathematicians. Still, he agreed to work with the labs to guide ideas vital to the field.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+ "date": "2026-10-28",
+ "slot": "am"
+}
