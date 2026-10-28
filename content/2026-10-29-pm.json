@@ -1,0 +1,141 @@
+{
+ "headline": "Nvidia releases free open transcription model",
+ "lines": [
+  {
+   "en": "Nvidia released a free, open-weight transcription model on Wednesday.",
+   "zh": "英伟达周三发布了一款免费的开源权重转写模型。",
+   "focus": "final -d in released"
+  },
+  {
+   "en": "It is called Nemotron 3.5 Transcribe and handles audio in up to forty languages.",
+   "zh": "它叫 Nemotron 3.5 Transcribe，能处理多达四十种语言的音频。",
+   "focus": ""
+  },
+  {
+   "en": "Open-weight means the model's internal settings are publicly available to download.",
+   "zh": "开源权重指模型的内部参数可以公开下载。",
+   "focus": "v in available"
+  },
+  {
+   "en": "Nvidia also released version two of Granary, its open source speech dataset.",
+   "zh": "英伟达还发布了其开源语音数据集 Granary 的第二版。",
+   "focus": "final -d in released"
+  },
+  {
+   "en": "The model can translate thirty-one languages to and from English.",
+   "zh": "该模型可以在三十一种语言与英语之间互译。",
+   "focus": "th in thirty"
+  },
+  {
+   "en": "It can handle recordings up to an hour long and tell up to eight speakers apart.",
+   "zh": "它能处理长达一小时的录音，并区分多达八位说话人。",
+   "focus": "link up to"
+  },
+  {
+   "en": "Nvidia claims it beats rivals on benchmarks, including Hugging Face's Open ASR Leaderboard.",
+   "zh": "英伟达称它在基准测试中胜过对手，包括 Hugging Face 的 Open ASR Leaderboard。",
+   "focus": "final -s in beats"
+  },
+  {
+   "en": "These tools target developers building apps for business meetings and medical transcription.",
+   "zh": "这些工具面向为企业会议和医疗转写开发应用的开发者。",
+   "focus": "final -s in tools"
+  },
+  {
+   "en": "Developers can customize apps to recognize an industry's jargon in each language.",
+   "zh": "开发者可以定制应用，使其识别各语言中的行业术语。",
+   "focus": "v versus w in developers"
+  },
+  {
+   "en": "One drawback is that Transcribe works with recorded audio, not livestreams.",
+   "zh": "一个缺点是 Transcribe 只处理录音，不处理直播流。",
+   "focus": "final -s in works"
+  },
+  {
+   "en": "At thirty billion parameters, it can run on a single chip, from robotics controllers to datacenter chips.",
+   "zh": "它有三百亿参数，可运行在单块芯片上，从机器人控制器到数据中心芯片都行。",
+   "focus": "th in thirty"
+  },
+  {
+   "en": "It joins Nvidia's open-weight voice models, including the small but powerful Parakeet.",
+   "zh": "它加入了英伟达的开源权重语音模型系列，包括小巧但强大的 Parakeet。",
+   "focus": "final -s in models"
+  }
+ ],
+ "terms": [
+  {
+   "word": "open-weight",
+   "zh": "开源权重",
+   "note": "指模型的参数文件公开，任何人都能下载和使用。"
+  },
+  {
+   "word": "transcription",
+   "zh": "转写",
+   "note": "把语音变成文字的过程。"
+  },
+  {
+   "word": "benchmark",
+   "zh": "基准测试",
+   "note": "用来比较不同模型性能的标准测试。"
+  },
+  {
+   "word": "parameters",
+   "zh": "参数",
+   "note": "模型内部可调节的数值，数量越大通常能力越强。"
+  },
+  {
+   "word": "dataset",
+   "zh": "数据集",
+   "note": "用来训练或测试模型的大量语音或文本样本。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "被动语态 are publicly available",
+   "note": "用被动强调参数本身可获取，中文常省略“被”字，容易漏掉 are。"
+  },
+  {
+   "line": 8,
+   "point": "现在分词 building 作后置定语",
+   "note": "building apps 修饰 developers，中文习惯说“开发应用的开发者”，容易误加 who are。"
+  },
+  {
+   "line": 10,
+   "point": "that 引导表语从句",
+   "note": "is that 后接完整句子说明缺点，中文常直接说“缺点是……”，容易漏掉 that。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is one limitation of Nemotron 3.5 Transcribe?",
+   "options": [
+    "It only works with recorded audio",
+    "It supports only English",
+    "It cannot run on a single chip"
+   ],
+   "answer": 0,
+   "explain": "Sentence 10 states it works with recorded audio, not livestreams."
+  },
+  {
+   "q": "How many languages can the model translate to and from English?",
+   "options": [
+    "Forty",
+    "Thirty-one",
+    "Eight"
+   ],
+   "answer": 1,
+   "explain": "Sentence 5 says it can translate thirty-one languages to and from English."
+  }
+ ],
+ "recall_prompts": [
+  "What did Nvidia release?",
+  "What are the model's main features?",
+  "Who is it for?"
+ ],
+ "script": "Nvidia released a free, open-weight transcription model on Wednesday. It is called Nemotron 3.5 Transcribe and handles audio in up to forty languages. Open-weight means the model's internal settings are publicly available to download. Nvidia also released version two of Granary, its open source speech dataset. The model can translate thirty-one languages to and from English. It can handle recordings up to an hour long and tell up to eight speakers apart. Nvidia claims it beats rivals on benchmarks, including Hugging Face's Open ASR Leaderboard. These tools target developers building apps for business meetings and medical transcription. Developers can customize apps to recognize an industry's jargon in each language. One drawback is that Transcribe works with recorded audio, not livestreams. At thirty billion parameters, it can run on a single chip, from robotics controllers to datacenter chips. It joins Nvidia's open-weight voice models, including the small but powerful Parakeet.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+ "date": "2026-10-29",
+ "slot": "pm"
+}

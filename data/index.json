@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-28T10:06:12",
+ "updated": "2026-10-29T02:20:28",
  "days": [
+  {
+   "id": "2026-10-29-pm",
+   "date": "2026-10-29",
+   "slot": "pm",
+   "headline": "Nvidia releases free open transcription model",
+   "source": "TECHCRUNCH",
+   "duration": 80.3,
+   "sentences": 12
+  },
   {
    "id": "2026-10-28-pm",
    "date": "2026-10-28",
