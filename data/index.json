@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-29T10:16:21",
+ "updated": "2026-10-30T02:26:12",
  "days": [
+  {
+   "id": "2026-10-30-pm",
+   "date": "2026-10-30",
+   "slot": "pm",
+   "headline": "Mistral opens trillion-parameter model for cyber defense",
+   "source": "TECHCRUNCH",
+   "duration": 86.9,
+   "sentences": 13
+  },
   {
    "id": "2026-10-29-pm",
    "date": "2026-10-29",

@@ -1,0 +1,146 @@
+{
+ "headline": "Mistral opens trillion-parameter model for cyber defense",
+ "lines": [
+  {
+   "en": "Mistral has released the weights for its trillion-parameter AI model, Mistral Large 4.",
+   "zh": "Mistral 已发布其万亿参数人工智能模型 Mistral Large 4 的权重。",
+   "focus": "final -s in weights"
+  },
+  {
+   "en": "Weights are the numerical training that makes the system work.",
+   "zh": "权重是让系统运转起来的数值训练结果。",
+   "focus": "th in the"
+  },
+  {
+   "en": "Businesses and governments can now download and run the model themselves.",
+   "zh": "企业和政府现在可以自行下载并运行该模型。",
+   "focus": "link download and"
+  },
+  {
+   "en": "The model is nicknamed Le Chonk and was first shown earlier this month.",
+   "zh": "该模型绰号“Le Chonk”，本月早些时候首次亮相。",
+   "focus": "final -ed in nicknamed"
+  },
+  {
+   "en": "The move comes as open-weight developers compete with closed-model providers like OpenAI and Anthropic.",
+   "zh": "此举正值开源权重开发者与 OpenAI、Anthropic 等闭源模型提供商竞争加剧之际。",
+   "focus": "v in providers"
+  },
+  {
+   "en": "Mistral argues that organizations should not depend on outside AI companies for advanced capabilities.",
+   "zh": "Mistral 认为，组织不应依赖外部人工智能公司来获取先进能力。",
+   "focus": "final -s in companies"
+  },
+  {
+   "en": "That argument matters more in cybersecurity, where groups want control over their data and systems.",
+   "zh": "这一论点在网络安全领域更为重要，因为相关机构希望掌控自己的数据和系统。",
+   "focus": "th in their"
+  },
+  {
+   "en": "Mistral says ML4 matches a Chinese open-weight rival, GLM-5.3, in performance.",
+   "zh": "Mistral 表示，ML4 在性能上与中国的开源权重竞争对手 GLM-5.3 相当。",
+   "focus": "final -s in matches"
+  },
+  {
+   "en": "But its model uses forty-seven percent fewer tokens per task, so it is more economical.",
+   "zh": "但其模型每项任务使用的 token 少百分之四十七，因此更经济。",
+   "focus": "v in seven"
+  },
+  {
+   "en": "The company also claims ML4 ranks above all other open models on agentic coding tasks.",
+   "zh": "该公司还称，ML4 在智能体编程任务上排名高于所有其他开源模型。",
+   "focus": "final -s in claims"
+  },
+  {
+   "en": "The weights are available on Hugging Face and through its API.",
+   "zh": "权重已在 Hugging Face 上以及通过其 API 提供。",
+   "focus": "link through its"
+  },
+  {
+   "en": "Mistral says open weights give organizations control that cannot be cut off.",
+   "zh": "Mistral 表示，开放权重赋予组织无法被切断的控制权。",
+   "focus": "final -t in cut"
+  },
+  {
+   "en": "Companies can deploy the model on-prem to respond to security incidents in real time.",
+   "zh": "企业可以在本地部署该模型，以实时响应安全事件。",
+   "focus": "link respond to"
+  }
+ ],
+ "terms": [
+  {
+   "word": "weights",
+   "zh": "权重",
+   "note": "指模型训练得到的数值参数，决定模型如何输出结果。"
+  },
+  {
+   "word": "open-weight",
+   "zh": "开放权重",
+   "note": "指模型权重可被下载和自行部署，而不是只能通过外部服务调用。"
+  },
+  {
+   "word": "tokens",
+   "zh": "token",
+   "note": "指模型处理文本时的基本单位，token 越少通常越省算力。"
+  },
+  {
+   "word": "agentic coding",
+   "zh": "智能体编程",
+   "note": "指由智能体自主完成写代码、改代码等多步编程任务。"
+  },
+  {
+   "word": "on-prem",
+   "zh": "本地部署",
+   "note": "指把模型部署在组织自己的服务器或机房内，而不是放在外部云端。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "情态动词 can + 动词原形 download and run",
+   "note": "表示现在具备的能力或许可；中文常直接说“可以下载运行”，容易漏掉 can 后必须用原形。"
+  },
+  {
+   "line": 5,
+   "point": "as 引导时间状语从句 comes as",
+   "note": "这里 as 表示“正值……之际”，不是“因为”；中文学习者容易误读成原因。"
+  },
+  {
+   "line": 7,
+   "point": "非限制性定语从句 where groups want",
+   "note": "where 指代前面的 cybersecurity 领域；中文习惯拆成两句，容易漏掉从句与先行词的关系。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What can businesses and governments now do with Mistral Large 4?",
+   "options": [
+    "Download and run it themselves",
+    "Only use it through a closed API",
+    "Buy it from OpenAI"
+   ],
+   "answer": 0,
+   "explain": "答案在第三句，说明企业政府可自行下载并运行模型。"
+  },
+  {
+   "q": "How does ML4 compare with GLM-5.3 on token use?",
+   "options": [
+    "It uses more tokens per task",
+    "It uses forty-seven percent fewer tokens per task",
+    "It uses the same number of tokens"
+   ],
+   "answer": 1,
+   "explain": "答案在第九句，明确说每项任务少用百分之四十七的 token。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Mistral has released the weights for its trillion-parameter AI model, Mistral Large 4. Weights are the numerical training that makes the system work. Businesses and governments can now download and run the model themselves. The model is nicknamed Le Chonk and was first shown earlier this month. The move comes as open-weight developers compete with closed-model providers like OpenAI and Anthropic. Mistral argues that organizations should not depend on outside AI companies for advanced capabilities. That argument matters more in cybersecurity, where groups want control over their data and systems. Mistral says ML4 matches a Chinese open-weight rival, GLM-5.3, in performance. But its model uses forty-seven percent fewer tokens per task, so it is more economical. The company also claims ML4 ranks above all other open models on agentic coding tasks. The weights are available on Hugging Face and through its API. Mistral says open weights give organizations control that cannot be cut off. Companies can deploy the model on-prem to respond to security incidents in real time.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+ "date": "2026-10-30",
+ "slot": "pm"
+}
