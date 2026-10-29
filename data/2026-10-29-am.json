@@ -1,0 +1,189 @@
+{
+ "id": "2026-10-29-am",
+ "date": "2026-10-29",
+ "slot": "am",
+ "source": "ARS TECHNICA",
+ "source_url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use/",
+ "headline": "Google unveils Gemini 4 Carbon, a limited-release AI model",
+ "audio": "audio/2026-10-29-am-full.mp3",
+ "duration": 80.1,
+ "wpm": 125.8,
+ "script": "Google has announced Gemini 4 Carbon, a new frontier AI model you cannot use yet. It comes just two weeks after Google rolled out Gemini 4 Argon. Carbon is not the Flash version people were waiting for. Instead, it is a slightly better version of Argon. Google says Carbon reaches a new level in coding, agentic tasks, and scientific analysis. An agentic task means the model can plan and carry out steps on its own. Google says the model makes big gains in cybersecurity. Carbon is twice as likely as Argon to write code with no vulnerabilities. The Chrome team says Carbon is ten times better at writing high-quality patches than non-Google models. In a prompt-injection attack, hidden text tries to make the model misbehave. Carbon resisted every such attack in the Grey Swan test, scoring zero percent. Google plans a staged release through its Fairwinds cyber defense program, with no wide-release date promised. Carbon will probably reach AI Ultra subscribers and Gemini API developers first.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Google has announced Gemini 4 Carbon, a new frontier AI model you cannot use yet.",
+   "zh": "谷歌发布了Gemini 4 Carbon，这是一款用户暂时还无法使用的新前沿人工智能模型。",
+   "audio": "audio/2026-10-29-am-s1.mp3",
+   "duration": 7.1,
+   "focus": "link \"announced a\" as one sound"
+  },
+  {
+   "id": 2,
+   "text": "It comes just two weeks after Google rolled out Gemini 4 Argon.",
+   "zh": "此时距离谷歌推出Gemini 4 Argon才过去两周。",
+   "audio": "audio/2026-10-29-am-s2.mp3",
+   "duration": 4.9,
+   "focus": "final -d in \"rolled\" before \"out\""
+  },
+  {
+   "id": 3,
+   "text": "Carbon is not the Flash version people were waiting for.",
+   "zh": "Carbon并不是人们一直在等待的Flash版本。",
+   "audio": "audio/2026-10-29-am-s3.mp3",
+   "duration": 3.9,
+   "focus": "th sound in \"the\""
+  },
+  {
+   "id": 4,
+   "text": "Instead, it is a slightly better version of Argon.",
+   "zh": "它其实是Argon的略微升级版。",
+   "audio": "audio/2026-10-29-am-s4.mp3",
+   "duration": 3.8,
+   "focus": "v sound in \"version\""
+  },
+  {
+   "id": 5,
+   "text": "Google says Carbon reaches a new level in coding, agentic tasks, and scientific analysis.",
+   "zh": "谷歌称Carbon在编程、智能体任务和科学分析方面达到了新水平。",
+   "audio": "audio/2026-10-29-am-s5.mp3",
+   "duration": 7.4,
+   "focus": "final -s in \"tasks\""
+  },
+  {
+   "id": 6,
+   "text": "An agentic task means the model can plan and carry out steps on its own.",
+   "zh": "智能体任务是指模型能够自行规划并执行多个步骤。",
+   "audio": "audio/2026-10-29-am-s6.mp3",
+   "duration": 5.7,
+   "focus": "link \"carry out\" smoothly"
+  },
+  {
+   "id": 7,
+   "text": "Google says the model makes big gains in cybersecurity.",
+   "zh": "谷歌表示该模型在网络安全方面取得了大幅进步。",
+   "audio": "audio/2026-10-29-am-s7.mp3",
+   "duration": 4.4,
+   "focus": "final -s in \"gains\""
+  },
+  {
+   "id": 8,
+   "text": "Carbon is twice as likely as Argon to write code with no vulnerabilities.",
+   "zh": "Carbon写出没有漏洞的代码的可能性是Argon的两倍。",
+   "audio": "audio/2026-10-29-am-s8.mp3",
+   "duration": 5.6,
+   "focus": "th sound in \"with\""
+  },
+  {
+   "id": 9,
+   "text": "The Chrome team says Carbon is ten times better at writing high-quality patches than non-Google models.",
+   "zh": "Chrome团队称，Carbon在编写高质量补丁方面比非谷歌模型强十倍。",
+   "audio": "audio/2026-10-29-am-s9.mp3",
+   "duration": 7.3,
+   "focus": "final -s in \"patches\""
+  },
+  {
+   "id": 10,
+   "text": "In a prompt-injection attack, hidden text tries to make the model misbehave.",
+   "zh": "在提示词注入攻击中，隐藏的文字会试图让模型做出错误行为。",
+   "audio": "audio/2026-10-29-am-s10.mp3",
+   "duration": 5.8,
+   "focus": "link \"hidden text\" as one sound"
+  },
+  {
+   "id": 11,
+   "text": "Carbon resisted every such attack in the Grey Swan test, scoring zero percent.",
+   "zh": "在Grey Swan测试中，Carbon抵御了每一次此类攻击，得分为零。",
+   "audio": "audio/2026-10-29-am-s11.mp3",
+   "duration": 6.6,
+   "focus": "final -ed in \"resisted\""
+  },
+  {
+   "id": 12,
+   "text": "Google plans a staged release through its Fairwinds cyber defense program, with no wide-release date promised.",
+   "zh": "谷歌计划通过其Fairwinds网络防御项目分阶段发布，并未承诺全面发布的时间。",
+   "audio": "audio/2026-10-29-am-s12.mp3",
+   "duration": 8.1,
+   "focus": "th sound in \"through\""
+  },
+  {
+   "id": 13,
+   "text": "Carbon will probably reach AI Ultra subscribers and Gemini API developers first.",
+   "zh": "Carbon可能会先向AI Ultra订阅用户和Gemini API开发者开放。",
+   "audio": "audio/2026-10-29-am-s13.mp3",
+   "duration": 7.2,
+   "focus": "final -s in \"subscribers\""
+  }
+ ],
+ "terms": [
+  {
+   "word": "frontier AI model",
+   "zh": "前沿人工智能模型",
+   "note": "指能力处于当前最领先水平的一类模型。"
+  },
+  {
+   "word": "agentic task",
+   "zh": "智能体任务",
+   "note": "指模型能自行规划并分步完成的任务，而不只是回答一句话。"
+  },
+  {
+   "word": "vulnerability",
+   "zh": "漏洞",
+   "note": "指软件中可被攻击者利用的安全缺陷。"
+  },
+  {
+   "word": "prompt-injection attack",
+   "zh": "提示词注入攻击",
+   "note": "指在输入中藏入文字，诱导模型做出违背本意的行为。"
+  },
+  {
+   "word": "staged release",
+   "zh": "分阶段发布",
+   "note": "指先小范围开放、再逐步扩大范围的发布方式。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has announced",
+   "note": "强调发布这一动作刚刚完成、结果仍在，中文常说“已发布”而容易漏掉 has。"
+  },
+  {
+   "line": 8,
+   "point": "twice as likely as 比较结构",
+   "note": "倍数要放在 as…as 之前，中文习惯说“是……的两倍”，容易写成 twice likely than。"
+  },
+  {
+   "line": 11,
+   "point": "分词短语 scoring zero percent",
+   "note": "现在分词作伴随状语补充结果，中文常拆成两句，读者容易误加 and 或写成从句。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Gemini 4 Carbon compared to?",
+   "options": [
+    "A brand-new Flash model",
+    "A slightly better version of Argon",
+    "A cheaper version of GPT-6 Astra"
+   ],
+   "answer": 1,
+   "explain": "答案在第四句，说明 Carbon 是 Argon 的略微升级版。"
+  },
+  {
+   "q": "How did Carbon perform in the Grey Swan test?",
+   "options": [
+    "It blocked every prompt-injection attack",
+    "It scored 0.7 percent",
+    "It scored 8.5 percent"
+   ],
+   "answer": 0,
+   "explain": "答案在第十一句，Carbon 抵御了全部攻击，得分为零。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

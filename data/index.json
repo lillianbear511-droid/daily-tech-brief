@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T02:20:28",
+ "updated": "2026-10-29T10:16:21",
  "days": [
   {
    "id": "2026-10-29-pm",
@@ -9,6 +9,15 @@
    "source": "TECHCRUNCH",
    "duration": 80.3,
    "sentences": 12
+  },
+  {
+   "id": "2026-10-29-am",
+   "date": "2026-10-29",
+   "slot": "am",
+   "headline": "Google unveils Gemini 4 Carbon, a limited-release AI model",
+   "source": "ARS TECHNICA",
+   "duration": 80.1,
+   "sentences": 13
   },
   {
    "id": "2026-10-28-pm",
