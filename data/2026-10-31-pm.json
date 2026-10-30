@@ -1,0 +1,189 @@
+{
+ "id": "2026-10-31-pm",
+ "date": "2026-10-31",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+ "headline": "Google's first space data center satellite is online",
+ "audio": "audio/2026-10-31-pm-full.mp3",
+ "duration": 85.3,
+ "wpm": 129.4,
+ "script": "Google's first space data center satellite is now online and talking to the ground. The prototype launched earlier this month on a SpaceX Falcon 9 rocket. It flew alongside more than one hundred other spacecraft. The satellite carries four Google Tensor Processing Units, or TPUs, which are chips built for machine learning. It generates up to one kilowatt of electricity. The goal is to prepare for future networks of close-flying satellites that run large inference workloads in orbit. Inference means running a trained model to answer prompts, not training it. The TPU's power demand means only one chip can run for about twenty minutes at a time. That makes space-to-ground communications harder than they already are. After about three weeks of testing the satellite's subsystems, engineers sent their first prompt this week. They asked Gemma 4, a model pre-loaded onto the satellite, to write a haiku about being in space. Google also asked the spacecraft to report on orbital conditions, and a spokesperson said it was operating normally. The team will now study how the chips handle heat stress and space radiation.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Google's first space data center satellite is now online and talking to the ground.",
+   "zh": "谷歌的首个太空数据中心卫星现已上线，并与地面保持通信。",
+   "audio": "audio/2026-10-31-pm-s1.mp3",
+   "duration": 6.4,
+   "focus": "th in 'talking' and 'the'"
+  },
+  {
+   "id": 2,
+   "text": "The prototype launched earlier this month on a SpaceX Falcon 9 rocket.",
+   "zh": "这颗原型卫星本月早些时候搭乘SpaceX的猎鹰9号火箭升空。",
+   "audio": "audio/2026-10-31-pm-s2.mp3",
+   "duration": 5.5,
+   "focus": "final -ed in 'launched'"
+  },
+  {
+   "id": 3,
+   "text": "It flew alongside more than one hundred other spacecraft.",
+   "zh": "它与一百多艘其他航天器一同进入太空。",
+   "audio": "audio/2026-10-31-pm-s3.mp3",
+   "duration": 4.3,
+   "focus": "link 'alongside' and 'more'"
+  },
+  {
+   "id": 4,
+   "text": "The satellite carries four Google Tensor Processing Units, or TPUs, which are chips built for machine learning.",
+   "zh": "该卫星搭载四块谷歌张量处理单元（TPU），这是专为机器学习设计的芯片。",
+   "audio": "audio/2026-10-31-pm-s4.mp3",
+   "duration": 8.3,
+   "focus": "final -s in 'carries' and 'chips'"
+  },
+  {
+   "id": 5,
+   "text": "It generates up to one kilowatt of electricity.",
+   "zh": "它最多可产生一千瓦的电力。",
+   "audio": "audio/2026-10-31-pm-s5.mp3",
+   "duration": 3.9,
+   "focus": "v in 'generates'"
+  },
+  {
+   "id": 6,
+   "text": "The goal is to prepare for future networks of close-flying satellites that run large inference workloads in orbit.",
+   "zh": "目标是为此后由近距离编队卫星在轨运行大规模推理任务做准备。",
+   "audio": "audio/2026-10-31-pm-s6.mp3",
+   "duration": 8.0,
+   "focus": "th in 'networks' and 'that'"
+  },
+  {
+   "id": 7,
+   "text": "Inference means running a trained model to answer prompts, not training it.",
+   "zh": "推理是指运行已训练好的模型来回答提示词，而不是训练模型。",
+   "audio": "audio/2026-10-31-pm-s7.mp3",
+   "duration": 5.4,
+   "focus": "link 'means' and 'running'"
+  },
+  {
+   "id": 8,
+   "text": "The TPU's power demand means only one chip can run for about twenty minutes at a time.",
+   "zh": "TPU的功耗意味着一次只能让一块芯片运行约二十分钟。",
+   "audio": "audio/2026-10-31-pm-s8.mp3",
+   "duration": 6.5,
+   "focus": ""
+  },
+  {
+   "id": 9,
+   "text": "That makes space-to-ground communications harder than they already are.",
+   "zh": "这让本就棘手的星地通信变得更加困难。",
+   "audio": "audio/2026-10-31-pm-s9.mp3",
+   "duration": 4.8,
+   "focus": "th in 'that' and 'than'"
+  },
+  {
+   "id": 10,
+   "text": "After about three weeks of testing the satellite's subsystems, engineers sent their first prompt this week.",
+   "zh": "在花费约三周测试卫星各子系统后，工程师本周发出了第一条提示词。",
+   "audio": "audio/2026-10-31-pm-s10.mp3",
+   "duration": 7.7,
+   "focus": "final -s in 'weeks' and 'subsystems'"
+  },
+  {
+   "id": 11,
+   "text": "They asked Gemma 4, a model pre-loaded onto the satellite, to write a haiku about being in space.",
+   "zh": "他们让卫星上预装的模型Gemma 4写一首关于身处太空的俳句。",
+   "audio": "audio/2026-10-31-pm-s11.mp3",
+   "duration": 8.2,
+   "focus": "link 'asked' and 'Gemma'"
+  },
+  {
+   "id": 12,
+   "text": "Google also asked the spacecraft to report on orbital conditions, and a spokesperson said it was operating normally.",
+   "zh": "谷歌还要求该航天器报告轨道状况，一位发言人表示其运行正常。",
+   "audio": "audio/2026-10-31-pm-s12.mp3",
+   "duration": 8.3,
+   "focus": "final -ly in 'normally'"
+  },
+  {
+   "id": 13,
+   "text": "The team will now study how the chips handle heat stress and space radiation.",
+   "zh": "团队现在将研究这些芯片如何应对热应力和太空辐射。",
+   "audio": "audio/2026-10-31-pm-s13.mp3",
+   "duration": 5.8,
+   "focus": "final -s in 'chips' and 'stress'"
+  }
+ ],
+ "terms": [
+  {
+   "word": "Tensor Processing Unit (TPU)",
+   "zh": "张量处理单元",
+   "note": "谷歌自研的机器学习芯片，专门加速模型计算。"
+  },
+  {
+   "word": "inference",
+   "zh": "推理",
+   "note": "指用训练好的模型处理输入并给出结果，而不是训练模型。"
+  },
+  {
+   "word": "prompt",
+   "zh": "提示词",
+   "note": "用户发给模型的指令或问题，模型据此生成回答。"
+  },
+  {
+   "word": "thermal stress",
+   "zh": "热应力",
+   "note": "温度剧烈变化对芯片和材料造成的压力。"
+  },
+  {
+   "word": "bit flip",
+   "zh": "位翻转",
+   "note": "辐射把内存里的一个比特从0变成1或从1变成0，导致数据出错。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "非限制性定语从句 which are chips built for machine learning",
+   "note": "用which补充说明TPU是什么；中文习惯另起一句，容易漏掉关系词或误用that。"
+  },
+  {
+   "line": 8,
+   "point": "at a time 表示“一次”",
+   "note": "at a time指每次的数量或时长；中文说“一次二十分钟”，介词at容易被漏掉。"
+  },
+  {
+   "line": 10,
+   "point": "After + 名词短语作时间状语 After about three weeks of testing",
+   "note": "after后接名词短语而非句子；中文习惯说“在……之后”，容易误加从句连接词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did engineers ask the satellite's model to do first?",
+   "options": [
+    "Report orbital conditions",
+    "Write a haiku about space",
+    "Test the TPU's power use"
+   ],
+   "answer": 1,
+   "explain": "答案在第十一句：工程师让Gemma 4写一首关于太空的俳句。"
+  },
+  {
+   "q": "Why can only one TPU run at a time?",
+   "options": [
+    "Because of the power demand",
+    "Because of radiation damage",
+    "Because of communication delays"
+   ],
+   "answer": 0,
+   "explain": "答案在第八句：TPU的功耗限制了一次只能运行一块芯片。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
