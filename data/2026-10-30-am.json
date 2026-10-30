@@ -1,0 +1,176 @@
+{
+ "id": "2026-10-30-am",
+ "date": "2026-10-30",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
+ "headline": "Humanist wins religious exemption from workplace AI",
+ "audio": "audio/2026-10-30-am-full.mp3",
+ "duration": 74.9,
+ "wpm": 122.6,
+ "script": "A nontheistic Humanist has secured a religious exemption from using AI at work. David Durman is an administrator at the University of Kentucky. He says Humanism is a set of beliefs about human experience and how people interact with the world. It centers on human well-being and flourishing, both individually and collectively. As AI grew more popular in daily life, Durman asked the American Humanist Association for help. He believes that using the technology runs counter to his beliefs. He says we become moral actors through the active application of our minds. He argues that overreliance on AI could weaken critical thinking. He also wrote that AI interferes with people's ability to earn a living. The American Humanist Association says concern about AI and human dignity runs through several faiths and traditions. Durman is the first Humanist to secure these workplace accommodations. The University of Kentucky reviews such requests case by case.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "A nontheistic Humanist has secured a religious exemption from using AI at work.",
+   "zh": "一位非有神论的人文主义者获得了在工作中不使用人工智能的宗教豁免。",
+   "audio": "audio/2026-10-30-am-s1.mp3",
+   "duration": 6.6,
+   "focus": "final -c in nontheistic"
+  },
+  {
+   "id": 2,
+   "text": "David Durman is an administrator at the University of Kentucky.",
+   "zh": "大卫·德曼是肯塔基大学的一名管理人员。",
+   "audio": "audio/2026-10-30-am-s2.mp3",
+   "duration": 4.5,
+   "focus": ""
+  },
+  {
+   "id": 3,
+   "text": "He says Humanism is a set of beliefs about human experience and how people interact with the world.",
+   "zh": "他说，人文主义是一套关于人类经验以及人们如何与世界互动的信念。",
+   "audio": "audio/2026-10-30-am-s3.mp3",
+   "duration": 7.4,
+   "focus": "th in the and with"
+  },
+  {
+   "id": 4,
+   "text": "It centers on human well-being and flourishing, both individually and collectively.",
+   "zh": "它关注人类的福祉与繁荣，既包括个人也包括集体。",
+   "audio": "audio/2026-10-30-am-s4.mp3",
+   "duration": 6.7,
+   "focus": ""
+  },
+  {
+   "id": 5,
+   "text": "As AI grew more popular in daily life, Durman asked the American Humanist Association for help.",
+   "zh": "随着人工智能在日常生活中越来越普及，德曼向美国人文主义协会寻求帮助。",
+   "audio": "audio/2026-10-30-am-s5.mp3",
+   "duration": 7.9,
+   "focus": "link asked the"
+  },
+  {
+   "id": 6,
+   "text": "He believes that using the technology runs counter to his beliefs.",
+   "zh": "他认为使用这项技术违背了他的信念。",
+   "audio": "audio/2026-10-30-am-s6.mp3",
+   "duration": 5.0,
+   "focus": "final -s in beliefs"
+  },
+  {
+   "id": 7,
+   "text": "He says we become moral actors through the active application of our minds.",
+   "zh": "他说，我们通过积极运用自己的头脑成为道德主体。",
+   "audio": "audio/2026-10-30-am-s7.mp3",
+   "duration": 5.5,
+   "focus": "th in through and minds"
+  },
+  {
+   "id": 8,
+   "text": "He argues that overreliance on AI could weaken critical thinking.",
+   "zh": "他认为过度依赖人工智能可能会削弱批判性思维。",
+   "audio": "audio/2026-10-30-am-s8.mp3",
+   "duration": 5.2,
+   "focus": "final -l in critical"
+  },
+  {
+   "id": 9,
+   "text": "He also wrote that AI interferes with people's ability to earn a living.",
+   "zh": "他还写道，人工智能干扰了人们谋生的能力。",
+   "audio": "audio/2026-10-30-am-s9.mp3",
+   "duration": 5.1,
+   "focus": "final -s in people's"
+  },
+  {
+   "id": 10,
+   "text": "The American Humanist Association says concern about AI and human dignity runs through several faiths and traditions.",
+   "zh": "美国人文主义协会表示，对人工智能和人类尊严的担忧贯穿于多种信仰和传统。",
+   "audio": "audio/2026-10-30-am-s10.mp3",
+   "duration": 8.9,
+   "focus": "th in through"
+  },
+  {
+   "id": 11,
+   "text": "Durman is the first Humanist to secure these workplace accommodations.",
+   "zh": "德曼是第一位获得此类工作场所便利安排的人文主义者。",
+   "audio": "audio/2026-10-30-am-s11.mp3",
+   "duration": 5.1,
+   "focus": "final -t in first"
+  },
+  {
+   "id": 12,
+   "text": "The University of Kentucky reviews such requests case by case.",
+   "zh": "肯塔基大学会逐案审查此类请求。",
+   "audio": "audio/2026-10-30-am-s12.mp3",
+   "duration": 4.9,
+   "focus": "link case by"
+  }
+ ],
+ "terms": [
+  {
+   "word": "religious exemption",
+   "zh": "宗教豁免",
+   "note": "指因宗教信仰而免于遵守某项工作要求的法律保护。"
+  },
+  {
+   "word": "Humanism",
+   "zh": "人文主义",
+   "note": "一种不信仰神、强调人的理性与道德的世俗思想体系。"
+  },
+  {
+   "word": "workplace accommodations",
+   "zh": "工作场所便利安排",
+   "note": "指雇主为员工调整工作方式以满足其特殊需求。"
+  },
+  {
+   "word": "critical thinking",
+   "zh": "批判性思维",
+   "note": "指独立分析和判断信息的能力，而不是盲目接受。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has secured",
+   "note": "强调到现在为止已经取得的结果，中文常漏掉 has 而只说“获得了”。"
+  },
+  {
+   "line": 5,
+   "point": "As 引导时间状语从句 As AI grew more popular",
+   "note": "as 表示“随着”，从句用过去时，主句动作随之发生，中文容易误用 when。"
+  },
+  {
+   "line": 7,
+   "point": "介词 through 表示方式 through the active application",
+   "note": "through 在这里表示“通过”，不是“穿过”，中文学习者容易直译成空间意义。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did David Durman obtain?",
+   "options": [
+    "A promotion at the University of Kentucky",
+    "A religious exemption from using AI at work",
+    "A job at the American Humanist Association"
+   ],
+   "answer": 1,
+   "explain": "答案在第一句，直接说明他获得了宗教豁免。"
+  },
+  {
+   "q": "Why does Durman think AI use conflicts with his beliefs?",
+   "options": [
+    "It costs too much money.",
+    "It replaces human creativity and weakens critical thinking.",
+    "It is banned by the University of Kentucky."
+   ],
+   "answer": 1,
+   "explain": "答案在第七、八句，他提到过度依赖 AI 会削弱批判性思维，并提到 AI 取代人类创造力。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
