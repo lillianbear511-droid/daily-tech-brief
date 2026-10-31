@@ -1,0 +1,141 @@
+{
+ "headline": "英伟达或为Nscale西弗吉尼亚AI数据中心担保债务",
+ "lines": [
+  {
+   "en": "Nvidia is in talks to guarantee billions of dollars in debt for an AI data center in West Virginia.",
+   "zh": "英伟达正在洽谈为西弗吉尼亚州一个AI数据中心的数十亿美元债务提供担保。",
+   "focus": "in talks 连读，talks 的 s 要轻"
+  },
+  {
+   "en": "The data center is planned by AI cloud provider Nscale for Anthropic.",
+   "zh": "该数据中心由AI云服务商Nscale为Anthropic规划建设。",
+   "focus": "planned 的 -ed 读 /d/"
+  },
+  {
+   "en": "Anthropic has signed a forty-four point six billion dollar contract for the first building alone.",
+   "zh": "仅第一栋楼，Anthropic就签下了四百四十六亿美元的合同。",
+   "focus": "signed 的 -ed 读 /d/"
+  },
+  {
+   "en": "In plain terms, the chipmaker would co-sign a customer's loans.",
+   "zh": "说白了，这家芯片厂商是在为客户贷款做共同签署人。",
+   "focus": "co-sign 重音在 co，s 连读"
+  },
+  {
+   "en": "That shows how hard the AI industry is working to keep its buildout plans alive.",
+   "zh": "这说明AI行业正竭力让建设计划维持下去。",
+   "focus": "buildout 的 d 和 t 连读"
+  },
+  {
+   "en": "Investors are getting nervous about how much money is involved.",
+   "zh": "投资者对其中涉及的资金规模越来越不安。",
+   "focus": "nervous 的 v 别读成 w"
+  },
+  {
+   "en": "The arrangement would help Nscale pay for electricity and construction at the campus.",
+   "zh": "这一安排将帮助Nscale支付园区的电力和建设费用。",
+   "focus": "would 的 d 常被吞掉"
+  },
+  {
+   "en": "Under a residual value guarantee, Nvidia would step in if Nscale missed construction payments.",
+   "zh": "在所谓残值担保下，如果Nscale拖欠建设款项，英伟达就会介入。",
+   "focus": "step in 连读，p 轻"
+  },
+  {
+   "en": "Nvidia would then briefly take over the facility and help find a buyer and a new tenant.",
+   "zh": "英伟达随后会暂时接管该设施，并帮忙寻找买家和新的租户。",
+   "focus": "take over 连读"
+  },
+  {
+   "en": "Nscale is seeking to go public at a valuation of up to thirty-five billion dollars.",
+   "zh": "Nscale正寻求上市，估值最高达三百五十亿美元。",
+   "focus": "seeking 的 -ing 别丢"
+  },
+  {
+   "en": "Its West Virginia campus is expected to use Nvidia's next-generation Vera Rubin chips.",
+   "zh": "其西弗吉尼亚园区预计将使用英伟达的下一代Vera Rubin芯片。",
+   "focus": "expected 的 -ed 读 /ɪd/"
+  },
+  {
+   "en": "Nscale has struggled to get projects off the ground, with only about twenty-five thousand advanced AI chips running in August.",
+   "zh": "Nscale一直难以让项目落地，八月时只有约两万五千枚先进AI芯片在运行。",
+   "focus": "thousand 的 th 咬舌"
+  },
+  {
+   "en": "Nvidia has already extended about one hundred seventy billion dollars in investments and credit support to such cloud providers.",
+   "zh": "英伟达已向这类云服务商提供了约一千七百亿美元的投资和信贷支持。",
+   "focus": "extended 的 -ed 读 /ɪd/"
+  }
+ ],
+ "terms": [
+  {
+   "word": "residual value guarantee",
+   "zh": "残值担保",
+   "note": "指借款方违约时，担保方接手资产并帮忙找买家，以保住资产的剩余价值。"
+  },
+  {
+   "word": "neocloud",
+   "zh": "新型云服务商",
+   "note": "指专门出租AI算力、背后没有现金充裕主业支撑的云公司。"
+  },
+  {
+   "word": "debt financing",
+   "zh": "债务融资",
+   "note": "指通过借款而不是卖股份来筹钱。"
+  },
+  {
+   "word": "valuation",
+   "zh": "估值",
+   "note": "指上市前市场给公司的整体定价。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "现在完成时 has signed",
+   "note": "强调合同已经签下、结果延续到现在；中文说“签下了”容易漏掉 has。"
+  },
+  {
+   "line": 8,
+   "point": "虚拟条件句 would step in if...",
+   "note": "表示假设尚未发生的情形；中文习惯用“就会”，容易漏掉 would。"
+  },
+  {
+   "line": 12,
+   "point": "with 复合结构 with only... running",
+   "note": "with 加名词加分词表示伴随状态；中文常拆成两句，容易丢掉 with。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Nvidia discussing with Nscale?",
+   "options": [
+    "Guaranteeing billions in debt for a data center",
+    "Buying the West Virginia campus outright",
+    "Building its own chips in West Virginia"
+   ],
+   "answer": 0,
+   "explain": "答案在第一句。"
+  },
+  {
+   "q": "How many advanced AI chips did Nscale have running in August?",
+   "options": [
+    "About five hundred thousand",
+    "About twenty-five thousand",
+    "About forty-six thousand"
+   ],
+   "answer": 1,
+   "explain": "答案在第十二句。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Nvidia is in talks to guarantee billions of dollars in debt for an AI data center in West Virginia. The data center is planned by AI cloud provider Nscale for Anthropic. Anthropic has signed a forty-four point six billion dollar contract for the first building alone. In plain terms, the chipmaker would co-sign a customer's loans. That shows how hard the AI industry is working to keep its buildout plans alive. Investors are getting nervous about how much money is involved. The arrangement would help Nscale pay for electricity and construction at the campus. Under a residual value guarantee, Nvidia would step in if Nscale missed construction payments. Nvidia would then briefly take over the facility and help find a buyer and a new tenant. Nscale is seeking to go public at a valuation of up to thirty-five billion dollars. Its West Virginia campus is expected to use Nvidia's next-generation Vera Rubin chips. Nscale has struggled to get projects off the ground, with only about twenty-five thousand advanced AI chips running in August. Nvidia has already extended about one hundred seventy billion dollars in investments and credit support to such cloud providers.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+ "date": "2026-10-31",
+ "slot": "am"
+}

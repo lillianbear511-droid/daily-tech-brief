@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T02:00:46",
+ "updated": "2026-10-31T10:11:49",
  "days": [
   {
    "id": "2026-10-31-pm",
@@ -8,6 +8,15 @@
    "headline": "Google's first space data center satellite is online",
    "source": "TECHCRUNCH",
    "duration": 85.3,
+   "sentences": 13
+  },
+  {
+   "id": "2026-10-31-am",
+   "date": "2026-10-31",
+   "slot": "am",
+   "headline": "英伟达或为Nscale西弗吉尼亚AI数据中心担保债务",
+   "source": "TECHCRUNCH",
+   "duration": 90.9,
    "sentences": 13
   },
   {
