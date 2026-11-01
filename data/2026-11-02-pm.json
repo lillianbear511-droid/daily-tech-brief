@@ -1,0 +1,181 @@
+{
+ "id": "2026-11-02-pm",
+ "date": "2026-11-02",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/tech/1024219/apples-homeview-could-add-security-camera-features",
+ "headline": "Apple HomeView code hints at security camera features",
+ "audio": "audio/2026-11-02-pm-full.mp3",
+ "duration": 78.9,
+ "wpm": 133.8,
+ "script": "Code inside Apple's HomeView software suggests the smart home hub may soon work as a security camera. A Reddit user named pdfu found the hidden strings in version 27.2 of the HomeView code. The strings describe a camera mode with motion detection, live streaming, and recording. They also describe privacy functions for that mode. One setup page reportedly reads that your HomeView can be used as a security camera with HomeKit Secure Video. The video feeds would only be visible to members of the home. An indicator light would show and a sound would play when someone watches the feed or recording starts. Home members would also get a notification whenever the Secure Video settings change. Options for what to detect, stream, or record would depend on whether you are home, away, or asleep. Some people wondered why Apple did not let HomeView double as a camera at launch. Apple has not said anything to suggest these features are coming. But privacy is central to Apple's marketing, so the company may be fine-tuning the features first.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Code inside Apple's HomeView software suggests the smart home hub may soon work as a security camera.",
+   "zh": "苹果HomeView软件中的代码显示，这款智能家居中枢可能很快就能当作安防摄像头使用。",
+   "audio": "audio/2026-11-02-pm-s1.mp3",
+   "duration": 7.6,
+   "focus": "final -s in suggests"
+  },
+  {
+   "id": 2,
+   "text": "A Reddit user named pdfu found the hidden strings in version 27.2 of the HomeView code.",
+   "zh": "一位名叫pdfu的Reddit用户在HomeView 27.2版本的代码中发现了这些隐藏的字符串。",
+   "audio": "audio/2026-11-02-pm-s2.mp3",
+   "duration": 8.0,
+   "focus": "link found the"
+  },
+  {
+   "id": 3,
+   "text": "The strings describe a camera mode with motion detection, live streaming, and recording.",
+   "zh": "这些字符串描述了一种摄像头模式，包含移动侦测、实时串流和录制功能。",
+   "audio": "audio/2026-11-02-pm-s3.mp3",
+   "duration": 6.3,
+   "focus": "th in with"
+  },
+  {
+   "id": 4,
+   "text": "They also describe privacy functions for that mode.",
+   "zh": "它们还描述了该模式的隐私保护功能。",
+   "audio": "audio/2026-11-02-pm-s4.mp3",
+   "duration": 3.6,
+   "focus": "final -s in functions"
+  },
+  {
+   "id": 5,
+   "text": "One setup page reportedly reads that your HomeView can be used as a security camera with HomeKit Secure Video.",
+   "zh": "据称有一个设置页面写着，你的HomeView可以配合HomeKit安全视频用作安防摄像头。",
+   "audio": "audio/2026-11-02-pm-s5.mp3",
+   "duration": 8.0,
+   "focus": "link used as a"
+  },
+  {
+   "id": 6,
+   "text": "The video feeds would only be visible to members of the home.",
+   "zh": "视频画面只会对家庭成员可见。",
+   "audio": "audio/2026-11-02-pm-s6.mp3",
+   "duration": 4.4,
+   "focus": "v versus w in video"
+  },
+  {
+   "id": 7,
+   "text": "An indicator light would show and a sound would play when someone watches the feed or recording starts.",
+   "zh": "当有人观看画面或开始录制时，会亮起指示灯并发出提示音。",
+   "audio": "audio/2026-11-02-pm-s7.mp3",
+   "duration": 7.5,
+   "focus": "final -s in starts"
+  },
+  {
+   "id": 8,
+   "text": "Home members would also get a notification whenever the Secure Video settings change.",
+   "zh": "每当安全视频的设置发生变化，家庭成员也会收到通知。",
+   "audio": "audio/2026-11-02-pm-s8.mp3",
+   "duration": 6.0,
+   "focus": "final -s in settings"
+  },
+  {
+   "id": 9,
+   "text": "Options for what to detect, stream, or record would depend on whether you are home, away, or asleep.",
+   "zh": "侦测、串流或录制的内容选项，将取决于你是在家、外出还是睡觉。",
+   "audio": "audio/2026-11-02-pm-s9.mp3",
+   "duration": 8.2,
+   "focus": "link whether you are"
+  },
+  {
+   "id": 10,
+   "text": "Some people wondered why Apple did not let HomeView double as a camera at launch.",
+   "zh": "有人好奇，苹果为什么在发布时没有让HomeView兼作摄像头。",
+   "audio": "audio/2026-11-02-pm-s10.mp3",
+   "duration": 5.6,
+   "focus": "final t in at"
+  },
+  {
+   "id": 11,
+   "text": "Apple has not said anything to suggest these features are coming.",
+   "zh": "苹果尚未透露任何信息表明这些功能即将推出。",
+   "audio": "audio/2026-11-02-pm-s11.mp3",
+   "duration": 4.4,
+   "focus": "final -s in features"
+  },
+  {
+   "id": 12,
+   "text": "But privacy is central to Apple's marketing, so the company may be fine-tuning the features first.",
+   "zh": "但隐私是苹果营销的核心，因此公司可能想先把这些功能打磨好。",
+   "audio": "audio/2026-11-02-pm-s12.mp3",
+   "duration": 7.3,
+   "focus": "th in the"
+  }
+ ],
+ "terms": [
+  {
+   "word": "smart home hub",
+   "zh": "智能家居中枢",
+   "note": "指控制家中各种智能设备的中心设备，HomeView就是其中之一。"
+  },
+  {
+   "word": "code strings",
+   "zh": "代码字符串",
+   "note": "指程序里一段段文字，往往能提前暴露尚未发布的功能。"
+  },
+  {
+   "word": "motion detection",
+   "zh": "移动侦测",
+   "note": "指摄像头发现画面里有东西移动时自动作出反应。"
+  },
+  {
+   "word": "live streaming",
+   "zh": "实时串流",
+   "note": "指把摄像头画面实时传送到手机上观看。"
+  },
+  {
+   "word": "HomeKit Secure Video",
+   "zh": "HomeKit安全视频",
+   "note": "苹果的一项服务，让摄像头录像加密后只给家庭成员看。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "suggests 后接宾语从句",
+   "note": "suggest表示“显示、表明”时，后面直接跟that从句，中文常漏掉主语或误用虚拟语气。"
+  },
+  {
+   "line": 6,
+   "point": "被动语态 would only be visible",
+   "note": "would加be加过去分词表示假设情况下的被动，中文习惯说“只会被看到”，容易漏掉be。"
+  },
+  {
+   "line": 9,
+   "point": "whether...or... 引导宾语从句",
+   "note": "whether引出三种并列可能，中文常译成“是否”，但这里要译出“是在家、外出还是睡觉”。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the Reddit user pdfu find?",
+   "options": [
+    "Hidden code strings in HomeView 27.2",
+    "A new Apple camera product",
+    "An official Apple announcement"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句，讲pdfu在27.2版本代码里发现隐藏字符串。"
+  },
+  {
+   "q": "According to the setup page, who can see the video feeds?",
+   "options": [
+    "Anyone with the app",
+    "Only members of the home",
+    "Only Apple staff"
+   ],
+   "answer": 1,
+   "explain": "答案在第六句，说画面只对家庭成员可见。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

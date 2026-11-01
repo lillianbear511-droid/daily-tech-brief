@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-01T10:01:33",
+ "updated": "2026-11-02T01:55:02",
  "days": [
+  {
+   "id": "2026-11-02-pm",
+   "date": "2026-11-02",
+   "slot": "pm",
+   "headline": "Apple HomeView code hints at security camera features",
+   "source": "THE VERGE",
+   "duration": 78.9,
+   "sentences": 12
+  },
   {
    "id": "2026-11-01-am",
    "date": "2026-11-01",
