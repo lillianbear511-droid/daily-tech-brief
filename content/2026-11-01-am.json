@@ -1,0 +1,141 @@
+{
+ "headline": "Apple CEO defends company's AI position",
+ "lines": [
+  {
+   "en": "Apple's new CEO says he likes where the company stands on artificial intelligence.",
+   "zh": "苹果新任首席执行官表示，他对公司在人工智能领域的现状感到满意。",
+   "focus": "final -s in Apple's links to new"
+  },
+  {
+   "en": "John Ternus became CEO at the start of September after a long career at Apple.",
+   "zh": "约翰·特努斯在苹果工作多年后，于九月初正式出任首席执行官。",
+   "focus": "final -s in Ternus"
+  },
+  {
+   "en": "Critics have said Apple fell behind on AI, partly because a stronger Siri arrived late.",
+   "zh": "批评者认为苹果在人工智能上落后了，部分原因是更强版本的Siri推出较晚。",
+   "focus": "final -d in arrived"
+  },
+  {
+   "en": "That new Siri finally launched this summer.",
+   "zh": "新版Siri终于在今年夏天上线。",
+   "focus": "final -ly in finally"
+  },
+  {
+   "en": "Ternus said everyone has an opinion, but he really likes where Apple is now.",
+   "zh": "特努斯说每个人都有看法，但他真的很喜欢苹果目前的位置。",
+   "focus": ""
+  },
+  {
+   "en": "He said Apple will absolutely use AI in its new products.",
+   "zh": "他表示苹果绝对会在新产品中使用人工智能。",
+   "focus": "v sound in absolutely"
+  },
+  {
+   "en": "But he said the company does not want to ship AI just for the sake of AI.",
+   "zh": "但他表示，公司不想为了人工智能而人工智能。",
+   "focus": "final -p in ship"
+  },
+  {
+   "en": "When it is done right, he said, people should not have to think about whether AI or traditional software made it happen.",
+   "zh": "他说，如果做得好，人们就不必去想这是人工智能还是传统软件实现的。",
+   "focus": "th sound in whether and think"
+  },
+  {
+   "en": "What matters, he said, is whether they built something people really love.",
+   "zh": "他说，重要的是他们是否做出了人们真正喜欢的东西。",
+   "focus": "final -d in build"
+  },
+  {
+   "en": "He was also asked whether agents could one day make apps unnecessary.",
+   "zh": "他还被问到，智能体是否有一天会让应用程序变得不再必要。",
+   "focus": "final -s in agents"
+  },
+  {
+   "en": "Agents are software that can carry out tasks on its own.",
+   "zh": "智能体是能够自行执行任务的软件。",
+   "focus": "final -s in tasks"
+  },
+  {
+   "en": "Ternus said that could make life easy, but creating products is a deeply human and personal thing.",
+   "zh": "特努斯说，那可能让生活变得轻松，但创造产品是一件非常人性化、个人化的事情。",
+   "focus": "th sound in thing"
+  }
+ ],
+ "terms": [
+  {
+   "word": "artificial intelligence",
+   "zh": "人工智能",
+   "note": "指让机器完成需要人类智能的任务的技术。"
+  },
+  {
+   "word": "Siri",
+   "zh": "Siri",
+   "note": "苹果设备上的语音助手。"
+  },
+  {
+   "word": "agents",
+   "zh": "智能体",
+   "note": "能自己执行任务的软件程序，而不只是回答问题。"
+  },
+  {
+   "word": "ship",
+   "zh": "发布",
+   "note": "指把产品正式推向用户。"
+  },
+  {
+   "word": "ecosystem",
+   "zh": "生态系统",
+   "note": "指苹果设备、软件和服务相互配合的整体。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "现在完成时 have said",
+   "note": "表示批评从过去持续到现在，中文常说“认为”而容易漏掉 have。"
+  },
+  {
+   "line": 8,
+   "point": "have to 表示“必须”",
+   "note": "should not have to 是“不必”，不是“不应该有”，中文容易误解。"
+  },
+  {
+   "line": 10,
+   "point": "被动语态 was asked",
+   "note": "记者提问用被动，中文习惯说“有人问他”，容易写成主动。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Ternus say about using AI in new products?",
+   "options": [
+    "Apple will absolutely use it",
+    "Apple will avoid it",
+    "Apple has not decided"
+   ],
+   "answer": 0,
+   "explain": "答案在第六句，他说苹果绝对会在新产品中使用人工智能。"
+  },
+  {
+   "q": "What did Ternus say about creating products?",
+   "options": [
+    "It can be fully automated",
+    "It is deeply human and personal",
+    "It is no longer important"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一句，他说创造产品是非常人性化、个人化的事情。"
+  }
+ ],
+ "recall_prompts": [
+  "What is Apple's position on AI?",
+  "Why does Ternus say people should not notice AI?",
+  "What did he say about agents and apps?"
+ ],
+ "script": "Apple's new CEO says he likes where the company stands on artificial intelligence. John Ternus became CEO at the start of September after a long career at Apple. Critics have said Apple fell behind on AI, partly because a stronger Siri arrived late. That new Siri finally launched this summer. Ternus said everyone has an opinion, but he really likes where Apple is now. He said Apple will absolutely use AI in its new products. But he said the company does not want to ship AI just for the sake of AI. When it is done right, he said, people should not have to think about whether AI or traditional software made it happen. What matters, he said, is whether they built something people really love. He was also asked whether agents could one day make apps unnecessary. Agents are software that can carry out tasks on its own. Ternus said that could make life easy, but creating products is a deeply human and personal thing.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake/",
+ "date": "2026-11-01",
+ "slot": "am"
+}

@@ -1,6 +1,15 @@
 {
- "updated": "2026-10-31T10:11:49",
+ "updated": "2026-11-01T10:01:33",
  "days": [
+  {
+   "id": "2026-11-01-am",
+   "date": "2026-11-01",
+   "slot": "am",
+   "headline": "Apple CEO defends company's AI position",
+   "source": "TECHCRUNCH",
+   "duration": 69.4,
+   "sentences": 12
+  },
   {
    "id": "2026-10-31-pm",
    "date": "2026-10-31",
