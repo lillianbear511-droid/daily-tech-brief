@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T01:55:02",
+ "updated": "2026-11-02T10:14:34",
  "days": [
   {
    "id": "2026-11-02-pm",
@@ -9,6 +9,15 @@
    "source": "THE VERGE",
    "duration": 78.9,
    "sentences": 12
+  },
+  {
+   "id": "2026-11-02-am",
+   "date": "2026-11-02",
+   "slot": "am",
+   "headline": "Tech CEOs' AI comments draw criticism",
+   "source": "TECHCRUNCH",
+   "duration": 89.0,
+   "sentences": 13
   },
   {
    "id": "2026-11-01-am",

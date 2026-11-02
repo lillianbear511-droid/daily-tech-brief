@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-02-am",
+ "date": "2026-11-02",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+ "headline": "Tech CEOs' AI comments draw criticism",
+ "audio": "audio/2026-11-02-am-full.mp3",
+ "duration": 89.0,
+ "wpm": 128.1,
+ "script": "Tech CEOs keep making comments about AI that sound out of touch to ordinary people. Dazzle AI CEO Marissa Mayer asked an AI tool to help describe her daughter for a school assignment. OpenAI CEO Sam Altman suggested parents make personalized podcasts for the drive to school. He also said he could not imagine parenting without ChatGPT. Meta CEO Mark Zuckerberg said meeting social and romantic needs through AI will become more acceptable. This led TechCrunch's Amanda Silberling to ask whether AI executives are too out of touch to build for normal people. The question matters as Anthropic prepares to go public. Wall Street is also losing its appetite for heavy AI spending. On the Equity podcast, Amanda said the problem is partly marketing and partly product. She argued the industry is pushing a future where basic human interaction gets optimized out of happening. Amanda added that humans talking to each other is probably a net positive for society. Anthony Ha said CEOs face a huge financial incentive to push AI into every part of life. But when they make that case, the picture can look dystopian rather than appealing.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Tech CEOs keep making comments about AI that sound out of touch to ordinary people.",
+   "zh": "科技公司的CEO们不断发表关于人工智能的言论，在普通人听来很不接地气。",
+   "audio": "audio/2026-11-02-am-s1.mp3",
+   "duration": 6.3,
+   "focus": "keep making: link the two words"
+  },
+  {
+   "id": 2,
+   "text": "Dazzle AI CEO Marissa Mayer asked an AI tool to help describe her daughter for a school assignment.",
+   "zh": "Dazzle AI的CEO玛丽莎·梅耶尔让一款人工智能工具帮她写女儿的一份学校作业。",
+   "audio": "audio/2026-11-02-am-s2.mp3",
+   "duration": 8.0,
+   "focus": "asked an: link the final d"
+  },
+  {
+   "id": 3,
+   "text": "OpenAI CEO Sam Altman suggested parents make personalized podcasts for the drive to school.",
+   "zh": "OpenAI的CEO萨姆·奥尔特曼建议家长为孩子上学路上制作个性化播客。",
+   "audio": "audio/2026-11-02-am-s3.mp3",
+   "duration": 7.3,
+   "focus": "suggested: say the -ed ending"
+  },
+  {
+   "id": 4,
+   "text": "He also said he could not imagine parenting without ChatGPT.",
+   "zh": "他还说，没有ChatGPT他无法想象怎么带孩子。",
+   "audio": "audio/2026-11-02-am-s4.mp3",
+   "duration": 5.1,
+   "focus": "could not: hold the final d"
+  },
+  {
+   "id": 5,
+   "text": "Meta CEO Mark Zuckerberg said meeting social and romantic needs through AI will become more acceptable.",
+   "zh": "Meta的CEO马克·扎克伯格说，通过人工智能满足社交和情感需求会越来越被接受。",
+   "audio": "audio/2026-11-02-am-s5.mp3",
+   "duration": 8.1,
+   "focus": "said: keep the final d short"
+  },
+  {
+   "id": 6,
+   "text": "This led TechCrunch's Amanda Silberling to ask whether AI executives are too out of touch to build for normal people.",
+   "zh": "这让TechCrunch的阿曼达·西尔伯林发问：人工智能高管是不是太脱离现实，做不出适合普通人的产品？",
+   "audio": "audio/2026-11-02-am-s6.mp3",
+   "duration": 8.6,
+   "focus": "led: final d links to TechCrunch"
+  },
+  {
+   "id": 7,
+   "text": "The question matters as Anthropic prepares to go public.",
+   "zh": "这个问题很重要，因为Anthropic正准备上市。",
+   "audio": "audio/2026-11-02-am-s7.mp3",
+   "duration": 4.2,
+   "focus": "prepares to: link the s to to"
+  },
+  {
+   "id": 8,
+   "text": "Wall Street is also losing its appetite for heavy AI spending.",
+   "zh": "与此同时，华尔街对人工智能的大额支出也正在失去兴趣。",
+   "audio": "audio/2026-11-02-am-s8.mp3",
+   "duration": 5.0,
+   "focus": "losing its: link the two words"
+  },
+  {
+   "id": 9,
+   "text": "On the Equity podcast, Amanda said the problem is partly marketing and partly product.",
+   "zh": "在Equity播客上，阿曼达说问题一半出在营销，一半出在产品。",
+   "audio": "audio/2026-11-02-am-s9.mp3",
+   "duration": 6.6,
+   "focus": "partly: say the final y"
+  },
+  {
+   "id": 10,
+   "text": "She argued the industry is pushing a future where basic human interaction gets optimized out of happening.",
+   "zh": "她认为，这个行业正在推动一种未来，让基本的人际交流被优化掉、不再发生。",
+   "audio": "audio/2026-11-02-am-s10.mp3",
+   "duration": 8.0,
+   "focus": "optimized out: link the d to out"
+  },
+  {
+   "id": 11,
+   "text": "Amanda added that humans talking to each other is probably a net positive for society.",
+   "zh": "阿曼达还说，人与人能互相交谈，对社会大概是件好事。",
+   "audio": "audio/2026-11-02-am-s11.mp3",
+   "duration": 6.3,
+   "focus": "talking to: link the g to to"
+  },
+  {
+   "id": 12,
+   "text": "Anthony Ha said CEOs face a huge financial incentive to push AI into every part of life.",
+   "zh": "安东尼·哈说，CEO们有巨大的经济动力，把人工智能推进到生活的每个角落。",
+   "audio": "audio/2026-11-02-am-s12.mp3",
+   "duration": 7.9,
+   "focus": "huge: say the h clearly"
+  },
+  {
+   "id": 13,
+   "text": "But when they make that case, the picture can look dystopian rather than appealing.",
+   "zh": "但当他们这样推销时，描绘出的图景往往更像反乌托邦，而不是吸引人。",
+   "audio": "audio/2026-11-02-am-s13.mp3",
+   "duration": 5.4,
+   "focus": "look: keep the final k"
+  }
+ ],
+ "terms": [
+  {
+   "word": "go public",
+   "zh": "上市",
+   "note": "指公司首次向公众发行股票。"
+  },
+  {
+   "word": "out of touch",
+   "zh": "脱离现实",
+   "note": "指不了解普通人的真实处境和想法。"
+  },
+  {
+   "word": "net positive",
+   "zh": "净收益",
+   "note": "指总体上好处大于坏处。"
+  },
+  {
+   "word": "dystopian",
+   "zh": "反乌托邦的",
+   "note": "形容一种压抑、不自由的糟糕未来。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "suggested parents make（虚拟语气）",
+   "note": "suggest 后的从句用动词原形，不加 to，也不随人称变化，中文学习者常误写成 parents made 或 parents to make。"
+  },
+  {
+   "line": 6,
+   "point": "too out of touch to build（too...to 结构）",
+   "note": "too 加形容词再加 to do 表示“太……以至于不能……”，本身已含否定，不能再加 not。"
+  },
+  {
+   "line": 10,
+   "point": "a future where...（关系副词 where）",
+   "note": "先行词是表示抽象“情境”的 future 时用 where 引导定语从句，中文学习者常误用 which。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Marissa Mayer use an AI tool for?",
+   "options": [
+    "To write a school assignment about her daughter",
+    "To plan a family podcast",
+    "To find a date"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句，梅耶尔让AI工具帮她写女儿的学校作业。"
+  },
+  {
+   "q": "According to Amanda, what is the problem?",
+   "options": [
+    "Only a marketing problem",
+    "Only a product problem",
+    "Both marketing and product"
+   ],
+   "answer": 2,
+   "explain": "答案在第九句，阿曼达说问题一半在营销一半在产品。"
+  }
+ ],
+ "recall_prompts": [
+  "What did the CEOs say?",
+  "Why does it matter now?",
+  "Who is affected?"
+ ]
+}
