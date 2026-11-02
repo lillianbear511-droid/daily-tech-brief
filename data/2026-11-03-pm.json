@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-03-pm",
+ "date": "2026-11-03",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
+ "headline": "42AI launches with $62.5M for behavior prediction model",
+ "audio": "audio/2026-11-03-pm-full.mp3",
+ "duration": 90.4,
+ "wpm": 114.8,
+ "script": "Israeli startup 42AI has come out of stealth with sixty-two point five million dollars in seed funding. The company says it is building a behavioral world model that can predict what people will do. A world model is a system that simulates how something works so it can forecast outcomes. 42AI is first running the system at a few financial brokerages. There it helps predict how individual traders will react to volatile conditions. The CEO says behavior is not fixed but always probabilistic. People have underlying tendencies that shape their decisions even when circumstances change. The model tries to find internal motivations instead of extrapolating from past actions. To do that, it examines how people react to seemingly unrelated events. For traders, these events include KYC checks, support calls, money transfers, and stock trades. The company converts these observations into mathematical representations of traits. These are fed into a transformer-based world model that lays out probabilities for decisions. 42AI spent three years developing this approach with psychology, neuroscience, and genetics research.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Israeli startup 42AI has come out of stealth with sixty-two point five million dollars in seed funding.",
+   "zh": "以色列初创公司42AI结束隐身状态，获得6250万美元种子轮融资。",
+   "audio": "audio/2026-11-03-pm-s1.mp3",
+   "duration": 8.6,
+   "focus": "final -s in dollars links to in"
+  },
+  {
+   "id": 2,
+   "text": "The company says it is building a behavioral world model that can predict what people will do.",
+   "zh": "该公司表示正在构建一个行为世界模型，能够预测人们会做什么。",
+   "audio": "audio/2026-11-03-pm-s2.mp3",
+   "duration": 6.2,
+   "focus": "th in that and what"
+  },
+  {
+   "id": 3,
+   "text": "A world model is a system that simulates how something works so it can forecast outcomes.",
+   "zh": "世界模型是一种模拟事物运作方式、从而预测结果的系统。",
+   "audio": "audio/2026-11-03-pm-s3.mp3",
+   "duration": 6.5,
+   "focus": "final -s in works"
+  },
+  {
+   "id": 4,
+   "text": "42AI is first running the system at a few financial brokerages.",
+   "zh": "42AI首先在几家金融经纪公司运行这套系统。",
+   "audio": "audio/2026-11-03-pm-s4.mp3",
+   "duration": 5.6,
+   "focus": "v versus w in few"
+  },
+  {
+   "id": 5,
+   "text": "There it helps predict how individual traders will react to volatile conditions.",
+   "zh": "在那里，它帮助预测个体交易者将如何应对剧烈波动的市场状况。",
+   "audio": "audio/2026-11-03-pm-s5.mp3",
+   "duration": 5.6,
+   "focus": "final -d in individual"
+  },
+  {
+   "id": 6,
+   "text": "The CEO says behavior is not fixed but always probabilistic.",
+   "zh": "首席执行官表示，行为不是固定的，而始终是概率性的。",
+   "audio": "audio/2026-11-03-pm-s6.mp3",
+   "duration": 5.1,
+   "focus": "final -s in says"
+  },
+  {
+   "id": 7,
+   "text": "People have underlying tendencies that shape their decisions even when circumstances change.",
+   "zh": "人们有潜在的心理倾向，即使环境改变也会影响其决策。",
+   "audio": "audio/2026-11-03-pm-s7.mp3",
+   "duration": 7.0,
+   "focus": "th in underlying"
+  },
+  {
+   "id": 8,
+   "text": "The model tries to find internal motivations instead of extrapolating from past actions.",
+   "zh": "该模型试图找出内在动机，而不是从过去的行为中推断模式。",
+   "audio": "audio/2026-11-03-pm-s8.mp3",
+   "duration": 7.1,
+   "focus": "final -g in extrapolating"
+  },
+  {
+   "id": 9,
+   "text": "To do that, it examines how people react to seemingly unrelated events.",
+   "zh": "为此，它考察人们如何对看似无关的事件做出反应。",
+   "audio": "audio/2026-11-03-pm-s9.mp3",
+   "duration": 6.0,
+   "focus": "final -s in events"
+  },
+  {
+   "id": 10,
+   "text": "For traders, these events include KYC checks, support calls, money transfers, and stock trades.",
+   "zh": "对交易者而言，这些事件包括KYC审核、客服电话、转账和股票交易。",
+   "audio": "audio/2026-11-03-pm-s10.mp3",
+   "duration": 8.4,
+   "focus": "final -s in checks"
+  },
+  {
+   "id": 11,
+   "text": "The company converts these observations into mathematical representations of traits.",
+   "zh": "该公司将这些观察结果转化为特征的数学表示。",
+   "audio": "audio/2026-11-03-pm-s11.mp3",
+   "duration": 6.5,
+   "focus": "th in mathematical"
+  },
+  {
+   "id": 12,
+   "text": "These are fed into a transformer-based world model that lays out probabilities for decisions.",
+   "zh": "这些表示被输入一个基于Transformer的世界模型，该模型列出各种决策的概率。",
+   "audio": "audio/2026-11-03-pm-s12.mp3",
+   "duration": 7.1,
+   "focus": "final -d in based"
+  },
+  {
+   "id": 13,
+   "text": "42AI spent three years developing this approach with psychology, neuroscience, and genetics research.",
+   "zh": "42AI花了三年时间，结合心理学、神经科学和遗传学研究来开发这种方法。",
+   "audio": "audio/2026-11-03-pm-s13.mp3",
+   "duration": 8.4,
+   "focus": "final -d in spent"
+  }
+ ],
+ "terms": [
+  {
+   "word": "world model",
+   "zh": "世界模型",
+   "note": "一种模拟现实运作方式、用来预测结果的AI系统。"
+  },
+  {
+   "word": "seed funding",
+   "zh": "种子轮融资",
+   "note": "公司最早期的外部投资，用来开发产品。"
+  },
+  {
+   "word": "brokerages",
+   "zh": "经纪公司",
+   "note": "替客户买卖股票等金融产品的机构。"
+  },
+  {
+   "word": "transformer-based",
+   "zh": "基于Transformer的",
+   "note": "一种擅长处理序列数据的神经网络结构。"
+  },
+  {
+   "word": "KYC",
+   "zh": "了解你的客户",
+   "note": "金融机构核实客户身份的流程。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "现在进行时 is building",
+   "note": "表示正在进行的动作，中文说“正在构建”时容易漏掉is。"
+  },
+  {
+   "line": 7,
+   "point": "that引导的定语从句",
+   "note": "that指代tendencies，中文习惯把从句放在名词前，英语则后置。"
+  },
+  {
+   "line": 12,
+   "point": "被动语态 are fed into",
+   "note": "强调数据被输入，中文常用“被”但英语被动更常见。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What does 42AI's model try to predict?",
+   "options": [
+    "Stock market prices",
+    "How individual people will behave",
+    "Weather patterns"
+   ],
+   "answer": 1,
+   "explain": "The answer is in sentence 2, which says the model predicts what people will do."
+  },
+  {
+   "q": "Where is 42AI first running its system?",
+   "options": [
+    "At hospitals",
+    "At financial brokerages",
+    "At universities"
+   ],
+   "answer": 1,
+   "explain": "The answer is in sentence 4, which mentions a few financial brokerages."
+  }
+ ],
+ "recall_prompts": [
+  "What is a world model?",
+  "How does 42AI gather data?",
+  "What is the funding amount?"
+ ]
+}

@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-02T10:14:34",
+ "updated": "2026-11-03T05:42:44",
  "days": [
+  {
+   "id": "2026-11-03-pm",
+   "date": "2026-11-03",
+   "slot": "pm",
+   "headline": "42AI launches with $62.5M for behavior prediction model",
+   "source": "TECHCRUNCH",
+   "duration": 90.4,
+   "sentences": 13
+  },
   {
    "id": "2026-11-02-pm",
    "date": "2026-11-02",
