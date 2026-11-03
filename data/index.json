@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-03T11:54:20",
+ "updated": "2026-11-04T03:28:51",
  "days": [
+  {
+   "id": "2026-11-04-pm",
+   "date": "2026-11-04",
+   "slot": "pm",
+   "headline": "CrowdStrike buys two AI security firms for nearly $500M",
+   "source": "TECHCRUNCH",
+   "duration": 100.0,
+   "sentences": 12
+  },
   {
    "id": "2026-11-03-pm",
    "date": "2026-11-03",

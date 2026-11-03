@@ -1,0 +1,136 @@
+{
+ "headline": "CrowdStrike buys two AI security firms for nearly $500M",
+ "lines": [
+  {
+   "en": "CrowdStrike will pay nearly five hundred million dollars for two AI security startups.",
+   "zh": "CrowdStrike 将斥资近五亿美元收购两家 AI 安全初创公司。",
+   "focus": "final -s in dollars"
+  },
+  {
+   "en": "The cybersecurity giant is buying Fiddler AI and Dreadnode to expand how it monitors and tests AI models and agents.",
+   "zh": "这家网络安全巨头正在收购 Fiddler AI 和 Dreadnode，以扩展其监控和测试 AI 模型与智能体的能力。",
+   "focus": ""
+  },
+  {
+   "en": "Fiddler AI makes observability software, which lets companies watch AI agents running inside their systems.",
+   "zh": "Fiddler AI 开发可观测性软件，让企业能够监视在其系统内运行的智能体。",
+   "focus": "th in which"
+  },
+  {
+   "en": "Dreadnode automates security testing, which finds flaws in AI models, apps and agents before they go live.",
+   "zh": "Dreadnode 则自动化安全测试，在 AI 模型、应用和智能体上线前发现其中的缺陷。",
+   "focus": "final -s in apps"
+  },
+  {
+   "en": "CrowdStrike is paying about four hundred million dollars for Fiddler AI and about ninety-five million for Dreadnode.",
+   "zh": "CrowdStrike 为 Fiddler AI 支付约四亿美元，为 Dreadnode 支付约九千五百万美元。",
+   "focus": "v in five"
+  },
+  {
+   "en": "The deals come as security policies and processes lag behind AI adoption inside companies.",
+   "zh": "这两笔交易达成之际，企业内部的安全政策和流程正落后于 AI 的采用速度。",
+   "focus": "final -s in policies"
+  },
+  {
+   "en": "Employees are experimenting with AI tools and automating workflows, which causes headaches for security teams.",
+   "zh": "员工们正在试用 AI 工具并自动化工作流程，这给安全团队带来了不少麻烦。",
+   "focus": "link with AI"
+  },
+  {
+   "en": "CrowdStrike's products are used widely across enterprises and governments, and it wants a share of this growing market.",
+   "zh": "CrowdStrike 的产品被企业和政府广泛使用，它希望在这个不断增长的市场中分一杯羹。",
+   "focus": "final -s in products"
+  },
+  {
+   "en": "Other startups and vendors are also raising money to address the same problem.",
+   "zh": "其他初创公司和厂商也在筹集资金来解决同样的问题。",
+   "focus": ""
+  },
+  {
+   "en": "CrowdStrike has built its own detection and response controls, called Falcon Guardian, to show what agents do on devices.",
+   "zh": "CrowdStrike 已经打造了自己的检测与响应控制产品 Falcon Guardian，用来展示智能体在设备上的行为。",
+   "focus": "final -s in devices"
+  },
+  {
+   "en": "Fiddler AI will join the Falcon platform as Falcon Observe, helping clients evaluate agents before deployment.",
+   "zh": "Fiddler AI 将以 Falcon Observe 的身份加入 Falcon 平台，帮助客户在部署前评估智能体。",
+   "focus": "v in Observe"
+  },
+  {
+   "en": "Dreadnode will be integrated into Falcon Guardian, feeding its test results in as security policy recommendations.",
+   "zh": "Dreadnode 将被整合进 Falcon Guardian，把测试结果作为安全策略建议输入其中。",
+   "focus": "link integrated into"
+  }
+ ],
+ "terms": [
+  {
+   "word": "agents",
+   "zh": "智能体",
+   "note": "指能自主执行任务的 AI 程序，不只是回答问题。"
+  },
+  {
+   "word": "observability",
+   "zh": "可观测性",
+   "note": "指通过监控数据了解系统内部运行状况的能力。"
+  },
+  {
+   "word": "telemetry",
+   "zh": "遥测数据",
+   "note": "指系统自动上报的运行数据，用来监控和分析。"
+  },
+  {
+   "word": "detection and response controls",
+   "zh": "检测与响应控制",
+   "note": "指发现威胁并做出反应的安全机制。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "现在进行时 is buying",
+   "note": "用进行时表示已宣布、正在推进的交易，中文常直接说“收购”，容易漏掉 be 动词。"
+  },
+  {
+   "line": 6,
+   "point": "as 引导时间状语从句",
+   "note": "as 在这里表示“正当……之际”，不是“因为”，中文学习者常误读为原因。"
+  },
+  {
+   "line": 12,
+   "point": "被动语态 will be integrated",
+   "note": "Dreadnode 是被整合的一方，用被动；中文习惯说“将整合进”，容易丢掉 be 和过去分词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How much is CrowdStrike paying for Fiddler AI?",
+   "options": [
+    "About ninety-five million dollars",
+    "About four hundred million dollars",
+    "About five hundred million dollars"
+   ],
+   "answer": 1,
+   "explain": "答案在第五句，明确给出 Fiddler AI 的收购价。"
+  },
+  {
+   "q": "What will Dreadnode's software feed into Falcon Guardian?",
+   "options": [
+    "Observability data",
+    "Test results as security policy recommendations",
+    "Employee workflow logs"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一句，说明 Dreadnode 的测试结果作为安全策略建议输入。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "CrowdStrike will pay nearly five hundred million dollars for two AI security startups. The cybersecurity giant is buying Fiddler AI and Dreadnode to expand how it monitors and tests AI models and agents. Fiddler AI makes observability software, which lets companies watch AI agents running inside their systems. Dreadnode automates security testing, which finds flaws in AI models, apps and agents before they go live. CrowdStrike is paying about four hundred million dollars for Fiddler AI and about ninety-five million for Dreadnode. The deals come as security policies and processes lag behind AI adoption inside companies. Employees are experimenting with AI tools and automating workflows, which causes headaches for security teams. CrowdStrike's products are used widely across enterprises and governments, and it wants a share of this growing market. Other startups and vendors are also raising money to address the same problem. CrowdStrike has built its own detection and response controls, called Falcon Guardian, to show what agents do on devices. Fiddler AI will join the Falcon platform as Falcon Observe, helping clients evaluate agents before deployment. Dreadnode will be integrated into Falcon Guardian, feeding its test results in as security policy recommendations.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off/",
+ "date": "2026-11-04",
+ "slot": "pm"
+}
