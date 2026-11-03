@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T05:42:44",
+ "updated": "2026-11-03T11:54:20",
  "days": [
   {
    "id": "2026-11-03-pm",
@@ -9,6 +9,15 @@
    "source": "TECHCRUNCH",
    "duration": 90.4,
    "sentences": 13
+  },
+  {
+   "id": "2026-11-03-am",
+   "date": "2026-11-03",
+   "slot": "am",
+   "headline": "OpenAI pitches power plants to protect nearby areas",
+   "source": "THE VERGE",
+   "duration": 96.3,
+   "sentences": 12
   },
   {
    "id": "2026-11-02-pm",

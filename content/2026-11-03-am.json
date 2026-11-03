@@ -1,0 +1,141 @@
+{
+ "headline": "OpenAI pitches power plants to protect nearby areas",
+ "lines": [
+  {
+   "en": "OpenAI will pilot its Grid Protectors Program at a new data center in Effingham County, Georgia.",
+   "zh": "OpenAI将在佐治亚州埃芬汉县的一个新数据中心试点其“电网保护者计划”。",
+   "focus": "final -t in Protectors"
+  },
+  {
+   "en": "During extreme weather or emergencies, the program promises to free up to one thousand megawatts of power.",
+   "zh": "该计划承诺在极端天气或紧急情况下释放最多一千兆瓦的电力。",
+   "focus": "link up to"
+  },
+  {
+   "en": "That is enough to power air conditioners in around seven hundred thousand homes.",
+   "zh": "这足以为大约七十万户家庭的空调供电。",
+   "focus": "th in thousand"
+  },
+  {
+   "en": "The announcement comes as opposition to data centers spreads across the US.",
+   "zh": "这一声明发布之际，美国各地对数据中心的反对声正在蔓延。",
+   "focus": "final -s in spreads"
+  },
+  {
+   "en": "Many massive projects have begun development and construction with little or no input from local residents.",
+   "zh": "许多大型项目在几乎没有或完全没有当地居民参与的情况下开始开发和建设。",
+   "focus": "link input from"
+  },
+  {
+   "en": "In Utah, residents protested after Box Elder County commissioners approved a data center.",
+   "zh": "在犹他州，居民在博克斯埃尔德县委员批准一个数据中心后进行了抗议。",
+   "focus": "final -ed in approved"
+  },
+  {
+   "en": "That data center is expected to consume more than double the state's peak electricity demand in 2025.",
+   "zh": "该数据中心预计将消耗超过该州2025年峰值电力需求的两倍。",
+   "focus": "v in demand"
+  },
+  {
+   "en": "It would also spread hot air in the desert valley surrounding the data center.",
+   "zh": "它还会在数据中心周围的沙漠山谷中扩散热空气。",
+   "focus": "th in surrounding"
+  },
+  {
+   "en": "OpenAI now pitches the construction of power plants that feed its AI data centers as a resource utilities can call on.",
+   "zh": "OpenAI现在将其为AI数据中心供电的发电厂建设，宣传为公用事业公司可以调用的资源。",
+   "focus": "link call on"
+  },
+  {
+   "en": "Several states, including Tennessee, Florida, Oklahoma, and Oregon, have enacted laws to prevent AI companies from passing energy costs to residents.",
+   "zh": "包括田纳西州、佛罗里达州、俄克拉荷马州和俄勒冈州在内的几个州已颁布法律，防止AI公司将能源成本转嫁给居民。",
+   "focus": "final -ed in enacted"
+  },
+  {
+   "en": "These laws also include moratoriums and other restrictions.",
+   "zh": "这些法律还包括暂停令和其他限制。",
+   "focus": "th in other"
+  },
+  {
+   "en": "A recent study by the Houston Advanced Research Center said powering proposed Texas data center projects could undo decades of air quality gains over just five years.",
+   "zh": "休斯顿高级研究中心最近的一项研究表示，为德克萨斯州拟建的数据中心项目供电，可能在短短五年内抵消数十年的空气质量改善。",
+   "focus": "final -s in decades"
+  }
+ ],
+ "terms": [
+  {
+   "word": "data center",
+   "zh": "数据中心",
+   "note": "存放大量服务器、消耗大量电力的设施。"
+  },
+  {
+   "word": "megawatt",
+   "zh": "兆瓦",
+   "note": "电功率单位，一千兆瓦约等于七十万户空调的用电。"
+  },
+  {
+   "word": "utilities",
+   "zh": "公用事业公司",
+   "note": "指供电、供水等公共服务企业，这里指电网运营商。"
+  },
+  {
+   "word": "moratoriums",
+   "zh": "暂停令",
+   "note": "暂时禁止某项活动的官方命令，这里指暂停新建数据中心。"
+  },
+  {
+   "word": "air quality gains",
+   "zh": "空气质量改善",
+   "note": "指过去在减少空气污染方面取得的成果。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "不定式作定语 to free up",
+   "note": "promises to free up 表示承诺做某事，中文习惯说“承诺释放”，容易漏掉 to。"
+  },
+  {
+   "line": 5,
+   "point": "现在完成时 have begun",
+   "note": "强调项目已经开始并持续到现在，中文常只说“开始”而漏掉 have。"
+  },
+  {
+   "line": 10,
+   "point": "prevent...from doing",
+   "note": "prevent A from B 表示阻止A做B，中文容易漏掉 from。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How much power does the Grid Protectors Program promise to free up?",
+   "options": [
+    "One hundred megawatts",
+    "One thousand megawatts",
+    "Seven hundred thousand megawatts"
+   ],
+   "answer": 1,
+   "explain": "第二句提到 free up to one thousand megawatts。"
+  },
+  {
+   "q": "What did the Houston Advanced Research Center study say?",
+   "options": [
+    "Texas data centers could undo decades of air quality gains in five years",
+    "Texas data centers would create thousands of jobs",
+    "Texas data centers would lower electricity prices"
+   ],
+   "answer": 0,
+   "explain": "最后一句提到 could undo decades of air quality gains over just five years。"
+  }
+ ],
+ "recall_prompts": [
+  "What is the Grid Protectors Program?",
+  "Why are residents protesting data centers?",
+  "What laws have states passed?"
+ ],
+ "script": "OpenAI will pilot its Grid Protectors Program at a new data center in Effingham County, Georgia. During extreme weather or emergencies, the program promises to free up to one thousand megawatts of power. That is enough to power air conditioners in around seven hundred thousand homes. The announcement comes as opposition to data centers spreads across the US. Many massive projects have begun development and construction with little or no input from local residents. In Utah, residents protested after Box Elder County commissioners approved a data center. That data center is expected to consume more than double the state's peak electricity demand in 2025. It would also spread hot air in the desert valley surrounding the data center. OpenAI now pitches the construction of power plants that feed its AI data centers as a resource utilities can call on. Several states, including Tennessee, Florida, Oklahoma, and Oregon, have enacted laws to prevent AI companies from passing energy costs to residents. These laws also include moratoriums and other restrictions. A recent study by the Houston Advanced Research Center said powering proposed Texas data center projects could undo decades of air quality gains over just five years.",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+ "date": "2026-11-03",
+ "slot": "am"
+}
