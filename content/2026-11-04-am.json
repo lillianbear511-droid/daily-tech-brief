@@ -1,0 +1,146 @@
+{
+ "headline": "Anthropic builds tool to prove which AI model made an output",
+ "lines": [
+  {
+   "en": "Anthropic is building an open source system to verify which AI model produced a given output.",
+   "zh": "Anthropic正在开发一套开源系统，用来验证某段输出究竟出自哪个AI模型。",
+   "focus": "which 的 ch 读 /tʃ/，别读成 sh"
+  },
+  {
+   "en": "The system is called FlashProve and it provides what researchers call provable inference.",
+   "zh": "这套系统名为FlashProve，它提供的是研究人员所说的“可证明推理”。",
+   "focus": "called 的 -ed 读 /d/，不要吞掉"
+  },
+  {
+   "en": "That means a cryptographic proof, essentially a mathematical guarantee, that an output came from a specific model.",
+   "zh": "也就是说，它给出的是一份密码学证明，本质上是一种数学保证，证明某段输出来自某个特定模型。",
+   "focus": "proof 的 f 要送气，别读成 p"
+  },
+  {
+   "en": "It lets users confirm the answer really came from the model they think they are using.",
+   "zh": "它让用户能够确认，自己收到的回答确实来自他们以为在用的那个模型。",
+   "focus": "lets 的 -ts 连读，收尾要清楚"
+  },
+  {
+   "en": "It works like cryptographic email signatures, which let recipients confirm who really sent a message.",
+   "zh": "它的原理类似加密邮件签名，收件人可以借此确认邮件到底是谁发的。",
+   "focus": "signatures 的 -s 结尾别漏读"
+  },
+  {
+   "en": "FlashProve would resist impostors trying to pass one model off as another.",
+   "zh": "FlashProve能够抵御冒充者把某个模型伪装成另一个模型。",
+   "focus": "off as 两词连读，f 音接元音"
+  },
+  {
+   "en": "That includes the lab that built and runs the model itself.",
+   "zh": "这甚至包括开发和运营该模型的实验室本身。",
+   "focus": "built 的 t 要轻收，别加元音"
+  },
+  {
+   "en": "Researchers say it could stop a company from secretly swapping in a cheaper model to cut costs.",
+   "zh": "研究人员表示，它可以阻止公司偷偷换成更便宜的模型来削减成本。",
+   "focus": "swapping 的双 p 只发一个 /p/"
+  },
+  {
+   "en": "It could also catch a firm swapping in a pricier model to inflate its performance results.",
+   "zh": "它也能发现公司换成更贵的模型来抬高自己的性能成绩。",
+   "focus": "pricier 的 c 读 /s/，不是 /k/"
+  },
+  {
+   "en": "To work, labs must publish a fingerprint of each model they release.",
+   "zh": "要让它运转，实验室必须为每个发布的模型公布一份“指纹”。",
+   "focus": "publish 的 sh 读 /ʃ/，别读成 s"
+  },
+  {
+   "en": "That fingerprint can later be matched to outputs and checked cryptographically.",
+   "zh": "这份指纹之后可以与具体输出比对，并用密码学方式核验。",
+   "focus": "matched 的 -ed 读 /t/，要收住"
+  },
+  {
+   "en": "Crucially, the fingerprints do not reveal a model's weights, the internal numbers that define how it behaves.",
+   "zh": "关键在于，指纹不会暴露模型的权重，也就是决定其行为的那些内部数值。",
+   "focus": "weights 的 -ts 结尾要读出来"
+  },
+  {
+   "en": "So labs can publish them without giving up their most valuable asset, and the system can work with commercial models too.",
+   "zh": "因此实验室不必交出最值钱的资产就能公布指纹，这套系统也能用于商业模型。",
+   "focus": "asset 的 -t 轻收，别吞掉"
+  }
+ ],
+ "terms": [
+  {
+   "word": "provable inference",
+   "zh": "可证明推理",
+   "note": "指用数学证明来确认某段输出确实由某个模型生成。"
+  },
+  {
+   "word": "cryptographic proof",
+   "zh": "密码学证明",
+   "note": "用加密算法生成的凭证，别人无法伪造。"
+  },
+  {
+   "word": "fingerprint",
+   "zh": "指纹",
+   "note": "这里指每个模型公布的一段标识数据，可与输出比对。"
+  },
+  {
+   "word": "weights",
+   "zh": "权重",
+   "note": "模型内部的数值参数，决定模型的行为方式。"
+  },
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指代码公开，任何人都能查看和使用。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "定语从句 they think they are using",
+   "note": "从句里套了插入的 they think，中文习惯直接说“他们以为在用的模型”，容易漏掉这层结构。"
+  },
+  {
+   "line": 6,
+   "point": "pass A off as B",
+   "note": "固定搭配，意为把A冒充成B；中文学习者常把 off 漏掉或误用成 pass as。"
+  },
+  {
+   "line": 12,
+   "point": "同位语 the internal numbers that define...",
+   "note": "用同位语解释前面的 weights，中文多用“也就是”引出，英语直接并列，读时要注意停顿。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is FlashProve designed to do?",
+   "options": [
+    "Speed up AI model training",
+    "Prove which model produced an output",
+    "Lower the cost of commercial models"
+   ],
+   "answer": 1,
+   "explain": "答案在第一、二句，系统用来验证输出来自哪个模型。"
+  },
+  {
+   "q": "Why can labs publish fingerprints without exposing model weights?",
+   "options": [
+    "Because fingerprints are encrypted with a password",
+    "Because weights are already public",
+    "Because fingerprints do not reveal the internal numbers"
+   ],
+   "answer": 2,
+   "explain": "答案在第十二句，指纹不暴露决定模型行为的内部数值。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Anthropic is building an open source system to verify which AI model produced a given output. The system is called FlashProve and it provides what researchers call provable inference. That means a cryptographic proof, essentially a mathematical guarantee, that an output came from a specific model. It lets users confirm the answer really came from the model they think they are using. It works like cryptographic email signatures, which let recipients confirm who really sent a message. FlashProve would resist impostors trying to pass one model off as another. That includes the lab that built and runs the model itself. Researchers say it could stop a company from secretly swapping in a cheaper model to cut costs. It could also catch a firm swapping in a pricier model to inflate its performance results. To work, labs must publish a fingerprint of each model they release. That fingerprint can later be matched to outputs and checked cryptographically. Crucially, the fingerprints do not reveal a model's weights, the internal numbers that define how it behaves. So labs can publish them without giving up their most valuable asset, and the system can work with commercial models too.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+ "date": "2026-11-04",
+ "slot": "am"
+}

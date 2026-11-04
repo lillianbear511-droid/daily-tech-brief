@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T03:28:51",
+ "updated": "2026-11-04T11:00:58",
  "days": [
   {
    "id": "2026-11-04-pm",
@@ -9,6 +9,15 @@
    "source": "TECHCRUNCH",
    "duration": 100.0,
    "sentences": 12
+  },
+  {
+   "id": "2026-11-04-am",
+   "date": "2026-11-04",
+   "slot": "am",
+   "headline": "Anthropic builds tool to prove which AI model made an output",
+   "source": "TECHCRUNCH",
+   "duration": 88.5,
+   "sentences": 13
   },
   {
    "id": "2026-11-03-pm",
