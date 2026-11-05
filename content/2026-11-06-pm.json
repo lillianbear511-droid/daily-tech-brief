@@ -1,0 +1,146 @@
+{
+ "headline": "OpenAI launches a cybersecurity model as AI finds more bugs",
+ "lines": [
+  {
+   "en": "OpenAI has released a new model built for cybersecurity work.",
+   "zh": "OpenAI发布了一款专为网络安全工作打造的新模型。",
+   "focus": "released a — link the final d into the a"
+  },
+  {
+   "en": "It is called ChatGPT Cyber and goes first to the top tier of Daybreak Red.",
+   "zh": "它名为ChatGPT Cyber，首先提供给Daybreak Red项目的最高级别用户。",
+   "focus": "first to — hold the final t before to"
+  },
+  {
+   "en": "That program gives offensive researchers tools to hunt for vulnerabilities.",
+   "zh": "该项目为攻击性研究人员提供寻找漏洞的工具。",
+   "focus": "hunt for — link the two words"
+  },
+  {
+   "en": "A vulnerability is a flaw in software that attackers can abuse.",
+   "zh": "漏洞是软件中可被攻击者利用的缺陷。",
+   "focus": "flaw in — link the two words"
+  },
+  {
+   "en": "The news follows a striking find by Max Justicz of Charge Robotics.",
+   "zh": "这一消息源于Charge Robotics公司Max Justicz的一次惊人发现。",
+   "focus": "Justicz — say the final ts sound"
+  },
+  {
+   "en": "He aimed GPT 5.6 Sol at Ubuntu code and found a severe flaw in two hours.",
+   "zh": "他把GPT 5.6 Sol对准Ubuntu代码，两小时内就发现了一个严重缺陷。",
+   "focus": "found a — link the final d into the a"
+  },
+  {
+   "en": "Ubuntu is a widely used open source operating system.",
+   "zh": "Ubuntu是一款广泛使用的开源操作系统。",
+   "focus": "used open — link the two words"
+  },
+  {
+   "en": "He reported it to the Debian Project, which issued a patch.",
+   "zh": "他把问题报告给了Debian项目，该项目随后发布了补丁。",
+   "focus": "reported it — link the two words"
+  },
+  {
+   "en": "There is no known evidence that anyone exploited the flaw.",
+   "zh": "目前没有已知证据表明有人利用过这个漏洞。",
+   "focus": "exploited — say the final ed ending"
+  },
+  {
+   "en": "OpenAI said the same model scanned the Linux kernel and found nine hundred forty-eight potential issues.",
+   "zh": "OpenAI表示，同一模型扫描了Linux内核，发现了九百四十八个潜在问题。",
+   "focus": "found nine — link the final d into nine"
+  },
+  {
+   "en": "It also found eighty-one new vulnerabilities in the Firefox browser.",
+   "zh": "它还在Firefox浏览器中发现了八十一个新型漏洞。",
+   "focus": "found eighty — link the final d into eighty"
+  },
+  {
+   "en": "OpenAI says defenders have a narrow window before AI hacking improves and spreads.",
+   "zh": "OpenAI表示，在AI攻击能力提升并扩散之前，防御方的时间窗口很窄。",
+   "focus": "improves and — link the final s into and"
+  },
+  {
+   "en": "Justicz spent about five thousand dollars on subscriptions and tokens to find several exploits.",
+   "zh": "Justicz花了约五千美元购买订阅和token，才找到几个可利用漏洞。",
+   "focus": "spent about — link the final t into about"
+  }
+ ],
+ "terms": [
+  {
+   "word": "vulnerability",
+   "zh": "漏洞",
+   "note": "指软件中可被攻击者利用的安全缺陷。"
+  },
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指源代码公开、任何人都能查看和修改的软件。"
+  },
+  {
+   "word": "patch",
+   "zh": "补丁",
+   "note": "指用来修复已知漏洞的小型软件更新。"
+  },
+  {
+   "word": "Linux kernel",
+   "zh": "Linux内核",
+   "note": "指Linux操作系统的核心部分，负责管理硬件和进程。"
+  },
+  {
+   "word": "tokens",
+   "zh": "token（调用额度）",
+   "note": "指使用AI模型时按用量计费的调用单位。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "被动语态 is called",
+   "note": "英文用被动说明名称，中文常说“它名为”，容易误写成主动句。"
+  },
+  {
+   "line": 8,
+   "point": "非限制性定语从句 which issued a patch",
+   "note": "which指代前面的Debian项目，中文要拆成“该项目随后……”而不能直译成一个长定语。"
+  },
+  {
+   "line": 12,
+   "point": "before加从句 before AI hacking improves",
+   "note": "before后接完整从句表示“在……之前”，中文习惯用“之前”而容易漏掉主语和动词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How long did it take Justicz to find the severe flaw?",
+   "options": [
+    "Two hours",
+    "Two days",
+    "Two weeks"
+   ],
+   "answer": 0,
+   "explain": "第六句说他两小时内就找到了这个严重缺陷。"
+  },
+  {
+   "q": "How many potential issues did the model find in the Linux kernel?",
+   "options": [
+    "Eighty-one",
+    "Nine hundred forty-eight",
+    "Five thousand"
+   ],
+   "answer": 1,
+   "explain": "第十句给出Linux内核的潜在问题数量是九百四十八个。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "OpenAI has released a new model built for cybersecurity work. It is called ChatGPT Cyber and goes first to the top tier of Daybreak Red. That program gives offensive researchers tools to hunt for vulnerabilities. A vulnerability is a flaw in software that attackers can abuse. The news follows a striking find by Max Justicz of Charge Robotics. He aimed GPT 5.6 Sol at Ubuntu code and found a severe flaw in two hours. Ubuntu is a widely used open source operating system. He reported it to the Debian Project, which issued a patch. There is no known evidence that anyone exploited the flaw. OpenAI said the same model scanned the Linux kernel and found nine hundred forty-eight potential issues. It also found eighty-one new vulnerabilities in the Firefox browser. OpenAI says defenders have a narrow window before AI hacking improves and spreads. Justicz spent about five thousand dollars on subscriptions and tokens to find several exploits.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+ "date": "2026-11-06",
+ "slot": "pm"
+}

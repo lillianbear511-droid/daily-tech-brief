@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-05T11:22:04",
+ "updated": "2026-11-06T04:36:05",
  "days": [
+  {
+   "id": "2026-11-06-pm",
+   "date": "2026-11-06",
+   "slot": "pm",
+   "headline": "OpenAI launches a cybersecurity model as AI finds more bugs",
+   "source": "TECHCRUNCH",
+   "duration": 77.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-05-am",
    "date": "2026-11-05",
