@@ -1,0 +1,136 @@
+{
+ "headline": "Open source AI grows; Hugging Face on who profits",
+ "lines": [
+  {
+   "en": "Open source AI models are becoming more mainstream, and Hugging Face explains who captures the value.",
+   "zh": "开源人工智能模型正变得越来越主流，而Hugging Face解释了谁能从中获得价值。",
+   "focus": "th in the and who"
+  },
+  {
+   "en": "Enterprises, governments and startups all rely on them for lower costs, more control and more flexibility.",
+   "zh": "企业、政府和初创公司都依赖它们来降低成本、获得更多控制权和灵活性。",
+   "focus": "final s in costs"
+  },
+  {
+   "en": "But as increasingly capable models become more freely available, how do companies capture value?",
+   "zh": "但随着能力越来越强的模型变得更易免费获取，公司该如何获取价值？",
+   "focus": "v in value"
+  },
+  {
+   "en": "And with Chinese open models gaining ground, can American players keep up?",
+   "zh": "而随着中国开源模型不断取得进展，美国玩家还能跟上吗？",
+   "focus": "link keep up"
+  },
+  {
+   "en": "On the Equity podcast, Rebecca Bellan spoke with Irene Solaiman of Hugging Face.",
+   "zh": "在Equity播客节目中，Rebecca Bellan与Hugging Face的Irene Solaiman进行了交谈。",
+   "focus": "final n in Solaiman"
+  },
+  {
+   "en": "Solaiman is Chief Policy Officer and SVP of Strategy at the company.",
+   "zh": "Solaiman是该公司的首席政策官兼战略高级副总裁。",
+   "focus": ""
+  },
+  {
+   "en": "The conversation covered what startups need to know before building on open models.",
+   "zh": "对话涵盖了初创公司在基于开源模型开发之前需要了解的内容。",
+   "focus": "link building on"
+  },
+  {
+   "en": "That includes choosing the right tools and infrastructure.",
+   "zh": "这包括选择合适的工具和基础设施。",
+   "focus": "final s in tools"
+  },
+  {
+   "en": "It also includes navigating the trade-offs shaping the future of open AI.",
+   "zh": "还包括应对那些塑造开源人工智能未来的权衡取舍。",
+   "focus": "th in the"
+  },
+  {
+   "en": "Open models promise lower costs, more control and more flexibility for those who adopt them.",
+   "zh": "开源模型为采用者承诺更低的成本、更多的控制权和更大的灵活性。",
+   "focus": "final t in costs"
+  },
+  {
+   "en": "The episode is available on YouTube, Apple Podcasts, Overcast and Spotify.",
+   "zh": "该节目可在YouTube、Apple Podcasts、Overcast和Spotify上收听。",
+   "focus": ""
+  },
+  {
+   "en": "Listeners can also follow Equity on X and Threads at EquityPod.",
+   "zh": "听众还可以在X和Threads上通过EquityPod关注Equity。",
+   "focus": "final s in Threads"
+  }
+ ],
+ "terms": [
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指模型的代码和权重公开，任何人都能下载和使用。"
+  },
+  {
+   "word": "enterprises",
+   "zh": "企业",
+   "note": "指规模较大的公司机构，区别于小型初创团队。"
+  },
+  {
+   "word": "infrastructure",
+   "zh": "基础设施",
+   "note": "指运行模型所需的算力、服务器和配套系统。"
+  },
+  {
+   "word": "trade-offs",
+   "zh": "权衡取舍",
+   "note": "指为了某个好处而必须放弃另一部分代价。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "一般现在时 rely on",
+   "note": "描述当前普遍状况用一般现在时，中文没有时态变化，容易误加 will 或漏掉主语复数。"
+  },
+  {
+   "line": 3,
+   "point": "as 引导时间状语从句 as models become",
+   "note": "as 表示“随着”，中文常译成“随着”，但容易误用 when 或 with。"
+  },
+  {
+   "line": 7,
+   "point": "before + 动名词 building",
+   "note": "介词 before 后接动名词，中文学习者常误接动词原形。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What do open models promise adopters?",
+   "options": [
+    "Higher costs and less control",
+    "Lower costs, more control and flexibility",
+    "Free hardware and support"
+   ],
+   "answer": 1,
+   "explain": "答案在第十句，直接列出开源模型的三项好处。"
+  },
+  {
+   "q": "Who did Rebecca Bellan speak with?",
+   "options": [
+    "A TechCrunch audio producer",
+    "Irene Solaiman of Hugging Face",
+    "A Chinese model developer"
+   ],
+   "answer": 1,
+   "explain": "答案在第五句，点明了受访者姓名和所在公司。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Open source AI models are becoming more mainstream, and Hugging Face explains who captures the value. Enterprises, governments and startups all rely on them for lower costs, more control and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can American players keep up? On the Equity podcast, Rebecca Bellan spoke with Irene Solaiman of Hugging Face. Solaiman is Chief Policy Officer and SVP of Strategy at the company. The conversation covered what startups need to know before building on open models. That includes choosing the right tools and infrastructure. It also includes navigating the trade-offs shaping the future of open AI. Open models promise lower costs, more control and more flexibility for those who adopt them. The episode is available on YouTube, Apple Podcasts, Overcast and Spotify. Listeners can also follow Equity on X and Threads at EquityPod.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/",
+ "date": "2026-11-05",
+ "slot": "am"
+}

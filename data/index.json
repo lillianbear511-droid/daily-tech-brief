@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-04T11:00:58",
+ "updated": "2026-11-05T11:22:04",
  "days": [
+  {
+   "id": "2026-11-05-am",
+   "date": "2026-11-05",
+   "slot": "am",
+   "headline": "Open source AI grows; Hugging Face on who profits",
+   "source": "TECHCRUNCH",
+   "duration": 77.4,
+   "sentences": 12
+  },
   {
    "id": "2026-11-04-pm",
    "date": "2026-11-04",
