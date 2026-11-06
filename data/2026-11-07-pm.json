@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-07-pm",
+ "date": "2026-11-07",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+ "headline": "Hundreds of Artex AI hacking tools exposed online",
+ "audio": "audio/2026-11-07-pm-full.mp3",
+ "duration": 99.2,
+ "wpm": 121.0,
+ "script": "Security researchers found hundreds of copies of a Chinese-made AI hacking tool exposed on the public internet. Anyone could access these systems, which could let outsiders launch cyberattacks on unsuspecting targets. The software is called Artex, an open-source autonomous penetration testing tool. That means it automatically probes computer systems for weaknesses. Since its public release in July, Artex has been linked to several cyberattacks. As open-source software, it is free for anyone to download and run on their own servers. That makes it popular with people who cannot access the most advanced cybersecurity AI models from Anthropic or OpenAI. Microsoft has described Artex as a system of AI agents that can conduct cyberattacks with little human interaction. The cybersecurity firm Censys scans the internet for exposed systems. Censys said it found more than eight hundred distinct Artex deployments accessible without a password. A Censys researcher said not every Artex instance is operated maliciously, and many are used by authorized testers. But it is unclear why hundreds of these systems are exposed, since the software does not require internet access. The findings show that even powerful hacking tools can be misconfigured and then found and misused by anyone.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Security researchers found hundreds of copies of a Chinese-made AI hacking tool exposed on the public internet.",
+   "zh": "安全研究人员发现，数百个中国制造的AI黑客工具副本暴露在公共互联网上。",
+   "audio": "audio/2026-11-07-pm-s1.mp3",
+   "duration": 8.2,
+   "focus": "final -s in researchers and copies"
+  },
+  {
+   "id": 2,
+   "text": "Anyone could access these systems, which could let outsiders launch cyberattacks on unsuspecting targets.",
+   "zh": "任何人都能访问这些系统，这可能让外部人员对毫无防备的目标发动网络攻击。",
+   "audio": "audio/2026-11-07-pm-s2.mp3",
+   "duration": 7.9,
+   "focus": "th sound in anything and outsiders"
+  },
+  {
+   "id": 3,
+   "text": "The software is called Artex, an open-source autonomous penetration testing tool.",
+   "zh": "这款软件名为Artex，是一个开源的自主渗透测试工具。",
+   "audio": "audio/2026-11-07-pm-s3.mp3",
+   "duration": 6.5,
+   "focus": "link called Artex"
+  },
+  {
+   "id": 4,
+   "text": "That means it automatically probes computer systems for weaknesses.",
+   "zh": "这意味着它会自动探测计算机系统的弱点。",
+   "audio": "audio/2026-11-07-pm-s4.mp3",
+   "duration": 4.7,
+   "focus": "final -s in systems and weaknesses"
+  },
+  {
+   "id": 5,
+   "text": "Since its public release in July, Artex has been linked to several cyberattacks.",
+   "zh": "自七月公开发布以来，Artex已与多起网络攻击有关联。",
+   "audio": "audio/2026-11-07-pm-s5.mp3",
+   "duration": 6.3,
+   "focus": "v sound in several"
+  },
+  {
+   "id": 6,
+   "text": "As open-source software, it is free for anyone to download and run on their own servers.",
+   "zh": "作为开源软件，任何人都可以免费下载并在自己的服务器上运行。",
+   "audio": "audio/2026-11-07-pm-s6.mp3",
+   "duration": 6.5,
+   "focus": "link download and run"
+  },
+  {
+   "id": 7,
+   "text": "That makes it popular with people who cannot access the most advanced cybersecurity AI models from Anthropic or OpenAI.",
+   "zh": "这使得它受到那些无法使用Anthropic或OpenAI最先进网络安全AI模型的人的欢迎。",
+   "audio": "audio/2026-11-07-pm-s7.mp3",
+   "duration": 9.0,
+   "focus": "th sound in Anthropic"
+  },
+  {
+   "id": 8,
+   "text": "Microsoft has described Artex as a system of AI agents that can conduct cyberattacks with little human interaction.",
+   "zh": "微软曾将Artex描述为一个由智能体组成的系统，能在几乎没有人工干预的情况下发动网络攻击。",
+   "audio": "audio/2026-11-07-pm-s8.mp3",
+   "duration": 8.7,
+   "focus": "final -s in agents"
+  },
+  {
+   "id": 9,
+   "text": "The cybersecurity firm Censys scans the internet for exposed systems.",
+   "zh": "网络安全公司Censys扫描互联网上暴露的系统。",
+   "audio": "audio/2026-11-07-pm-s9.mp3",
+   "duration": 5.9,
+   "focus": "final -s in Censys and systems"
+  },
+  {
+   "id": 10,
+   "text": "Censys said it found more than eight hundred distinct Artex deployments accessible without a password.",
+   "zh": "Censys表示，它发现了八百多个无需密码即可访问的Artex独立部署。",
+   "audio": "audio/2026-11-07-pm-s10.mp3",
+   "duration": 7.6,
+   "focus": "th sound in without"
+  },
+  {
+   "id": 11,
+   "text": "A Censys researcher said not every Artex instance is operated maliciously, and many are used by authorized testers.",
+   "zh": "Censys的一位研究员表示，并非每个Artex实例都是恶意运营的，许多是由授权测试人员使用的。",
+   "audio": "audio/2026-11-07-pm-s11.mp3",
+   "duration": 9.3,
+   "focus": "final -ed in authorized"
+  },
+  {
+   "id": 12,
+   "text": "But it is unclear why hundreds of these systems are exposed, since the software does not require internet access.",
+   "zh": "但目前不清楚为什么数百个这样的系统会暴露在外，因为该软件并不需要互联网访问。",
+   "audio": "audio/2026-11-07-pm-s12.mp3",
+   "duration": 8.1,
+   "focus": "link does not"
+  },
+  {
+   "id": 13,
+   "text": "The findings show that even powerful hacking tools can be misconfigured and then found and misused by anyone.",
+   "zh": "这些发现表明，即使是强大的黑客工具也可能被错误配置，然后被任何人发现并滥用。",
+   "audio": "audio/2026-11-07-pm-s13.mp3",
+   "duration": 8.4,
+   "focus": "final -ed in misconfigured"
+  }
+ ],
+ "terms": [
+  {
+   "word": "open-source",
+   "zh": "开源",
+   "note": "指源代码公开，任何人都可以免费下载、使用和修改。"
+  },
+  {
+   "word": "penetration testing",
+   "zh": "渗透测试",
+   "note": "指模拟黑客攻击来检查系统安全漏洞的测试。"
+  },
+  {
+   "word": "AI agents",
+   "zh": "智能体",
+   "note": "指能自主执行任务的AI程序，这里指自动发动攻击的软件。"
+  },
+  {
+   "word": "deployments",
+   "zh": "部署实例",
+   "note": "指软件被安装并运行起来的一套系统。"
+  },
+  {
+   "word": "misconfigured",
+   "zh": "配置错误",
+   "note": "指系统设置不当，导致本不该公开的访问被开放。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 5,
+   "point": "现在完成时 has been linked",
+   "note": "强调从过去到现在一直有关联，中文常漏掉 has been 而只说“有关联”。"
+  },
+  {
+   "line": 6,
+   "point": "不定式作定语 free for anyone to download",
+   "note": "to download 修饰 anyone，中文习惯说“供任何人下载”，容易漏掉 for。"
+  },
+  {
+   "line": 12,
+   "point": "since 引导原因状语从句",
+   "note": "since 在这里表示“因为”，不是“自从”，中文学习者容易误读为时间。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Censys find?",
+   "options": [
+    "More than 800 Artex deployments accessible without a password",
+    "A new AI model from Anthropic",
+    "A password leak at Microsoft"
+   ],
+   "answer": 0,
+   "explain": "The answer is in sentence 10."
+  },
+  {
+   "q": "Why are the exposed systems a concern?",
+   "options": [
+    "They slow down the internet",
+    "They can be found and misused by anyone",
+    "They cost too much to run"
+   ],
+   "answer": 1,
+   "explain": "The answer is in sentence 13."
+  }
+ ],
+ "recall_prompts": [
+  "What is Artex?",
+  "How many exposed deployments were found?",
+  "Why does exposure matter?"
+ ]
+}

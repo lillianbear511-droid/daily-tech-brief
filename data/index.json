@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-06T04:36:05",
+ "updated": "2026-11-07T03:18:58",
  "days": [
+  {
+   "id": "2026-11-07-pm",
+   "date": "2026-11-07",
+   "slot": "pm",
+   "headline": "Hundreds of Artex AI hacking tools exposed online",
+   "source": "TECHCRUNCH",
+   "duration": 99.2,
+   "sentences": 13
+  },
   {
    "id": "2026-11-06-pm",
    "date": "2026-11-06",
