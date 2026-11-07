@@ -74,6 +74,28 @@ audio.addEventListener('pause', () => {
   document.querySelectorAll('.play').forEach(b => b.dataset.playing = '');
 });
 
+/* A cached half-file (an old build stored the server's 206) decodes as nothing,
+   and the audio element shows no clue. Drop the media cache once per page load
+   and let the next tap pull the whole file from the network. */
+let audioRecovered = false;
+audio.addEventListener('error', async () => {
+  if (audioRecovered || !audio.src) return;
+  audioRecovered = true;
+  try {
+    const keys = await caches.keys();
+    await Promise.all(keys.map(k => caches.delete(k)));
+  } catch { /* private mode */ }
+  audio.pause();
+  audio.removeAttribute('src');
+  audio.load();
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.getRegistrations()
+      .then(rs => Promise.all(rs.map(r => r.update())))
+      .catch(() => {});
+  }
+  toast('Audio cache reset — tap play again');
+});
+
 function togglePlay(src, btn) {
   const playing = !audio.paused && audio.src.endsWith(src);
   if (playing) { audio.pause(); return false; }
