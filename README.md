@@ -62,18 +62,22 @@ python3 pipeline/compose.py --dry-run        # see the script before committing 
 bash pipeline/deploy.sh                      # publish
 ```
 
-`--slot` takes `am`, `pm`, `auto` (default — morning before 14:00, evening after) or
-`none` for a single daily issue.
+`--slot` takes `am`, `pm`, `auto` (default) or `none` for a single daily issue.
+`auto` anchors on the target times: 07:00–19:59 builds today's morning issue,
+20:00–23:59 today's evening, and 00:00–06:59 is still catching up on yesterday's
+evening.
 
 ## Daily job
 
-`.github/workflows/daily.yml` runs twice: 07:05 and 20:05 Asia/Shanghai. Each run picks
-a story the other issue did not use, rewrites it, records it, commits, and pushes one
-card. Nothing runs on your machine.
+`.github/workflows/daily.yml` runs six times a day — three shots at 07:05, three at
+20:05 Asia/Shanghai. Each run picks a story the other issue did not use, rewrites it,
+records it, commits, and pushes one card. Nothing runs on your machine.
 
-The slot comes from the cron that fired, not from the clock, because GitHub cron is UTC
-and sometimes starts hours late. A manual run defaults to `auto`; pick `am` or `pm` in
-the dispatch form to be explicit.
+GitHub's cron is best effort and has started this repo's jobs up to seven hours late.
+Two things absorb that: the slot is decided by the target time that most recently
+passed rather than by which cron fired, and the retries notice the issue already
+exists before they install ffmpeg and quit. A run that catches up on yesterday after
+midnight rebuilds the content but stays quiet — no day-old card at 3am.
 
 Re-running is safe: `daily.py` refuses to rebuild an issue that already exists, so the
 morning job can never overwrite the evening one.
