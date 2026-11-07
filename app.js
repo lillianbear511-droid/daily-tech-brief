@@ -45,7 +45,7 @@ function normalize(d) {
 }
 const dp = id => {
   const p = (S.progress[id] ||= {});
-  p.listen ||= {}; p.shadow ||= {}; p.recall ||= {}; p.done ??= false;
+  p.listen ||= {}; p.shadow ||= {}; p.recall ||= {}; p.auto ||= {}; p.done ??= false;
   return p;
 };
 const sameDay = date => S.index.filter(x => x.date === date);
@@ -544,6 +544,45 @@ function sListen() {
   if (answered) renderReview(); else renderOne();
 }
 
+/* ---------------------------------------------------------- assessment */
+// Comparing a take with the original reading happens entirely on the device:
+// decode both, resample to 16 kHz mono, hand the samples to assess.js.
+const PCM = new Map();                      // reference url -> Float32Array
+const BAND = { g: 'Clear', a: 'Close', r: 'Retry' };
+
+async function toPcm(input) {
+  const blob = input instanceof Blob ? input : await fetch(input).then(r => r.blob());
+  const bytes = await blob.arrayBuffer();
+  const ac = REC.ac || new (window.AudioContext || window.webkitAudioContext)();
+  const buf = await new Promise((ok, no) => ac.decodeAudioData(bytes, ok, no));
+  const OFF = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+  const off = new OFF(1, Math.max(1, Math.ceil(buf.duration * 16000)), 16000);
+  const src = off.createBufferSource();
+  src.buffer = buf;
+  src.connect(off.destination);
+  src.start();
+  const out = await off.startRendering();
+  return out.getChannelData(0);
+}
+
+async function refPcm(url) {
+  if (!PCM.has(url)) {
+    const pcm = await toPcm(url);
+    PCM.set(url, pcm);
+    if (PCM.size > 3) PCM.delete(PCM.keys().next().value);
+  }
+  return PCM.get(url);
+}
+
+const meterHTML = p => [
+  ['Sounds', p.match], ['Whole', p.completeness],
+  ['Rhythm', p.pace], ['Endings', p.clarity],
+].map(([label, v]) => {
+  const col = v >= 75 ? 'var(--green)' : v >= 55 ? 'var(--amber)' : '#C4573A';
+  return `<div class="meter"><span class="ml">${label}</span>
+      <span class="mt"><i style="width:${v}%;background:${col}"></i></span>
+      <span class="mv">${v}</span></div>`;
+}).join('');
 /* -------- SHADOW -------- */
 function sShadow(arg) {
   const d = S.day, p = dp(d.id);
@@ -644,55 +683,116 @@ function sShadow(arg) {
       hintEl.textContent = 'Compare your version with the original';
       timerEl.textContent = fmt((Date.now() - t0) / 1000);
       const rec = await recStop();
-      if (rec) showOwn(rec.url);
+      if (rec) checkTake(rec);
     }
   };
 
-  function showOwn(url) {
+  let lastTake = null;                      // object URL of the latest take
+  let cur = rating || '';                   // manual override, if used
+
+  function paintTake({ score, band, parts, notes }) {
+    document.getElementById('own').innerHTML = `
+      <div class="card flat" style="margin-top:14px">
+        <div class="row" style="align-items:baseline">
+          <div class="stack gap-6">
+            <div class="eyebrow">Your take</div>
+            <div class="score"><span class="n">${score}</span><span class="u">/100</span></div>
+          </div>
+          <span class="verdict ${band}">${BAND[band] || ''}</span>
+        </div>
+        <div class="stack gap-8" style="margin-top:16px">${meterHTML(parts)}</div>
+        ${notes && notes.length ? `<div class="stack gap-8" style="margin-top:14px">
+          ${notes.map(n => `<div class="note"><span>${n.t}</span></div>`).join('')}
+        </div>` : ''}
+        <div class="row" style="margin-top:16px;gap:10px">
+          <button class="btn ghost sm" id="ownPlay" style="flex:1">Play back</button>
+          <button class="btn sm" id="ownRec" style="flex:1">Try again</button>
+        </div>
+        <button class="link" id="override">Machine got it wrong? Rate it yourself</button>
+      </div>`;
+    const play = document.getElementById('ownPlay');
+    if (lastTake) play.onclick = () => { new Audio(lastTake).play().catch(() => toast('Tap to play')); };
+    else play.style.display = 'none';
+    document.getElementById('ownRec').onclick = () => recBtn.click();
+    document.getElementById('override').onclick = () => showManual(true);
+  }
+
+  function endTake(reason) {
+    const msg = {
+      silent: 'Nothing audible in that take. Check the mic and go once more.',
+      'too-short': 'That take was too short to compare with the original.',
+      manual: 'Scoring needs one visit with a connection to warm up. Rate this one by ear.',
+      error: 'Could not compare that take.',
+    }[reason] || 'Could not compare that take.';
     document.getElementById('own').innerHTML = `
       <div class="card flat stack gap-10" style="margin-top:14px">
         <div class="eyebrow">Your take</div>
-        <div class="sub" id="ownTip" style="font-size:11px;display:none"></div>
-        <div class="row" style="justify-content:flex-start;gap:10px">
-          <button class="btn ghost sm" id="ownPlay" style="width:auto;padding:0 16px;height:42px">Play back</button>
-          <button class="btn ghost sm" id="ownRec" style="width:auto;padding:0 16px;height:42px">Record again</button>
+        <div class="sub" style="font-size:11px">${msg}</div>
+        <div class="row" style="gap:10px">
+          <button class="btn ghost sm" id="ownPlay" style="flex:1">Play back</button>
+          <button class="btn sm" id="ownRec" style="flex:1">Try again</button>
         </div>
       </div>`;
-    const url2 = url;
     document.getElementById('ownPlay').onclick = () => {
-      const a = new Audio(url2);
-      a.play().catch(() => toast('Tap to play'));
+      if (lastTake) new Audio(lastTake).play().catch(() => toast('Tap to play'));
     };
     document.getElementById('ownRec').onclick = () => recBtn.click();
-    showRate();
+    showManual(true);
   }
 
-  function showRate() {
-    document.getElementById('rateArea').innerHTML = `
+  async function checkTake(rec) {
+    lastTake = rec.url;
+    document.getElementById('own').innerHTML = `
+      <div class="card flat stack gap-10" style="margin-top:14px">
+        <div class="eyebrow">Your take</div>
+        <div class="sub" style="font-size:11px">Comparing with the original…</div>
+      </div>`;
+    if (!window.DTBAssess) return endTake('manual');
+    try {
+      const [ref, mine] = await Promise.all([refPcm(s.audio), toPcm(rec.blob)]);
+      const r = window.DTBAssess.compare(ref, mine);
+      if (!r.ok) return endTake(r.reason === 'silent' ? 'silent' : 'too-short');
+      cur = r.band;
+      showManual(false);                  // the score replaces the self-rating
+      dp(d.id).shadow[s.id] = r.band;
+      dp(d.id).auto[s.id] = { s: r.score, b: r.band, m: r.parts, t: r.notes.map(n => n.t) };
+      save('progress', S.progress);
+      flagNeed(r.band === 'r');
+      buzz();
+      paintTake(r);
+    } catch (e) {
+      endTake('error');
+    }
+  }
+
+  function flagNeed(bad) {
+    const has = S.needs.some(n => (n.id || n.date) === d.id && n.sid === s.id);
+    if (bad && !has) {
+      S.needs.unshift({ id: d.id, date: d.date, sid: s.id, text: s.text.slice(0, 70), focus: s.focus || '' });
+      S.needs = S.needs.slice(0, 40);
+    } else if (!bad && has) {
+      S.needs = S.needs.filter(n => !((n.id || n.date) === d.id && n.sid === s.id));
+    } else return;
+    save('needs', S.needs);
+  }
+
+  function showManual(open) {
+    const area = document.getElementById('rateArea');
+    if (!open) { area.innerHTML = ''; return; }
+    area.innerHTML = `
       <div class="stack gap-8" style="margin-top:14px">
-        <div class="eyebrow">How close was it?</div>
+        <div class="eyebrow">Your call</div>
         <div class="rate-row">
-          <button class="rate g ${rating === 'g' ? 'sel' : ''}" data-r="g"><i class="c"></i>Clear</button>
-          <button class="rate a ${rating === 'a' ? 'sel' : ''}" data-r="a"><i class="c"></i>Close</button>
-          <button class="rate r ${rating === 'r' ? 'sel' : ''}" data-r="r"><i class="c"></i>Retry</button>
+          ${['g', 'a', 'r'].map(k => `<button class="rate ${k} ${cur === k ? 'sel' : ''}" data-r="${k}"><i class="c"></i>${BAND[k]}</button>`).join('')}
         </div>
       </div>`;
-    document.querySelectorAll('.rate').forEach(b => {
+    area.querySelectorAll('.rate').forEach(b => {
       b.onclick = () => {
-        const r = b.dataset.r;
-        dp(d.id).shadow[s.id] = r;
+        cur = b.dataset.r;
+        dp(d.id).shadow[s.id] = cur;
         save('progress', S.progress);
-        if (r === 'r') {
-          if (!S.needs.some(n => (n.id || n.date) === d.id && n.sid === s.id)) {
-            S.needs.unshift({ id: d.id, date: d.date, sid: s.id, text: s.text.slice(0, 70), focus: s.focus || '' });
-            S.needs = S.needs.slice(0, 40);
-            save('needs', S.needs);
-          }
-        } else {
-          S.needs = S.needs.filter(n => !((n.id || n.date) === d.id && n.sid === s.id));
-          save('needs', S.needs);
-        }
-        document.querySelectorAll('.rate').forEach(x => x.classList.remove('sel'));
+        flagNeed(cur === 'r');
+        area.querySelectorAll('.rate').forEach(x => x.classList.remove('sel'));
         b.classList.add('sel');
         buzz();
       };
@@ -700,21 +800,17 @@ function sShadow(arg) {
   }
 
   if (rating) {
-    showOwn(null);
-    document.getElementById('ownPlay').style.display = 'none';
-    document.getElementById('ownRec').textContent = 'Record again';
-    document.querySelector('.card.flat .eyebrow').textContent = 'Rated: ' + ({ g: 'clear', a: 'close', r: 'retry' })[rating];
-    const tip = document.getElementById('ownTip');
-    if (tip) {
-      const nudge = {
-        g: 'Locked in. Say the next one.',
-        a: 'One more pass at 0.75x, then move on.',
-        r: 'Drop to 0.75x and copy the rhythm before the words.',
-      }[rating];
-      tip.style.display = 'block';
-      tip.textContent = nudge;
+    const saved = p.auto?.[s.id];
+    if (saved) {
+      paintTake({ score: saved.s, band: saved.b, parts: saved.m, notes: (saved.t || []).map(t => ({ t })) });
+    } else {
+      document.getElementById('own').innerHTML = `
+        <div class="card flat stack gap-10" style="margin-top:14px">
+          <div class="eyebrow">Rated: ${BAND[rating].toLowerCase()}</div>
+          <div class="sub" style="font-size:11px">Record a take to have it scored.</div>
+        </div>`;
+      showManual(true);
     }
-    showRate();
   }
 
   document.getElementById('prev').onclick = () => go('shadow/' + (idx - 1));
@@ -837,6 +933,8 @@ function sProgress() {
   const close = all.filter(r => r === 'a').length;
   const retry = all.filter(r => r === 'r').length;
   const total = all.length || 1;
+  const scored = Object.values(S.progress).flatMap(p => Object.values(p.auto || {}));
+  const avg = scored.length ? Math.round(scored.reduce((a, x) => a + (x.s || 0), 0) / scored.length) : 0;
 
   const todayP = S.progress[S.day?.id || todayISO()] || {};
   const startedToday = !!todayP.listen?.answered || Object.keys(todayP.shadow || {}).length > 0;
@@ -861,11 +959,11 @@ function sProgress() {
     <div class="card stack gap-12" style="margin-top:20px">
       <div class="row">
         <span class="eyebrow">Shadowing quality</span>
-        <span style="font-size:10px;font-weight:600;color:var(--green)">${all.length} sentences</span>
+        <span style="font-size:10px;font-weight:600;color:var(--green)">${all.length} sentence${all.length === 1 ? '' : 's'}</span>
       </div>
       <div class="row" style="gap:6px;align-items:flex-end">
-        <span style="font-family:var(--serif);font-size:40px;font-weight:600;line-height:1">${all.length ? Math.round(clear / total * 100) + '%' : '—'}</span>
-        <span class="sub" style="padding-bottom:6px">${all.length ? 'rated clear' : 'no ratings yet'}</span>
+        <span style="font-family:var(--serif);font-size:40px;font-weight:600;line-height:1">${avg || (all.length ? Math.round(clear / total * 100) + '%' : '—')}</span>
+        <span class="sub" style="padding-bottom:6px">${avg ? 'average take' : (all.length ? 'rated clear' : 'no takes yet')}</span>
       </div>
       <div style="display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--line)">
         <div style="width:${clear / total * 100}%;background:var(--green)"></div>
