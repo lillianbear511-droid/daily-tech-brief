@@ -24,7 +24,9 @@ import argparse
 import html
 import json
 import os
+import base64
 import re
+import subprocess
 import sys
 import time
 import urllib.request
@@ -36,6 +38,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
+DATA = ROOT / "data"
+CACHE = ROOT / ".cache"
+
+REPO = "lillianbear511-droid/daily-tech-brief"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import slots  # noqa: E402  (shares the am/pm slug rules with the other steps)
@@ -197,14 +203,79 @@ def parse_feed(name, url):
     return out
 
 
-def used_urls():
-    seen = set()
-    for f in CONTENT.glob("*.json"):
+def _gh_token():
+    tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if tok:
+        return tok.strip()
+    try:
+        out = subprocess.run(["gh", "auth", "token"], capture_output=True,
+                             text=True, timeout=5)
+        return out.stdout.strip() or None
+    except Exception:                              # noqa: BLE001
+        return None
+
+
+def _api(path, token):
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{REPO}/{path}",
+        headers={"Authorization": f"Bearer {token}",
+                 "Accept": "application/vnd.github+json",
+                 "User-Agent": "daily-brief"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        return json.loads(r.read().decode())
+
+
+def remote_used_urls():
+    """Stories the runner published that this laptop has not downloaded yet.
+
+    Two issues a day are produced by GitHub Actions; the working copy only has
+    whatever was pulled down last. Reading data/ alone is therefore not enough
+    and the local picker will happily re-run this morning's story. The runner
+    itself checks out the whole repo, so there the extra call is skipped.
+    """
+    if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
+        return set()
+    stamp = CACHE / "used_remote.json"
+    if stamp.exists() and time.time() - stamp.stat().st_mtime < 600:
         try:
-            seen.add(json.loads(f.read_text()).get("source_url", ""))
+            return set(json.loads(stamp.read_text()).get("urls", []))
         except Exception:                          # noqa: BLE001
             pass
-    return seen
+    token = _gh_token()
+    if not token:
+        return set()
+    try:
+        names = [f["name"] for f in _api("contents/data", token)
+                 if f["name"].endswith(".json") and f["name"] != "index.json"]
+
+        def one(name):
+            try:
+                blob = _api(f"contents/data/{name}", token)["content"]
+                return json.loads(base64.b64decode(blob)).get("source_url", "")
+            except Exception:                      # noqa: BLE001
+                return ""
+
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            urls = [u for u in pool.map(one, names) if u]
+        CACHE.mkdir(exist_ok=True)
+        stamp.write_text(json.dumps({"urls": urls}))
+        print(f"  history: {len(urls)} past issue(s) from GitHub")
+        return set(urls)
+    except Exception as exc:                       # noqa: BLE001
+        print(f"  ! past issues unavailable ({exc.__class__.__name__}), "
+              f"local history only")
+        return set()
+
+
+def used_urls():
+    seen = set()
+    for f in list(CONTENT.glob("*.json")) + list(DATA.glob("*.json")):
+        try:
+            seen.add(json.loads(f.read_text()).get("source_url") or "")
+        except Exception:                          # noqa: BLE001
+            pass
+    seen.discard("")
+    return seen | remote_used_urls()
 
 
 def score(item) -> float:
