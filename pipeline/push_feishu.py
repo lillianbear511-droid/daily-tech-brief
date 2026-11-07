@@ -20,7 +20,6 @@ import json
 import os
 import sys
 import urllib.request
-from datetime import date as date_cls
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -141,13 +140,15 @@ def main():
     if not days:
         sys.exit("No issues in data/index.json yet. Run generate.py first.")
 
-    # --strict-today means "today's issue of THIS slot": the 20:05 run must not
-    # resend the morning card, and must stay quiet if its own build failed.
-    if args.strict_today:
-        slug = slots.make(date_cls.today().isoformat(), slots.resolve(args.slot))
-    elif args.date:
+    # --strict-today means "the issue this run was supposed to produce": the
+    # 20:05 run must not resend the morning card, and must stay quiet if its
+    # own build failed. The slug is normally passed in from daily.py, which
+    # resolved it against the target time; the fallback repeats that logic.
+    if args.date:
         slug = args.date if args.date.endswith(("-am", "-pm")) \
             else slots.make(args.date, slots.resolve(args.slot))
+    elif args.strict_today:
+        slug = slots.make(*slots.due())
     else:
         slug = days[0].get("id") or days[0]["date"]
 
