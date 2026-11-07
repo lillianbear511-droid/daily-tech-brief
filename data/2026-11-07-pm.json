@@ -3,187 +3,182 @@
  "date": "2026-11-07",
  "slot": "pm",
  "source": "TECHCRUNCH",
- "source_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
- "headline": "Hundreds of Artex AI hacking tools exposed online",
+ "source_url": "https://techcrunch.com/2026/11/06/sequoia-shutting-down-its-scouts-program-marks-the-end-of-an-era/",
+ "headline": "Sequoia shuts down its scout program",
  "audio": "audio/2026-11-07-pm-full.mp3",
- "duration": 99.2,
- "wpm": 121.0,
- "script": "Security researchers found hundreds of copies of a Chinese-made AI hacking tool exposed on the public internet. Anyone could access these systems, which could let outsiders launch cyberattacks on unsuspecting targets. The software is called Artex, an open-source autonomous penetration testing tool. That means it automatically probes computer systems for weaknesses. Since its public release in July, Artex has been linked to several cyberattacks. As open-source software, it is free for anyone to download and run on their own servers. That makes it popular with people who cannot access the most advanced cybersecurity AI models from Anthropic or OpenAI. Microsoft has described Artex as a system of AI agents that can conduct cyberattacks with little human interaction. The cybersecurity firm Censys scans the internet for exposed systems. Censys said it found more than eight hundred distinct Artex deployments accessible without a password. A Censys researcher said not every Artex instance is operated maliciously, and many are used by authorized testers. But it is unclear why hundreds of these systems are exposed, since the software does not require internet access. The findings show that even powerful hacking tools can be misconfigured and then found and misused by anyone.",
+ "duration": 70.8,
+ "wpm": 134.7,
+ "script": "Sequoia this week announced a broad overhaul, including closing its London office and shutting down its scout program. A scout is a founder or operator who writes checks on the firm's behalf. Sequoia pioneered this model seventeen years ago. Many venture capital firms followed, competing harder for deal flow. But a consensus is emerging that the model has reached its limits. Not everyone was convinced in the first place. One investor said the scouts themselves do not care much about the investments. Sequoia framed the decision as part of a need for more focus. Its goal is putting more energy behind fewer people and things. Rival firm Andreessen Horowitz has also revamped its scout network. Under the new approach, scouts get more resources but are expected to be more active. For founders, being a scout can be a stepping stone to a partner role. One former scout said she was sad and hoped other funds would not follow suit.",
  "sentences": [
   {
    "id": 1,
-   "text": "Security researchers found hundreds of copies of a Chinese-made AI hacking tool exposed on the public internet.",
-   "zh": "安全研究人员发现，数百个中国制造的AI黑客工具副本暴露在公共互联网上。",
+   "text": "Sequoia this week announced a broad overhaul, including closing its London office and shutting down its scout program.",
+   "zh": "红杉资本本周宣布了一项大规模改革，包括关闭其伦敦办公室并终止其侦察员项目。",
    "audio": "audio/2026-11-07-pm-s1.mp3",
-   "duration": 8.2,
-   "focus": "final -s in researchers and copies"
+   "duration": 8.5,
+   "focus": "closing its — link the s to its"
   },
   {
    "id": 2,
-   "text": "Anyone could access these systems, which could let outsiders launch cyberattacks on unsuspecting targets.",
-   "zh": "任何人都能访问这些系统，这可能让外部人员对毫无防备的目标发动网络攻击。",
+   "text": "A scout is a founder or operator who writes checks on the firm's behalf.",
+   "zh": "侦察员是指代表公司开出支票的创始人或运营者。",
    "audio": "audio/2026-11-07-pm-s2.mp3",
-   "duration": 7.9,
-   "focus": "th sound in anything and outsiders"
+   "duration": 5.3,
+   "focus": "writes checks — final s sound"
   },
   {
    "id": 3,
-   "text": "The software is called Artex, an open-source autonomous penetration testing tool.",
-   "zh": "这款软件名为Artex，是一个开源的自主渗透测试工具。",
+   "text": "Sequoia pioneered this model seventeen years ago.",
+   "zh": "红杉在十七年前开创了这一模式。",
    "audio": "audio/2026-11-07-pm-s3.mp3",
-   "duration": 6.5,
-   "focus": "link called Artex"
+   "duration": 3.9,
+   "focus": "pioneered — final d sound"
   },
   {
    "id": 4,
-   "text": "That means it automatically probes computer systems for weaknesses.",
-   "zh": "这意味着它会自动探测计算机系统的弱点。",
+   "text": "Many venture capital firms followed, competing harder for deal flow.",
+   "zh": "许多风险投资公司纷纷效仿，为争夺项目来源竞争更激烈。",
    "audio": "audio/2026-11-07-pm-s4.mp3",
-   "duration": 4.7,
-   "focus": "final -s in systems and weaknesses"
+   "duration": 5.1,
+   "focus": "followed — final d sound"
   },
   {
    "id": 5,
-   "text": "Since its public release in July, Artex has been linked to several cyberattacks.",
-   "zh": "自七月公开发布以来，Artex已与多起网络攻击有关联。",
+   "text": "But a consensus is emerging that the model has reached its limits.",
+   "zh": "但一种共识正在形成：该模式已达到其极限。",
    "audio": "audio/2026-11-07-pm-s5.mp3",
-   "duration": 6.3,
-   "focus": "v sound in several"
+   "duration": 4.8,
+   "focus": "reached its — link the d to its"
   },
   {
    "id": 6,
-   "text": "As open-source software, it is free for anyone to download and run on their own servers.",
-   "zh": "作为开源软件，任何人都可以免费下载并在自己的服务器上运行。",
+   "text": "Not everyone was convinced in the first place.",
+   "zh": "并不是所有人都一开始就信服。",
    "audio": "audio/2026-11-07-pm-s6.mp3",
-   "duration": 6.5,
-   "focus": "link download and run"
+   "duration": 3.0,
+   "focus": "convinced — final t sound"
   },
   {
    "id": 7,
-   "text": "That makes it popular with people who cannot access the most advanced cybersecurity AI models from Anthropic or OpenAI.",
-   "zh": "这使得它受到那些无法使用Anthropic或OpenAI最先进网络安全AI模型的人的欢迎。",
+   "text": "One investor said the scouts themselves do not care much about the investments.",
+   "zh": "一位投资者说，侦察员本身并不太关心这些投资。",
    "audio": "audio/2026-11-07-pm-s7.mp3",
-   "duration": 9.0,
-   "focus": "th sound in Anthropic"
+   "duration": 5.5,
+   "focus": "themselves — th sound"
   },
   {
    "id": 8,
-   "text": "Microsoft has described Artex as a system of AI agents that can conduct cyberattacks with little human interaction.",
-   "zh": "微软曾将Artex描述为一个由智能体组成的系统，能在几乎没有人工干预的情况下发动网络攻击。",
+   "text": "Sequoia framed the decision as part of a need for more focus.",
+   "zh": "红杉将这一决定描述为需要更专注的一部分。",
    "audio": "audio/2026-11-07-pm-s8.mp3",
-   "duration": 8.7,
-   "focus": "final -s in agents"
+   "duration": 4.8,
+   "focus": "framed — final d sound"
   },
   {
    "id": 9,
-   "text": "The cybersecurity firm Censys scans the internet for exposed systems.",
-   "zh": "网络安全公司Censys扫描互联网上暴露的系统。",
+   "text": "Its goal is putting more energy behind fewer people and things.",
+   "zh": "其目标是把更多精力放在更少的人和事上。",
    "audio": "audio/2026-11-07-pm-s9.mp3",
-   "duration": 5.9,
-   "focus": "final -s in Censys and systems"
+   "duration": 4.8,
+   "focus": "behind — final d sound"
   },
   {
    "id": 10,
-   "text": "Censys said it found more than eight hundred distinct Artex deployments accessible without a password.",
-   "zh": "Censys表示，它发现了八百多个无需密码即可访问的Artex独立部署。",
+   "text": "Rival firm Andreessen Horowitz has also revamped its scout network.",
+   "zh": "竞争对手安德森·霍洛维茨也改革了其侦察员网络。",
    "audio": "audio/2026-11-07-pm-s10.mp3",
-   "duration": 7.6,
-   "focus": "th sound in without"
+   "duration": 5.6,
+   "focus": "revamped — final t sound"
   },
   {
    "id": 11,
-   "text": "A Censys researcher said not every Artex instance is operated maliciously, and many are used by authorized testers.",
-   "zh": "Censys的一位研究员表示，并非每个Artex实例都是恶意运营的，许多是由授权测试人员使用的。",
+   "text": "Under the new approach, scouts get more resources but are expected to be more active.",
+   "zh": "在新方法下，侦察员获得更多资源，但也被期望更加活跃。",
    "audio": "audio/2026-11-07-pm-s11.mp3",
-   "duration": 9.3,
-   "focus": "final -ed in authorized"
+   "duration": 6.2,
+   "focus": "expected — final d sound"
   },
   {
    "id": 12,
-   "text": "But it is unclear why hundreds of these systems are exposed, since the software does not require internet access.",
-   "zh": "但目前不清楚为什么数百个这样的系统会暴露在外，因为该软件并不需要互联网访问。",
+   "text": "For founders, being a scout can be a stepping stone to a partner role.",
+   "zh": "对创始人来说，当侦察员可以成为通往合伙人角色的垫脚石。",
    "audio": "audio/2026-11-07-pm-s12.mp3",
-   "duration": 8.1,
-   "focus": "link does not"
+   "duration": 5.1,
+   "focus": "stepping — final g sound"
   },
   {
    "id": 13,
-   "text": "The findings show that even powerful hacking tools can be misconfigured and then found and misused by anyone.",
-   "zh": "这些发现表明，即使是强大的黑客工具也可能被错误配置，然后被任何人发现并滥用。",
+   "text": "One former scout said she was sad and hoped other funds would not follow suit.",
+   "zh": "一位前侦察员说，她感到难过，并希望其他基金不要效仿。",
    "audio": "audio/2026-11-07-pm-s13.mp3",
-   "duration": 8.4,
-   "focus": "final -ed in misconfigured"
+   "duration": 5.6,
+   "focus": "hoped — final t sound"
   }
  ],
  "terms": [
   {
-   "word": "open-source",
-   "zh": "开源",
-   "note": "指源代码公开，任何人都可以免费下载、使用和修改。"
+   "word": "scout",
+   "zh": "侦察员",
+   "note": "指代表投资公司寻找项目并开出小额支票的创始人或运营者。"
   },
   {
-   "word": "penetration testing",
-   "zh": "渗透测试",
-   "note": "指模拟黑客攻击来检查系统安全漏洞的测试。"
+   "word": "deal flow",
+   "zh": "项目来源",
+   "note": "指投资公司能接触到的潜在投资项目数量。"
   },
   {
-   "word": "AI agents",
-   "zh": "智能体",
-   "note": "指能自主执行任务的AI程序，这里指自动发动攻击的软件。"
+   "word": "venture capital",
+   "zh": "风险投资",
+   "note": "指向初创公司投资以换取股权的资金。"
   },
   {
-   "word": "deployments",
-   "zh": "部署实例",
-   "note": "指软件被安装并运行起来的一套系统。"
-  },
-  {
-   "word": "misconfigured",
-   "zh": "配置错误",
-   "note": "指系统设置不当，导致本不该公开的访问被开放。"
+   "word": "stepping stone",
+   "zh": "垫脚石",
+   "note": "指帮助人达到更高目标的过渡阶段。"
   }
  ],
  "grammar": [
   {
+   "line": 2,
+   "point": "定语从句 who writes checks",
+   "note": "who 引导定语从句修饰 founder or operator，中文习惯把修饰语放在名词前，容易漏掉 who。"
+  },
+  {
    "line": 5,
-   "point": "现在完成时 has been linked",
-   "note": "强调从过去到现在一直有关联，中文常漏掉 has been 而只说“有关联”。"
+   "point": "现在完成时 has reached",
+   "note": "强调到目前为止的结果，中文常说“已经”而容易漏掉 has。"
   },
   {
-   "line": 6,
-   "point": "不定式作定语 free for anyone to download",
-   "note": "to download 修饰 anyone，中文习惯说“供任何人下载”，容易漏掉 for。"
-  },
-  {
-   "line": 12,
-   "point": "since 引导原因状语从句",
-   "note": "since 在这里表示“因为”，不是“自从”，中文学习者容易误读为时间。"
+   "line": 11,
+   "point": "被动语态 are expected to",
+   "note": "表示被期望做某事，中文习惯用主动说法，容易漏掉 are。"
   }
  ],
  "questions": [
   {
-   "q": "What did Censys find?",
+   "q": "What did Sequoia announce this week?",
    "options": [
-    "More than 800 Artex deployments accessible without a password",
-    "A new AI model from Anthropic",
-    "A password leak at Microsoft"
-   ],
-   "answer": 0,
-   "explain": "The answer is in sentence 10."
-  },
-  {
-   "q": "Why are the exposed systems a concern?",
-   "options": [
-    "They slow down the internet",
-    "They can be found and misused by anyone",
-    "They cost too much to run"
+    "A new scout program",
+    "Closing its London office and ending scouts",
+    "Opening a London office"
    ],
    "answer": 1,
-   "explain": "The answer is in sentence 13."
+   "explain": "答案在第一句，提到关闭伦敦办公室并终止侦察员项目。"
+  },
+  {
+   "q": "How did Andreessen Horowitz change its scout program?",
+   "options": [
+    "It gave scouts fewer resources",
+    "It ended the program",
+    "It gave scouts more resources but expected them to be more active"
+   ],
+   "answer": 2,
+   "explain": "答案在第十一句，提到侦察员获得更多资源但被期望更活跃。"
   }
  ],
  "recall_prompts": [
-  "What is Artex?",
-  "How many exposed deployments were found?",
-  "Why does exposure matter?"
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
  ]
 }
