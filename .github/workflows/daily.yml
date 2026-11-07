@@ -8,9 +8,10 @@ on:
     # from a few minutes to seven hours late. With one cron per issue, a late
     # run did not just arrive late: the 20:05 job started at 03:16 the next
     # morning, so the evening brief got dated to the following day and the day
-    # it belonged to went empty. Three shots plus a slot decided by target time
-    # (not by which cron fired) makes lateness and transient failures harmless:
-    # the second and third runs find the issue already built and exit quietly.
+    # it belonged to went empty. Three shots per issue — plus a slot decided by
+    # target time instead of by which cron fired — makes lateness and transient
+    # failures harmless: the retry runs find the issue already built and quit
+    # before installing anything.
     #
     # UTC in, Asia/Shanghai (UTC+8) out.
     - cron: "5 23 * * *"     # 07:05 morning
@@ -45,22 +46,48 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Which issue is due, and is it already here? Answered before ffmpeg or
+      # pip run, so a retry of an already-built issue costs seconds and cannot
+      # fail in the toolchain and page you with a false alarm.
+      - name: Which issue is due?
+        id: check
+        env:
+          SLOT: ${{ inputs.slot || 'auto' }}
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          from pathlib import Path
+          sys.path.insert(0, "pipeline")
+          import slots
+
+          arg = os.environ.get("SLOT", "auto")
+          if slots.is_auto(arg):
+              day, slot = slots.due()
+          else:
+              from datetime import datetime
+              day, slot = datetime.now().date().isoformat(), slots.resolve(arg)
+          slug = slots.make(day, slot)
+          skip = Path("data", f"{slug}.json").exists()
+          print(f"issue: {slug} · skip={skip}", flush=True)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"slug={slug}\nskip={'true' if skip else 'false'}\n")
+          PY
+
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.skip != 'true' || inputs.dry_run == true
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install
+        if: inputs.dry_run != true && steps.check.outputs.skip != 'true'
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -q -r requirements.txt
 
-      # daily.py works out which issue is due from the target times (07:00 and
-      # 20:00 local), so a run that starts hours late still fills the slot it
-      # was aiming at instead of relabelling the next one.
       - name: Pick, rewrite, voices, data
         id: build
-        if: inputs.dry_run != true
+        if: inputs.dry_run != true && steps.check.outputs.skip != 'true'
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
@@ -130,11 +157,12 @@ jobs:
           SLUG: ${{ steps.build.outputs.slug }}
         run: python pipeline/push_feishu.py --strict-today --date "$SLUG"
 
-      # A silent failure here means no brief and no explanation, so say so.
+      # A silent failure here means no brief and no explanation, so say so —
+      # but only for a run that was actually trying to build something.
       - name: Report failure
-        if: failure() && inputs.dry_run != true
+        if: failure() && inputs.dry_run != true && steps.check.outputs.skip != 'true'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-          SLUG: ${{ steps.build.outputs.slug || 'this' }}
+          SLUG: ${{ steps.check.outputs.slug || 'this' }}
         run: python pipeline/push_feishu.py --alert "the $SLUG issue did not build, see the Actions log"
