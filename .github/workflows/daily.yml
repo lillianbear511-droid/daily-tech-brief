@@ -2,14 +2,23 @@ name: daily brief
 
 on:
   schedule:
-    # Two issues a day. GitHub cron is UTC and often starts hours late, so each
-    # one keeps a few minutes of slack and the slot is decided by the cron that
-    # fired — not by the clock, which would drift across the boundary.
+    # Two issues a day, three shots at each.
     #
-    # 23:05 UTC = 07:05 Asia/Shanghai — morning issue
-    - cron: "5 23 * * *"
-    # 12:05 UTC = 20:05 Asia/Shanghai — evening issue
-    - cron: "5 12 * * *"
+    # GitHub's cron is best effort and has started this repo's jobs anywhere
+    # from a few minutes to seven hours late. With one cron per issue, a late
+    # run did not just arrive late: the 20:05 job started at 03:16 the next
+    # morning, so the evening brief got dated to the following day and the day
+    # it belonged to went empty. Three shots plus a slot decided by target time
+    # (not by which cron fired) makes lateness and transient failures harmless:
+    # the second and third runs find the issue already built and exit quietly.
+    #
+    # UTC in, Asia/Shanghai (UTC+8) out.
+    - cron: "5 23 * * *"     # 07:05 morning
+    - cron: "35 0 * * *"     # 08:35 morning, retry
+    - cron: "5 2 * * *"      # 10:05 morning, retry
+    - cron: "5 12 * * *"     # 20:05 evening
+    - cron: "35 13 * * *"    # 21:35 evening, retry
+    - cron: "5 15 * * *"     # 23:05 evening, retry
   workflow_dispatch:        # manual run from the Actions tab
     inputs:
       slot:
@@ -28,6 +37,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     # Without this the runner's date.today() returns the UTC date, so the
     # 23:05 UTC job would rebuild yesterday's issue and mail it every morning.
     env:
@@ -40,25 +50,33 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      # The cron that fired says which issue this is. A manual run defaults to
-      # "auto", which the scripts read off the local hour.
-      - name: Resolve issue slot
-        id: slot
-        run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            case "${{ github.event.schedule }}" in
-              "5 12 * * *") echo "slot=pm" >> "$GITHUB_OUTPUT" ;;
-              *)            echo "slot=am" >> "$GITHUB_OUTPUT" ;;
-            esac
-          else
-            echo "slot=${{ inputs.slot || 'auto' }}" >> "$GITHUB_OUTPUT"
-          fi
-          echo "Building slot: $(grep slot= "$GITHUB_OUTPUT" | cut -d= -f2)"
-
       - name: Install
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           pip install -q -r requirements.txt
+
+      # daily.py works out which issue is due from the target times (07:00 and
+      # 20:00 local), so a run that starts hours late still fills the slot it
+      # was aiming at instead of relabelling the next one.
+      - name: Pick, rewrite, voices, data
+        id: build
+        if: inputs.dry_run != true
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SLOT: ${{ inputs.slot || 'auto' }}
+        run: |
+          set +e
+          python pipeline/daily.py --skip-push --slot "$SLOT"
+          code=$?
+          set -e
+          if [ "$code" -eq 3 ]; then
+            echo "Nothing to do: this issue is already built."
+          elif [ "$code" -ne 0 ]; then
+            echo "daily.py failed with $code"
+            exit "$code"
+          fi
 
       - name: Dry run - pick and rewrite only
         if: inputs.dry_run == true
@@ -68,7 +86,7 @@ jobs:
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
         run: |
           python -c "from datetime import date, datetime, timezone; print('runner sees today as', date.today().isoformat(), '| utc', datetime.now(timezone.utc).isoformat(timespec='minutes'), '| local', datetime.now().isoformat(timespec='minutes'))"
-          python pipeline/compose.py --dry-run --slot ${{ steps.slot.outputs.slot }}
+          python pipeline/compose.py --dry-run --slot ${{ inputs.slot || 'auto' }}
 
       # edge-tts and ffmpeg are the two things that only fail on the runner,
       # never on a laptop. Say so before 7am rather than at 7am.
@@ -89,22 +107,10 @@ jobs:
           print("ffprobe ok")
           PY
 
-      # daily.py refuses to rebuild an issue that already exists, so a re-run of
-      # this workflow never overwrites a brief you have already read — and the
-      # morning job cannot touch the evening one.
-      - name: Pick, rewrite, voices, data
-        if: inputs.dry_run != true
-        env:
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
-          LLM_MODEL: ${{ secrets.LLM_MODEL }}
-          SLOT: ${{ steps.slot.outputs.slot }}
-        run: python pipeline/daily.py --skip-push --slot "$SLOT"
-
       - name: Commit
-        if: inputs.dry_run != true
+        if: inputs.dry_run != true && steps.build.outputs.built == 'true'
         env:
-          SLOT: ${{ steps.slot.outputs.slot }}
+          SLUG: ${{ steps.build.outputs.slug }}
         run: |
           git config user.name  "daily-brief bot"
           git config user.email "bot@users.noreply.github.com"
@@ -112,17 +118,17 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing new"
           else
-            git commit -m "brief: $(date +%Y-%m-%d) ${SLOT}"
+            git commit -m "brief: $SLUG"
             git push
           fi
 
       - name: Push to Feishu
-        if: inputs.dry_run != true
+        if: inputs.dry_run != true && steps.build.outputs.built == 'true'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-          SLOT: ${{ steps.slot.outputs.slot }}
-        run: python pipeline/push_feishu.py --strict-today --slot "$SLOT"
+          SLUG: ${{ steps.build.outputs.slug }}
+        run: python pipeline/push_feishu.py --strict-today --date "$SLUG"
 
       # A silent failure here means no brief and no explanation, so say so.
       - name: Report failure
@@ -130,5 +136,5 @@ jobs:
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
-          SLOT: ${{ steps.slot.outputs.slot }}
-        run: python pipeline/push_feishu.py --alert "the ${SLOT} issue did not build, see the Actions log"
+          SLUG: ${{ steps.build.outputs.slug || 'this' }}
+        run: python pipeline/push_feishu.py --alert "the $SLUG issue did not build, see the Actions log"
