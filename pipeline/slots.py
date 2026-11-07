@@ -15,14 +15,16 @@ issue that day".
 """
 
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 SLOTS = ("am", "pm")
 
-# Local hour that divides the day in two. The morning cron fires at 07:05 but
-# GitHub can start it hours late; anything before 14:00 is still the morning
-# issue, and the evening cron (20:05, likewise late) always lands after it.
-SLOT_SPLIT_HOUR = 14
+# When each issue is supposed to go out. A run that fires hours late still
+# belongs to the point it was aiming at, not to the clock it woke up at:
+# GitHub started the 20:05 job at 03:16 the next morning once, which dated an
+# evening brief to the following day and left the real evening empty.
+AM_HOUR = 7
+PM_HOUR = 20
 
 _SLUG_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:-(am|pm))?$")
 
@@ -39,9 +41,24 @@ def make(date: str, slot: str = "") -> str:
     return f"{date}-{slot}" if slot else date
 
 
+def due(now: datetime | None = None):
+    """(date, slot) that a run starting now should produce.
+
+    Anchored on the most recent target time, so lateness cannot relabel an
+    issue: 07:05-19:59 builds today's morning, 20:00-23:59 today's evening,
+    and 00:00-06:59 is still catching up on yesterday's evening.
+    """
+    now = now or datetime.now()
+    if AM_HOUR <= now.hour < PM_HOUR:
+        return now.date().isoformat(), "am"
+    if now.hour >= PM_HOUR:
+        return now.date().isoformat(), "pm"
+    return (now - timedelta(days=1)).date().isoformat(), "pm"
+
+
 def current() -> str:
     """Which issue a run with no explicit --slot should build."""
-    return "am" if datetime.now().hour < SLOT_SPLIT_HOUR else "pm"
+    return due()[1]
 
 
 def resolve(slot_arg: str) -> str:
@@ -54,6 +71,10 @@ def resolve(slot_arg: str) -> str:
     if s not in SLOTS:
         raise SystemExit(f"--slot must be am, pm, auto or none (got {slot_arg!r})")
     return s
+
+
+def is_auto(slot_arg: str) -> bool:
+    return (slot_arg or "").strip().lower() in ("", "auto")
 
 
 def next_slot(slot: str) -> str:
