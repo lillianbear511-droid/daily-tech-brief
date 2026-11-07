@@ -12,7 +12,7 @@ Recording needs HTTPS, which Pages provides. Over a LAN IP the mic is blocked by
 ## What is where
 
 ```
-index.html  app.js  styles.css  sw.js  manifest.json   the app (no build step)
+index.html  app.js  assess.js  styles.css  sw.js  manifest.json   the app (no build step)
 icons/                                                 home screen icons
 data/<date>-am.json  data/<date>-pm.json               one practice unit per issue
 data/index.json                                        list of issues, newest first
@@ -89,8 +89,12 @@ morning job can never overwrite the evening one.
   than 90 days and keep `data/`.
 - **iOS kills recording when you leave the screen.** Not fixable. The app says so on the
   record screen.
-- **No pronunciation scoring.** You rate each sentence by ear — clear / close / retry.
-  Real phoneme scoring needs Azure Pronunciation Assessment, which needs a paid key.
-  Fake scores are worse than no scores.
+- **Scoring is similarity, not phoneme accuracy.** `assess.js` compares your take with
+  the reference reading on the device: DTW over cepstral features, plus duration,
+  path straightness, high-band energy and level. It can tell you that you drifted,
+  rushed, dropped a word or swallowed endings. It cannot tell you *which* phoneme was
+  wrong — that needs forced alignment or a paid pronunciation API, and both need an
+  upload. The 0–100 number is a distance mapped through a calibrated band, so treat it
+  as a trend for one speaker over time, not as an absolute grade to compare with others.
 - **One story per issue, chosen by rules.** `SKIP` and `BOOST` in `compose.py` steer it.
   If it keeps picking things you don't care about, edit those two tuples.
