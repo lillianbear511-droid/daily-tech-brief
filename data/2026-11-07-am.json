@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-07-am",
+ "date": "2026-11-07",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+ "headline": "Crusoe sells unfinished Wyoming data center to Google",
+ "audio": "audio/2026-11-07-am-full.mp3",
+ "duration": 79.6,
+ "wpm": 125.1,
+ "script": "Crusoe has sold an unfinished data center project in Wyoming to Google. Google had tried and failed to become a customer of that project. Google is now taking over the development itself. Reports say Google had raised concerns about the cost and the construction timeline under Crusoe. Crusoe first announced the project last year with Tallgrass, a Blackstone-backed infrastructure company. They planned to scale it to ten gigawatts of power capacity. Google did not say how much it paid Crusoe for the unfinished project. But Google plans to invest seventeen billion dollars to develop the data center campus. The deal shows how hard it is for independent developers to deliver huge projects on time and within budget. Securing equipment and power is a challenge, and local opposition can make development even harder. Google has not walked away from Crusoe entirely. Crusoe is building another data center for Google near Amarillo, Texas. Crusoe also raised three point nine billion dollars in September, despite the Wyoming setback.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Crusoe has sold an unfinished data center project in Wyoming to Google.",
+   "zh": "Crusoe已将其在怀俄明州一个未完工的数据中心项目出售给谷歌。",
+   "audio": "audio/2026-11-07-am-s1.mp3",
+   "duration": 5.6,
+   "focus": "final -d in sold, link to an"
+  },
+  {
+   "id": 2,
+   "text": "Google had tried and failed to become a customer of that project.",
+   "zh": "谷歌此前曾试图成为该项目的客户，但没有成功。",
+   "audio": "audio/2026-11-07-am-s2.mp3",
+   "duration": 4.5,
+   "focus": "final -d in tried, failed"
+  },
+  {
+   "id": 3,
+   "text": "Google is now taking over the development itself.",
+   "zh": "如今谷歌正亲自接手这一开发项目。",
+   "audio": "audio/2026-11-07-am-s3.mp3",
+   "duration": 3.7,
+   "focus": "v in development, not w"
+  },
+  {
+   "id": 4,
+   "text": "Reports say Google had raised concerns about the cost and the construction timeline under Crusoe.",
+   "zh": "据报道，谷歌曾对Crusoe管理下的成本和建设进度表示担忧。",
+   "audio": "audio/2026-11-07-am-s4.mp3",
+   "duration": 7.0,
+   "focus": "th in the, link to cost"
+  },
+  {
+   "id": 5,
+   "text": "Crusoe first announced the project last year with Tallgrass, a Blackstone-backed infrastructure company.",
+   "zh": "Crusoe去年首次公布该项目，合作方是获得黑石投资的基础设施公司Tallgrass。",
+   "audio": "audio/2026-11-07-am-s5.mp3",
+   "duration": 7.5,
+   "focus": "final -ed in backed"
+  },
+  {
+   "id": 6,
+   "text": "They planned to scale it to ten gigawatts of power capacity.",
+   "zh": "双方计划最终将该项目扩展至十吉瓦的电力容量。",
+   "audio": "audio/2026-11-07-am-s6.mp3",
+   "duration": 4.2,
+   "focus": "final -s in gigawatts"
+  },
+  {
+   "id": 7,
+   "text": "Google did not say how much it paid Crusoe for the unfinished project.",
+   "zh": "谷歌没有透露它为这个未完工项目向Crusoe支付了多少钱。",
+   "audio": "audio/2026-11-07-am-s7.mp3",
+   "duration": 5.1,
+   "focus": "th in how much, link to it"
+  },
+  {
+   "id": 8,
+   "text": "But Google plans to invest seventeen billion dollars to develop the data center campus.",
+   "zh": "但谷歌计划投资一百七十亿美元来开发这个数据中心园区。",
+   "audio": "audio/2026-11-07-am-s8.mp3",
+   "duration": 6.8,
+   "focus": "v in invest, not w"
+  },
+  {
+   "id": 9,
+   "text": "The deal shows how hard it is for independent developers to deliver huge projects on time and within budget.",
+   "zh": "这笔交易表明，独立开发商要按时、按预算交付大型项目有多么困难。",
+   "audio": "audio/2026-11-07-am-s9.mp3",
+   "duration": 8.0,
+   "focus": "th in within, budget"
+  },
+  {
+   "id": 10,
+   "text": "Securing equipment and power is a challenge, and local opposition can make development even harder.",
+   "zh": "获取设备和电力本身就是挑战，当地社区的反对还可能让开发更加困难。",
+   "audio": "audio/2026-11-07-am-s10.mp3",
+   "duration": 7.6,
+   "focus": "final -g in securing, link to equipment"
+  },
+  {
+   "id": 11,
+   "text": "Google has not walked away from Crusoe entirely.",
+   "zh": "谷歌并没有完全放弃与Crusoe的合作。",
+   "audio": "audio/2026-11-07-am-s11.mp3",
+   "duration": 3.7,
+   "focus": "final -d in walked, link to away"
+  },
+  {
+   "id": 12,
+   "text": "Crusoe is building another data center for Google near Amarillo, Texas.",
+   "zh": "Crusoe正在得克萨斯州阿马里洛附近为谷歌建设另一个数据中心。",
+   "audio": "audio/2026-11-07-am-s12.mp3",
+   "duration": 6.1,
+   "focus": "final -r in another, Amarillo"
+  },
+  {
+   "id": 13,
+   "text": "Crusoe also raised three point nine billion dollars in September, despite the Wyoming setback.",
+   "zh": "尽管在怀俄明州受挫，Crusoe还是在九月完成了三十九亿美元的融资。",
+   "audio": "audio/2026-11-07-am-s13.mp3",
+   "duration": 7.6,
+   "focus": "final -d in raised, link to three"
+  }
+ ],
+ "terms": [
+  {
+   "word": "data center",
+   "zh": "数据中心",
+   "note": "集中放置大量服务器、用于存储和计算数据的建筑设施。"
+  },
+  {
+   "word": "gigawatt",
+   "zh": "吉瓦",
+   "note": "功率单位，一吉瓦等于十亿瓦，这里指数据中心可用的电力容量。"
+  },
+  {
+   "word": "infrastructure",
+   "zh": "基础设施",
+   "note": "指支撑大型项目运转的电力、网络、建筑等基础条件。"
+  },
+  {
+   "word": "campus",
+   "zh": "园区",
+   "note": "这里指由多栋建筑组成的数据中心集中区域。"
+  },
+  {
+   "word": "setback",
+   "zh": "挫折",
+   "note": "指项目推进中遇到的阻碍或失利。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "过去完成时 had tried and failed",
+   "note": "表示在谷歌接手之前就已发生的尝试，中文常只说“曾试图”而漏掉 had。"
+  },
+  {
+   "line": 9,
+   "point": "形式主语 how hard it is for... to...",
+   "note": "it 是形式主语，真正的主语是 to deliver 不定式；中文习惯直接说“做某事很难”，容易漏掉 it。"
+  },
+  {
+   "line": 13,
+   "point": "介词 despite + 名词",
+   "note": "despite 后直接接名词，不能接句子；中文说“尽管……”，容易误加 that 或改成 although。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Crusoe do with the Wyoming project?",
+   "options": [
+    "It sold the unfinished project to Google.",
+    "It finished the project and leased it to Google.",
+    "It cancelled the project entirely."
+   ],
+   "answer": 0,
+   "explain": "答案在第一句，Crusoe 把未完工的怀俄明项目卖给了谷歌。"
+  },
+  {
+   "q": "How much does Google plan to invest in the data center campus?",
+   "options": [
+    "Three point nine billion dollars.",
+    "Seventeen billion dollars.",
+    "Ten billion dollars."
+   ],
+   "answer": 1,
+   "explain": "答案在第八句，谷歌计划投资一百七十亿美元开发该园区。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

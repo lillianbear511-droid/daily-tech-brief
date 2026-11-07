@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T03:18:58",
+ "updated": "2026-11-07T10:40:28",
  "days": [
   {
    "id": "2026-11-07-pm",
@@ -8,6 +8,15 @@
    "headline": "Hundreds of Artex AI hacking tools exposed online",
    "source": "TECHCRUNCH",
    "duration": 99.2,
+   "sentences": 13
+  },
+  {
+   "id": "2026-11-07-am",
+   "date": "2026-11-07",
+   "slot": "am",
+   "headline": "Crusoe sells unfinished Wyoming data center to Google",
+   "source": "TECHCRUNCH",
+   "duration": 79.6,
    "sentences": 13
   },
   {
