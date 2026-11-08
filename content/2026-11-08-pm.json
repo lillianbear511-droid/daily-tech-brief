@@ -1,0 +1,146 @@
+{
+ "headline": "从抓黑客到网络安全投资人",
+ "lines": [
+  {
+   "en": "Stephen Ward co-founded Brightmind Partners, a cybersecurity fund in New York.",
+   "zh": "斯蒂芬·沃德联合创立了Brightmind Partners，一家位于纽约的网络安全基金。",
+   "focus": "co-founded 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "The firm closed a debut fund of two hundred fifty million dollars late last year.",
+   "zh": "该公司去年年底完成了首期基金募集，规模为两亿五千万美元。",
+   "focus": "closed a 两词连读"
+  },
+  {
+   "en": "Ward says investors must sell on the way up.",
+   "zh": "沃德说，投资者必须在上涨途中卖出。",
+   "focus": ""
+  },
+  {
+   "en": "Before investing, he served in the Coast Guard and the Secret Service.",
+   "zh": "在投资之前，他曾在海岸警卫队和特勤局任职。",
+   "focus": "served 的 -ed 结尾不要吞掉"
+  },
+  {
+   "en": "He was also a chief information security officer, the executive who guards a company's data, at TIAA and Home Depot.",
+   "zh": "他还曾在TIAA和家得宝担任首席信息安全官，也就是负责保护公司数据的高管。",
+   "focus": "chief information 两词连读"
+  },
+  {
+   "en": "One proof point is SGNL, an identity security startup.",
+   "zh": "一个例证是SGNL，一家身份安全初创公司。",
+   "focus": "proof point 的 p 和 p 连读"
+  },
+  {
+   "en": "CrowdStrike agreed in January to buy SGNL for seven hundred forty million dollars.",
+   "zh": "CrowdStrike于一月同意以七亿四千万美元收购SGNL。",
+   "focus": "agreed in 连读"
+  },
+  {
+   "en": "That deal came eleven months after Brightmind led SGNL's Series A round.",
+   "zh": "这笔交易发生在Brightmind领投SGNL的A轮融资十一个月之后。",
+   "focus": "led 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "Ward is now raising a second fund of roughly the same size.",
+   "zh": "沃德现在正在募集第二只基金，规模大致相同。",
+   "focus": ""
+  },
+  {
+   "en": "He is doing it alone, because his co-founder left in April.",
+   "zh": "他独自在做这件事，因为他的联合创始人四月离开了。",
+   "focus": "left in 连读"
+  },
+  {
+   "en": "Early-stage cybersecurity startups are raising more money than later-stage rivals for the first time in over a decade.",
+   "zh": "早期网络安全初创公司筹集的资金十多年来首次超过后期阶段的竞争对手。",
+   "focus": "first time 的 t 和 t 连读"
+  },
+  {
+   "en": "Ward grew up in New Jersey and joined the Coast Guard after high school.",
+   "zh": "沃德在新泽西长大，高中毕业后加入了海岸警卫队。",
+   "focus": "joined 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "He later arrested a hacker who stole credit card data, then turned him into an informant.",
+   "zh": "他后来逮捕了一名窃取信用卡数据的黑客，然后把他变成了线人。",
+   "focus": "arrested a 连读"
+  }
+ ],
+ "terms": [
+  {
+   "word": "venture capital",
+   "zh": "风险投资",
+   "note": "指向初创公司投资以换取股份的资金。"
+  },
+  {
+   "word": "fund",
+   "zh": "基金",
+   "note": "这里指汇集投资人资金、专门用于投资的池子。"
+  },
+  {
+   "word": "Series A",
+   "zh": "A轮融资",
+   "note": "指初创公司第一轮正式的外部机构融资。"
+  },
+  {
+   "word": "CISO",
+   "zh": "首席信息安全官",
+   "note": "公司里负责信息安全的高管。"
+  },
+  {
+   "word": "informant",
+   "zh": "线人",
+   "note": "指向执法机构提供犯罪信息的人。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "过去时 closed",
+   "note": "描述去年年底已完成的动作，中文常漏掉时态变化，这里必须用 closed 而不是 close。"
+  },
+  {
+   "line": 5,
+   "point": "同位语 the executive who guards a company's data",
+   "note": "用同位语解释前面的职位，中文习惯另起一句，容易漏掉 who 引导的定语从句。"
+  },
+  {
+   "line": 11,
+   "point": "比较级 more money than",
+   "note": "比较两方筹资额，中文说“超过”时容易丢掉 than 结构。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did CrowdStrike agree to do in January?",
+   "options": [
+    "Buy SGNL for seven hundred forty million dollars",
+    "Lead SGNL's Series A round",
+    "Launch a new cybersecurity fund"
+   ],
+   "answer": 0,
+   "explain": "答案在第七句，CrowdStrike 于一月同意收购 SGNL。"
+  },
+  {
+   "q": "Why is Ward raising the second fund alone?",
+   "options": [
+    "Because the fund is smaller",
+    "Because his co-founder left in April",
+    "Because he moved to New York"
+   ],
+   "answer": 1,
+   "explain": "答案在第十句，联合创始人四月离开，所以他独自募资。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Stephen Ward co-founded Brightmind Partners, a cybersecurity fund in New York. The firm closed a debut fund of two hundred fifty million dollars late last year. Ward says investors must sell on the way up. Before investing, he served in the Coast Guard and the Secret Service. He was also a chief information security officer, the executive who guards a company's data, at TIAA and Home Depot. One proof point is SGNL, an identity security startup. CrowdStrike agreed in January to buy SGNL for seven hundred forty million dollars. That deal came eleven months after Brightmind led SGNL's Series A round. Ward is now raising a second fund of roughly the same size. He is doing it alone, because his co-founder left in April. Early-stage cybersecurity startups are raising more money than later-stage rivals for the first time in over a decade. Ward grew up in New Jersey and joined the Coast Guard after high school. He later arrested a hacker who stole credit card data, then turned him into an informant.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/08/the-ex-secret-service-agent-who-flipped-a-hacker-is-now-raising-a-second-250m-cybersecurity-fund/",
+ "date": "2026-11-08",
+ "slot": "pm"
+}

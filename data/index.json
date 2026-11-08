@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-08T10:12:15",
+ "updated": "2026-11-09T01:54:54",
  "days": [
+  {
+   "id": "2026-11-08-pm",
+   "date": "2026-11-08",
+   "slot": "pm",
+   "headline": "从抓黑客到网络安全投资人",
+   "source": "TECHCRUNCH",
+   "duration": 78.8,
+   "sentences": 13
+  },
   {
    "id": "2026-11-08-am",
    "date": "2026-11-08",
