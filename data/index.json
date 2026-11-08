@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-07T13:54:51",
+ "updated": "2026-11-08T10:12:15",
  "days": [
+  {
+   "id": "2026-11-08-am",
+   "date": "2026-11-08",
+   "slot": "am",
+   "headline": "NYT Cooking's AI assistant: helpful, with limits",
+   "source": "THE VERGE",
+   "duration": 80.4,
+   "sentences": 13
+  },
   {
    "id": "2026-11-07-pm",
    "date": "2026-11-07",

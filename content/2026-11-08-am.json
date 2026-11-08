@@ -1,0 +1,146 @@
+{
+ "headline": "NYT Cooking's AI assistant: helpful, with limits",
+ "lines": [
+  {
+   "en": "The NYT Cooking app now includes a built-in AI assistant for subscribers.",
+   "zh": "《纽约时报》烹饪应用现在为订阅用户内置了一个人工智能助手。",
+   "focus": "built-in: link the two words, final n"
+  },
+  {
+   "en": "It launched on iOS only, and many recipe purists are skeptical of it.",
+   "zh": "它首发只支持iOS，许多坚持传统做法的人对它持怀疑态度。",
+   "focus": "launched: keep the final -ed sound"
+  },
+  {
+   "en": "The assistant runs on artificial intelligence, meaning software that answers questions in plain language.",
+   "zh": "这个助手依靠人工智能运行，也就是用自然语言回答问题的软件。",
+   "focus": "artificial: say the sh sound in -cial"
+  },
+  {
+   "en": "A reviewer tested it on ingredient swaps, recipe scaling, and a missing Bundt pan.",
+   "zh": "一位评测者用它测试了替换食材、调整食谱分量，以及缺少一个环形烤模的情况。",
+   "focus": "tested: keep the final -ed sound"
+  },
+  {
+   "en": "It saved her weeknight chicken dinner but almost ruined her cake.",
+   "zh": "它救了她工作日晚上的鸡肉晚餐，却差点毁了她的蛋糕。",
+   "focus": "almost: say the l, then the st"
+  },
+  {
+   "en": "Around seven each evening, she stands at the fridge deciding what to cook.",
+   "zh": "每天傍晚七点左右，她站在冰箱前琢磨做什么菜。",
+   "focus": "stands: keep the final -s sound"
+  },
+  {
+   "en": "Her husband complains when chicken appears again, so she uses AI to find new ideas.",
+   "zh": "丈夫一看到又是鸡肉就抱怨，所以她用人工智能找新点子。",
+   "focus": "appears: keep the final -s sound"
+  },
+  {
+   "en": "She also relies on Alexa Plus, the Samsung Food app, and an AI cooking robot.",
+   "zh": "她还依赖Alexa Plus、三星美食应用和一台人工智能烹饪机器人。",
+   "focus": "Plus: end on a clear s sound"
+  },
+  {
+   "en": "These tools help her swap ingredients, generate ideas, and fix mistakes.",
+   "zh": "这些工具帮她替换食材、想出新点子，并纠正错误。",
+   "focus": "swap: end on a clear p sound"
+  },
+  {
+   "en": "She still watches them closely, since AI can get things wrong.",
+   "zh": "她仍然密切留意它们，因为人工智能也会出错。",
+   "focus": "closely: say the l, then the s"
+  },
+  {
+   "en": "She values NYT Cooking for its thousands of tested recipes from reputable sources.",
+   "zh": "她看重《纽约时报》烹饪应用，是因为它有数千份经过测试、来源可靠的食谱。",
+   "focus": "thousands: say the th sound"
+  },
+  {
+   "en": "She has tried purely AI-generated recipes, and they were not good.",
+   "zh": "她试过纯人工智能生成的食谱，结果并不好。",
+   "focus": "AI-generated: link the two parts"
+  },
+  {
+   "en": "Reader comments on the app often solve her cooking problems, such as what to substitute.",
+   "zh": "应用里的读者评论常常能解决她的烹饪难题，比如该用什么替代。",
+   "focus": "comments: keep the final -s sound"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI assistant",
+   "zh": "人工智能助手",
+   "note": "指应用里能听懂自然语言提问并给出建议的软件功能。"
+  },
+  {
+   "word": "recipe scaling",
+   "zh": "食谱分量调整",
+   "note": "指按人数把食谱里的用量按比例放大或缩小。"
+  },
+  {
+   "word": "ingredient swaps",
+   "zh": "食材替换",
+   "note": "指手头缺某种食材时，换成另一种可替代的食材。"
+  },
+  {
+   "word": "Bundt pan",
+   "zh": "环形烤模",
+   "note": "一种中间带孔的圆形蛋糕模具，常用于烤蛋糕。"
+  },
+  {
+   "word": "recipe purists",
+   "zh": "食谱纯粹主义者",
+   "note": "指坚持传统做法、不信任机器生成食谱的人。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "被动语态 are skeptical of it",
+   "note": "这里用be skeptical of表示“对……持怀疑态度”，中文习惯说“怀疑它”，容易漏掉介词of。"
+  },
+  {
+   "line": 5,
+   "point": "一般过去时 saved / ruined",
+   "note": "讲一次具体测试的结果用过去时，中文靠“了”表达，容易误用现在时。"
+  },
+  {
+   "line": 12,
+   "point": "现在完成时 has tried",
+   "note": "强调到现在为止的经历，中文常说“试过”，容易漏掉have。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the reviewer test the assistant on?",
+   "options": [
+    "Ingredient swaps, recipe scaling, and a missing Bundt pan",
+    "Grocery delivery and meal planning",
+    "Restaurant reservations and reviews"
+   ],
+   "answer": 0,
+   "explain": "答案在第四条，讲评测者测试了替换食材、调整分量和缺少烤模。"
+  },
+  {
+   "q": "Which platforms can use the assistant at launch?",
+   "options": [
+    "Android and iOS",
+    "iOS only",
+    "Web browsers only"
+   ],
+   "answer": 1,
+   "explain": "答案在第二条，说它首发只支持iOS。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "The NYT Cooking app now includes a built-in AI assistant for subscribers. It launched on iOS only, and many recipe purists are skeptical of it. The assistant runs on artificial intelligence, meaning software that answers questions in plain language. A reviewer tested it on ingredient swaps, recipe scaling, and a missing Bundt pan. It saved her weeknight chicken dinner but almost ruined her cake. Around seven each evening, she stands at the fridge deciding what to cook. Her husband complains when chicken appears again, so she uses AI to find new ideas. She also relies on Alexa Plus, the Samsung Food app, and an AI cooking robot. These tools help her swap ingredients, generate ideas, and fix mistakes. She still watches them closely, since AI can get things wrong. She values NYT Cooking for its thousands of tested recipes from reputable sources. She has tried purely AI-generated recipes, and they were not good. Reader comments on the app often solve her cooking problems, such as what to substitute.",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+ "date": "2026-11-08",
+ "slot": "am"
+}
