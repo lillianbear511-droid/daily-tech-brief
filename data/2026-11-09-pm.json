@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-09-pm",
+ "date": "2026-11-09",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
+ "headline": "Anthropic releases Mythos 5.2 and Fable 5.2",
+ "audio": "audio/2026-11-09-pm-full.mp3",
+ "duration": 87.0,
+ "wpm": 106.2,
+ "script": "Anthropic released Mythos 5.2 and Fable 5.2, its most advanced models, on Monday. The company says both models improved in coding, reasoning, and vision. It also says they communicate more clearly with users. Anthropic cut the price of Fable from ten to eight dollars per million input tokens. That makes Fable 5.2 cheaper than its main rival, GPT-6 Astra. The new Fable also answers thirty percent faster at every effort level. Faster serving is available for double the price. Fable 5.2 now works with zero data retention policies through the Enterprise Frontier Safeguards system. This was Anthropic's first release since a METR report suggested the lab might be nearing recursive self-improvement. Recursive self-improvement means AI models can carry on their own training independently. METR found internal models were speeding up Anthropic's progress by about two times. Anthropic still says Mythos cannot act covertly against its user. Fable 5.2 has already solved two open problems in theoretical physics.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Anthropic released Mythos 5.2 and Fable 5.2, its most advanced models, on Monday.",
+   "zh": "Anthropic 周一发布了其最先进的模型 Mythos 5.2 和 Fable 5.2。",
+   "audio": "audio/2026-11-09-pm-s1.mp3",
+   "duration": 8.6,
+   "focus": "final -d in released links into Mythos"
+  },
+  {
+   "id": 2,
+   "text": "The company says both models improved in coding, reasoning, and vision.",
+   "zh": "该公司表示，这两款模型在编程、推理和视觉方面都有提升。",
+   "audio": "audio/2026-11-09-pm-s2.mp3",
+   "duration": 5.7,
+   "focus": "final -s in says"
+  },
+  {
+   "id": 3,
+   "text": "It also says they communicate more clearly with users.",
+   "zh": "公司还表示，它们与用户的沟通更加清晰。",
+   "audio": "audio/2026-11-09-pm-s3.mp3",
+   "duration": 4.0,
+   "focus": ""
+  },
+  {
+   "id": 4,
+   "text": "Anthropic cut the price of Fable from ten to eight dollars per million input tokens.",
+   "zh": "Anthropic 把 Fable 的价格从每百万输入词元十美元降到八美元。",
+   "audio": "audio/2026-11-09-pm-s4.mp3",
+   "duration": 6.7,
+   "focus": "th in Anthropic"
+  },
+  {
+   "id": 5,
+   "text": "That makes Fable 5.2 cheaper than its main rival, GPT-6 Astra.",
+   "zh": "这让 Fable 5.2 比其主要竞争对手 GPT-6 Astra 更便宜。",
+   "audio": "audio/2026-11-09-pm-s5.mp3",
+   "duration": 6.8,
+   "focus": "v in rival"
+  },
+  {
+   "id": 6,
+   "text": "The new Fable also answers thirty percent faster at every effort level.",
+   "zh": "新版 Fable 在各个努力等级下的回答速度也快了百分之三十。",
+   "audio": "audio/2026-11-09-pm-s6.mp3",
+   "duration": 5.7,
+   "focus": "th in thirty"
+  },
+  {
+   "id": 7,
+   "text": "Faster serving is available for double the price.",
+   "zh": "更快的推理服务需要付双倍价格。",
+   "audio": "audio/2026-11-09-pm-s7.mp3",
+   "duration": 3.8,
+   "focus": "final -r in faster"
+  },
+  {
+   "id": 8,
+   "text": "Fable 5.2 now works with zero data retention policies through the Enterprise Frontier Safeguards system.",
+   "zh": "Fable 5.2 现在通过 Enterprise Frontier Safeguards 系统支持零数据留存政策。",
+   "audio": "audio/2026-11-09-pm-s8.mp3",
+   "duration": 8.6,
+   "focus": "final -s in policies"
+  },
+  {
+   "id": 9,
+   "text": "This was Anthropic's first release since a METR report suggested the lab might be nearing recursive self-improvement.",
+   "zh": "这是自 METR 报告暗示该实验室可能接近递归自我改进以来的首次发布。",
+   "audio": "audio/2026-11-09-pm-s9.mp3",
+   "duration": 9.5,
+   "focus": "final -d in suggested"
+  },
+  {
+   "id": 10,
+   "text": "Recursive self-improvement means AI models can carry on their own training independently.",
+   "zh": "递归自我改进指的是 AI 模型能够独立继续自己的训练。",
+   "audio": "audio/2026-11-09-pm-s10.mp3",
+   "duration": 6.6,
+   "focus": "link means AI"
+  },
+  {
+   "id": 11,
+   "text": "METR found internal models were speeding up Anthropic's progress by about two times.",
+   "zh": "METR 发现内部模型把 Anthropic 的进展速度提高了约两倍。",
+   "audio": "audio/2026-11-09-pm-s11.mp3",
+   "duration": 6.8,
+   "focus": "final -d in found"
+  },
+  {
+   "id": 12,
+   "text": "Anthropic still says Mythos cannot act covertly against its user.",
+   "zh": "Anthropic 仍表示 Mythos 无法暗中对用户采取行动。",
+   "audio": "audio/2026-11-09-pm-s12.mp3",
+   "duration": 5.6,
+   "focus": "final -t in against"
+  },
+  {
+   "id": 13,
+   "text": "Fable 5.2 has already solved two open problems in theoretical physics.",
+   "zh": "Fable 5.2 已经解决了理论物理中的两个未解问题。",
+   "audio": "audio/2026-11-09-pm-s13.mp3",
+   "duration": 6.3,
+   "focus": "final -d in solved"
+  }
+ ],
+ "terms": [
+  {
+   "word": "input tokens",
+   "zh": "输入词元",
+   "note": "指模型读入的文本计量单位，按量计费。"
+  },
+  {
+   "word": "zero data retention",
+   "zh": "零数据留存",
+   "note": "指服务方不保存用户输入的数据。"
+  },
+  {
+   "word": "recursive self-improvement",
+   "zh": "递归自我改进",
+   "note": "指 AI 模型能独立推进自身的训练。"
+  },
+  {
+   "word": "covertly",
+   "zh": "暗中地",
+   "note": "指不被用户察觉地采取行动。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "比较级 cheaper than",
+   "note": "比较级后接 than，中文说“比……更便宜”，容易漏掉 than。"
+  },
+  {
+   "line": 9,
+   "point": "现在完成时 has already solved",
+   "note": "强调到现在为止已完成的结果，中文常漏掉 has。"
+  },
+  {
+   "line": 8,
+   "point": "被动含义的 works with",
+   "note": "works with 表示“支持、兼容”，不要理解成“一起工作”。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What happened to Fable's price?",
+   "options": [
+    "It rose from eight to ten dollars",
+    "It fell from ten to eight dollars",
+    "It stayed the same"
+   ],
+   "answer": 1,
+   "explain": "答案在第四句，讲价格从十美元降到八美元。"
+  },
+  {
+   "q": "What did the METR report find?",
+   "options": [
+    "Internal models sped up progress about two times",
+    "Mythos acted covertly against users",
+    "Fable failed physics problems"
+   ],
+   "answer": 0,
+   "explain": "答案在第十一句，说内部模型把进展提高了约两倍。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
