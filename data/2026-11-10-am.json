@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-10-am",
+ "date": "2026-11-10",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/09/hotel-giant-wyndham-exposed-customer-data-after-app-security-lapse/",
+ "headline": "Wyndham app leaked customer data via hardcoded password",
+ "audio": "audio/2026-11-10-am-full.mp3",
+ "duration": 96.2,
+ "wpm": 121.0,
+ "script": "Wyndham, the hotel giant, exposed customer personal information through a security lapse in its Android app. A security researcher found a password hidden inside the app's source code. That password gave access to an internal company database hosted by Salesforce. The exposed data included customer names, email addresses, and Wyndham member numbers. The database also stored login tokens, called JWTs, which keep customers logged in without re-entering passwords. The database had millions of entries, but the exact number of exposed customer records is unknown. Wyndham says it has about one hundred twenty-nine million enrolled rewards members. The researcher said Wyndham had no way to report security flaws, so he asked TechCrunch for help. Soon after TechCrunch contacted Wyndham's security staff, the exposed credential was revoked. Wyndham said its team took steps to address the issue and found no evidence of unauthorized access. Wyndham would not say whether it could tell if anyone accessed the database before the discovery. It also would not say if it plans to notify customers or disclose the incident to U.S. regulators. Hardcoding passwords in public apps is dangerous because anyone with the app can extract them.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Wyndham, the hotel giant, exposed customer personal information through a security lapse in its Android app.",
+   "zh": "酒店业巨头温德姆因其安卓应用的安全漏洞泄露了客户的个人信息。",
+   "audio": "audio/2026-11-10-am-s1.mp3",
+   "duration": 8.3,
+   "focus": "th in through"
+  },
+  {
+   "id": 2,
+   "text": "A security researcher found a password hidden inside the app's source code.",
+   "zh": "一名安全研究员在应用的源代码中发现了一个隐藏的密码。",
+   "audio": "audio/2026-11-10-am-s2.mp3",
+   "duration": 5.5,
+   "focus": "final d in found"
+  },
+  {
+   "id": 3,
+   "text": "That password gave access to an internal company database hosted by Salesforce.",
+   "zh": "该密码可以访问由Salesforce托管的一个公司内部数据库。",
+   "audio": "audio/2026-11-10-am-s3.mp3",
+   "duration": 6.4,
+   "focus": "v in gave"
+  },
+  {
+   "id": 4,
+   "text": "The exposed data included customer names, email addresses, and Wyndham member numbers.",
+   "zh": "泄露的数据包括客户姓名、电子邮件地址和温德姆会员号。",
+   "audio": "audio/2026-11-10-am-s4.mp3",
+   "duration": 6.8,
+   "focus": "final s in names"
+  },
+  {
+   "id": 5,
+   "text": "The database also stored login tokens, called JWTs, which keep customers logged in without re-entering passwords.",
+   "zh": "该数据库还存储了称为JWT的登录令牌，让客户无需反复输入密码即可保持登录状态。",
+   "audio": "audio/2026-11-10-am-s5.mp3",
+   "duration": 10.0,
+   "focus": "link called JWTs"
+  },
+  {
+   "id": 6,
+   "text": "The database had millions of entries, but the exact number of exposed customer records is unknown.",
+   "zh": "该数据库有数百万条记录，但泄露的客户记录确切数量尚不清楚。",
+   "audio": "audio/2026-11-10-am-s6.mp3",
+   "duration": 7.9,
+   "focus": "final t in exact"
+  },
+  {
+   "id": 7,
+   "text": "Wyndham says it has about one hundred twenty-nine million enrolled rewards members.",
+   "zh": "温德姆表示其注册奖励会员约有1.29亿。",
+   "audio": "audio/2026-11-10-am-s7.mp3",
+   "duration": 6.1,
+   "focus": ""
+  },
+  {
+   "id": 8,
+   "text": "The researcher said Wyndham had no way to report security flaws, so he asked TechCrunch for help.",
+   "zh": "该研究员表示温德姆没有报告安全漏洞的渠道，因此他请TechCrunch帮忙。",
+   "audio": "audio/2026-11-10-am-s8.mp3",
+   "duration": 7.1,
+   "focus": "final d in said"
+  },
+  {
+   "id": 9,
+   "text": "Soon after TechCrunch contacted Wyndham's security staff, the exposed credential was revoked.",
+   "zh": "在TechCrunch联系温德姆安全团队后不久，泄露的凭证被撤销。",
+   "audio": "audio/2026-11-10-am-s9.mp3",
+   "duration": 6.9,
+   "focus": "link contacted Wyndham's"
+  },
+  {
+   "id": 10,
+   "text": "Wyndham said its team took steps to address the issue and found no evidence of unauthorized access.",
+   "zh": "温德姆表示其团队已采取措施解决问题，并未发现未经授权访问的证据。",
+   "audio": "audio/2026-11-10-am-s10.mp3",
+   "duration": 7.7,
+   "focus": "th in unauthorized"
+  },
+  {
+   "id": 11,
+   "text": "Wyndham would not say whether it could tell if anyone accessed the database before the discovery.",
+   "zh": "温德姆不愿说明它是否能判断在发现之前是否有人访问过该数据库。",
+   "audio": "audio/2026-11-10-am-s11.mp3",
+   "duration": 6.7,
+   "focus": "v in evidence"
+  },
+  {
+   "id": 12,
+   "text": "It also would not say if it plans to notify customers or disclose the incident to U.S. regulators.",
+   "zh": "它也不愿说明是否计划通知客户或向美国监管机构披露此事。",
+   "audio": "audio/2026-11-10-am-s12.mp3",
+   "duration": 7.9,
+   "focus": "link notify customers"
+  },
+  {
+   "id": 13,
+   "text": "Hardcoding passwords in public apps is dangerous because anyone with the app can extract them.",
+   "zh": "在公开应用中硬编码密码很危险，因为任何拥有该应用的人都能提取它们。",
+   "audio": "audio/2026-11-10-am-s13.mp3",
+   "duration": 6.8,
+   "focus": "final g in hardcoding"
+  }
+ ],
+ "terms": [
+  {
+   "word": "hardcoding",
+   "zh": "硬编码",
+   "note": "指把密码等固定值直接写进程序代码里，而不是放在安全的配置中。"
+  },
+  {
+   "word": "credential",
+   "zh": "凭证",
+   "note": "指用于验证身份的信息，比如密码或令牌。"
+  },
+  {
+   "word": "login tokens",
+   "zh": "登录令牌",
+   "note": "指让用户保持登录状态的一段数据，代替反复输入密码。"
+  },
+  {
+   "word": "source code",
+   "zh": "源代码",
+   "note": "指编写应用所用的原始程序代码。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 5,
+   "point": "非限制性定语从句 which keep",
+   "note": "which 指代前面的 login tokens，补充说明其作用；中文习惯用“让……”另起一句，容易漏掉关系代词。"
+  },
+  {
+   "line": 9,
+   "point": "被动语态 was revoked",
+   "note": "强调凭证被撤销这一结果，中文常用“被撤销”，但容易漏掉 was 所体现的过去时。"
+  },
+  {
+   "line": 11,
+   "point": "宾语从句 whether it could tell if...",
+   "note": "whether 引导宾语从句表示“是否”，后面又套 if 从句；中文习惯直接说“能不能判断”，容易把两个连接词混用。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the researcher find inside the app's source code?",
+   "options": [
+    "A customer list",
+    "A password",
+    "A Salesforce server"
+   ],
+   "answer": 1,
+   "explain": "The answer is in the second sentence, where the researcher finds a password hidden in the source code."
+  },
+  {
+   "q": "What happened after TechCrunch contacted Wyndham's security staff?",
+   "options": [
+    "The app was removed from stores",
+    "Customers were notified",
+    "The exposed credential was revoked"
+   ],
+   "answer": 2,
+   "explain": "The answer is in the ninth sentence, which says the credential was revoked soon after contact."
+  }
+ ],
+ "recall_prompts": [
+  "What was exposed?",
+  "How was it found?",
+  "What did Wyndham do?"
+ ]
+}

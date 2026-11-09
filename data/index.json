@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-10T06:16:40",
+ "updated": "2026-11-10T07:10:48",
  "days": [
+  {
+   "id": "2026-11-10-am",
+   "date": "2026-11-10",
+   "slot": "am",
+   "headline": "Wyndham app leaked customer data via hardcoded password",
+   "source": "TECHCRUNCH",
+   "duration": 96.2,
+   "sentences": 13
+  },
   {
    "id": "2026-11-09-pm",
    "date": "2026-11-09",
