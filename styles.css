@@ -267,3 +267,61 @@ button{font-family:inherit;border:0;background:none;color:inherit;padding:0;curs
 .meter .mv{width:20px;flex:none;text-align:right;font-size:10px;font-variant-numeric:tabular-nums;color:var(--muted)}
 .note{font-size:11px;line-height:1.55;color:var(--muted)}
 .link{font-size:10px;color:var(--faint);text-decoration:underline;text-underline-offset:2px;margin-top:12px;text-align:left}
+.link.sm{margin-top:0}
+
+/* ---------- notebook ---------- */
+.save-btn{
+  flex:none;width:26px;height:26px;border-radius:9px;border:1px solid var(--line);
+  background:var(--paper);color:var(--faint);font-size:15px;font-weight:500;line-height:1;
+}
+.save-btn.on{background:var(--warm);border-color:transparent;color:#C4573A;font-size:12px}
+.tchip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.card-del{
+  flex:none;width:24px;height:24px;border-radius:8px;color:var(--faint);
+  font-size:17px;line-height:1;background:transparent;
+}
+.card-del:active{background:var(--warm)}
+.row-item[data-card]{cursor:pointer}
+.review-banner{
+  display:flex;width:100%;align-items:center;justify-content:space-between;
+  margin-top:18px;padding:14px 16px;border-radius:14px;
+  background:var(--warm);border:1px solid rgba(255,90,54,.18);text-align:left;
+}
+.review-banner .t{font-size:12px;font-weight:600;margin-top:4px}
+.review-banner .arrow{font-size:18px;color:#C4573A}
+.tab.has-due{position:relative}
+.tab.has-due::after{
+  content:'';position:absolute;top:6px;right:calc(50% - 20px);
+  width:7px;height:7px;border-radius:50%;background:var(--accent);
+}
+.sel-save{
+  position:fixed;z-index:60;left:50%;transform:translateX(-50%);
+  bottom:calc(88px + var(--safe-b));
+  background:var(--ink);color:var(--paper);font-size:12px;font-weight:600;
+  padding:11px 18px;border-radius:99px;box-shadow:0 8px 24px rgba(22,22,26,.24);
+}
+.sel-save[hidden]{display:none}
+.revfront{
+  font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.2;
+  overflow-wrap:anywhere;
+}
+.revfront.long{font-family:var(--sans);font-size:17px;font-weight:500;line-height:1.6}
+.revback{display:none;border-left:2px solid var(--accent);padding-left:12px}
+.revback.on{display:block}
+
+/* ---------- recall feedback ---------- */
+.recall-input{
+  width:100%;border:1px solid var(--line);border-radius:12px;background:var(--paper);
+  padding:12px;font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--ink);
+  resize:vertical;outline:none;
+}
+.recall-input:focus{border-color:var(--accent)}
+.recall-input::placeholder{color:var(--faint)}
+.coach-tip{background:var(--paper);border-radius:10px;padding:10px 12px}
+.coach-tip .ct{font-size:11px;font-weight:600;margin-bottom:3px}
+.model-line{display:flex;gap:10px;align-items:flex-start}
+.model-line span{
+  flex:none;min-width:56px;font-size:9px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;color:var(--accent);padding-top:3px;
+}
+.model-line p{margin:0;font-size:12px;line-height:1.65;color:#4A4744}
