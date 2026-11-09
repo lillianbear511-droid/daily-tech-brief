@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-09T01:54:54",
+ "updated": "2026-11-09T10:31:30",
  "days": [
+  {
+   "id": "2026-11-09-am",
+   "date": "2026-11-09",
+   "slot": "am",
+   "headline": "Apps to break the doomscrolling habit",
+   "source": "TECHCRUNCH",
+   "duration": 78.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-08-pm",
    "date": "2026-11-08",

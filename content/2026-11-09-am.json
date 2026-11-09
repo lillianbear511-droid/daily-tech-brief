@@ -1,0 +1,146 @@
+{
+ "headline": "Apps to break the doomscrolling habit",
+ "lines": [
+  {
+   "en": "Doomscrolling means spending too much time consuming content on social media.",
+   "zh": "末日刷屏指的是在社交媒体上花过多时间浏览内容。",
+   "focus": "spending ends with -ing, keep the final sound"
+  },
+  {
+   "en": "A survey last year found that sixty-four percent of Americans say they doomscroll.",
+   "zh": "去年一项调查发现，百分之六十四的美国人表示自己会末日刷屏。",
+   "focus": "found that links the two words together"
+  },
+  {
+   "en": "Researchers warn it can harm your mental health and shorten your attention span.",
+   "zh": "研究人员警告说，它会损害心理健康，并缩短注意力持续时间。",
+   "focus": "harm your links the r to the y sound"
+  },
+  {
+   "en": "Long scrolling sessions can cause brain fatigue, poor focus, and disrupted sleep.",
+   "zh": "长时间刷屏会导致大脑疲劳、注意力不集中和睡眠紊乱。",
+   "focus": "disrupted ends with a -ed sound"
+  },
+  {
+   "en": "Negative content can leave you feeling disheartened, anxious, and emotionally drained.",
+   "zh": "负面内容会让你感到沮丧、焦虑、情绪耗竭。",
+   "focus": "drained ends with a final d"
+  },
+  {
+   "en": "Breaking the cycle is hard, but some apps offer engaging and productive content instead.",
+   "zh": "打破这个循环很难，但有些应用提供有趣又有益的内容。",
+   "focus": "but some links the t to the s"
+  },
+  {
+   "en": "Finch is a self-care pet app that helps you build healthy habits.",
+   "zh": "Finch 是一款自我关怀宠物应用，帮助你养成健康习惯。",
+   "focus": "that helps links the t to the h"
+  },
+  {
+   "en": "You care for a virtual pet by completing small daily goals like drinking water or walking.",
+   "zh": "你通过完成喝水、散步等每日小目标来照顾一只虚拟宠物。",
+   "focus": "care for links the r to the f"
+  },
+  {
+   "en": "The more self-care you do, the more your pet thrives.",
+   "zh": "你做的自我关怀越多，你的宠物就长得越好。",
+   "focus": "thrives ends with a final z sound"
+  },
+  {
+   "en": "Libby is a free reading app that connects you to your public library's digital collection.",
+   "zh": "Libby 是一款免费阅读应用，把你连接到当地公共图书馆的数字馆藏。",
+   "focus": "connects you links the t to the y"
+  },
+  {
+   "en": "With a library card, you can borrow thousands of ebooks, audiobooks, and magazines.",
+   "zh": "有了借书证，你就能借阅成千上万的电子书、有声书和杂志。",
+   "focus": "thousands starts with the th sound"
+  },
+  {
+   "en": "Dudel Draw gives you a random shape each day that you turn into a drawing.",
+   "zh": "Dudel Draw 每天给你一个随机形状，你把它画成一幅画。",
+   "focus": "that you links the t to the y"
+  },
+  {
+   "en": "Radio Garden lets you listen to over twenty-five thousand live radio stations worldwide.",
+   "zh": "Radio Garden 让你收听全球超过两万五千个直播电台。",
+   "focus": "listen to links the n to the t"
+  }
+ ],
+ "terms": [
+  {
+   "word": "doomscrolling",
+   "zh": "末日刷屏",
+   "note": "指长时间不停刷社交媒体上的负面或无聊内容。"
+  },
+  {
+   "word": "attention span",
+   "zh": "注意力持续时间",
+   "note": "指一个人能集中注意力多久。"
+  },
+  {
+   "word": "self-care",
+   "zh": "自我关怀",
+   "note": "指照顾自己的身心健康的日常行为。"
+  },
+  {
+   "word": "virtual pet",
+   "zh": "虚拟宠物",
+   "note": "指应用里养的电子宠物，需要你完成任务来照顾。"
+  },
+  {
+   "word": "digital collection",
+   "zh": "数字馆藏",
+   "note": "指图书馆提供的电子书、有声书等在线资源。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "动名词作主语 spending too much time",
+   "note": "英语用动名词短语作主语，中文常译成“花时间做某事”，容易误加 to。"
+  },
+  {
+   "line": 2,
+   "point": "宾语从句 that sixty-four percent of Americans say they doomscroll",
+   "note": "that 引导的从句里又套了 say 的宾语从句，中文习惯省略连接词，这里两个 that 都不能省。"
+  },
+  {
+   "line": 9,
+   "point": "the more... the more... 比较级结构",
+   "note": "表示“越……越……”，中文没有对应句式，容易漏掉两个 the。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What percentage of Americans say they doomscroll?",
+   "options": [
+    "Forty percent",
+    "Sixty-four percent",
+    "Twenty-five percent"
+   ],
+   "answer": 1,
+   "explain": "答案在第二句，调查显示百分之六十四。"
+  },
+  {
+   "q": "What does Finch help you do?",
+   "options": [
+    "Borrow library books",
+    "Listen to radio stations",
+    "Build healthy habits with a virtual pet"
+   ],
+   "answer": 2,
+   "explain": "答案在第七句，Finch 是帮助养成健康习惯的宠物应用。"
+  }
+ ],
+ "recall_prompts": [
+  "What is doomscrolling?",
+  "What problems can it cause?",
+  "Which apps are mentioned and what do they do?"
+ ],
+ "script": "Doomscrolling means spending too much time consuming content on social media. A survey last year found that sixty-four percent of Americans say they doomscroll. Researchers warn it can harm your mental health and shorten your attention span. Long scrolling sessions can cause brain fatigue, poor focus, and disrupted sleep. Negative content can leave you feeling disheartened, anxious, and emotionally drained. Breaking the cycle is hard, but some apps offer engaging and productive content instead. Finch is a self-care pet app that helps you build healthy habits. You care for a virtual pet by completing small daily goals like drinking water or walking. The more self-care you do, the more your pet thrives. Libby is a free reading app that connects you to your public library's digital collection. With a library card, you can borrow thousands of ebooks, audiobooks, and magazines. Dudel Draw gives you a random shape each day that you turn into a drawing. Radio Garden lets you listen to over twenty-five thousand live radio stations worldwide.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/08/apps-to-distract-you-from-the-endless-cycle-of-doomscrolling/",
+ "date": "2026-11-09",
+ "slot": "am"
+}
