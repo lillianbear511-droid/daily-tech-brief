@@ -15,6 +15,9 @@ const todayISO = () => {
 const dayDiff = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000);
 const load = (k, d) => { try { const v = JSON.parse(localStorage.getItem('dtb.' + k)); return v ?? d; } catch { return d; } };
 const save = (k, v) => localStorage.setItem('dtb.' + k, JSON.stringify(v));
+/* Anything the learner typed must never be interpolated into innerHTML raw. */
+const esc = s => String(s ?? '').replace(/[&<>"']/g,
+  c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let toastTimer;
 function toast(msg) {
   toastEl.textContent = msg;
@@ -22,7 +25,15 @@ function toast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toastEl.classList.remove('on'), 1800);
 }
-function buzz(ms = 8) { if (navigator.vibrate) navigator.vibrate(ms); }
+function buzz(ms = 8) {
+  // Chrome logs a console error when vibration is requested without a user
+  // gesture (e.g. a scripted restore). It is harmless, but noisy.
+  try {
+    if (!navigator.vibrate) return;
+    if (navigator.userActivation && !navigator.userActivation.hasBeenActive) return;
+    navigator.vibrate(ms);
+  } catch { /* no-op */ }
+}
 
 /* ---------------------------------------------------------------- state */
 const S = {
@@ -195,18 +206,76 @@ function recStop() {
 }
 
 /* ---------------------------------------------------------------- words */
-function addWords(day) {
-  (day.terms || []).forEach(t => {
-    if (!S.words[t.word]) {
-      S.words[t.word] = { ...t, added: day.date, last: day.date, box: 0 };
-    }
-  });
+/* One notebook for both single words and whole sentences. Cards written by
+   older builds have no `kind` and are simply words — nothing to migrate. */
+function addCard(o, quiet) {
+  if (!o.word) return false;
+  if (S.words[o.word]) { if (!quiet) toast('Already in your notebook'); return false; }
+  S.words[o.word] = { ...o, added: todayISO(), last: todayISO(), box: 0 };
   save('words', S.words);
+  if (!quiet) {
+    buzz();
+    toast(o.kind === 'sentence' ? '句子已收进单词本' : '已收进单词本 · 明天开始复习');
+  }
+  return true;
 }
+function addWords(day) {
+  (day.terms || []).forEach(t =>
+    addCard({ ...t, kind: 'word', auto: true, src: day.id }, true));
+}
+const hasCard = k => !!S.words[k];
+function delCard(k) { delete S.words[k]; save('words', S.words); }
 const INTERVALS = [1, 3, 7, 16, 35];
 function isDue(w) {
   const gap = dayDiff(w.last || w.added, todayISO());
   return gap >= (INTERVALS[w.box] ?? 1);
+}
+const dueCards = () => Object.values(S.words).filter(isDue);
+
+/* Small inline "+" next to anything worth keeping. */
+function saveBtn(text, zh, kind, note) {
+  const on = hasCard(text);
+  return `<button class="save-btn${on ? ' on' : ''}" data-save="${esc(text)}"
+    data-zh="${esc(zh || '')}" data-kind="${kind}" data-note="${esc(note || '')}"
+    aria-label="Save to notebook">${on ? '✓' : '+'}</button>`;
+}
+function bindSave(scope = document) {
+  scope.querySelectorAll('[data-save]').forEach(b => {
+    b.onclick = e => {
+      e.stopPropagation();
+      addCard({ word: b.dataset.save, zh: b.dataset.zh, kind: b.dataset.kind,
+                note: b.dataset.note, src: S.day?.id });
+      b.textContent = '✓';
+      b.classList.add('on');
+    };
+  });
+}
+
+/* Selecting any English text on a reading screen offers "save to notebook".
+   Kept bottom-fixed rather than floating at the caret: on iOS the native
+   selection menu already owns the space right above the highlight. */
+function initSelectionSaver() {
+  const bar = document.createElement('button');
+  bar.className = 'sel-save';
+  bar.hidden = true;
+  bar.textContent = '+ 收进单词本';
+  document.body.appendChild(bar);
+  let timer = 0, pending = '';
+  const check = () => {
+    const sel = window.getSelection();
+    const txt = (sel?.toString() || '').trim().replace(/\s+/g, ' ');
+    const inField = sel?.anchorNode?.parentElement?.closest?.('textarea,input');
+    pending = (!inField && txt.length >= 2 && txt.length < 300 && /[a-zA-Z]/.test(txt)) ? txt : '';
+    bar.hidden = !pending;
+  };
+  document.addEventListener('selectionchange', () => { clearTimeout(timer); timer = setTimeout(check, 200); });
+  bar.onclick = () => {
+    if (!pending) return;
+    addCard({ word: pending, zh: '', kind: pending.split(/\s+/).length > 5 ? 'sentence' : 'word',
+              note: '', src: S.day?.id });
+    bar.hidden = true;
+    window.getSelection()?.removeAllRanges();
+  };
 }
 function speak(text) {
   try {
@@ -258,6 +327,8 @@ function setTab(name) {
   tabsEl.hidden = practice;
   tabsEl.querySelectorAll('.tab').forEach(t =>
     t.classList.toggle('on', t.dataset.tab === name));
+  tabsEl.querySelector('[data-tab="words"]')
+    ?.classList.toggle('has-due', dueCards().length > 0);
 }
 tabsEl.querySelectorAll('.tab').forEach(t =>
   t.addEventListener('click', () => go(t.dataset.tab)));
@@ -297,6 +368,7 @@ function sToday() {
     : (!p.recall?.done ? 'Finish with recall' : 'Practice again'));
 
   // The other issue of the same day, if the evening brief has been built yet.
+  const dueN = dueCards().length;
   const sibs = sameDay(d.date).filter(x => x.id !== d.id);
   const slotZh = SLOT_ZH[d.slot] || '';
   const title = d.slot === 'am' ? 'Morning brief'
@@ -314,6 +386,14 @@ function sToday() {
       </div>
       <div class="chip"><i class="dot"></i>${st.count > 0 ? `${st.count} DAY${st.count > 1 ? 'S' : ''}` : 'DAY 1'}</div>
     </div>
+
+    ${dueN ? `<button class="review-banner" id="reviewBanner">
+      <div style="text-align:left">
+        <div class="eyebrow" style="color:var(--accent)">DUE TODAY</div>
+        <div class="t">${dueN} 张卡待复习 · 约 2 分钟</div>
+      </div>
+      <span class="arrow">→</span>
+    </button>` : ''}
 
     <div class="card stack gap-16" style="margin-top:22px">
       <div class="meta">
@@ -393,6 +473,7 @@ function sToday() {
   };
   document.querySelectorAll('#terms .tchip').forEach(b => b.onclick = () => speak(b.dataset.w));
   document.getElementById('recap')?.addEventListener('click', () => go('progress'));
+  document.getElementById('reviewBanner')?.addEventListener('click', () => go('words/review'));
   document.getElementById('notes')?.addEventListener('click', () => go('notes'));
   document.querySelector('[data-sib]')?.addEventListener('click',
     e => switchIssue(e.currentTarget.dataset.sib));
@@ -606,7 +687,10 @@ function sShadow(arg) {
     </div>
 
     <div class="card stack gap-14" style="margin-top:18px">
-      <div class="eyebrow">Sentence ${pad(s.id)} · ${fmt(s.duration)}</div>
+      <div class="row">
+        <div class="eyebrow">Sentence ${pad(s.id)} · ${fmt(s.duration)}</div>
+        ${saveBtn(s.text, s.zh, 'sentence', `第 ${s.id} 句 · ${S.day.headline}`)}
+      </div>
       <div class="sentence">${s.text}</div>
       ${s.zh ? `<div class="zh">${s.zh}</div>` : ''}
       ${s.focus ? `<div class="focus"><i class="d"></i><span>${s.focus}</span></div>` : ''}
@@ -653,6 +737,7 @@ function sShadow(arg) {
   waveHost = wave;
   timeHost = document.getElementById('tc3');
   document.getElementById('splay').onclick = e => togglePlay(s.audio, e.currentTarget);
+  bindSave();
 
   let recording = false, t0 = 0, tickTimer = 0;
   const liveBars = [...document.getElementById('live').children];
@@ -830,6 +915,10 @@ function sShadow(arg) {
 /* -------- RECALL -------- */
 function sRecall() {
   const d = S.day, p = dp(d.id);
+  const saved = p.recall || {};
+  const Coach = window.DTBCoach;
+  const canASR = !!Coach?.dictationSupported();
+
   root.innerHTML = `
   <div class="screen solo">
     <div class="topbar">
@@ -860,8 +949,24 @@ function sRecall() {
     </div>
 
     <div id="own"></div>
+
+    <div class="card flat stack gap-10" style="margin-top:14px">
+      <div class="row">
+        <div class="eyebrow">Feedback · 可选</div>
+        ${canASR ? '<button class="link sm" id="asr" style="margin:0">🎤 自动转写</button>' : ''}
+      </div>
+      <div class="sub">把刚才说的英文打下来，就能看到漏了什么、哪里换种说法更地道。不打字也能完成今天练习。</div>
+      <textarea id="recallText" class="recall-input" rows="4"
+        placeholder="Type what you just said…">${esc(saved.text || '')}</textarea>
+      <button class="btn ghost sm" id="evaluate" ${saved.text ? '' : 'disabled'}>评价我的总结</button>
+      <div id="coachOut"></div>
+      <div id="aiBox"></div>
+    </div>
+
     <div class="dock">
-      <button class="btn" id="finish" disabled>Record first, then save</button>
+      <button class="btn" id="finish" ${saved.done ? '' : 'disabled'}>
+        ${saved.done ? 'Save & finish' : 'Record first, then save'}
+      </button>
     </div>
   </div>`;
 
@@ -869,7 +974,123 @@ function sRecall() {
   const timerEl = document.getElementById('timer');
   const recBtn = document.getElementById('rec');
   const hintEl = document.getElementById('hint');
-  let recording = false, t0 = 0, autoStop = 0;
+  const textEl = document.getElementById('recallText');
+  const evalBtn = document.getElementById('evaluate');
+  const fin = document.getElementById('finish');
+  const coachOut = document.getElementById('coachOut');
+  const aiBox = document.getElementById('aiBox');
+  let recording = false, t0 = 0, autoStop = 0, asrRec = null, saveTimer = 0;
+
+  const asText = v => esc(typeof v === 'string' ? v : JSON.stringify(v ?? ''));
+
+  /* Keep the draft even if the learner leaves before finishing. */
+  textEl.addEventListener('input', () => {
+    evalBtn.disabled = textEl.value.trim().length < 8;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      p.recall = { ...(p.recall || {}), text: textEl.value.trim() };
+      save('progress', S.progress);
+    }, 500);
+  });
+
+  if (canASR) {
+    document.getElementById('asr').onclick = e => {
+      const btn = e.currentTarget;
+      if (asrRec) { try { asrRec.stop(); } catch { /* no-op */ } asrRec = null; btn.textContent = '🎤 自动转写'; return; }
+      asrRec = Coach.dictate(
+        t => { textEl.value = t; textEl.dispatchEvent(new Event('input')); },
+        () => { asrRec = null; btn.textContent = '🎤 自动转写'; });
+      if (!asrRec) toast('这个浏览器用不了自动转写，直接打字吧');
+      else btn.textContent = '■ 停止转写';
+    };
+  }
+
+  function renderCoach(r, text) {
+    const bar = (label, v, color) => `<div class="meter">
+      <span class="ml">${label}</span>
+      <span class="mt"><i style="width:${v}%;background:${color}"></i></span>
+      <span class="mv">${v}</span></div>`;
+    const vc = r.score >= 78 ? 'g' : (r.score >= 55 ? 'a' : 'r');
+    coachOut.innerHTML = `
+      <div class="card flat stack gap-10" style="margin-top:12px">
+        <div class="row" style="align-items:baseline">
+          <div class="score"><span class="n">${r.score}</span><span class="u">/100</span></div>
+          <span class="verdict ${vc}">${r.band}</span>
+        </div>
+        ${bar('覆盖', r.parts.coverage, 'var(--accent)')}
+        ${bar('结构', r.parts.structure, 'var(--amber)')}
+        ${bar('表达', r.parts.expression, 'var(--green)')}
+        <div class="stack gap-8" style="margin-top:6px">
+          ${r.tips.map(t => `<div class="coach-tip">
+            <div class="ct">${esc(t.title)}</div>
+            <div class="note">${esc(t.body)}</div>
+          </div>`).join('')}
+        </div>
+        <div class="stack gap-8" style="margin-top:8px;border-top:1px dashed var(--line);padding-top:12px">
+          <div class="eyebrow">三句骨架 · 练「怎么说」</div>
+          <div class="sub">下面是从原文挑出的三句骨架，不是标准答案。用自己的话把它们连起来，就是一篇合格总结。</div>
+          ${r.model.map(m => `<div class="model-line"><span>${esc(m.tag)}</span><p>${esc(m.text)}</p></div>`).join('')}
+        </div>
+        <button class="link" id="aiGo">用 AI 逐句精修（可选）</button>
+      </div>`;
+    document.getElementById('aiGo').onclick = () => aiPolish(text);
+  }
+
+  function aiPolish(text) {
+    const key = Coach.getKey();
+    if (!key) {
+      aiBox.innerHTML = `
+        <div class="card flat stack gap-8" style="margin-top:10px">
+          <div class="eyebrow">第一次用 · 填一次就好</div>
+          <input id="llmkey" class="recall-input" type="password"
+            placeholder="DeepSeek API key（sk-…）" style="min-height:42px">
+          <div class="sub">只存在这个浏览器里，直接发给 DeepSeek，不经过任何服务器，也不会写进仓库。不想填就跳过，上面的反馈照常能用。</div>
+          <div class="row" style="gap:8px">
+            <button class="btn ghost sm" id="skipKey" style="flex:1">跳过</button>
+            <button class="btn sm" id="saveKey" style="flex:1">保存并精修</button>
+          </div>
+        </div>`;
+      document.getElementById('skipKey').onclick = () => { aiBox.innerHTML = ''; };
+      document.getElementById('saveKey').onclick = () => {
+        const k = document.getElementById('llmkey').value.trim();
+        if (!k) return toast('先填 key');
+        Coach.setKey(k);
+        aiPolish(text);
+      };
+      return;
+    }
+    aiBox.innerHTML = `<div class="sub" style="margin-top:10px">正在精修…</div>`;
+    Coach.polish(text, d, key).then(j => {
+      aiBox.innerHTML = `
+        <div class="card flat stack gap-10" style="margin-top:10px">
+          <div class="eyebrow">更地道的版本</div>
+          <div style="font-size:13px;line-height:1.7">${asText(j.rewritten)}</div>
+          ${(j.changes || []).length ? `<div class="stack gap-6">
+            <div class="eyebrow">改了什么</div>
+            ${j.changes.map(c => `<div class="note">· ${asText(c)}</div>`).join('')}
+          </div>` : ''}
+          ${j.missed ? `<div class="note"><b>漏了：</b>${asText(j.missed)}</div>` : ''}
+          ${j.phrase ? `<div class="note"><b>值得记住：</b>${asText(j.phrase)}</div>` : ''}
+          <button class="link" id="clearKey" style="margin-top:0">清除本机 key</button>
+        </div>`;
+      document.getElementById('clearKey').onclick = () => { Coach.setKey(''); aiBox.innerHTML = ''; toast('已清除'); };
+    }).catch(e => {
+      aiBox.innerHTML = `<div class="sub" style="margin-top:10px;color:#C4573A">
+        精修失败（${esc(e.message || 'network')}）。检查 key 或网络；上面的反馈不受影响。</div>`;
+    });
+  }
+
+  evalBtn.onclick = () => {
+    if (!Coach) return toast('评价模块没加载，刷新一下');
+    const text = textEl.value.trim();
+    const r = Coach.evaluate(text, d);
+    if (!r.ok) return toast('写得太短了，至少说一句完整的');
+    p.recall = { ...(p.recall || {}), text, score: r.score, band: r.band };
+    save('progress', S.progress);
+    renderCoach(r, text);
+    buzz();
+    setTimeout(() => coachOut.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+  };
 
   recBtn.onclick = async () => {
     if (!recording) {
@@ -894,7 +1115,6 @@ function sRecall() {
       liveBars.forEach(b => b.style.height = '2px');
       const secs = (Date.now() - t0) / 1000;
       const rec = await recStop();
-      hintEl.textContent = 'Out loud beats perfect';
       if (rec) {
         hintEl.textContent = 'Done · ' + Math.round(secs) + 's';
         document.getElementById('own').innerHTML = `
@@ -902,21 +1122,23 @@ function sRecall() {
             <div class="eyebrow">Your recording</div>
             <button class="btn ghost sm" id="ownPlay" style="margin-top:2px">Play back</button>
           </div>`;
-        const u = rec.url;
-        document.getElementById('ownPlay').onclick = () => new Audio(u).play();
-        dp(d.id).recall = { done: true, secs: Math.round(secs) };
-        dp(d.id).done = true;
+        document.getElementById('ownPlay').onclick = () => new Audio(rec.url).play();
+        p.recall = { ...(p.recall || {}), done: true, secs: Math.round(secs), text: textEl.value.trim() };
+        p.done = true;
         save('progress', S.progress);
         addWords(d);
-        const fin = document.getElementById('finish');
         fin.disabled = false;
         fin.textContent = 'Save & finish';
+      } else {
+        hintEl.textContent = 'Out loud beats perfect';
       }
     }
   };
 
-  document.getElementById('finish').onclick = () => {
-    dp(d.id).done = true;
+  fin.onclick = () => {
+    if (asrRec) { try { asrRec.stop(); } catch { /* no-op */ } }
+    p.recall = { ...(p.recall || {}), done: true, text: textEl.value.trim() };
+    p.done = true;
     save('progress', S.progress);
     addWords(d);
     buzz(14);
@@ -935,6 +1157,8 @@ function sProgress() {
   const total = all.length || 1;
   const scored = Object.values(S.progress).flatMap(p => Object.values(p.auto || {}));
   const avg = scored.length ? Math.round(scored.reduce((a, x) => a + (x.s || 0), 0) / scored.length) : 0;
+  const recalls = Object.values(S.progress).map(p => p.recall?.score).filter(x => typeof x === 'number');
+  const recallAvg = recalls.length ? Math.round(recalls.reduce((a, b) => a + b, 0) / recalls.length) : null;
 
   const todayP = S.progress[S.day?.id || todayISO()] || {};
   const startedToday = !!todayP.listen?.answered || Object.keys(todayP.shadow || {}).length > 0;
@@ -998,15 +1222,23 @@ function sProgress() {
 
     <div class="row-item" style="margin-top:22px" id="toWords">
       <div>
-        <div class="eyebrow">Saved words</div>
-        <div class="t" style="margin-top:5px;font-weight:400;color:#4A4744">${Object.keys(S.words).length} saved · ${Object.values(S.words).filter(isDue).length} due today</div>
+        <div class="eyebrow">单词本</div>
+        <div class="t" style="margin-top:5px;font-weight:400;color:#4A4744">${Object.keys(S.words).length} 张卡 · ${dueCards().length} 张待复习</div>
       </div>
       <svg width="12" height="12" viewBox="0 0 12 12"><path d="M4 1.5L8.5 6 4 10.5" stroke="#C4C0B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
     </div>
 
+    ${recallAvg !== null ? `<div class="card flat stack gap-8" style="margin-top:20px">
+      <div class="eyebrow">Summary feedback</div>
+      <div class="row" style="align-items:baseline;justify-content:flex-start;gap:10px">
+        <span class="score"><span class="n" style="font-size:30px">${recallAvg}</span><span class="u">/100</span></span>
+        <span class="sub">${recalls.length} 次口语总结的平均分</span>
+      </div>
+    </div>` : ''}
+
     <div class="stack gap-8" style="margin-top:22px">
       <div class="eyebrow">How this is measured</div>
-      <div class="sub">You rate each sentence by ear — clear, close, or retry. There is no score to chase; the bar above only shows which sounds keep coming back.</div>
+      <div class="sub">跟读分是本机把你的录音和原音做声学比对得出的，不上传。总结分看你覆盖了几个要点、有没有逻辑连接、有没有中式直译——先打分，再给具体改法。</div>
     </div>
   </div>`;
 
@@ -1015,62 +1247,163 @@ function sProgress() {
     b.onclick = () => switchIssue(b.dataset.open, 'today'));
 }
 /* -------- WORDS -------- */
-function sWords() {
-  const list = Object.values(S.words);
-  const due = list.filter(isDue);
+let wordFilter = 'all';
+function sWords(arg) {
+  if (arg === 'review') return sReview();
+  const all = Object.values(S.words);
+  const due = dueCards();
+  const sentenceCount = all.filter(w => w.kind === 'sentence').length;
+  const shown = all.filter(w =>
+    wordFilter === 'all' ? true
+      : wordFilter === 'due' ? isDue(w)
+        : wordFilter === 'sentence' ? w.kind === 'sentence'
+          : w.kind !== 'sentence');
+  const chip = (k, label, n) =>
+    `<button class="tchip${wordFilter === k ? ' on' : ''}" data-filter="${k}">${label} ${n}</button>`;
+
   root.innerHTML = `
   <div class="screen">
     <div class="stack gap-6">
-      <div class="eyebrow">Words</div>
+      <div class="eyebrow">Words & lines</div>
       <div class="row" style="align-items:flex-end">
-        <h1 class="h1">Saved words</h1>
-        <span style="font-family:var(--serif);font-size:22px;font-weight:500;color:#C4C0B8">${list.length}</span>
+        <h1 class="h1">单词本</h1>
+        <span style="font-family:var(--serif);font-size:22px;font-weight:500;color:#C4C0B8">${all.length}</span>
       </div>
     </div>
 
     <div class="chips" style="margin-top:18px">
-      <span class="tchip" style="background:var(--ink);color:var(--paper);border-color:var(--ink)">All ${list.length}</span>
-      <span class="tchip">Due ${due.length}</span>
+      ${chip('all', 'All', all.length)}
+      ${chip('due', 'Due', due.length)}
+      ${chip('word', 'Words', all.length - sentenceCount)}
+      ${chip('sentence', 'Sentences', sentenceCount)}
     </div>
+
+    ${due.length ? `<button class="btn" id="drill" style="margin-top:18px">
+        Review ${due.length} due card${due.length > 1 ? 's' : ''} · 2 min
+      </button>` : `<div class="card flat" style="margin-top:18px">
+        <div class="sub">今天没有到期的卡。收藏后第二天开始出现，答「记得」会把间隔拉长到 3 / 7 / 16 / 35 天。</div>
+      </div>`}
 
     <div class="rows" style="margin-top:14px">
-      ${list.length ? list.map(w => {
-        const d = isDue(w);
-        return `<button class="row-item" data-w="${w.word}">
-          <div style="flex:1">
-            <div class="t">${w.word}</div>
-            <div class="d">${w.zh || w.phonetic || w.pos || ''}</div>
+      ${shown.length ? shown.map(w => {
+        const long = w.kind === 'sentence';
+        const label = w.word.length > 78 ? w.word.slice(0, 78) + '…' : w.word;
+        return `<div class="row-item" data-card="${esc(w.word)}">
+          <div style="flex:1;min-width:0">
+            <div class="t" style="${long ? 'font-weight:400;line-height:1.5' : ''}">${esc(label)}</div>
+            <div class="d">${esc(w.zh || (long ? '整句卡 · 自己回想意思' : '—'))}${w.src ? ' · ' + esc(w.src) : ''}</div>
           </div>
-          ${d ? '<span class="badge">DUE</span>' : '<svg width="12" height="12" viewBox="0 0 12 12"><path d="M4 1.5L8.5 6 4 10.5" stroke="#C4C0B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>'}
-        </button>`;
-      }).join('') : `<div class="empty" style="padding:14px 0 6px">Not saved yet — these are today's key terms.</div>
-        ${(S.day.terms || []).map(t => `<button class="row-item" data-preview="${t.word}" style="width:100%">
-          <div style="flex:1"><div class="t">${t.word}</div><div class="d">${t.zh || ''}</div></div>
-          <span class="badge">TODAY</span>
-        </button>`).join('')}
-        <div class="empty" style="padding-top:12px">Finish today's practice to add them to your list.</div>`}
+          ${isDue(w) ? '<span class="badge">DUE</span>' : ''}
+          <button class="card-del" data-del="${esc(w.word)}" aria-label="Remove">×</button>
+        </div>`;
+      }).join('') : `<div class="empty" style="padding:18px 0">
+        ${all.length ? '这个分类下还没有卡。' : `还没收过卡。<br><br>跟读页句子右上角的 +、语言点页每条词句旁边的 +，或者直接选中任意英文，都能收进来。`}
+      </div>`}
     </div>
 
-    ${due.length ? `<button class="btn" id="drill" style="margin-top:18px">Review ${due.length} due word${due.length > 1 ? 's' : ''} · 2 min</button>` : ''}
+    <div class="stack gap-8" style="margin-top:22px">
+      <div class="eyebrow">怎么复习</div>
+      <div class="sub">到期卡会翻牌：先看英文回想，再看释义，然后选「记得 / 忘了」。忘了就回到明天再来，记得就逐步拉长间隔。首页和 WORDS 标签上的红点是到期提醒。</div>
+    </div>
   </div>`;
 
-  document.querySelectorAll('.row-item[data-w]').forEach(b => {
-    b.onclick = () => {
-      const w = S.words[b.dataset.w];
+  document.querySelectorAll('[data-filter]').forEach(b => {
+    b.onclick = () => { wordFilter = b.dataset.filter; sWords(); };
+  });
+  document.querySelectorAll('[data-card]').forEach(el => {
+    el.onclick = e => {
+      if (e.target.closest('[data-del]')) return;
+      const w = S.words[el.dataset.card];
       if (!w) return;
       speak(w.word);
-      const gap = dayDiff(w.last || w.added, todayISO());
-      if (gap >= 1) { w.last = todayISO(); w.box = Math.min((w.box || 0) + 1, INTERVALS.length - 1); save('words', S.words); }
-      toast(`${w.word} — ${w.zh || w.gloss || ''}`);
+      toast(w.zh || w.note || '回想一下这句话的意思');
     };
   });
-  document.querySelectorAll('[data-preview]').forEach(b => {
-    b.onclick = () => speak(b.dataset.preview);
+  document.querySelectorAll('[data-del]').forEach(b => {
+    b.onclick = e => {
+      e.stopPropagation();
+      delCard(b.dataset.del);
+      sWords();
+      toast('已移除');
+    };
   });
-  document.getElementById('drill')?.addEventListener('click', () => {
-    due.slice(0, 8).forEach((w, i) => setTimeout(() => speak(w.word), i * 1800));
-    toast('Listen and repeat — ' + due.length + ' words');
-  });
+  document.getElementById('drill')?.addEventListener('click', () => go('words/review'));
+}
+
+/* Real active recall: see the line, retrieve the meaning, then grade yourself.
+   The grade moves the card through 1 / 3 / 7 / 16 / 35-day intervals. */
+function sReview() {
+  const queue = dueCards().slice(0, 12);
+  let i = 0, flipped = false, forgot = 0;
+
+  function finish() {
+    root.innerHTML = `
+    <div class="screen">
+      <div class="stack gap-6" style="margin-top:40px">
+        <div class="eyebrow">Review done</div>
+        <h1 class="h1">${i} 张卡过完了</h1>
+      </div>
+      <div class="card stack gap-10" style="margin-top:24px">
+        <div class="sub">忘了 ${forgot} 张，明天会再出现；其余的按 3 / 7 / 16 / 35 天逐步拉开。</div>
+        <div class="sub">间隔重复的关键不是多刷，是在快忘的时候再想一次。</div>
+      </div>
+      <div class="dock"><button class="btn" id="back">回到单词本</button></div>
+    </div>`;
+    document.getElementById('back').onclick = () => go('words');
+  }
+
+  function paint() {
+    if (i >= queue.length) return finish();
+    const w = queue[i];
+    const long = w.kind === 'sentence';
+    root.innerHTML = `
+    <div class="screen">
+      <div class="topbar">
+        <button class="back" data-go="words">
+          <svg viewBox="0 0 18 18"><path d="M11 3.5L5.5 9 11 14.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          Review
+        </button>
+        <div class="eyebrow">${i + 1} / ${queue.length}</div>
+      </div>
+      <div class="progress-line" style="margin-top:12px">
+        ${queue.map((_, k) => `<i class="${k < i ? 'on' : ''}"></i>`).join('')}
+      </div>
+
+      <div class="card stack gap-14" style="margin-top:22px">
+        <div class="eyebrow">${long ? 'SENTENCE' : 'WORD'}${w.src ? ' · ' + esc(w.src) : ''}</div>
+        <div class="${long ? 'revfront long' : 'revfront'}">${esc(w.word)}</div>
+        <div class="revback${flipped ? ' on' : ''}">
+          <div style="font-size:13px;line-height:1.6">${esc(w.zh || '自己回想一下这句话在说什么')}</div>
+          ${w.note ? `<div class="note" style="margin-top:8px">${esc(w.note)}</div>` : ''}
+        </div>
+        ${flipped
+          ? `<div class="row" style="gap:10px;margin-top:4px">
+              <button class="btn ghost" id="forgot" style="flex:1">忘了</button>
+              <button class="btn" id="got" style="flex:1">记得</button>
+            </div>`
+          : `<button class="btn ghost" id="flip">Show meaning</button>`}
+      </div>
+
+      <button class="link" id="say">🔊 听发音</button>
+      <div class="dock"><button class="btn ghost sm" id="quit">退出复习</button></div>
+    </div>`;
+
+    document.getElementById('say').onclick = () => speak(w.word);
+    document.getElementById('quit').onclick = () => go('words');
+    document.getElementById('flip')?.addEventListener('click', () => { flipped = true; paint(); });
+    const grade = ok => {
+      w.box = ok ? Math.min((w.box || 0) + 1, INTERVALS.length - 1) : 0;
+      w.last = todayISO();
+      if (!ok) forgot++;
+      save('words', S.words);
+      buzz(ok ? 8 : 14);
+      i++; flipped = false;
+      paint();
+    };
+    document.getElementById('forgot')?.addEventListener('click', () => grade(false));
+    document.getElementById('got')?.addEventListener('click', () => grade(true));
+  }
+  paint();
 }
 
 /* ---------------------------------------------------------------- notes */
@@ -1096,7 +1429,10 @@ function sNotes() {
       <div class="eyebrow">词汇 · ${terms.length}</div>
       <div class="card flat stack gap-14">
         ${terms.map(t => `<div class="lang-item">
-          <div class="k">${t.word}<em>${t.zh || ''}</em></div>
+          <div class="row" style="align-items:flex-start">
+            <div class="k" style="flex:1">${t.word}<em>${t.zh || ''}</em></div>
+            ${saveBtn(t.word, t.zh, 'word', t.note || t.gloss || '')}
+          </div>
           <div class="n">${t.note || t.gloss || ''}</div>
         </div>`).join('') || '<div class="sub">今天没有词汇。</div>'}
       </div>
@@ -1119,12 +1455,16 @@ function sNotes() {
       </div>
       <div class="card flat stack gap-14">
         ${d.sentences.map(s => `<div class="pair">
-          <div class="e">${s.text}</div>
+          <div class="row" style="align-items:flex-start">
+            <div class="e" style="flex:1">${s.text}</div>
+            ${saveBtn(s.text, s.zh, 'sentence', `第 ${s.id} 句 · ${d.headline}`)}
+          </div>
           <div class="c">${s.zh || ''}</div>
         </div>`).join('')}
       </div>
     </div>
   </div>`;
+  bindSave();
 }
 
 /* Progress used to be keyed by date. Now that a day can hold two issues it is
@@ -1197,6 +1537,7 @@ async function boot() {
   document.title = S.day.headline;
   dp(S.day.id);
   bindBack();
+  initSelectionSaver();
   route();
   prefetchAudio(S.day);
 }
