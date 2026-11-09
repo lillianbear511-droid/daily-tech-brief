@@ -11,9 +11,9 @@
      b) handing a cached 200 to a range request — Chrome tolerates it, Safari
         does not.
    So: never store a 206, never return a whole file to a range request. */
-const V = 'dtb-v9';
+const V = 'dtb-v10';
 const SHELL = [
-  './', './index.html', './styles.css', './app.js', './assess.js', './manifest.json',
+  './', './index.html', './styles.css', './app.js', './assess.js', './coach.js', './manifest.json',
   './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png',
 ];
 
