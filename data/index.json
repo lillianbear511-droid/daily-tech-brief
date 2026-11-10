@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-10T07:10:48",
+ "updated": "2026-11-11T03:40:39",
  "days": [
+  {
+   "id": "2026-11-10-pm",
+   "date": "2026-11-10",
+   "slot": "pm",
+   "headline": "Google adds two specialized AI chips to its lineup",
+   "source": "TECHCRUNCH",
+   "duration": 88.1,
+   "sentences": 12
+  },
   {
    "id": "2026-11-10-am",
    "date": "2026-11-10",

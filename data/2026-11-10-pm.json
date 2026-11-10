@@ -1,0 +1,181 @@
+{
+ "id": "2026-11-10-pm",
+ "date": "2026-11-10",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+ "headline": "Google adds two specialized AI chips to its lineup",
+ "audio": "audio/2026-11-10-pm-full.mp3",
+ "duration": 88.1,
+ "wpm": 125.3,
+ "script": "Google has unveiled two new specialized chips to cut its reliance on outside suppliers for cloud computing. Both are variants of its tensor processing units, or TPUs, which are chips designed in-house for AI work. The first, TPU 8tx, was built with AMD and is meant for confidential inference. Inference means running a trained model to answer queries rather than training it. This chip keeps sensitive data and model weights isolated even while they are in active use. It also has a custom network that lets it run reasoning alongside training. That lets a company train a small model on its own data without moving the data between devices. The second, TPU 8i Max, combines two of the inference chips launched in April into one package. That doubles memory capacity, processing power and bandwidth, so models can handle more information during queries. Both chips belong to Google's eighth generation, introduced in April this year. The launch comes as Microsoft, Amazon, OpenAI and Anthropic all work on their own AI chips. They all want to reduce their reliance on Nvidia, which dominates the market.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Google has unveiled two new specialized chips to cut its reliance on outside suppliers for cloud computing.",
+   "zh": "谷歌发布了两款新的专用芯片，以减少其云计算业务对外部供应商的依赖。",
+   "audio": "audio/2026-11-10-pm-s1.mp3",
+   "duration": 8.1,
+   "focus": "link \"cut its\" as one sound"
+  },
+  {
+   "id": 2,
+   "text": "Both are variants of its tensor processing units, or TPUs, which are chips designed in-house for AI work.",
+   "zh": "两款芯片都是其张量处理单元（TPU）的变体，这类芯片是谷歌为人工智能工作自主研发的。",
+   "audio": "audio/2026-11-10-pm-s2.mp3",
+   "duration": 8.4,
+   "focus": "final -s in \"chips\" and \"units\""
+  },
+  {
+   "id": 3,
+   "text": "The first, TPU 8tx, was built with AMD and is meant for confidential inference.",
+   "zh": "第一款是TPU 8tx，与AMD合作打造，专用于机密推理。",
+   "audio": "audio/2026-11-10-pm-s3.mp3",
+   "duration": 7.5,
+   "focus": "th sound in \"with\""
+  },
+  {
+   "id": 4,
+   "text": "Inference means running a trained model to answer queries rather than training it.",
+   "zh": "推理指的是运行已训练好的模型来回答查询，而不是训练模型。",
+   "audio": "audio/2026-11-10-pm-s4.mp3",
+   "duration": 5.5,
+   "focus": "v sound in \"trained\""
+  },
+  {
+   "id": 5,
+   "text": "This chip keeps sensitive data and model weights isolated even while they are in active use.",
+   "zh": "这款芯片即使在数据被实际使用时，也能让敏感数据和模型权重保持隔离。",
+   "audio": "audio/2026-11-10-pm-s5.mp3",
+   "duration": 7.1,
+   "focus": "link \"keeps sensitive\" smoothly"
+  },
+  {
+   "id": 6,
+   "text": "It also has a custom network that lets it run reasoning alongside training.",
+   "zh": "它还配备了一个定制网络，使其能在训练的同时进行推理。",
+   "audio": "audio/2026-11-10-pm-s6.mp3",
+   "duration": 5.6,
+   "focus": ""
+  },
+  {
+   "id": 7,
+   "text": "That lets a company train a small model on its own data without moving the data between devices.",
+   "zh": "这样一来，企业就能用自己的数据训练小型模型，而无需在设备之间传输数据。",
+   "audio": "audio/2026-11-10-pm-s7.mp3",
+   "duration": 6.7,
+   "focus": "final -s in \"devices\""
+  },
+  {
+   "id": 8,
+   "text": "The second, TPU 8i Max, combines two of the inference chips launched in April into one package.",
+   "zh": "第二款是TPU 8i Max，把四月发布的两颗推理芯片整合进一个封装中。",
+   "audio": "audio/2026-11-10-pm-s8.mp3",
+   "duration": 8.3,
+   "focus": "final -s in \"chips\""
+  },
+  {
+   "id": 9,
+   "text": "That doubles memory capacity, processing power and bandwidth, so models can handle more information during queries.",
+   "zh": "这使内存容量、处理能力和带宽都翻倍，因此模型在查询时能处理更多信息。",
+   "audio": "audio/2026-11-10-pm-s9.mp3",
+   "duration": 8.7,
+   "focus": "final -s in \"doubles\""
+  },
+  {
+   "id": 10,
+   "text": "Both chips belong to Google's eighth generation, introduced in April this year.",
+   "zh": "两款芯片都属于谷歌今年四月推出的第八代产品。",
+   "audio": "audio/2026-11-10-pm-s10.mp3",
+   "duration": 6.5,
+   "focus": "th in \"eighth\""
+  },
+  {
+   "id": 11,
+   "text": "The launch comes as Microsoft, Amazon, OpenAI and Anthropic all work on their own AI chips.",
+   "zh": "此次发布之际，微软、亚马逊、OpenAI和Anthropic都在研发各自的AI芯片。",
+   "audio": "audio/2026-11-10-pm-s11.mp3",
+   "duration": 8.0,
+   "focus": "link \"comes as\" as one sound"
+  },
+  {
+   "id": 12,
+   "text": "They all want to reduce their reliance on Nvidia, which dominates the market.",
+   "zh": "它们都想减少对主导市场的英伟达的依赖。",
+   "audio": "audio/2026-11-10-pm-s12.mp3",
+   "duration": 5.7,
+   "focus": "v sound in \"Nvidia\""
+  }
+ ],
+ "terms": [
+  {
+   "word": "tensor processing unit (TPU)",
+   "zh": "张量处理单元",
+   "note": "谷歌自研的AI专用芯片，用来加速模型训练和推理。"
+  },
+  {
+   "word": "inference",
+   "zh": "推理",
+   "note": "指用训练好的模型处理查询、给出结果，而不是训练模型。"
+  },
+  {
+   "word": "model weights",
+   "zh": "模型权重",
+   "note": "模型训练后学到的一组参数，决定它如何输出结果。"
+  },
+  {
+   "word": "bandwidth",
+   "zh": "带宽",
+   "note": "这里指芯片在单位时间内搬运数据的能力。"
+  },
+  {
+   "word": "hyperscaler",
+   "zh": "超大规模云服务商",
+   "note": "指微软、亚马逊、谷歌这类运营大型数据中心的云厂商。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "非限制性定语从句 which are chips designed in-house",
+   "note": "用which补充说明TPU是什么，中文常拆成两句说；注意which前要有逗号，且不能用that。"
+  },
+  {
+   "line": 5,
+   "point": "让步状语从句 even while they are in active use",
+   "note": "even while表示“即使当……时”，中文学习者容易漏掉even，只译成“当……时”，丢掉让步语气。"
+  },
+  {
+   "line": 9,
+   "point": "so引导的结果状语从句 so models can handle more information",
+   "note": "so连接前因后果，中文常另起一句用“因此”；注意so后面接完整句子，不能像中文那样直接接名词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is TPU 8tx mainly designed for?",
+   "options": [
+    "Confidential training and running of AI models",
+    "Doubling memory capacity for large workloads",
+    "Replacing Nvidia chips in data centers"
+   ],
+   "answer": 0,
+   "explain": "答案在第三句，明确说TPU 8tx专用于机密推理，并在第五句说明其保护数据。"
+  },
+  {
+   "q": "What does TPU 8i Max do?",
+   "options": [
+    "It trains small models on proprietary data",
+    "It combines two inference chips into one package",
+    "It runs reasoning alongside training"
+   ],
+   "answer": 1,
+   "explain": "答案在第八句，说它把四月发布的两颗推理芯片整合进一个封装。"
+  }
+ ],
+ "recall_prompts": [
+  "What did Google announce?",
+  "How do the two chips differ?",
+  "Why does this matter for Nvidia?"
+ ]
+}
