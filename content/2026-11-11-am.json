@@ -1,0 +1,141 @@
+{
+ "headline": "Amazon to launch Ring security drone and robot in 2026 and 2027",
+ "lines": [
+  {
+   "en": "Amazon will launch an AI-powered Ring security drone and a robot in late 2026 and early 2027.",
+   "zh": "亚马逊将在2026年底和2027年初推出一款AI驱动的Ring安防无人机和一款机器人。",
+   "focus": "link will launch as one unit"
+  },
+  {
+   "en": "The Ring Rover Cam and Ring Drone Cam rely on an AI Pilot system.",
+   "zh": "Ring Rover Cam和Ring Drone Cam依靠一个AI Pilot系统。",
+   "focus": "final -m in Cam"
+  },
+  {
+   "en": "This system uses cameras, vision models, sensors and cloud processing to plan patrol routes.",
+   "zh": "该系统利用摄像头、视觉模型、传感器和云端处理来规划巡逻路线。",
+   "focus": "link uses cameras"
+  },
+  {
+   "en": "It also helps the devices navigate around obstacles like furniture.",
+   "zh": "它还能帮助设备绕过家具等障碍物。",
+   "focus": "final -e in navigate"
+  },
+  {
+   "en": "Both devices digitally map the floor plan of a home or business.",
+   "zh": "两款设备都会对家庭或企业的平面图进行数字测绘。",
+   "focus": "th in both"
+  },
+  {
+   "en": "The customer carries the drone through indoor spaces or lets the Rover explore on its own.",
+   "zh": "用户带着无人机穿过室内空间，或让Rover自行探索。",
+   "focus": "final -s in spaces"
+  },
+  {
+   "en": "The AI Pilot then identifies rooms and suggests patrol points near doors, windows or a cash register.",
+   "zh": "然后AI Pilot会识别房间，并建议在门、窗或收银机附近设置巡逻点。",
+   "focus": "link points near"
+  },
+  {
+   "en": "These flying and roving cameras could add new privacy risks for homes and businesses.",
+   "zh": "这些飞行和移动摄像头可能给家庭和企业带来新的隐私风险。",
+   "focus": "th in these"
+  },
+  {
+   "en": "The Ring Drone succeeds the Ring Always Home Cam, sold by invitation in September 2021 for $250.",
+   "zh": "Ring Drone接替了Ring Always Home Cam，后者于2021年9月以250美元的价格凭邀请购买。",
+   "focus": "final -d in sold"
+  },
+  {
+   "en": "The drone still needs FCC approval and is targeted for January 27, 2027.",
+   "zh": "该无人机仍需获得FCC批准，目标日期是2027年1月27日。",
+   "focus": "link needs FCC"
+  },
+  {
+   "en": "It has a 148-degree field of view, 2K video and 360-degree rotation.",
+   "zh": "它具有148度视野、2K视频和360度旋转。",
+   "focus": ""
+  },
+  {
+   "en": "The drone flies for only eight minutes per charge and comes with a docking station.",
+   "zh": "该无人机每次充电仅能飞行八分钟，并配有一个充电底座。",
+   "focus": "final -s in minutes"
+  },
+  {
+   "en": "Performance may degrade near reflective surfaces, blank walls or glass.",
+   "zh": "在反光表面、空白墙壁或玻璃附近，性能可能会下降。",
+   "focus": "final -e in degrade"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI Pilot",
+   "zh": "AI Pilot系统",
+   "note": "亚马逊的自动驾驶系统，用摄像头和传感器规划路线并避开障碍。"
+  },
+  {
+   "word": "floor plan",
+   "zh": "平面图",
+   "note": "房屋或办公室内部布局的数字地图。"
+  },
+  {
+   "word": "field of view",
+   "zh": "视野",
+   "note": "摄像头能覆盖的角度范围。"
+  },
+  {
+   "word": "docking station",
+   "zh": "充电底座",
+   "note": "无人机停放并充电的装置。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "一般将来时 will launch",
+   "note": "表示计划中的未来动作，中文常省略“将”，但英文必须用will。"
+  },
+  {
+   "line": 2,
+   "point": "依靠 rely on",
+   "note": "介词on不可省略，中文说“依靠”不需要介词，容易漏掉。"
+  },
+  {
+   "line": 9,
+   "point": "过去分词 sold 作后置定语",
+   "note": "sold by invitation 修饰前面的产品，中文习惯用“被出售”但英文用过去分词短语。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "When is the Ring Drone Cam expected to reach customers?",
+   "options": [
+    "Late 2026",
+    "Early 2027",
+    "January 27, 2027"
+   ],
+   "answer": 2,
+   "explain": "The answer is in sentence 10."
+  },
+  {
+   "q": "What is one limitation of the drone?",
+   "options": [
+    "It cannot rotate",
+    "It flies for only eight minutes",
+    "It has no camera"
+   ],
+   "answer": 1,
+   "explain": "The answer is in sentence 12."
+  }
+ ],
+ "recall_prompts": [
+  "What products is Amazon launching?",
+  "How does the AI Pilot work?",
+  "What privacy concerns are raised?"
+ ],
+ "script": "Amazon will launch an AI-powered Ring security drone and a robot in late 2026 and early 2027. The Ring Rover Cam and Ring Drone Cam rely on an AI Pilot system. This system uses cameras, vision models, sensors and cloud processing to plan patrol routes. It also helps the devices navigate around obstacles like furniture. Both devices digitally map the floor plan of a home or business. The customer carries the drone through indoor spaces or lets the Rover explore on its own. The AI Pilot then identifies rooms and suggests patrol points near doors, windows or a cash register. These flying and roving cameras could add new privacy risks for homes and businesses. The Ring Drone succeeds the Ring Always Home Cam, sold by invitation in September 2021 for $250. The drone still needs FCC approval and is targeted for January 27, 2027. It has a 148-degree field of view, 2K video and 360-degree rotation. The drone flies for only eight minutes per charge and comes with a docking station. Performance may degrade near reflective surfaces, blank walls or glass.",
+ "source": "ARS TECHNICA",
+ "source_url": "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
+ "date": "2026-11-11",
+ "slot": "am"
+}

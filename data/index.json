@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-11T03:40:39",
+ "updated": "2026-11-11T09:24:45",
  "days": [
+  {
+   "id": "2026-11-11-am",
+   "date": "2026-11-11",
+   "slot": "am",
+   "headline": "Amazon to launch Ring security drone and robot in 2026 and 2027",
+   "source": "ARS TECHNICA",
+   "duration": 95.9,
+   "sentences": 13
+  },
   {
    "id": "2026-11-10-pm",
    "date": "2026-11-10",
