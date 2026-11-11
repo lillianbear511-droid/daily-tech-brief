@@ -6,6 +6,11 @@ name: deploy pages
 on:
   push:
     branches: [main]
+  # The daily job commits with GITHUB_TOKEN. GitHub deliberately does not let
+  # such a push fire another workflow, so the daily job asks for a publish
+  # explicitly after a real commit instead of waiting for a push event.
+  repository_dispatch:
+    types: [publish]
   workflow_dispatch:
 
 permissions:
