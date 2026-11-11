@@ -1,17 +1,19 @@
 /* Service worker.
-   - Shell (html/css/js): network-first, so a new build shows up on the first open.
-   - Media (audio/icons): keep the COMPLETE file, then answer Safari's byte-range
-     requests out of that copy ourselves.
+   - Shell (html/css/js/data): network-first, so a new build shows up on the
+     first open.
+   - Media (audio/icons): cache COMPLETE 200 responses only. While online,
+     byte-range requests go straight to the network and the server's own 206
+     is handed back untouched. Only a genuine network failure falls back to
+     slicing a cached copy.
 
-   Why the range handling: iOS Safari and macOS Safari fetch media with a
-   `Range: bytes=...` header and refuse to play anything that is not a 206 with
-   a matching Content-Range. Two ways to get this wrong, both fatal:
-     a) caching the network's 206 — you store a fragment under the file's URL,
-        and every later play decodes garbage;
-     b) handing a cached 200 to a range request — Chrome tolerates it, Safari
-        does not.
-   So: never store a 206, never return a whole file to a range request. */
-const V = 'dtb-v11';
+   Why we stopped synthesising 206s: iOS Safari's media loader is picky about
+   responses a service worker builds by hand (streaming, header set, timing
+   against a cache that is still being written). It has cut playback short
+   after a few seconds twice, while the identical mp3 played fine through the
+   server's own 206. Chrome never reproduces it. So the rule is simple: do
+   not get between Safari and the server while online. Slicing is an offline
+   fallback, not the normal path. */
+const V = 'dtb-v12';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './assess.js', './coach.js', './manifest.json',
   './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png',
@@ -65,7 +67,12 @@ async function slice(res, rangeHeader) {
   if (!r) {
     return new Response(null, {
       status: 416,
-      headers: { 'Content-Range': `bytes */${size}` },
+      headers: {
+        'Content-Range': `bytes */${size}`,
+        'Content-Length': '0',
+        'Accept-Ranges': 'bytes',
+        'Content-Type': 'audio/mpeg',
+      },
     });
   }
   const body = buf.slice(r.start, r.end + 1);
@@ -73,7 +80,9 @@ async function slice(res, rangeHeader) {
     status: 206,
     statusText: 'Partial Content',
     headers: {
-      'Content-Type': res.headers.get('Content-Type') || 'audio/mpeg',
+      // Pages answers with audio/mp3; Safari's media loader is happier with
+      // the canonical type when the response comes from a service worker.
+      'Content-Type': 'audio/mpeg',
       'Content-Length': String(body.byteLength),
       'Content-Range': `bytes ${r.start}-${r.end}/${size}`,
       'Accept-Ranges': 'bytes',
@@ -81,23 +90,56 @@ async function slice(res, rangeHeader) {
   });
 }
 
+/* Only trust entries we wrote ourselves, with the exact byte count recorded.
+   A cache row left half-written (an abandoned prefetch) is worse than no
+   cache at all: slicing it produces a Content-Range whose total is the short
+   length, and the player stops after those few seconds. */
+function complete(res) {
+  const n = Number(res.headers.get('X-DTB-Size'));
+  const len = Number(res.headers.get('Content-Length'));
+  return n > 0 && (!len || n === len);
+}
+
 async function media(request, cache) {
   const key = new Request(request.url);
-  // ignoreVary: GitHub Pages sends Vary: Accept-Encoding, which would otherwise
-  // stop a plain fetch() from ever matching the media loader's request.
-  const hit = await cache.match(key, { ignoreVary: true });
+  const range = request.headers.get('range');
 
-  if (hit && hit.status === 200) {
-    const range = request.headers.get('range');
-    return range ? slice(hit, range) : hit;
+  // ONLINE PLAYBACK. Hand Safari the server's own 206 untouched. Do not read
+  // the cache here — a cache entry can still be mid-write when the user taps
+  // play on a freshly pushed issue, and any synthesised response risks
+  // truncating playback. This is the path that broke twice before.
+  if (range) {
+    const fresh = await fetch(request).catch(() => null);
+    if (fresh) return fresh;
+    // Genuinely offline: only now is a cached copy worth slicing.
+    const hit = await cache.match(key, { ignoreVary: true });
+    if (hit && hit.status === 200 && complete(hit)) return slice(hit, range);
+    return hit || Response.error();
   }
+
+  // ignoreVary: GitHub Pages sends Vary: Accept-Encoding, which would
+  // otherwise stop a plain fetch() from ever matching the media request.
+  const hit = await cache.match(key, { ignoreVary: true });
+  if (hit && hit.status === 200 && complete(hit)) return hit;
 
   const fresh = await fetch(request).catch(() => null);
   if (!fresh) return hit || Response.error();
 
-  // Only a complete 200 is safe to keep.
+  // Buffer the entire body BEFORE writing. Remembering a live stream means a
+  // client that drops the response (prefetch never reads it) can leave a
+  // truncated row behind. A byte array is atomic and always complete.
   if (fresh.status === 200) {
-    try { await cache.put(key, fresh.clone()); } catch { /* quota */ }
+    try {
+      const buf = await fresh.clone().arrayBuffer();
+      const headers = new Headers(fresh.headers);
+      // The bytes are decoded already; keeping an encoding header would make
+      // the next reader try to decode them a second time.
+      headers.delete('Content-Encoding');
+      headers.delete('Transfer-Encoding');
+      headers.set('Content-Length', String(buf.byteLength));
+      headers.set('X-DTB-Size', String(buf.byteLength));
+      await cache.put(key, new Response(buf, { status: 200, headers }));
+    } catch { /* quota or aborted body */ }
   }
   return fresh;
 }
