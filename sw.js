@@ -13,7 +13,7 @@
    server's own 206. Chrome never reproduces it. So the rule is simple: do
    not get between Safari and the server while online. Slicing is an offline
    fallback, not the normal path. */
-const V = 'dtb-v12';
+const V = 'dtb-v13';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './assess.js', './coach.js', './manifest.json',
   './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png',
@@ -110,11 +110,14 @@ async function media(request, cache) {
   // truncating playback. This is the path that broke twice before.
   if (range) {
     const fresh = await fetch(request).catch(() => null);
-    if (fresh) return fresh;
-    // Genuinely offline: only now is a cached copy worth slicing.
+    // 206 is the normal ranged answer; some servers ignore Range and send the
+    // whole 200, which is fine too. Anything else (404, 5xx) is not an audio
+    // response — fall through to the cached copy instead of handing the
+    // player an error page.
+    if (fresh && (fresh.status === 206 || fresh.status === 200)) return fresh;
     const hit = await cache.match(key, { ignoreVary: true });
     if (hit && hit.status === 200 && complete(hit)) return slice(hit, range);
-    return hit || Response.error();
+    return Response.error();
   }
 
   // ignoreVary: GitHub Pages sends Vary: Accept-Encoding, which would
