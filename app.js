@@ -77,25 +77,36 @@ audio.addEventListener('timeupdate', () => {
   }
   if (timeHost) timeHost.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
 });
-audio.addEventListener('ended', () => {
-  document.querySelectorAll('.play').forEach(b => b.dataset.playing = '');
-  if (typeof audio.onDone === 'function') { const f = audio.onDone; audio.onDone = null; f(); }
-});
 audio.addEventListener('pause', () => {
   document.querySelectorAll('.play').forEach(b => b.dataset.playing = '');
 });
 
-/* A cached half-file (an old build stored the server's 206) decodes as nothing,
-   and the audio element shows no clue. Drop the media cache once per page load
-   and let the next tap pull the whole file from the network. */
+/* A truncated range response does NOT fire `error`: the player simply decides
+   the file is shorter than it is and reports `ended` after a few seconds.
+   Catch that too. Clear only media rows — the shell stays available offline —
+   and make the next tap go to the network. One repair per page load. */
 let audioRecovered = false;
-audio.addEventListener('error', async () => {
-  if (audioRecovered || !audio.src) return;
-  audioRecovered = true;
+async function clearMediaCache() {
   try {
-    const keys = await caches.keys();
-    await Promise.all(keys.map(k => caches.delete(k)));
+    for (const k of await caches.keys()) {
+      const ca = await caches.open(k);
+      for (const r of await ca.keys()) {
+        if (r.url.includes('/audio/')) await ca.delete(r);
+      }
+    }
   } catch { /* private mode */ }
+}
+function expectedDuration(src) {
+  const d = S.day;
+  if (!d) return 0;
+  if (src.endsWith(d.audio)) return d.duration || 0;
+  const s = (d.sentences || []).find(x => src.endsWith(x.audio));
+  return s ? (s.duration || 0) : 0;
+}
+async function repairAudio(message) {
+  if (audioRecovered) return;
+  audioRecovered = true;
+  await clearMediaCache();
   audio.pause();
   audio.removeAttribute('src');
   audio.load();
@@ -104,7 +115,18 @@ audio.addEventListener('error', async () => {
       .then(rs => Promise.all(rs.map(r => r.update())))
       .catch(() => {});
   }
-  toast('Audio cache reset — tap play again');
+  toast(message);
+}
+audio.addEventListener('error', () => {
+  if (audio.src) repairAudio('Audio cache reset — tap play again');
+});
+audio.addEventListener('ended', () => {
+  const expected = expectedDuration(audio.src);
+  if (expected > 10 && audio.duration && audio.duration < expected * 0.8) {
+    repairAudio('Audio stopped early — cache cleared, tap play again');
+  }
+  document.querySelectorAll('.play').forEach(b => b.dataset.playing = '');
+  if (typeof audio.onDone === 'function') { const f = audio.onDone; audio.onDone = null; f(); }
 });
 
 function togglePlay(src, btn) {
@@ -1550,7 +1572,10 @@ function prefetchAudio(day) {
   let i = 0;
   const step = () => {
     if (i >= files.length) return;
-    fetch(files[i++]).then(() => setTimeout(step, 260)).catch(() => {});
+    // Consume the body. Abandoning a response mid-stream can leave a partial
+    // row in the SW's media cache, which later yields a short Content-Range.
+    fetch(files[i++]).then(r => r.arrayBuffer())
+      .then(() => setTimeout(step, 260)).catch(() => {});
   };
   setTimeout(step, 1200);
 }
