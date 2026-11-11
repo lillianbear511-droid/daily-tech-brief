@@ -152,6 +152,36 @@ def duration_seconds(path: Path) -> float:
         return 0.0
 
 
+def verify_full_audio(path: Path, declared: float, segments: list):
+    """Refuse to publish an mp3 that a player could only decode part of.
+
+    ffprobe reads the header, so a truncated or mis-stitched file can still
+    claim its full length while the player stops after a few seconds. Decode
+    the entire stream to PCM and compare the real length against both the
+    header and the sum of the clips that went into it.
+    """
+    proc = subprocess.run(
+        ["ffmpeg", "-v", "error", "-i", str(path),
+         "-ac", "1", "-ar", "8000", "-f", "s16le", "-"],
+        capture_output=True)
+    if proc.returncode != 0:
+        raise RuntimeError("full audio failed a complete decode: "
+                           + proc.stderr.decode(errors="replace")[:200])
+    decoded = len(proc.stdout) / 2 / 8000
+    parts = (sum(s.get("duration", 0) for s in segments)
+             + GAP_MS / 1000 * max(0, len(segments) - 1))
+    if declared <= 0 or decoded <= 0:
+        raise RuntimeError(f"full audio has no usable duration ({path.name})")
+    if abs(decoded - declared) > 1.0:
+        raise RuntimeError(f"full audio decodes to {decoded:.1f}s but the header "
+                           f"says {declared:.1f}s — refusing to publish {path.name}")
+    if parts and not (parts * 0.9 <= decoded <= parts * 1.15):
+        raise RuntimeError(f"full audio is {decoded:.1f}s but {len(segments)} clips "
+                           f"should make {parts:.1f}s — refusing to publish {path.name}")
+    print(f"    audio verified · decoded {decoded:.1f}s / header {declared:.1f}s",
+          flush=True)
+
+
 def _ffmpeg(args):
     proc = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *args],
                           capture_output=True, text=True)
@@ -236,6 +266,8 @@ def build(slug: str, voice: str, rate: str) -> dict:
             out = AUDIO / f"{slug}-s{i}.mp3"
             _wav_to_mp3(wav, out)
             dur = duration_seconds(out)
+            if dur < 0.5:
+                raise RuntimeError(f"sentence {i} produced only {dur}s of audio — aborting")
             seg_meta.append({
                 "id": i,
                 "text": line["en"],
@@ -253,6 +285,7 @@ def build(slug: str, voice: str, rate: str) -> dict:
         shutil.rmtree(rawdir, ignore_errors=True)
 
     total = duration_seconds(full)
+    verify_full_audio(full, total, seg_meta)
 
     payload = {
         "id": slug,
