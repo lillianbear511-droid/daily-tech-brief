@@ -34,6 +34,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   build:
@@ -69,13 +70,14 @@ jobs:
               day, slot = now.date().isoformat(), slots.resolve(arg)
           slug = slots.make(day, slot)
           skip = Path("data", f"{slug}.json").exists()
-          # A run that catches up on yesterday after midnight must not page
-          # anyone with a day-old card.
-          notify = day == now.date().isoformat()
-          print(f"issue: {slug} · skip={skip} · notify={notify}", flush=True)
+          # `skip` is the only de-duplication needed: retry runs stop here, so
+          # every issue is built at most once and therefore gets at most one
+          # card. GitHub cron has been arriving 6-8 hours late on this repo,
+          # which puts the evening issue at 3-5am. Suppressing "stale" cards
+          # then silently deleted the whole issue from the user's day.
+          print(f"issue: {slug} · skip={skip}", flush=True)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
               f.write(f"slug={slug}\nskip={'true' if skip else 'false'}\n")
-              f.write(f"notify={'true' if notify else 'false'}\n")
           PY
 
       - uses: actions/setup-python@v5
@@ -143,6 +145,7 @@ jobs:
         if: inputs.dry_run != true && steps.check.outputs.skip != 'true' && steps.build.outputs.built != 'false'
         env:
           SLUG: ${{ steps.build.outputs.slug || steps.check.outputs.slug }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name  "daily-brief bot"
           git config user.email "bot@users.noreply.github.com"
@@ -152,10 +155,55 @@ jobs:
           else
             git commit -m "brief: $SLUG"
             git push
+            # A push made with GITHUB_TOKEN fires no push event, so without
+            # this the site keeps serving the previous build: data 200 on the
+            # repo, 404 and dead audio on the web. repository_dispatch is one
+            # of the two events GITHUB_TOKEN *is* allowed to trigger.
+            if curl -sSf -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              "https://api.github.com/repos/${{ github.repository }}/dispatches" \
+              -d '{"event_type":"publish"}' > /dev/null; then
+              echo "deploy queued for $SLUG"
+            else
+              echo "repository_dispatch refused; falling back to workflow_dispatch"
+              gh workflow run pages.yml --ref main
+            fi
           fi
 
+      - name: Wait for the issue to be live
+        if: inputs.dry_run != true && steps.check.outputs.skip != 'true' && steps.build.outputs.built != 'false'
+        env:
+          SLUG: ${{ steps.build.outputs.slug || steps.check.outputs.slug }}
+          APP_URL: ${{ secrets.APP_URL }}
+        run: |
+          python3 - <<'PY'
+          import os, time, urllib.request
+          base = (os.environ.get("APP_URL") or
+                  "https://lillianbear511-droid.github.io/daily-tech-brief").rstrip("/")
+          slug = os.environ["SLUG"]
+          targets = [f"data/{slug}.json", f"audio/{slug}-full.mp3"]
+          deadline = time.time() + 600
+          while time.time() < deadline:
+              ok = True
+              for t in targets:
+                  try:
+                      req = urllib.request.Request(
+                          f"{base}/{t}?v={int(time.time())}", method="HEAD")
+                      with urllib.request.urlopen(req, timeout=10) as r:
+                          ok = ok and r.status == 200
+                  except Exception:
+                      ok = False
+              if ok:
+                  print(f"live: {slug}")
+                  break
+              time.sleep(15)
+          else:
+              print(f"WARNING: {slug} not live after 10 min; sending the card anyway")
+          PY
+
       - name: Push to Feishu
-        if: inputs.dry_run != true && steps.check.outputs.skip != 'true' && steps.build.outputs.built != 'false' && steps.check.outputs.notify == 'true'
+        if: inputs.dry_run != true && steps.check.outputs.skip != 'true' && steps.build.outputs.built != 'false'
         env:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           APP_URL: ${{ secrets.APP_URL }}
