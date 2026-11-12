@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-11T09:24:45",
+ "updated": "2026-11-12T11:56:39",
  "days": [
+  {
+   "id": "2026-11-12-am",
+   "date": "2026-11-12",
+   "slot": "am",
+   "headline": "Fractile raises $720M for AI chips",
+   "source": "TECHCRUNCH",
+   "duration": 91.9,
+   "sentences": 13
+  },
   {
    "id": "2026-11-11-am",
    "date": "2026-11-11",

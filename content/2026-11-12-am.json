@@ -1,0 +1,146 @@
+{
+ "headline": "Fractile raises $720M for AI chips",
+ "lines": [
+  {
+   "en": "British AI chip startup Fractile has raised seven hundred twenty million dollars in a Series C round.",
+   "zh": "英国人工智能芯片初创公司Fractile在C轮融资中筹集了7.2亿美元。",
+   "focus": "final -d in raised"
+  },
+  {
+   "en": "Britain's Sovereign AI Fund backed the round, according to the government.",
+   "zh": "据政府称，英国主权人工智能基金参与了这轮投资。",
+   "focus": "th in according"
+  },
+  {
+   "en": "This makes Fractile one of the best-funded startups building chips made specifically for AI.",
+   "zh": "这使Fractile成为专门为人工智能制造芯片的资金最充足的初创公司之一。",
+   "focus": "final -s in chips"
+  },
+  {
+   "en": "Such chips are one way to cut the cost of inference, which means running AI models in production.",
+   "zh": "这类芯片是降低推理成本的一种方式，推理指的是在生产环境中运行人工智能模型。",
+   "focus": "v in production"
+  },
+  {
+   "en": "Fractile goes further with a full-stack approach that also includes a machine learning compiler.",
+   "zh": "Fractile更进一步，采用全栈方案，其中还包括一个机器学习编译器。",
+   "focus": "final -r in compiler"
+  },
+  {
+   "en": "A compiler is software that turns model code into instructions the chip can run fast.",
+   "zh": "编译器是一种软件，它把模型代码转换成芯片能快速执行的指令。",
+   "focus": "final -s in instructions"
+  },
+  {
+   "en": "The company calls itself a frontier AI company, and its valuation reflects that.",
+   "zh": "该公司自称是一家前沿人工智能公司，其估值也反映了这一点。",
+   "focus": "v in valuation"
+  },
+  {
+   "en": "The British government put the valuation at over five billion pounds, possibly about seven billion dollars.",
+   "zh": "英国政府称估值超过50亿英镑，可能约为70亿美元。",
+   "focus": "v in five"
+  },
+  {
+   "en": "Fractile's main difference is its hardware design, which now centers on DRAM.",
+   "zh": "Fractile的主要区别在于其硬件设计，目前以DRAM为核心。",
+   "focus": "final -n in design"
+  },
+  {
+   "en": "DRAM is the most common type of RAM, and Fractile stacks it on top of each chip.",
+   "zh": "DRAM是最常见的一种内存，Fractile把它堆叠在每块芯片之上。",
+   "focus": "stacks it linking"
+  },
+  {
+   "en": "The company hopes this bypasses the usual trade-off between memory and capacity.",
+   "zh": "该公司希望这能绕开内存与容量之间常见的取舍。",
+   "focus": "final -s in bypasses"
+  },
+  {
+   "en": "That trade-off has become harder with agentic AI, where companies run longer chains of tasks with large models.",
+   "zh": "随着智能体的兴起，这种取舍变得更棘手，因为公司要用大模型执行更长的任务链。",
+   "focus": "th in chains"
+  },
+  {
+   "en": "CEO Walter Goodwin wrote that there is still a lot of work ahead and the funding will help ship first chips next year.",
+   "zh": "首席执行官沃尔特·古德温写道，前面还有很多工作要做，这笔资金将帮助公司在明年交付首批芯片。",
+   "focus": "final -d in ahead"
+  }
+ ],
+ "terms": [
+  {
+   "word": "inference",
+   "zh": "推理",
+   "note": "指模型训练完成后在实际产品中运行、给出结果的过程。"
+  },
+  {
+   "word": "compiler",
+   "zh": "编译器",
+   "note": "把模型代码翻译成芯片能直接执行的指令的软件。"
+  },
+  {
+   "word": "DRAM",
+   "zh": "动态随机存取存储器",
+   "note": "最常见的一种内存，用来临时存放芯片正在处理的数据。"
+  },
+  {
+   "word": "agentic AI",
+   "zh": "智能体人工智能",
+   "note": "能自己连续完成多步任务的AI系统，而不是只回答一次问题。"
+  },
+  {
+   "word": "full-stack",
+   "zh": "全栈",
+   "note": "指公司同时做芯片硬件和配套软件，而不是只做其中一层。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "make + 宾语 + 名词补足语 (makes Fractile one of...)",
+   "note": "make后接宾语和名词，表示“使某物成为”，中文常漏掉这个名词结构而误加to be。"
+  },
+  {
+   "line": 5,
+   "point": "定语从句 that also includes",
+   "note": "that引导的从句修饰approach，中文习惯把修饰语放前面，容易漏掉that或错用which。"
+  },
+  {
+   "line": 12,
+   "point": "现在完成时 has become",
+   "note": "表示变化持续到现在，中文说“变得”时容易漏掉has，读起来就像一般现在时。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Fractile's main difference from other AI chip startups?",
+   "options": [
+    "Its hardware design centered on stacked DRAM",
+    "Its low prices for inference",
+    "Its partnership with Amazon"
+   ],
+   "answer": 0,
+   "explain": "答案在第九、十句，讲硬件设计以堆叠DRAM为核心。"
+  },
+  {
+   "q": "What will the new funding help Fractile do?",
+   "options": [
+    "Open offices in the U.S.",
+    "Ship its first chips and systems next year",
+    "Buy a rival chip company"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一句，CEO说资金将帮助明年交付首批芯片和系统。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "British AI chip startup Fractile has raised seven hundred twenty million dollars in a Series C round. Britain's Sovereign AI Fund backed the round, according to the government. This makes Fractile one of the best-funded startups building chips made specifically for AI. Such chips are one way to cut the cost of inference, which means running AI models in production. Fractile goes further with a full-stack approach that also includes a machine learning compiler. A compiler is software that turns model code into instructions the chip can run fast. The company calls itself a frontier AI company, and its valuation reflects that. The British government put the valuation at over five billion pounds, possibly about seven billion dollars. Fractile's main difference is its hardware design, which now centers on DRAM. DRAM is the most common type of RAM, and Fractile stacks it on top of each chip. The company hopes this bypasses the usual trade-off between memory and capacity. That trade-off has become harder with agentic AI, where companies run longer chains of tasks with large models. CEO Walter Goodwin wrote that there is still a lot of work ahead and the funding will help ship first chips next year.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
+ "date": "2026-11-12",
+ "slot": "am"
+}
