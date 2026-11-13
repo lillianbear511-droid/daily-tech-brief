@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-12T11:56:39",
+ "updated": "2026-11-13T11:30:03",
  "days": [
+  {
+   "id": "2026-11-13-am",
+   "date": "2026-11-13",
+   "slot": "am",
+   "headline": "Hugging Face CEO vows to keep fighting for open source AI",
+   "source": "TECHCRUNCH",
+   "duration": 73.5,
+   "sentences": 13
+  },
   {
    "id": "2026-11-12-am",
    "date": "2026-11-12",

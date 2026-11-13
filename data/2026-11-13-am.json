@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-13-am",
+ "date": "2026-11-13",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+ "headline": "Hugging Face CEO vows to keep fighting for open source AI",
+ "audio": "audio/2026-11-13-am-full.mp3",
+ "duration": 73.5,
+ "wpm": 138.0,
+ "script": "Hugging Face's CEO says he will keep fighting for open source AI after Nvidia's CEO stepped down. He called it a really sad day. Nvidia had planned to buy Hugging Face for twelve point nine billion dollars. That deal would be Nvidia's second largest ever. The CEO wrote online that the whole thing sucks and he wishes it had not happened. But he made one thing clear: the company will fight harder than ever for open source AI. Open source means the code is public and anyone can inspect and change it. The post suggests that the departure worries open source advocates. As Nvidia's CEO, Jensen Huang strongly supported open weight models. Open weight models are AI systems whose trained values anyone can download and run. The U.S. Justice Department is asking how the deal would affect competition. The deal is still set to close in the first half of twenty twenty seven. Huang also signed a letter urging the government not to over restrict open weight models.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Hugging Face's CEO says he will keep fighting for open source AI after Nvidia's CEO stepped down.",
+   "zh": "Hugging Face的首席执行官表示，在英伟达首席执行官卸任后，他将继续为开源人工智能而战。",
+   "audio": "audio/2026-11-13-am-s1.mp3",
+   "duration": 7.5,
+   "focus": "final -s in 'says' and 'Nvidia's'"
+  },
+  {
+   "id": 2,
+   "text": "He called it a really sad day.",
+   "zh": "他称这是非常悲伤的一天。",
+   "audio": "audio/2026-11-13-am-s2.mp3",
+   "duration": 2.3,
+   "focus": "linked 'called it' sounds like 'call dit'"
+  },
+  {
+   "id": 3,
+   "text": "Nvidia had planned to buy Hugging Face for twelve point nine billion dollars.",
+   "zh": "英伟达此前计划以一百二十九亿美元收购Hugging Face。",
+   "audio": "audio/2026-11-13-am-s3.mp3",
+   "duration": 5.4,
+   "focus": "final -d in 'planned' and 'had'"
+  },
+  {
+   "id": 4,
+   "text": "That deal would be Nvidia's second largest ever.",
+   "zh": "这将是英伟达历史上第二大收购。",
+   "audio": "audio/2026-11-13-am-s4.mp3",
+   "duration": 3.8,
+   "focus": "linked 'largest ever'"
+  },
+  {
+   "id": 5,
+   "text": "The CEO wrote online that the whole thing sucks and he wishes it had not happened.",
+   "zh": "这位首席执行官在网上写道，整件事很糟糕，他希望这一切没有发生。",
+   "audio": "audio/2026-11-13-am-s5.mp3",
+   "duration": 5.7,
+   "focus": "final -s in 'sucks' and 'wishes'"
+  },
+  {
+   "id": 6,
+   "text": "But he made one thing clear: the company will fight harder than ever for open source AI.",
+   "zh": "但他明确表示：公司将为开源人工智能比以往更加努力地奋斗。",
+   "audio": "audio/2026-11-13-am-s6.mp3",
+   "duration": 6.5,
+   "focus": "th in 'thing'"
+  },
+  {
+   "id": 7,
+   "text": "Open source means the code is public and anyone can inspect and change it.",
+   "zh": "开源意味着代码是公开的，任何人都可以查看和修改。",
+   "audio": "audio/2026-11-13-am-s7.mp3",
+   "duration": 5.6,
+   "focus": "linked 'anyone can'"
+  },
+  {
+   "id": 8,
+   "text": "The post suggests that the departure worries open source advocates.",
+   "zh": "这篇帖子表明，这一离职让开源倡导者感到担忧。",
+   "audio": "audio/2026-11-13-am-s8.mp3",
+   "duration": 4.9,
+   "focus": "final -s in 'suggests' and 'advocates'"
+  },
+  {
+   "id": 9,
+   "text": "As Nvidia's CEO, Jensen Huang strongly supported open weight models.",
+   "zh": "作为英伟达的首席执行官，黄仁勋大力支持开放权重模型。",
+   "audio": "audio/2026-11-13-am-s9.mp3",
+   "duration": 6.1,
+   "focus": "v sound in 'Nvidia's'"
+  },
+  {
+   "id": 10,
+   "text": "Open weight models are AI systems whose trained values anyone can download and run.",
+   "zh": "开放权重模型是任何人都可以下载并运行其训练数值的人工智能系统。",
+   "audio": "audio/2026-11-13-am-s10.mp3",
+   "duration": 6.6,
+   "focus": "linked 'download and run'"
+  },
+  {
+   "id": 11,
+   "text": "The U.S. Justice Department is asking how the deal would affect competition.",
+   "zh": "美国司法部正在询问这笔交易将如何影响竞争。",
+   "audio": "audio/2026-11-13-am-s11.mp3",
+   "duration": 5.6,
+   "focus": "final -t in 'Justice' and 'Department'"
+  },
+  {
+   "id": 12,
+   "text": "The deal is still set to close in the first half of twenty twenty seven.",
+   "zh": "这笔交易仍计划在2027年上半年完成。",
+   "audio": "audio/2026-11-13-am-s12.mp3",
+   "duration": 5.0,
+   "focus": "linked 'set to'"
+  },
+  {
+   "id": 13,
+   "text": "Huang also signed a letter urging the government not to over restrict open weight models.",
+   "zh": "黄仁勋还签署了一封信，敦促政府不要过度限制开放权重模型。",
+   "audio": "audio/2026-11-13-am-s13.mp3",
+   "duration": 6.4,
+   "focus": ""
+  }
+ ],
+ "terms": [
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指代码公开，任何人都能查看和修改。"
+  },
+  {
+   "word": "open weight",
+   "zh": "开放权重",
+   "note": "指模型的训练数值公开，任何人都能下载并运行。"
+  },
+  {
+   "word": "acquisition",
+   "zh": "收购",
+   "note": "指一家公司买下另一家公司。"
+  },
+  {
+   "word": "advocate",
+   "zh": "倡导者",
+   "note": "指公开支持某个想法的人。"
+  },
+  {
+   "word": "competition",
+   "zh": "竞争",
+   "note": "指公司之间争夺市场和客户。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "过去完成时 had planned",
+   "note": "表示在另一个过去动作之前已经计划好，中文常只说“计划”而漏掉 had。"
+  },
+  {
+   "line": 10,
+   "point": "定语从句 whose trained values",
+   "note": "whose 表示“其”，中文习惯拆成两句，容易漏掉关系词。"
+  },
+  {
+   "line": 12,
+   "point": "be set to do",
+   "note": "表示“计划好要做”，中文容易直译成“被设置”，这里是被动形式表将来。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Nvidia plan to pay for Hugging Face?",
+   "options": [
+    "Twelve point nine billion dollars",
+    "Twenty billion dollars",
+    "Six billion dollars"
+   ],
+   "answer": 0,
+   "explain": "The price is stated in the third sentence."
+  },
+  {
+   "q": "When is the deal still scheduled to close?",
+   "options": [
+    "In the first half of 2027",
+    "In December 2025",
+    "In July 2026"
+   ],
+   "answer": 0,
+   "explain": "The closing date is given in the twelfth sentence."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
