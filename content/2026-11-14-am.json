@@ -1,0 +1,141 @@
+{
+ "headline": "ChatGPT Wallet lets AI agents shop for you",
+ "lines": [
+  {
+   "en": "ChatGPT can now shop for you.",
+   "zh": "ChatGPT现在可以替你购物了。",
+   "focus": "link 'shop for' as one unit"
+  },
+  {
+   "en": "On Friday, OpenAI launched a wallet feature that lets its agents, called dots, help you decide what to buy and then complete the purchase for you.",
+   "zh": "周五，OpenAI推出了一项钱包功能，让其名为dots的智能体帮你决定买什么，然后替你完成购买。",
+   "focus": "final -s in 'dots'"
+  },
+  {
+   "en": "The option is initially limited to some U.S. ChatGPT Pro subscribers, ages eighteen and up, with a U.S.-issued Visa, Mastercard, or American Express.",
+   "zh": "该选项最初仅限部分美国ChatGPT Pro订阅用户，年满十八岁，并持有美国发行的Visa、Mastercard或American Express卡。",
+   "focus": "th sound in 'with'"
+  },
+  {
+   "en": "OpenAI says users are fully in control, because they can review the items, the total, and the payment card before checkout.",
+   "zh": "OpenAI表示用户完全掌控，因为他们可以在结账前查看商品、总额和付款卡。",
+   "focus": "v versus w in 'review'"
+  },
+  {
+   "en": "Users also approve purchases with a security check like Face ID or a fingerprint, which creates a record of the transaction.",
+   "zh": "用户还需通过Face ID或指纹等安全检查来批准购买，这会生成交易记录。",
+   "focus": "final -r in 'fingerprint'"
+  },
+  {
+   "en": "This comes as consumer AI tools seek product-market fit, meaning the right way to help people finish tasks more efficiently.",
+   "zh": "此举正值消费级AI工具寻求产品市场契合，即找到帮助人们更高效完成任务的正确定位。",
+   "focus": "link 'comes as'"
+  },
+  {
+   "en": "DoorDash and Uber report low numbers of orders placed by AI agents, but Meta's Muse, with over ten million users, sees AI-assisted shopping as a top activity.",
+   "zh": "DoorDash和Uber报告称由智能体下的订单数量很少，但拥有超过一千万用户的Meta Muse将AI辅助购物视为其应用上的热门活动。",
+   "focus": "final -s in 'orders'"
+  },
+  {
+   "en": "Other personal AI agents, like Instinct, also support making purchases for users.",
+   "zh": "其他个人AI智能体，如Instinct，也支持替用户购买。",
+   "focus": "th sound in 'Other'"
+  },
+  {
+   "en": "To start, subscribers add eligible cards to the new ChatGPT Wallet, then ask their dot to help with a purchase.",
+   "zh": "开始时，订阅用户将符合条件的卡添加到新的ChatGPT Wallet，然后让他们的dot帮忙购买。",
+   "focus": "link 'add eligible'"
+  },
+  {
+   "en": "The wallet charges the selected card using a payment token, a substitute for the actual card details, so that information is not shared with the dot or the merchant.",
+   "zh": "钱包使用支付令牌（实际卡信息的替代品）向所选卡收费，因此该信息不会与dot或商家共享。",
+   "focus": "th sound in 'that'"
+  },
+  {
+   "en": "The merchant automatically receives what it needs to fulfill the order, like the shipping address and contact information.",
+   "zh": "商家会自动收到完成订单所需的信息，如收货地址和联系方式。",
+   "focus": "final -s in 'needs'"
+  },
+  {
+   "en": "Customers still earn credit card rewards and keep protections like disputing transactions.",
+   "zh": "客户仍可获得信用卡奖励，并保留争议交易等保护。",
+   "focus": "final -s in 'rewards'"
+  },
+  {
+   "en": "The limited launch lets OpenAI test and improve the feature before a broader rollout.",
+   "zh": "有限发布让OpenAI在更广泛推出前测试和改进该功能。",
+   "focus": "link 'before a'"
+  }
+ ],
+ "terms": [
+  {
+   "word": "agents",
+   "zh": "智能体",
+   "note": "指能代替用户执行任务的AI程序，这里叫dots。"
+  },
+  {
+   "word": "payment token",
+   "zh": "支付令牌",
+   "note": "代替真实卡号的代码，用于保护支付信息。"
+  },
+  {
+   "word": "product-market fit",
+   "zh": "产品市场契合",
+   "note": "指产品正好满足市场需求的状态。"
+  },
+  {
+   "word": "checkout",
+   "zh": "结账",
+   "note": "指完成购买的最后一步。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "定语从句 that lets its agents...",
+   "note": "that引导的从句修饰wallet feature，中文习惯把修饰语放前面，容易漏掉that。"
+  },
+  {
+   "line": 5,
+   "point": "非限制性定语从句 which creates...",
+   "note": "which指代前面整个动作，中文常拆成两句，这里用从句保持紧凑。"
+  },
+  {
+   "line": 10,
+   "point": "被动语态 is not shared",
+   "note": "强调信息不被共享，中文常用“不会共享”而省略“被”。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "Who can use the new wallet feature at first?",
+   "options": [
+    "All ChatGPT users",
+    "Some U.S. Pro subscribers with eligible cards",
+    "Only Meta Muse users"
+   ],
+   "answer": 1,
+   "explain": "答案在第三句，提到最初仅限部分美国Pro订阅用户。"
+  },
+  {
+   "q": "What does the payment token do?",
+   "options": [
+    "It stores the user's real card number",
+    "It replaces the actual card details",
+    "It sends the order to Amazon"
+   ],
+   "answer": 1,
+   "explain": "答案在第十句，说明支付令牌是实际卡信息的替代品。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "ChatGPT can now shop for you. On Friday, OpenAI launched a wallet feature that lets its agents, called dots, help you decide what to buy and then complete the purchase for you. The option is initially limited to some U.S. ChatGPT Pro subscribers, ages eighteen and up, with a U.S.-issued Visa, Mastercard, or American Express. OpenAI says users are fully in control, because they can review the items, the total, and the payment card before checkout. Users also approve purchases with a security check like Face ID or a fingerprint, which creates a record of the transaction. This comes as consumer AI tools seek product-market fit, meaning the right way to help people finish tasks more efficiently. DoorDash and Uber report low numbers of orders placed by AI agents, but Meta's Muse, with over ten million users, sees AI-assisted shopping as a top activity. Other personal AI agents, like Instinct, also support making purchases for users. To start, subscribers add eligible cards to the new ChatGPT Wallet, then ask their dot to help with a purchase. The wallet charges the selected card using a payment token, a substitute for the actual card details, so that information is not shared with the dot or the merchant. The merchant automatically receives what it needs to fulfill the order, like the shipping address and contact information. Customers still earn credit card rewards and keep protections like disputing transactions. The limited launch lets OpenAI test and improve the feature before a broader rollout.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+ "date": "2026-11-14",
+ "slot": "am"
+}
