@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-14-pm",
+ "date": "2026-11-14",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+ "headline": "AI graveyard: projects and startups that failed",
+ "audio": "audio/2026-11-14-pm-full.mp3",
+ "duration": 97.9,
+ "wpm": 118.3,
+ "script": "About forty-two percent of AI projects are eventually dropped by the companies that started them. That number comes from S&P Global Market Intelligence. The reasons include weak funding, hard technical problems, competition, and low user demand. Last month, the chatbot platform Character.ai filed for bankruptcy, only five years after it launched. The privacy-focused AI assistant Ollie also announced its shutdown a few weeks ago. Even OpenAI, one of the most valuable private companies, has had its own failures. On July ninth, OpenAI redesigned ChatGPT to combine Chat, Codex, and Work modes into one app. Users found the new interface confusing, so OpenAI soon brought back the old design. It also shut down stand-alone apps and moved their features into ChatGPT. Its AI agent Operator, which could browse the web for users, was folded into ChatGPT too. Apple delayed its improved Siri for years because of engineering issues and bugs. That delay led to a two hundred fifty million dollar settlement over how Apple marketed the iPhone sixteen. Character.ai raised one hundred fifty million dollars in 2023, then Google paid about two point seven billion to license its technology.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "About forty-two percent of AI projects are eventually dropped by the companies that started them.",
+   "zh": "大约百分之四十二的人工智能项目最终被发起它们的公司放弃。",
+   "audio": "audio/2026-11-14-pm-s1.mp3",
+   "duration": 6.5,
+   "focus": "final -s in projects links to are"
+  },
+  {
+   "id": 2,
+   "text": "That number comes from S&P Global Market Intelligence.",
+   "zh": "这个数字来自标普全球市场情报。",
+   "audio": "audio/2026-11-14-pm-s2.mp3",
+   "duration": 4.4,
+   "focus": ""
+  },
+  {
+   "id": 3,
+   "text": "The reasons include weak funding, hard technical problems, competition, and low user demand.",
+   "zh": "原因包括资金不足、技术难题、竞争激烈以及用户需求低迷。",
+   "audio": "audio/2026-11-14-pm-s3.mp3",
+   "duration": 7.8,
+   "focus": "final -s in reasons"
+  },
+  {
+   "id": 4,
+   "text": "Last month, the chatbot platform Character.ai filed for bankruptcy, only five years after it launched.",
+   "zh": "上个月，聊天机器人平台Character.ai申请破产，此时距其上线仅五年。",
+   "audio": "audio/2026-11-14-pm-s4.mp3",
+   "duration": 8.3,
+   "focus": "th in month"
+  },
+  {
+   "id": 5,
+   "text": "The privacy-focused AI assistant Ollie also announced its shutdown a few weeks ago.",
+   "zh": "主打隐私保护的人工智能助手Ollie也在几周前宣布关停。",
+   "audio": "audio/2026-11-14-pm-s5.mp3",
+   "duration": 6.5,
+   "focus": "v in privacy"
+  },
+  {
+   "id": 6,
+   "text": "Even OpenAI, one of the most valuable private companies, has had its own failures.",
+   "zh": "即便是全球估值最高的私营公司之一OpenAI，也有自己的失败案例。",
+   "audio": "audio/2026-11-14-pm-s6.mp3",
+   "duration": 6.5,
+   "focus": "v in valuable"
+  },
+  {
+   "id": 7,
+   "text": "On July ninth, OpenAI redesigned ChatGPT to combine Chat, Codex, and Work modes into one app.",
+   "zh": "7月9日，OpenAI重新设计了ChatGPT，把聊天、Codex和工作三种模式合并到一个应用里。",
+   "audio": "audio/2026-11-14-pm-s7.mp3",
+   "duration": 9.5,
+   "focus": "th in ninth"
+  },
+  {
+   "id": 8,
+   "text": "Users found the new interface confusing, so OpenAI soon brought back the old design.",
+   "zh": "用户觉得新界面令人困惑，于是OpenAI很快恢复了旧版设计。",
+   "audio": "audio/2026-11-14-pm-s8.mp3",
+   "duration": 6.9,
+   "focus": "final -d in found"
+  },
+  {
+   "id": 9,
+   "text": "It also shut down stand-alone apps and moved their features into ChatGPT.",
+   "zh": "它还关停了独立应用，并把它们的功能并入ChatGPT。",
+   "audio": "audio/2026-11-14-pm-s9.mp3",
+   "duration": 6.2,
+   "focus": "final -t in shut"
+  },
+  {
+   "id": 10,
+   "text": "Its AI agent Operator, which could browse the web for users, was folded into ChatGPT too.",
+   "zh": "其能替用户浏览网页的智能体Operator也被并入了ChatGPT。",
+   "audio": "audio/2026-11-14-pm-s10.mp3",
+   "duration": 8.0,
+   "focus": "final -d in folded"
+  },
+  {
+   "id": 11,
+   "text": "Apple delayed its improved Siri for years because of engineering issues and bugs.",
+   "zh": "苹果因工程问题和程序错误，把改进版Siri推迟了多年。",
+   "audio": "audio/2026-11-14-pm-s11.mp3",
+   "duration": 6.1,
+   "focus": "final -s in issues"
+  },
+  {
+   "id": 12,
+   "text": "That delay led to a two hundred fifty million dollar settlement over how Apple marketed the iPhone sixteen.",
+   "zh": "这一推迟最终导致苹果因iPhone 16的营销方式支付了2.5亿美元和解金。",
+   "audio": "audio/2026-11-14-pm-s12.mp3",
+   "duration": 7.9,
+   "focus": "final -d in marketed"
+  },
+  {
+   "id": 13,
+   "text": "Character.ai raised one hundred fifty million dollars in 2023, then Google paid about two point seven billion to license its technology.",
+   "zh": "Character.ai在2023年融资1.5亿美元，之后谷歌支付约27亿美元获得其技术授权。",
+   "audio": "audio/2026-11-14-pm-s13.mp3",
+   "duration": 11.1,
+   "focus": "final -d in raised"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI agent",
+   "zh": "智能体",
+   "note": "能替用户浏览网页、完成任务的软件程序。"
+  },
+  {
+   "word": "bankruptcy",
+   "zh": "破产",
+   "note": "公司无力偿还债务时申请的法律程序。"
+  },
+  {
+   "word": "user retention",
+   "zh": "用户留存",
+   "note": "用户在一段时间后仍继续使用产品的比例。"
+  },
+  {
+   "word": "settlement",
+   "zh": "和解金",
+   "note": "为避免诉讼而支付的赔偿款项。"
+  },
+  {
+   "word": "license",
+   "zh": "授权",
+   "note": "付费获得使用某项技术的权利。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "被动语态 are dropped",
+   "note": "强调项目被公司放弃，中文习惯说“被放弃”，但容易漏掉 are 的时态。"
+  },
+  {
+   "line": 4,
+   "point": "现在完成时 has had",
+   "note": "表示到现在为止的经历，中文说“也有过”，容易漏掉 has。"
+  },
+  {
+   "line": 10,
+   "point": "非限制性定语从句 which could browse",
+   "note": "用 which 补充说明 Operator 的功能，中文常拆成两句，这里要连在一起听。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What percentage of AI projects are abandoned by their companies?",
+   "options": [
+    "About twenty-four percent",
+    "About forty-two percent",
+    "About fifty percent"
+   ],
+   "answer": 1,
+   "explain": "The answer is in the first sentence."
+  },
+  {
+   "q": "Why did OpenAI bring back the old ChatGPT design?",
+   "options": [
+    "Users found the new interface confusing",
+    "The new design cost too much",
+    "The government asked them to"
+   ],
+   "answer": 0,
+   "explain": "The answer is in the eighth sentence."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
