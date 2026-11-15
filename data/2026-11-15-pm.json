@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-15-pm",
+ "date": "2026-11-15",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/podcast/1033948/sony-aibo-robot-dog-version-history",
+ "headline": "Sony's Aibo: a robot dog that became family",
+ "audio": "audio/2026-11-15-pm-full.mp3",
+ "duration": 62.8,
+ "wpm": 145.2,
+ "script": "In the 1990s, Sony was convinced a robot takeover was coming soon. The company believed we would all live among countless humanoid robots. Some of those robots would be coworkers, and others would be friends. At least one of them would be a pet. That pet was exactly what Sony aimed for when it created the Aibo. The Aibo was designed to be part of the family. A recent podcast episode went back in time to tell the Aibo's story. The host was joined by two Verge colleagues to discuss the robot dog. They talked about where this remarkable robot dog came from. They also discussed its impressive success and how long it lasted. The group tried to explain why Aibo had such an effect on its owners. They also asked what Sony got right and wrong about robots. Finally, they wondered whether a robo-pet could ever be a global phenomenon.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "In the 1990s, Sony was convinced a robot takeover was coming soon.",
+   "zh": "上世纪九十年代，索尼坚信机器人时代即将到来。",
+   "audio": "audio/2026-11-15-pm-s1.mp3",
+   "duration": 5.6,
+   "focus": "was convinced 连读，v 音要咬唇"
+  },
+  {
+   "id": 2,
+   "text": "The company believed we would all live among countless humanoid robots.",
+   "zh": "公司相信我们都将生活在无数人形机器人之中。",
+   "audio": "audio/2026-11-15-pm-s2.mp3",
+   "duration": 5.2,
+   "focus": "humanoid 开头 h 要送气"
+  },
+  {
+   "id": 3,
+   "text": "Some of those robots would be coworkers, and others would be friends.",
+   "zh": "其中一些机器人会成为同事，另一些会成为朋友。",
+   "audio": "audio/2026-11-15-pm-s3.mp3",
+   "duration": 4.9,
+   "focus": "would be 连读，d 轻带过"
+  },
+  {
+   "id": 4,
+   "text": "At least one of them would be a pet.",
+   "zh": "至少有一个会成为宠物。",
+   "audio": "audio/2026-11-15-pm-s4.mp3",
+   "duration": 2.5,
+   "focus": "least 结尾 t 要收住"
+  },
+  {
+   "id": 5,
+   "text": "That pet was exactly what Sony aimed for when it created the Aibo.",
+   "zh": "索尼创造 Aibo 时，瞄准的正是这个宠物角色。",
+   "audio": "audio/2026-11-15-pm-s5.mp3",
+   "duration": 4.6,
+   "focus": "created 结尾 -ed 读 /ɪd/"
+  },
+  {
+   "id": 6,
+   "text": "The Aibo was designed to be part of the family.",
+   "zh": "Aibo 被设计成家庭的一员。",
+   "audio": "audio/2026-11-15-pm-s6.mp3",
+   "duration": 3.3,
+   "focus": "part of 连读，t 轻弹"
+  },
+  {
+   "id": 7,
+   "text": "A recent podcast episode went back in time to tell the Aibo's story.",
+   "zh": "最近一期播客节目回顾过去，讲述了 Aibo 的故事。",
+   "audio": "audio/2026-11-15-pm-s7.mp3",
+   "duration": 5.1,
+   "focus": "episode 结尾 d 别丢"
+  },
+  {
+   "id": 8,
+   "text": "The host was joined by two Verge colleagues to discuss the robot dog.",
+   "zh": "主持人与两位 Verge 同事一起讨论了这只机器狗。",
+   "audio": "audio/2026-11-15-pm-s8.mp3",
+   "duration": 4.9,
+   "focus": "joined 结尾 -ed 读 /d/"
+  },
+  {
+   "id": 9,
+   "text": "They talked about where this remarkable robot dog came from.",
+   "zh": "他们谈到了这只了不起的机器狗从何而来。",
+   "audio": "audio/2026-11-15-pm-s9.mp3",
+   "duration": 4.2,
+   "focus": "remarkable 的 r 别读成 l"
+  },
+  {
+   "id": 10,
+   "text": "They also discussed its impressive success and how long it lasted.",
+   "zh": "他们还讨论了它令人瞩目的成功以及它持续了多久。",
+   "audio": "audio/2026-11-15-pm-s10.mp3",
+   "duration": 4.8,
+   "focus": "lasted 结尾 -ed 读 /ɪd/"
+  },
+  {
+   "id": 11,
+   "text": "The group tried to explain why Aibo had such an effect on its owners.",
+   "zh": "这群人试图解释 Aibo 为何对主人有如此大的影响。",
+   "audio": "audio/2026-11-15-pm-s11.mp3",
+   "duration": 5.2,
+   "focus": "effect on 连读，t 轻带"
+  },
+  {
+   "id": 12,
+   "text": "They also asked what Sony got right and wrong about robots.",
+   "zh": "他们还追问索尼在机器人上做对了什么、做错了什么。",
+   "audio": "audio/2026-11-15-pm-s12.mp3",
+   "duration": 4.3,
+   "focus": "right and 连读，t 轻弹"
+  },
+  {
+   "id": 13,
+   "text": "Finally, they wondered whether a robo-pet could ever be a global phenomenon.",
+   "zh": "最后，他们想知道机器宠物是否有可能成为全球现象。",
+   "audio": "audio/2026-11-15-pm-s13.mp3",
+   "duration": 6.0,
+   "focus": "whether 的 th 咬舌"
+  }
+ ],
+ "terms": [
+  {
+   "word": "humanoid",
+   "zh": "人形的",
+   "note": "指外形和动作像人的机器人。"
+  },
+  {
+   "word": "robot takeover",
+   "zh": "机器人接管",
+   "note": "指机器人取代人类工作和生活的设想。"
+  },
+  {
+   "word": "robo-pet",
+   "zh": "机器宠物",
+   "note": "指像宠物一样陪伴人的电子设备。"
+  },
+  {
+   "word": "phenomenon",
+   "zh": "现象",
+   "note": "指广受关注、影响很大的事物。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "过去将来时 would live",
+   "note": "表示从过去看未来会发生的事，中文常直接说“将”，容易漏掉 would。"
+  },
+  {
+   "line": 6,
+   "point": "被动语态 was designed to be",
+   "note": "强调设计目的而非设计者，中文习惯说“被设计成”，注意 to be 不能省。"
+  },
+  {
+   "line": 11,
+   "point": "had such an effect on",
+   "note": "have an effect on 是固定搭配，effect 可数，前面要加 an，中文容易漏冠词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Sony believe in the 1990s?",
+   "options": [
+    "A robot takeover was coming soon",
+    "Pets would replace robots",
+    "Aibo would fail"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句，Sony was convinced a robot takeover was coming soon。"
+  },
+  {
+   "q": "What did the podcast hosts try to explain?",
+   "options": [
+    "How to build a robot",
+    "Why Aibo affected its owners so much",
+    "When Sony stopped making robots"
+   ],
+   "answer": 1,
+   "explain": "答案在第十一句，他们试图解释 Aibo 为何对主人有如此大的影响。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
