@@ -1,0 +1,176 @@
+{
+ "id": "2026-11-15-am",
+ "date": "2026-11-15",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+ "headline": "Nvidia security team questions after CEO exit",
+ "audio": "audio/2026-11-15-am-full.mp3",
+ "duration": 81.4,
+ "wpm": 119.4,
+ "script": "Nvidia's chief security officer and head of product security stepped down in August. Two and a half months later, CEO Jensen Huang left the company over questions about his extramarital relationships. Those questions started with an executive at Megaspeed, a Singapore data center company. U.S. investigators suspect Megaspeed of funneling Nvidia chips to China. The questions then widened to reports about two separate affairs with Nvidia employees. David Reber, who spent four years as CSO, said he was leaving for health reasons. He disclosed that he had been diagnosed with young-onset Parkinson's more than two years earlier. His replacement, Saša Zdjelar, previously spent seventeen years at ExxonMobil in Houston. Nothing public connects these role changes to the Megaspeed matter. Security specialists say any affair can give a foreign intelligence service leverage over an executive. Retired intelligence officer Nicholas Eftimiades says spotting such clues is especially difficult. He says security teams are often underfunded because they do not drive revenue.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Nvidia's chief security officer and head of product security stepped down in August.",
+   "zh": "英伟达的首席安全官兼产品安全负责人于八月离职。",
+   "audio": "audio/2026-11-15-am-s1.mp3",
+   "duration": 6.6,
+   "focus": "final -ed in stepped"
+  },
+  {
+   "id": 2,
+   "text": "Two and a half months later, CEO Jensen Huang left the company over questions about his extramarital relationships.",
+   "zh": "两个半月后，首席执行官黄仁勋因婚外情问题离开公司。",
+   "audio": "audio/2026-11-15-am-s2.mp3",
+   "duration": 8.8,
+   "focus": "link left the"
+  },
+  {
+   "id": 3,
+   "text": "Those questions started with an executive at Megaspeed, a Singapore data center company.",
+   "zh": "这些问题始于新加坡数据中心公司Megaspeed的一名高管。",
+   "audio": "audio/2026-11-15-am-s3.mp3",
+   "duration": 6.4,
+   "focus": "th in those"
+  },
+  {
+   "id": 4,
+   "text": "U.S. investigators suspect Megaspeed of funneling Nvidia chips to China.",
+   "zh": "美国调查人员怀疑Megaspeed将英伟达芯片转运至中国。",
+   "audio": "audio/2026-11-15-am-s4.mp3",
+   "duration": 6.1,
+   "focus": "final -s in chips"
+  },
+  {
+   "id": 5,
+   "text": "The questions then widened to reports about two separate affairs with Nvidia employees.",
+   "zh": "随后问题扩大到有关他与英伟达员工的两段独立婚外情的报道。",
+   "audio": "audio/2026-11-15-am-s5.mp3",
+   "duration": 6.5,
+   "focus": "final -s in reports"
+  },
+  {
+   "id": 6,
+   "text": "David Reber, who spent four years as CSO, said he was leaving for health reasons.",
+   "zh": "担任首席安全官四年的David Reber表示，他因健康原因离职。",
+   "audio": "audio/2026-11-15-am-s6.mp3",
+   "duration": 6.6,
+   "focus": "v in David"
+  },
+  {
+   "id": 7,
+   "text": "He disclosed that he had been diagnosed with young-onset Parkinson's more than two years earlier.",
+   "zh": "他透露，两年多前他被诊断出早发性帕金森病。",
+   "audio": "audio/2026-11-15-am-s7.mp3",
+   "duration": 6.2,
+   "focus": "final -ed in diagnosed"
+  },
+  {
+   "id": 8,
+   "text": "His replacement, Saša Zdjelar, previously spent seventeen years at ExxonMobil in Houston.",
+   "zh": "他的继任者Saša Zdjelar此前在休斯顿的埃克森美孚工作了十七年。",
+   "audio": "audio/2026-11-15-am-s8.mp3",
+   "duration": 7.2,
+   "focus": "v in previously"
+  },
+  {
+   "id": 9,
+   "text": "Nothing public connects these role changes to the Megaspeed matter.",
+   "zh": "没有公开信息将这些职位变动与Megaspeed事件联系起来。",
+   "audio": "audio/2026-11-15-am-s9.mp3",
+   "duration": 4.5,
+   "focus": "th in Nothing"
+  },
+  {
+   "id": 10,
+   "text": "Security specialists say any affair can give a foreign intelligence service leverage over an executive.",
+   "zh": "安全专家表示，任何婚外情都可能让外国情报机构获得对高管的把柄。",
+   "audio": "audio/2026-11-15-am-s10.mp3",
+   "duration": 7.5,
+   "focus": "v in service"
+  },
+  {
+   "id": 11,
+   "text": "Retired intelligence officer Nicholas Eftimiades says spotting such clues is especially difficult.",
+   "zh": "退休情报官员Nicholas Eftimiades表示，发现这类线索尤其困难。",
+   "audio": "audio/2026-11-15-am-s11.mp3",
+   "duration": 7.6,
+   "focus": "final -s in clues"
+  },
+  {
+   "id": 12,
+   "text": "He says security teams are often underfunded because they do not drive revenue.",
+   "zh": "他说，安全团队往往资金不足，因为他们不直接创造收入。",
+   "audio": "audio/2026-11-15-am-s12.mp3",
+   "duration": 5.4,
+   "focus": "final -ed in underfunded"
+  }
+ ],
+ "terms": [
+  {
+   "word": "chief security officer",
+   "zh": "首席安全官",
+   "note": "公司里负责整体安全事务的最高管理者。"
+  },
+  {
+   "word": "extramarital relationships",
+   "zh": "婚外情",
+   "note": "指已婚者与配偶以外的人发生的亲密关系。"
+  },
+  {
+   "word": "leverage",
+   "zh": "把柄",
+   "note": "这里指用来胁迫或影响他人的筹码。"
+  },
+  {
+   "word": "underfunded",
+   "zh": "资金不足的",
+   "note": "指获得的预算不够，资源有限。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "过去分词短语 over questions about...",
+   "note": "用over引出离职原因，中文常说“因……而”，容易漏掉介词over。"
+  },
+  {
+   "line": 6,
+   "point": "非限制性定语从句 who spent four years as CSO",
+   "note": "用who补充说明David Reber的身份，中文习惯拆成短句，容易漏掉关系代词。"
+  },
+  {
+   "line": 7,
+   "point": "过去完成时 had been diagnosed",
+   "note": "表示诊断发生在离职之前，中文用“早在……就”表达，容易误用一般过去时。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "When did Nvidia's chief security officer step down?",
+   "options": [
+    "In August",
+    "In November",
+    "Two years ago"
+   ],
+   "answer": 0,
+   "explain": "答案在第一条，明确说八月离职。"
+  },
+  {
+   "q": "Why does Eftimiades say security teams are often underfunded?",
+   "options": [
+    "They lack trained staff",
+    "They do not drive revenue",
+    "They report to HR"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一条，他说安全团队不直接创造收入。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

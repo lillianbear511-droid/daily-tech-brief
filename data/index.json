@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-15T03:56:19",
+ "updated": "2026-11-15T10:50:44",
  "days": [
+  {
+   "id": "2026-11-15-am",
+   "date": "2026-11-15",
+   "slot": "am",
+   "headline": "Nvidia security team questions after CEO exit",
+   "source": "TECHCRUNCH",
+   "duration": 81.4,
+   "sentences": 12
+  },
   {
    "id": "2026-11-14-pm",
    "date": "2026-11-14",
