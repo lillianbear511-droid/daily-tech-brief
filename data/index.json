@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-16T10:53:19",
+ "updated": "2026-11-17T07:04:51",
  "days": [
+  {
+   "id": "2026-11-17-am",
+   "date": "2026-11-17",
+   "slot": "am",
+   "headline": "Apple adds Mac security controls for AI agents",
+   "source": "TECHCRUNCH",
+   "duration": 85.1,
+   "sentences": 13
+  },
   {
    "id": "2026-11-16-am",
    "date": "2026-11-16",

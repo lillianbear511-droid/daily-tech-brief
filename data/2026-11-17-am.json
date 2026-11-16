@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-17-am",
+ "date": "2026-11-17",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/16/apple-reveals-new-mac-security-controls-as-ai-agents-raise-privacy-risks/",
+ "headline": "Apple adds Mac security controls for AI agents",
+ "audio": "audio/2026-11-17-am-full.mp3",
+ "duration": 85.1,
+ "wpm": 124.1,
+ "script": "Apple announced new Mac security controls on Monday to protect user data from AI agents. These agents are apps that can act across the operating system on a user's behalf. Unlike chatbots that only answer questions, agents can take actions on files and apps. Apple warned that granting an app full disk access puts all Mac data at risk. The company has benefited from sales of Mac minis used to run local AI models. To balance these interests, Apple said in October it would revise some security settings. Two incidents involving AI agents preceded the announcement. A journalist claimed Meta's Muse app read private messages without consent. A separate report cited a flaw in ChatGPT's Mac app that could expose sensitive data. Apple is splitting Device Control and Data Access into two separate settings. Users will now grant permissions by selecting the requested app from a single list. A new option lets users set apps to ask for permission every time access is needed. The changes arrive with macOS 27.3 and give users more control and information.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Apple announced new Mac security controls on Monday to protect user data from AI agents.",
+   "zh": "苹果周一宣布了新的Mac安全控制措施，以保护用户数据免受AI智能体的影响。",
+   "audio": "audio/2026-11-17-am-s1.mp3",
+   "duration": 7.1,
+   "focus": "final -s in controls"
+  },
+  {
+   "id": 2,
+   "text": "These agents are apps that can act across the operating system on a user's behalf.",
+   "zh": "这些智能体是能代表用户在操作系统上执行操作的应用程序。",
+   "audio": "audio/2026-11-17-am-s2.mp3",
+   "duration": 5.9,
+   "focus": "linking act across"
+  },
+  {
+   "id": 3,
+   "text": "Unlike chatbots that only answer questions, agents can take actions on files and apps.",
+   "zh": "与只回答问题的聊天机器人不同，智能体可以对文件和应用程序采取操作。",
+   "audio": "audio/2026-11-17-am-s3.mp3",
+   "duration": 6.9,
+   "focus": "th in unlike"
+  },
+  {
+   "id": 4,
+   "text": "Apple warned that granting an app full disk access puts all Mac data at risk.",
+   "zh": "苹果警告说，授予应用完全磁盘访问权限会使所有Mac数据面临风险。",
+   "audio": "audio/2026-11-17-am-s4.mp3",
+   "duration": 6.4,
+   "focus": "final -k in disk"
+  },
+  {
+   "id": 5,
+   "text": "The company has benefited from sales of Mac minis used to run local AI models.",
+   "zh": "该公司从用于运行本地AI模型的Mac mini销售中获益。",
+   "audio": "audio/2026-11-17-am-s5.mp3",
+   "duration": 6.3,
+   "focus": "v in used"
+  },
+  {
+   "id": 6,
+   "text": "To balance these interests, Apple said in October it would revise some security settings.",
+   "zh": "为了平衡这些利益，苹果在十月份表示将修改一些安全设置。",
+   "audio": "audio/2026-11-17-am-s6.mp3",
+   "duration": 6.5,
+   "focus": "th in October"
+  },
+  {
+   "id": 7,
+   "text": "Two incidents involving AI agents preceded the announcement.",
+   "zh": "在宣布之前发生了两起涉及AI智能体的事件。",
+   "audio": "audio/2026-11-17-am-s7.mp3",
+   "duration": 5.0,
+   "focus": "final -d in preceded"
+  },
+  {
+   "id": 8,
+   "text": "A journalist claimed Meta's Muse app read private messages without consent.",
+   "zh": "一名记者声称Meta的Muse应用未经同意读取了私人信息。",
+   "audio": "audio/2026-11-17-am-s8.mp3",
+   "duration": 5.9,
+   "focus": "final -t in consent"
+  },
+  {
+   "id": 9,
+   "text": "A separate report cited a flaw in ChatGPT's Mac app that could expose sensitive data.",
+   "zh": "另一份报告指出ChatGPT的Mac应用存在漏洞，可能泄露敏感数据。",
+   "audio": "audio/2026-11-17-am-s9.mp3",
+   "duration": 6.7,
+   "focus": "th in ChatGPT"
+  },
+  {
+   "id": 10,
+   "text": "Apple is splitting Device Control and Data Access into two separate settings.",
+   "zh": "苹果正在将设备控制和数据访问拆分为两个独立的设置。",
+   "audio": "audio/2026-11-17-am-s10.mp3",
+   "duration": 6.0,
+   "focus": "linking split into"
+  },
+  {
+   "id": 11,
+   "text": "Users will now grant permissions by selecting the requested app from a single list.",
+   "zh": "用户现在将通过从单一列表中选择请求的应用来授予权限。",
+   "audio": "audio/2026-11-17-am-s11.mp3",
+   "duration": 6.0,
+   "focus": "final -t in grant"
+  },
+  {
+   "id": 12,
+   "text": "A new option lets users set apps to ask for permission every time access is needed.",
+   "zh": "一个新选项允许用户设置应用在每次需要访问时都请求权限。",
+   "audio": "audio/2026-11-17-am-s12.mp3",
+   "duration": 6.5,
+   "focus": "linking ask for"
+  },
+  {
+   "id": 13,
+   "text": "The changes arrive with macOS 27.3 and give users more control and information.",
+   "zh": "这些变化随macOS 27.3推出，为用户提供更多控制和信息。",
+   "audio": "audio/2026-11-17-am-s13.mp3",
+   "duration": 7.8,
+   "focus": "final -s in changes"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI agents",
+   "zh": "AI智能体",
+   "note": "指能代表用户在设备上执行操作的软件，而不只是回答问题。"
+  },
+  {
+   "word": "full disk access",
+   "zh": "完全磁盘访问权限",
+   "note": "一种权限，允许应用读取和修改Mac上的所有文件。"
+  },
+  {
+   "word": "operating system",
+   "zh": "操作系统",
+   "note": "管理硬件和软件资源的基础软件，如macOS。"
+  },
+  {
+   "word": "permissions",
+   "zh": "权限",
+   "note": "控制应用可以访问哪些数据和功能的设置。"
+  },
+  {
+   "word": "macOS 27.3",
+   "zh": "macOS 27.3",
+   "note": "苹果Mac电脑操作系统的版本号。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "不定式表目的 to protect",
+   "note": "用不定式说明宣布措施的目的，中文常直接说“为了”，容易漏掉to。"
+  },
+  {
+   "line": 3,
+   "point": "现在分词作定语 that only answer questions",
+   "note": "定语从句修饰chatbots，中文习惯把修饰语放在名词前，这里要放在后面。"
+  },
+  {
+   "line": 6,
+   "point": "宾语从句 it would revise",
+   "note": "said后接宾语从句，用would表示过去将来，中文容易误用will。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Apple announce on Monday?",
+   "options": [
+    "New Mac security controls",
+    "A new AI chatbot",
+    "A new Mac model"
+   ],
+   "answer": 0,
+   "explain": "第一句直接说明苹果宣布了新的Mac安全控制措施。"
+  },
+  {
+   "q": "What does the new option allow users to do?",
+   "options": [
+    "Run AI agents without any permissions",
+    "Set apps to ask for permission every time",
+    "Disable all security settings"
+   ],
+   "answer": 1,
+   "explain": "倒数第二句提到新选项允许用户设置应用每次需要访问时都请求权限。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
