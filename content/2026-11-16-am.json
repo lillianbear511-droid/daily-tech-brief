@@ -1,0 +1,146 @@
+{
+ "headline": "Indian chip startup Bharat Semi raises $24M for AI sensors",
+ "lines": [
+  {
+   "en": "Indian chip startup Bharat Semi has raised twenty-four million dollars in seed funding.",
+   "zh": "印度芯片初创公司Bharat Semi完成了2400万美元的种子轮融资。",
+   "focus": "raised ends with a clear -d sound"
+  },
+  {
+   "en": "The money will help it develop AI-enabled image sensors for customers in the United States and elsewhere.",
+   "zh": "这笔资金将帮助它开发具备人工智能功能的图像传感器，面向美国及其他地区的客户。",
+   "focus": "AI-enabled links the two words smoothly"
+  },
+  {
+   "en": "An image sensor is a chip that turns light into digital pictures.",
+   "zh": "图像传感器是一种把光转换成数字图像的芯片。",
+   "focus": "turns light links the final s to the l"
+  },
+  {
+   "en": "The nearly five-year-old startup says it has already won design deals with General Atomics and Kaynes Semicon.",
+   "zh": "这家成立近五年的初创公司表示，它已经与通用原子公司和Kaynes Semicon达成了设计合作。",
+   "focus": "has already links the s to the a"
+  },
+  {
+   "en": "Its sensors are still under development, and commercial production is planned for 2027.",
+   "zh": "它的传感器仍在研发中，计划于2027年投入商业化生产。",
+   "focus": "planned ends with a clear -d sound"
+  },
+  {
+   "en": "India has committed billions of dollars to build a domestic chip industry.",
+   "zh": "印度已投入数十亿美元建设本土芯片产业。",
+   "focus": "committed ends with the -ed sound"
+  },
+  {
+   "en": "The country hopes to become an alternative manufacturing hub as companies diversify beyond China.",
+   "zh": "随着企业将供应链从中国分散出去，该国希望成为另一个制造中心。",
+   "focus": "hopes to links the s to the t"
+  },
+  {
+   "en": "Bharat Semi is developing programmable image sensors that combine capture, processing, and AI on one chip.",
+   "zh": "Bharat Semi正在开发可编程图像传感器，把图像采集、处理和人工智能集成在一颗芯片上。",
+   "focus": "that combine links the t to the c"
+  },
+  {
+   "en": "This cuts the need to send visual data to separate processors.",
+   "zh": "这减少了把视觉数据发送到独立处理器的需要。",
+   "focus": "need to links the d to the t"
+  },
+  {
+   "en": "The company says this could lower system costs by at least seventy percent.",
+   "zh": "该公司表示，这可能使系统成本降低至少百分之七十。",
+   "focus": "least seventy links the t to the s"
+  },
+  {
+   "en": "Its first-generation sensors are already being prototyped.",
+   "zh": "其第一代传感器已经进入原型制作阶段。",
+   "focus": "first-generation links the t to the g"
+  },
+  {
+   "en": "More advanced second-generation sensors should reach the prototype stage by mid-2027.",
+   "zh": "更先进的第二代传感器预计将在2027年中期进入原型阶段。",
+   "focus": "reached ends with a clear -d sound"
+  },
+  {
+   "en": "The company plans to use the funding to grow its engineering team and bring its sensors to market.",
+   "zh": "该公司计划用这笔资金扩充工程团队，并把传感器推向市场。",
+   "focus": "bring its links the g to the i"
+  }
+ ],
+ "terms": [
+  {
+   "word": "seed funding",
+   "zh": "种子轮融资",
+   "note": "公司早期拿到的第一笔外部投资，用来把产品做出来。"
+  },
+  {
+   "word": "image sensor",
+   "zh": "图像传感器",
+   "note": "把光线转换成数字图像的芯片，手机和相机里都有。"
+  },
+  {
+   "word": "design win",
+   "zh": "设计中标",
+   "note": "客户决定在产品里采用你的芯片，通常意味着后续订单。"
+  },
+  {
+   "word": "programmable",
+   "zh": "可编程的",
+   "note": "芯片的功能可以通过软件修改，而不是出厂就固定。"
+  },
+  {
+   "word": "system-on-chip",
+   "zh": "片上系统",
+   "note": "把多种功能集成到一颗芯片上的方案。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "现在完成时 has won",
+   "note": "强调到现在为止已经拿到的成果，中文常说“已经”，容易漏掉 has。"
+  },
+  {
+   "line": 5,
+   "point": "被动语态 is planned for",
+   "note": "计划是被动的安排，中文习惯说“计划于”，容易写成主动句。"
+  },
+  {
+   "line": 8,
+   "point": "定语从句 that combine",
+   "note": "that 引导从句修饰 sensors，中文习惯把修饰放在名词前，容易漏掉 that。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Bharat Semi developing?",
+   "options": [
+    "AI-enabled image sensors",
+    "Electric vehicles",
+    "Cloud software"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句和第八句，讲的是图像传感器。"
+  },
+  {
+   "q": "When does the company plan its first commercial production?",
+   "options": [
+    "2024",
+    "2027",
+    "2030"
+   ],
+   "answer": 1,
+   "explain": "答案在第五句，明确说商业化生产计划在2027年。"
+  }
+ ],
+ "recall_prompts": [
+  "What did the company raise?",
+  "What are the sensors used for?",
+  "When will production start?"
+ ],
+ "script": "Indian chip startup Bharat Semi has raised twenty-four million dollars in seed funding. The money will help it develop AI-enabled image sensors for customers in the United States and elsewhere. An image sensor is a chip that turns light into digital pictures. The nearly five-year-old startup says it has already won design deals with General Atomics and Kaynes Semicon. Its sensors are still under development, and commercial production is planned for 2027. India has committed billions of dollars to build a domestic chip industry. The country hopes to become an alternative manufacturing hub as companies diversify beyond China. Bharat Semi is developing programmable image sensors that combine capture, processing, and AI on one chip. This cuts the need to send visual data to separate processors. The company says this could lower system costs by at least seventy percent. Its first-generation sensors are already being prototyped. More advanced second-generation sensors should reach the prototype stage by mid-2027. The company plans to use the funding to grow its engineering team and bring its sensors to market.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+ "date": "2026-11-16",
+ "slot": "am"
+}

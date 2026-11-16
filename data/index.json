@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-16T03:00:21",
+ "updated": "2026-11-16T10:53:19",
  "days": [
+  {
+   "id": "2026-11-16-am",
+   "date": "2026-11-16",
+   "slot": "am",
+   "headline": "Indian chip startup Bharat Semi raises $24M for AI sensors",
+   "source": "TECHCRUNCH",
+   "duration": 86.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-15-pm",
    "date": "2026-11-15",
