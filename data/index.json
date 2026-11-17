@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-17T07:04:51",
+ "updated": "2026-11-18T05:57:00",
  "days": [
+  {
+   "id": "2026-11-17-pm",
+   "date": "2026-11-17",
+   "slot": "pm",
+   "headline": "Google 将 Gemini 聊天记录与 AI 训练分开控制",
+   "source": "ARS TECHNICA",
+   "duration": 82.9,
+   "sentences": 13
+  },
   {
    "id": "2026-11-17-am",
    "date": "2026-11-17",

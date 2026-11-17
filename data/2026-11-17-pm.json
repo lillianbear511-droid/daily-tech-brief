@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-17-pm",
+ "date": "2026-11-17",
+ "slot": "pm",
+ "source": "ARS TECHNICA",
+ "source_url": "https://arstechnica.com/ai/2026/11/google-will-let-you-opt-out-of-ai-training-in-gemini-without-losing-your-history/",
+ "headline": "Google 将 Gemini 聊天记录与 AI 训练分开控制",
+ "audio": "audio/2026-11-17-pm-full.mp3",
+ "duration": 82.9,
+ "wpm": 141.1,
+ "script": "Google now lets Gemini users keep their chat history while blocking AI training on that data. The change is rolling out globally, though it may take a few weeks to reach everyone. Previously, the only way to opt out of training was to turn off your history entirely. That made it impossible to go back and pick up an old chat later. Now users see two separate toggles: one for model training and one for chat history. AI training is opt-out, so you must find the toggle to block Google from using your chats. You can find it under Activity in Gemini settings, or through your Google account's data menu. This control only applies to future interactions with Gemini. Any data you previously fed into Google's AI is already part of the training data. Google says it may retain that data for up to three years to improve its models. Even if you disable history, Google still keeps your data for two months. The company says this helps it respond to users and protect the public from harmful AI use. Despite the longer retention, separating training from history is still a welcome privacy improvement.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Google now lets Gemini users keep their chat history while blocking AI training on that data.",
+   "zh": "谷歌现在允许 Gemini 用户保留聊天记录，同时阻止用这些数据训练人工智能。",
+   "audio": "audio/2026-11-17-pm-s1.mp3",
+   "duration": 7.4,
+   "focus": "th in 'while' and 'that'"
+  },
+  {
+   "id": 2,
+   "text": "The change is rolling out globally, though it may take a few weeks to reach everyone.",
+   "zh": "这一变动正在全球推送，但可能需要几周才能覆盖所有用户。",
+   "audio": "audio/2026-11-17-pm-s2.mp3",
+   "duration": 5.7,
+   "focus": "final -s in 'weeks'"
+  },
+  {
+   "id": 3,
+   "text": "Previously, the only way to opt out of training was to turn off your history entirely.",
+   "zh": "此前，退出训练的唯一办法是完全关闭聊天记录。",
+   "audio": "audio/2026-11-17-pm-s3.mp3",
+   "duration": 6.0,
+   "focus": "link 'out of'"
+  },
+  {
+   "id": 4,
+   "text": "That made it impossible to go back and pick up an old chat later.",
+   "zh": "这导致用户无法回头继续之前的对话。",
+   "audio": "audio/2026-11-17-pm-s4.mp3",
+   "duration": 4.5,
+   "focus": "final -k in 'back'"
+  },
+  {
+   "id": 5,
+   "text": "Now users see two separate toggles: one for model training and one for chat history.",
+   "zh": "现在用户会看到两个独立的开关：一个控制模型训练，一个控制聊天记录。",
+   "audio": "audio/2026-11-17-pm-s5.mp3",
+   "duration": 6.9,
+   "focus": "v in 'separate'"
+  },
+  {
+   "id": 6,
+   "text": "AI training is opt-out, so you must find the toggle to block Google from using your chats.",
+   "zh": "人工智能训练是选择退出制，所以你必须找到开关来阻止谷歌使用你的聊天内容。",
+   "audio": "audio/2026-11-17-pm-s6.mp3",
+   "duration": 6.6,
+   "focus": "link 'block Google'"
+  },
+  {
+   "id": 7,
+   "text": "You can find it under Activity in Gemini settings, or through your Google account's data menu.",
+   "zh": "你可以在 Gemini 设置的“活动”中找到它，也可以通过谷歌账户的数据菜单进入。",
+   "audio": "audio/2026-11-17-pm-s7.mp3",
+   "duration": 6.5,
+   "focus": "th in 'through'"
+  },
+  {
+   "id": 8,
+   "text": "This control only applies to future interactions with Gemini.",
+   "zh": "这一控制只适用于未来与 Gemini 的互动。",
+   "audio": "audio/2026-11-17-pm-s8.mp3",
+   "duration": 4.8,
+   "focus": "final -s in 'applies'"
+  },
+  {
+   "id": 9,
+   "text": "Any data you previously fed into Google's AI is already part of the training data.",
+   "zh": "你之前输入谷歌人工智能的任何数据都已经成为训练数据的一部分。",
+   "audio": "audio/2026-11-17-pm-s9.mp3",
+   "duration": 6.7,
+   "focus": "link 'fed into'"
+  },
+  {
+   "id": 10,
+   "text": "Google says it may retain that data for up to three years to improve its models.",
+   "zh": "谷歌表示，它可能保留这些数据最多三年，用于改进模型。",
+   "audio": "audio/2026-11-17-pm-s10.mp3",
+   "duration": 5.7,
+   "focus": "th in 'three'"
+  },
+  {
+   "id": 11,
+   "text": "Even if you disable history, Google still keeps your data for two months.",
+   "zh": "即使你关闭聊天记录，谷歌仍会保留你的数据两个月。",
+   "audio": "audio/2026-11-17-pm-s11.mp3",
+   "duration": 5.3,
+   "focus": "link 'keeps your'"
+  },
+  {
+   "id": 12,
+   "text": "The company says this helps it respond to users and protect the public from harmful AI use.",
+   "zh": "该公司表示，这有助于它回应用户并保护公众免受有害人工智能使用的影响。",
+   "audio": "audio/2026-11-17-pm-s12.mp3",
+   "duration": 6.9,
+   "focus": "final -t in 'protect'"
+  },
+  {
+   "id": 13,
+   "text": "Despite the longer retention, separating training from history is still a welcome privacy improvement.",
+   "zh": "尽管保留时间更长，但将训练与聊天记录分开仍是一项值得欢迎的隐私改进。",
+   "audio": "audio/2026-11-17-pm-s13.mp3",
+   "duration": 7.7,
+   "focus": ""
+  }
+ ],
+ "terms": [
+  {
+   "word": "opt-out",
+   "zh": "选择退出",
+   "note": "指默认开启，用户需要主动关闭某项功能。"
+  },
+  {
+   "word": "toggle",
+   "zh": "开关",
+   "note": "指设置里可以切换开或关的按钮。"
+  },
+  {
+   "word": "training data",
+   "zh": "训练数据",
+   "note": "指用来教人工智能模型的数据。"
+  },
+  {
+   "word": "retain",
+   "zh": "保留",
+   "note": "指公司继续保存用户的数据。"
+  },
+  {
+   "word": "chat history",
+   "zh": "聊天记录",
+   "note": "指用户与 Gemini 的对话记录。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "不定式作定语 the way to opt out",
+   "note": "to opt out 修饰 the way，中文常说“退出训练的办法”，容易漏掉 to。"
+  },
+  {
+   "line": 6,
+   "point": "使役结构 block Google from using",
+   "note": "block sb from doing 表示阻止某人做某事，中文学习者容易漏掉 from。"
+  },
+  {
+   "line": 9,
+   "point": "现在完成时 is already part of",
+   "note": "这里用现在完成时强调过去数据对现在的影响，中文用“已经”表达，但容易漏掉 is。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What can users now do that they could not do before?",
+   "options": [
+    "Keep chat history while blocking AI training",
+    "Delete all past training data",
+    "Turn off Gemini completely"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句和第五句，说明聊天记录与训练已分开控制。"
+  },
+  {
+   "q": "How long does Google keep data if a user disables history under the new settings?",
+   "options": [
+    "72 hours",
+    "Two months",
+    "Three years"
+   ],
+   "answer": 1,
+   "explain": "答案在第十一句，明确说关闭记录后仍保留两个月。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
