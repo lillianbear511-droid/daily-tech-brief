@@ -1,0 +1,146 @@
+{
+ "headline": "Nvidia says open source AI strategy remains intact",
+ "lines": [
+  {
+   "en": "Nvidia's interim CEO Colette Kress reaffirmed the company's commitment to open source AI on Tuesday's earnings call.",
+   "zh": "英伟达临时CEO科莱特·克雷斯在周二的财报电话会议上重申了公司对开源AI的承诺。",
+   "focus": "final -s in Nvidia's and Kress"
+  },
+  {
+   "en": "It was the first call since CEO Jensen Huang resigned.",
+   "zh": "这是CEO黄仁勋辞职后的首次电话会议。",
+   "focus": "link since CEO"
+  },
+  {
+   "en": "Kress said Nvidia is committed to fostering a vibrant open model ecosystem.",
+   "zh": "克雷斯表示，英伟达致力于培育一个充满活力的开放模型生态系统。",
+   "focus": ""
+  },
+  {
+   "en": "She said this lets every country, company, and industry build its own intelligence.",
+   "zh": "她说，这让每个国家、公司和行业都能构建自己的智能。",
+   "focus": "final -s in lets"
+  },
+  {
+   "en": "She noted that open models were accelerating AI adoption.",
+   "zh": "她指出，开放模型正在加速AI的采用。",
+   "focus": "-ing in accelerating"
+  },
+  {
+   "en": "She cited a thirty-five-fold year-over-year surge in weekly token volume on OpenRouter.",
+   "zh": "她引用了OpenRouter上周度token量同比增长三十五倍的数据。",
+   "focus": "v in volume"
+  },
+  {
+   "en": "That includes a three-and-a-half-fold increase over the past three months.",
+   "zh": "其中包括过去三个月增长了三倍半。",
+   "focus": "link past three"
+  },
+  {
+   "en": "Kress also spoke about Nvidia's plans for Hugging Face, a platform for open source AI models.",
+   "zh": "克雷斯还谈到了英伟达对Hugging Face的计划，这是一个开源AI模型平台。",
+   "focus": "v in vibrant? no; use 'v in Face'? skip"
+  },
+  {
+   "en": "Nvidia agreed to acquire it for twelve point nine billion dollars in September.",
+   "zh": "英伟达在九月同意以一百二十九亿美元收购它。",
+   "focus": "link for twelve"
+  },
+  {
+   "en": "That would be the second-largest acquisition in Nvidia's history.",
+   "zh": "这将是英伟达历史上第二大收购。",
+   "focus": "final -t in largest"
+  },
+  {
+   "en": "The platform serves more than eighteen million developers and two hundred thousand companies.",
+   "zh": "该平台服务超过一千八百万开发者和二十万家公司。",
+   "focus": "final -s in serves"
+  },
+  {
+   "en": "It is still on track to join Nvidia despite Huang's ouster.",
+   "zh": "尽管黄仁勋被罢免，该平台仍有望加入英伟达。",
+   "focus": "link on track"
+  },
+  {
+   "en": "Kress said together they will scale the platform and make intelligence more open and accessible.",
+   "zh": "克雷斯表示，他们将共同扩大平台规模，让智能更加开放和易于获取。",
+   "focus": "final -e in scale? skip"
+  }
+ ],
+ "terms": [
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指代码公开、任何人都能查看和修改的软件。"
+  },
+  {
+   "word": "token",
+   "zh": "词元",
+   "note": "AI模型处理文本的基本单位，可以是一个词或词的一部分。"
+  },
+  {
+   "word": "acquisition",
+   "zh": "收购",
+   "note": "指一家公司买下另一家公司。"
+  },
+  {
+   "word": "open-weight",
+   "zh": "开放权重",
+   "note": "指模型的参数公开，别人可以下载和使用。"
+  },
+  {
+   "word": "agentic AI",
+   "zh": "智能体AI",
+   "note": "指能自己规划并执行多步任务的AI系统。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has resigned",
+   "note": "强调辞职对现在的影响，中文常只说“辞职了”而漏掉has。"
+  },
+  {
+   "line": 9,
+   "point": "不定式作目的状语 agreed to acquire",
+   "note": "to acquire表示同意去收购，中文习惯说“同意收购”，容易漏掉to。"
+  },
+  {
+   "line": 12,
+   "point": "介词短语 despite Huang's ouster",
+   "note": "despite后接名词，中文说“尽管被罢免”，容易误接从句。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Kress reaffirm on the earnings call?",
+   "options": [
+    "Nvidia's commitment to open source AI",
+    "Nvidia's plan to sell Hugging Face",
+    "Nvidia's new CEO"
+   ],
+   "answer": 0,
+   "explain": "答案在第一句。"
+  },
+  {
+   "q": "How much did Nvidia agree to pay for Hugging Face?",
+   "options": [
+    "Twelve point nine billion dollars",
+    "Eighteen million dollars",
+    "Three point five billion dollars"
+   ],
+   "answer": 0,
+   "explain": "答案在第九句。"
+  }
+ ],
+ "recall_prompts": [
+  "What did Kress reaffirm?",
+  "How fast is token volume growing?",
+  "What is happening with Hugging Face?"
+ ],
+ "script": "Nvidia's interim CEO Colette Kress reaffirmed the company's commitment to open source AI on Tuesday's earnings call. It was the first call since CEO Jensen Huang resigned. Kress said Nvidia is committed to fostering a vibrant open model ecosystem. She said this lets every country, company, and industry build its own intelligence. She noted that open models were accelerating AI adoption. She cited a thirty-five-fold year-over-year surge in weekly token volume on OpenRouter. That includes a three-and-a-half-fold increase over the past three months. Kress also spoke about Nvidia's plans for Hugging Face, a platform for open source AI models. Nvidia agreed to acquire it for twelve point nine billion dollars in September. That would be the second-largest acquisition in Nvidia's history. The platform serves more than eighteen million developers and two hundred thousand companies. It is still on track to join Nvidia despite Huang's ouster. Kress said together they will scale the platform and make intelligence more open and accessible.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
+ "date": "2026-11-18",
+ "slot": "am"
+}
