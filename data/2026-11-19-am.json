@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-19-am",
+ "date": "2026-11-19",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+ "headline": "Microsoft CEO explains why 60,000 employees were offered buyouts",
+ "audio": "audio/2026-11-19-am-full.mp3",
+ "duration": 84.6,
+ "wpm": 134.8,
+ "script": "Microsoft CEO Satya Nadella explained Wednesday why he offered buyouts to sixty thousand employees in October. The buyout urged them to voluntarily quit instead of going through another massive layoff. The short answer is AI, but not in the way you might expect. He is not saying he is replacing employees with AI, especially software engineers. He is reorganizing Microsoft so that everyone uses AI to do their work. Their jobs then become focused on managing that AI. He said the buyout made sure everyone felt they had agency in making choices. He described how views on AI in software engineering shifted from doubt to hype and back. Software engineering is very much alive and will thrive, but the work has a new operating point. He said that reorganization is hard for some people but it has to be done. He gave the example of the Cowork team, which has just eleven developers who mastered using AI. They build a software factory that builds the product, rather than building the product themselves. He believes every employee will one day become a manager of agents instead of doing the work directly.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Microsoft CEO Satya Nadella explained Wednesday why he offered buyouts to sixty thousand employees in October.",
+   "zh": "微软首席执行官萨提亚·纳德拉周三解释了为何在十月向六万名员工提供买断方案。",
+   "audio": "audio/2026-11-19-am-s1.mp3",
+   "duration": 8.9,
+   "focus": "th in thousand"
+  },
+  {
+   "id": 2,
+   "text": "The buyout urged them to voluntarily quit instead of going through another massive layoff.",
+   "zh": "该买断方案鼓励他们自愿离职，而不是再经历一次大规模裁员。",
+   "audio": "audio/2026-11-19-am-s2.mp3",
+   "duration": 6.6,
+   "focus": "final t in quit"
+  },
+  {
+   "id": 3,
+   "text": "The short answer is AI, but not in the way you might expect.",
+   "zh": "简短的回答是人工智能，但并非你想象的那种方式。",
+   "audio": "audio/2026-11-19-am-s3.mp3",
+   "duration": 4.2,
+   "focus": ""
+  },
+  {
+   "id": 4,
+   "text": "He is not saying he is replacing employees with AI, especially software engineers.",
+   "zh": "他并不是说要用人工智能取代员工，尤其是软件工程师。",
+   "audio": "audio/2026-11-19-am-s4.mp3",
+   "duration": 6.6,
+   "focus": "v versus w in replacing"
+  },
+  {
+   "id": 5,
+   "text": "He is reorganizing Microsoft so that everyone uses AI to do their work.",
+   "zh": "他正在重组微软，让每个人都用人工智能来完成工作。",
+   "audio": "audio/2026-11-19-am-s5.mp3",
+   "duration": 6.0,
+   "focus": ""
+  },
+  {
+   "id": 6,
+   "text": "Their jobs then become focused on managing that AI.",
+   "zh": "他们的工作随之变成管理这些人工智能。",
+   "audio": "audio/2026-11-19-am-s6.mp3",
+   "duration": 3.7,
+   "focus": "final s in jobs"
+  },
+  {
+   "id": 7,
+   "text": "He said the buyout made sure everyone felt they had agency in making choices.",
+   "zh": "他说买断方案确保每个人都感到自己在做选择时有自主权。",
+   "audio": "audio/2026-11-19-am-s7.mp3",
+   "duration": 5.9,
+   "focus": "linking felt they"
+  },
+  {
+   "id": 8,
+   "text": "He described how views on AI in software engineering shifted from doubt to hype and back.",
+   "zh": "他描述了软件工程领域对人工智能的看法如何从怀疑转向炒作，再回归理性。",
+   "audio": "audio/2026-11-19-am-s8.mp3",
+   "duration": 6.8,
+   "focus": "final t in shifted"
+  },
+  {
+   "id": 9,
+   "text": "Software engineering is very much alive and will thrive, but the work has a new operating point.",
+   "zh": "软件工程依然充满活力并将蓬勃发展，但工作方式有了新的基准点。",
+   "audio": "audio/2026-11-19-am-s9.mp3",
+   "duration": 7.2,
+   "focus": "th in thrive"
+  },
+  {
+   "id": 10,
+   "text": "He said that reorganization is hard for some people but it has to be done.",
+   "zh": "他说这种重组对一些人来说很难，但必须完成。",
+   "audio": "audio/2026-11-19-am-s10.mp3",
+   "duration": 5.1,
+   "focus": "linking but it"
+  },
+  {
+   "id": 11,
+   "text": "He gave the example of the Cowork team, which has just eleven developers who mastered using AI.",
+   "zh": "他以Cowork团队为例，该团队只有十一名开发者，且都已精通使用人工智能。",
+   "audio": "audio/2026-11-19-am-s11.mp3",
+   "duration": 7.4,
+   "focus": "final n in eleven"
+  },
+  {
+   "id": 12,
+   "text": "They build a software factory that builds the product, rather than building the product themselves.",
+   "zh": "他们搭建了一座软件工厂来生产产品，而不是自己直接做产品。",
+   "audio": "audio/2026-11-19-am-s12.mp3",
+   "duration": 6.5,
+   "focus": "th in rather"
+  },
+  {
+   "id": 13,
+   "text": "He believes every employee will one day become a manager of agents instead of doing the work directly.",
+   "zh": "他相信每位员工终有一天会成为智能体的管理者，而不是直接做工作。",
+   "audio": "audio/2026-11-19-am-s13.mp3",
+   "duration": 7.0,
+   "focus": "final t in agent"
+  }
+ ],
+ "terms": [
+  {
+   "word": "buyout",
+   "zh": "买断方案",
+   "note": "公司给员工一笔钱，让员工自愿离职的方案。"
+  },
+  {
+   "word": "layoff",
+   "zh": "裁员",
+   "note": "公司因成本或重组而强制削减岗位。"
+  },
+  {
+   "word": "agent",
+   "zh": "智能体",
+   "note": "能代替人执行任务的AI程序，这里指微软365应用里的AI智能体。"
+  },
+  {
+   "word": "operating point",
+   "zh": "运行基准点",
+   "note": "团队组织和工作方式的新基准，不是硬件术语。"
+  },
+  {
+   "word": "incumbent",
+   "zh": "老牌公司",
+   "note": "指微软这类已有五十一年的成熟企业，而非初创公司。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "why 引导的宾语从句",
+   "note": "explained 后接 why 从句说明原因，中文习惯说“解释了为什么”，容易漏掉连接词 why。"
+  },
+  {
+   "line": 5,
+   "point": "so that 引导目的状语从句",
+   "note": "so that 表示“以便”，中文常直接说“让”，容易漏掉 so that 或误用 for。"
+  },
+  {
+   "line": 11,
+   "point": "which 引导的非限制性定语从句",
+   "note": "which 指代前面的 Cowork team，中文习惯拆成两句，容易漏掉 which 或误用 who。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How many employees were offered buyouts in October?",
+   "options": [
+    "Six thousand",
+    "Sixty thousand",
+    "Eleven thousand"
+   ],
+   "answer": 1,
+   "explain": "答案在第一句，明确说 sixty thousand employees in October。"
+  },
+  {
+   "q": "According to Nadella, what will every employee eventually become?",
+   "options": [
+    "A software engineer",
+    "A manager of agents",
+    "A buyout recipient"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一句，说 every employee will become a manager of agents。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

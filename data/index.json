@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-18T16:00:12",
+ "updated": "2026-11-19T12:18:36",
  "days": [
+  {
+   "id": "2026-11-19-am",
+   "date": "2026-11-19",
+   "slot": "am",
+   "headline": "Microsoft CEO explains why 60,000 employees were offered buyouts",
+   "source": "TECHCRUNCH",
+   "duration": 84.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-18-am",
    "date": "2026-11-18",
