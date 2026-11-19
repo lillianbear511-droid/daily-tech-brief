@@ -1,0 +1,136 @@
+{
+ "headline": "Meta's AI agent Muse mixed up user conversations, report says",
+ "lines": [
+  {
+   "en": "Meta employees say the company's AI agent Muse mixed up conversations across different accounts.",
+   "zh": "Meta员工表示，公司的智能体Muse把不同账户之间的对话搞混了。",
+   "focus": "final -s in accounts"
+  },
+  {
+   "en": "They also worry it exposed private user data, according to a Reuters report on internal posts.",
+   "zh": "据路透社基于内部帖子的报道，他们还担心这泄露了用户的私人数据。",
+   "focus": "linked: worry it"
+  },
+  {
+   "en": "An AI agent is software that acts on its own to carry out tasks for a user.",
+   "zh": "智能体是一种能自主行动、替用户完成任务的软件。",
+   "focus": ""
+  },
+  {
+   "en": "Some employees saw messages about childcare requests they never made.",
+   "zh": "一些员工看到了自己从未发过的育儿请求消息。",
+   "focus": "final -s in requests"
+  },
+  {
+   "en": "Others saw career advice they never asked for, or product orders they never placed.",
+   "zh": "还有人看到了自己从未索取的职业建议，或从未下过的商品订单。",
+   "focus": ""
+  },
+  {
+   "en": "One employee said Muse randomly posted bank balances that did not belong to them.",
+   "zh": "一名员工说，Muse随意发出了并不属于他们的银行余额。",
+   "focus": "th in them"
+  },
+  {
+   "en": "Another employee got a reminder to answer her sister on Signal, an encrypted messaging app.",
+   "zh": "另一名员工收到提醒，要她回复姐姐在加密通讯应用Signal上的消息。",
+   "focus": "final -r in sister"
+  },
+  {
+   "en": "She said she never granted access to other apps and did not recall being asked.",
+   "zh": "她说自己从未授权它访问其他应用，也不记得被问过。",
+   "focus": "final -d in granted"
+  },
+  {
+   "en": "A Meta spokesperson said employee testing is core to product development.",
+   "zh": "Meta的一位发言人说，员工测试是产品开发的核心环节。",
+   "focus": ""
+  },
+  {
+   "en": "The spokesperson said the point is to get feedback and add safety and privacy protections.",
+   "zh": "这位发言人说，目的是获取反馈，并加入安全和隐私保护。",
+   "focus": "final -s in protections"
+  },
+  {
+   "en": "The spokesperson added that employees use different versions of Muse than the public.",
+   "zh": "这位发言人还补充说，员工使用的Muse版本与公众不同。",
+   "focus": "th in than"
+  },
+  {
+   "en": "Muse launched in September and has over ten million downloads.",
+   "zh": "Muse于九月上线，下载量已超过一千万次。",
+   "focus": "final -s in downloads"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI agent",
+   "zh": "智能体",
+   "note": "指能自主替用户执行任务的软件程序。"
+  },
+  {
+   "word": "encrypted",
+   "zh": "加密的",
+   "note": "指消息内容被编码，只有收发双方能读懂。"
+  },
+  {
+   "word": "privacy protections",
+   "zh": "隐私保护",
+   "note": "指防止用户私人数据被看到或滥用的措施。"
+  },
+  {
+   "word": "downloads",
+   "zh": "下载量",
+   "note": "指这款应用被安装到设备上的次数。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "定语从句 they never made",
+   "note": "省略了that，修饰前面的requests；中文习惯把修饰语放前面，容易漏掉这层关系。"
+  },
+  {
+   "line": 8,
+   "point": "动名词 being asked",
+   "note": "recall后接动名词表示记得做过某事；中文说“记得被问过”，容易误用不定式。"
+  },
+  {
+   "line": 11,
+   "point": "比较结构 different ... than",
+   "note": "than引出比较对象；中文用“与……不同”，容易漏掉than或误用from。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did some employees say Muse did with their data?",
+   "options": [
+    "It deleted their accounts",
+    "It showed messages and balances that were not theirs",
+    "It charged them for downloads"
+   ],
+   "answer": 1,
+   "explain": "答案在第四到第六句，讲员工看到不属于自己的消息和余额。"
+  },
+  {
+   "q": "How did Meta respond to the concerns?",
+   "options": [
+    "It shut down Muse",
+    "It said employee testing is core to development",
+    "It denied that Muse exists"
+   ],
+   "answer": 1,
+   "explain": "答案在第九、十句，发言人说明员工测试是开发核心。"
+  }
+ ],
+ "recall_prompts": [
+  "What went wrong with Muse?",
+  "What did Meta say about it?",
+  "How big is Muse?"
+ ],
+ "script": "Meta employees say the company's AI agent Muse mixed up conversations across different accounts. They also worry it exposed private user data, according to a Reuters report on internal posts. An AI agent is software that acts on its own to carry out tasks for a user. Some employees saw messages about childcare requests they never made. Others saw career advice they never asked for, or product orders they never placed. One employee said Muse randomly posted bank balances that did not belong to them. Another employee got a reminder to answer her sister on Signal, an encrypted messaging app. She said she never granted access to other apps and did not recall being asked. A Meta spokesperson said employee testing is core to product development. The spokesperson said the point is to get feedback and add safety and privacy protections. The spokesperson added that employees use different versions of Muse than the public. Muse launched in September and has over ten million downloads.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+ "date": "2026-11-19",
+ "slot": "pm"
+}
