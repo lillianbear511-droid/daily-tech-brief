@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-20T05:51:01",
+ "updated": "2026-11-20T15:49:54",
  "days": [
+  {
+   "id": "2026-11-20-am",
+   "date": "2026-11-20",
+   "slot": "am",
+   "headline": "Apple may be building its own AI agent for the Mac",
+   "source": "TECHCRUNCH",
+   "duration": 89.3,
+   "sentences": 13
+  },
   {
    "id": "2026-11-19-pm",
    "date": "2026-11-19",

@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-20-am",
+ "date": "2026-11-20",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+ "headline": "Apple may be building its own AI agent for the Mac",
+ "audio": "audio/2026-11-20-am-full.mp3",
+ "duration": 89.3,
+ "wpm": 131.0,
+ "script": "Apple appears to be developing its own AI agent that can do computer work for users. That includes using apps, visiting websites, and writing code. Bloomberg first reported the news after spotting a recent Apple job listing. The listing was for a senior engineering manager to oversee an AI agent that can use a computer. The posting describes an agent that browses the web, works across apps, and runs commands. It also writes and debugs code, calls services, and picks the right tool for each step. The posting says the agent should do all this privately and with Apple's usual polish. Agents that can do computer work have become one of the hottest products in tech this past year. Anthropic and OpenAI have launched such services, and Meta recently launched its Muse agent line. Apple is also making it much harder for third-party agents to get total control of its computers. Its upcoming macOS 27.3 will warn users before they grant full access to third-party agents. Bloomberg says Apple has considered launching the service as soon as the end of next year. But progress on the in-house agent remains in the early stages.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Apple appears to be developing its own AI agent that can do computer work for users.",
+   "zh": "苹果似乎正在开发自己的智能体，可以替用户完成电脑上的工作。",
+   "audio": "audio/2026-11-20-am-s1.mp3",
+   "duration": 6.5,
+   "focus": "appears to 连读"
+  },
+  {
+   "id": 2,
+   "text": "That includes using apps, visiting websites, and writing code.",
+   "zh": "这包括使用应用、访问网站和编写代码。",
+   "audio": "audio/2026-11-20-am-s2.mp3",
+   "duration": 4.9,
+   "focus": "includes 的 -s 结尾"
+  },
+  {
+   "id": 3,
+   "text": "Bloomberg first reported the news after spotting a recent Apple job listing.",
+   "zh": "彭博社最先报道了这一消息，此前它发现苹果最近发布了一则招聘启事。",
+   "audio": "audio/2026-11-20-am-s3.mp3",
+   "duration": 5.8,
+   "focus": "reported 的 -ed 结尾"
+  },
+  {
+   "id": 4,
+   "text": "The listing was for a senior engineering manager to oversee an AI agent that can use a computer.",
+   "zh": "这则启事招聘一名高级工程经理，负责监管一个能使用电脑的智能体。",
+   "audio": "audio/2026-11-20-am-s4.mp3",
+   "duration": 7.4,
+   "focus": "that 的 th 音"
+  },
+  {
+   "id": 5,
+   "text": "The posting describes an agent that browses the web, works across apps, and runs commands.",
+   "zh": "启事描述了一个能浏览网页、跨应用工作并运行命令的智能体。",
+   "audio": "audio/2026-11-20-am-s5.mp3",
+   "duration": 7.2,
+   "focus": "browses 的 -s 结尾"
+  },
+  {
+   "id": 6,
+   "text": "It also writes and debugs code, calls services, and picks the right tool for each step.",
+   "zh": "它还能编写和调试代码、调用服务，并为每一步选择正确的工具。",
+   "audio": "audio/2026-11-20-am-s6.mp3",
+   "duration": 6.7,
+   "focus": "writes 的 -s 结尾"
+  },
+  {
+   "id": 7,
+   "text": "The posting says the agent should do all this privately and with Apple's usual polish.",
+   "zh": "启事称，该智能体应私下完成所有这些工作，并具备苹果一贯的精致体验。",
+   "audio": "audio/2026-11-20-am-s7.mp3",
+   "duration": 6.6,
+   "focus": "privately 的 v 音"
+  },
+  {
+   "id": 8,
+   "text": "Agents that can do computer work have become one of the hottest products in tech this past year.",
+   "zh": "过去一年，能完成电脑工作的智能体已成为科技行业最热门的产品之一。",
+   "audio": "audio/2026-11-20-am-s8.mp3",
+   "duration": 6.5,
+   "focus": "hottest 的 -est 结尾"
+  },
+  {
+   "id": 9,
+   "text": "Anthropic and OpenAI have launched such services, and Meta recently launched its Muse agent line.",
+   "zh": "Anthropic 和 OpenAI 已推出此类服务，Meta 最近也推出了其 Muse 智能体系列。",
+   "audio": "audio/2026-11-20-am-s9.mp3",
+   "duration": 7.8,
+   "focus": "launched 的 -ed 结尾"
+  },
+  {
+   "id": 10,
+   "text": "Apple is also making it much harder for third-party agents to get total control of its computers.",
+   "zh": "苹果同时也在大幅提高第三方智能体完全控制其电脑的难度。",
+   "audio": "audio/2026-11-20-am-s10.mp3",
+   "duration": 7.3,
+   "focus": "harder 的 r 音"
+  },
+  {
+   "id": 11,
+   "text": "Its upcoming macOS 27.3 will warn users before they grant full access to third-party agents.",
+   "zh": "其即将推出的 macOS 27.3 会在用户授予第三方智能体完全访问权限前发出警告。",
+   "audio": "audio/2026-11-20-am-s11.mp3",
+   "duration": 9.0,
+   "focus": "grant 的 t 结尾"
+  },
+  {
+   "id": 12,
+   "text": "Bloomberg says Apple has considered launching the service as soon as the end of next year.",
+   "zh": "彭博社称，苹果考虑最早在明年年底推出该服务。",
+   "audio": "audio/2026-11-20-am-s12.mp3",
+   "duration": 6.2,
+   "focus": "considered 的 -ed 结尾"
+  },
+  {
+   "id": 13,
+   "text": "But progress on the in-house agent remains in the early stages.",
+   "zh": "但内部智能体的进展仍处于早期阶段。",
+   "audio": "audio/2026-11-20-am-s13.mp3",
+   "duration": 4.7,
+   "focus": "remains 的 -s 结尾"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI agent",
+   "zh": "智能体",
+   "note": "指能自主操作电脑、调用工具完成多步任务的 AI 程序。"
+  },
+  {
+   "word": "job listing",
+   "zh": "招聘启事",
+   "note": "公司发布的职位招聘信息。"
+  },
+  {
+   "word": "third-party",
+   "zh": "第三方",
+   "note": "指苹果以外的其他开发者或公司。"
+  },
+  {
+   "word": "macOS",
+   "zh": "macOS",
+   "note": "苹果电脑使用的操作系统。"
+  },
+  {
+   "word": "in-house",
+   "zh": "内部的",
+   "note": "指公司自己开发，而非外包或收购。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在分词作定语 developing",
+   "note": "appears to be developing 表示正在开发，中文常漏掉进行意味，说成“似乎在开发”即可，但英语必须用进行式。"
+  },
+  {
+   "line": 4,
+   "point": "不定式作目的状语 to oversee",
+   "note": "to oversee 说明招聘该经理的目的，中文习惯用“来负责”，英语用不定式，不要写成 for overseeing。"
+  },
+  {
+   "line": 10,
+   "point": "make it + 形容词 + for sb. to do",
+   "note": "it 是形式宾语，真正宾语是 to get total control；中文没有这种结构，容易漏掉 it。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Apple reportedly developing?",
+   "options": [
+    "A new iPhone",
+    "An AI agent that can use a computer",
+    "A third-party app store"
+   ],
+   "answer": 1,
+   "explain": "第一句和第四句都提到苹果在开发能使用电脑的智能体。"
+  },
+  {
+   "q": "What will macOS 27.3 do about third-party agents?",
+   "options": [
+    "Give them full access automatically",
+    "Block them completely",
+    "Warn users before granting full access"
+   ],
+   "answer": 2,
+   "explain": "第十一句说 macOS 27.3 会在授予完全访问权限前警告用户。"
+  }
+ ],
+ "recall_prompts": [
+  "What is Apple building?",
+  "How did the news come out?",
+  "What is Apple doing about third-party agents?"
+ ]
+}
