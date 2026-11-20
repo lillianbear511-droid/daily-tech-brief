@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-20-pm",
+ "date": "2026-11-20",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+ "headline": "Daniel Ek backs AI researcher's fusion startup Europa Fusion",
+ "audio": "audio/2026-11-20-pm-full.mp3",
+ "duration": 89.4,
+ "wpm": 127.5,
+ "script": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. The UK-based company was founded in February by Nantas Nardelli, who has worked at Google DeepMind and Facebook AI Research. He was most recently head of machine learning at Pacific Fusion, a California startup. Pacific Fusion relies heavily on physical devices to test its ideas and improve its simulations. Nardelli reportedly disagreed with that hardware focus and wanted a more simulation-heavy approach. Europa Fusion will pursue a pulsed-power approach, which uses timed surges of electrical current to compress fuel. That compression pushes atoms together until they fuse and release energy. Fusion could become a major energy source in the coming decades. But so far, no one has built a plant that can supply electricity to the grid. If it becomes commercially viable, fusion could provide carbon-free power from nearly limitless fuel. It could also ease concerns about the energy consumption of AI. Nardelli said his background is in electronics and control engineering, and he used to build robots. He said it is time to fix climate change for good.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher.",
+   "zh": "Spotify创始人丹尼尔·埃克正在投资Europa Fusion，这是一家由人工智能研究员创办的聚变能源初创公司。",
+   "audio": "audio/2026-11-20-pm-s1.mp3",
+   "duration": 8.7,
+   "focus": "founder ends in an -er sound, keep the r soft"
+  },
+  {
+   "id": 2,
+   "text": "The UK-based company was founded in February by Nantas Nardelli, who has worked at Google DeepMind and Facebook AI Research.",
+   "zh": "这家总部位于英国的公司由南塔斯·纳尔德利在今年二月创立，他曾在谷歌DeepMind和Facebook人工智能研究院工作。",
+   "audio": "audio/2026-11-20-pm-s2.mp3",
+   "duration": 9.4,
+   "focus": "worked at links the d to the a, say wor-kta"
+  },
+  {
+   "id": 3,
+   "text": "He was most recently head of machine learning at Pacific Fusion, a California startup.",
+   "zh": "他最近担任加州初创公司Pacific Fusion的机器学习负责人。",
+   "audio": "audio/2026-11-20-pm-s3.mp3",
+   "duration": 6.1,
+   "focus": "most recently, hold the final t before the r"
+  },
+  {
+   "id": 4,
+   "text": "Pacific Fusion relies heavily on physical devices to test its ideas and improve its simulations.",
+   "zh": "Pacific Fusion严重依赖实体设备来验证其想法并改进模拟。",
+   "audio": "audio/2026-11-20-pm-s4.mp3",
+   "duration": 8.1,
+   "focus": "relies ends in a z sound, not an s"
+  },
+  {
+   "id": 5,
+   "text": "Nardelli reportedly disagreed with that hardware focus and wanted a more simulation-heavy approach.",
+   "zh": "据报道，纳尔德利不认同这种侧重硬件的做法，而是希望更偏重模拟。",
+   "audio": "audio/2026-11-20-pm-s5.mp3",
+   "duration": 7.2,
+   "focus": "disagreed ends with a clear d sound"
+  },
+  {
+   "id": 6,
+   "text": "Europa Fusion will pursue a pulsed-power approach, which uses timed surges of electrical current to compress fuel.",
+   "zh": "Europa Fusion将采用脉冲功率方案，即用精确计时的电流冲击来压缩燃料。",
+   "audio": "audio/2026-11-20-pm-s6.mp3",
+   "duration": 8.6,
+   "focus": "pulsed-power, link the d into the p"
+  },
+  {
+   "id": 7,
+   "text": "That compression pushes atoms together until they fuse and release energy.",
+   "zh": "这种压缩把原子挤在一起，直到它们发生聚变并释放能量。",
+   "audio": "audio/2026-11-20-pm-s7.mp3",
+   "duration": 5.8,
+   "focus": "pushes ends in a z sound before atoms"
+  },
+  {
+   "id": 8,
+   "text": "Fusion could become a major energy source in the coming decades.",
+   "zh": "聚变有望在未来几十年成为重要的能源来源。",
+   "audio": "audio/2026-11-20-pm-s8.mp3",
+   "duration": 5.0,
+   "focus": "source ends with a clear s sound"
+  },
+  {
+   "id": 9,
+   "text": "But so far, no one has built a plant that can supply electricity to the grid.",
+   "zh": "但到目前为止，还没有人建成能够向电网供电的聚变电厂。",
+   "audio": "audio/2026-11-20-pm-s9.mp3",
+   "duration": 5.6,
+   "focus": "has built links the s to the b"
+  },
+  {
+   "id": 10,
+   "text": "If it becomes commercially viable, fusion could provide carbon-free power from nearly limitless fuel.",
+   "zh": "如果实现商业可行，聚变可以用几乎无限的燃料提供无碳电力。",
+   "audio": "audio/2026-11-20-pm-s10.mp3",
+   "duration": 7.3,
+   "focus": "viable, say the v with the top teeth on the lip"
+  },
+  {
+   "id": 11,
+   "text": "It could also ease concerns about the energy consumption of AI.",
+   "zh": "它还可能缓解人们对人工智能能耗的担忧。",
+   "audio": "audio/2026-11-20-pm-s11.mp3",
+   "duration": 4.5,
+   "focus": "consumption ends with a shun sound"
+  },
+  {
+   "id": 12,
+   "text": "Nardelli said his background is in electronics and control engineering, and he used to build robots.",
+   "zh": "纳尔德利说他的背景是电子学和控制工程，过去还造过机器人。",
+   "audio": "audio/2026-11-20-pm-s12.mp3",
+   "duration": 7.2,
+   "focus": "used to, the d blends into the t"
+  },
+  {
+   "id": 13,
+   "text": "He said it is time to fix climate change for good.",
+   "zh": "他说，现在是彻底解决气候变化问题的时候了。",
+   "audio": "audio/2026-11-20-pm-s13.mp3",
+   "duration": 3.3,
+   "focus": "fix climate, link the x into the c"
+  }
+ ],
+ "terms": [
+  {
+   "word": "fusion",
+   "zh": "核聚变",
+   "note": "指轻原子核结合并释放能量的过程，这里指用这种方式发电。"
+  },
+  {
+   "word": "pulsed-power",
+   "zh": "脉冲功率",
+   "note": "指用短促而精确计时的电流冲击来压缩燃料。"
+  },
+  {
+   "word": "simulation",
+   "zh": "模拟",
+   "note": "指用计算机模型代替实体设备来测试设计。"
+  },
+  {
+   "word": "grid",
+   "zh": "电网",
+   "note": "指把电力输送给家庭和企业的公共供电网络。"
+  },
+  {
+   "word": "commercially viable",
+   "zh": "商业可行",
+   "note": "指技术能真正赚钱、可以大规模推向市场。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 2,
+   "point": "非限制性定语从句 who has worked",
+   "note": "用who引导从句补充说明创始人经历，中文习惯拆成独立句子，容易漏掉关系词。"
+  },
+  {
+   "line": 5,
+   "point": "reportedly + 过去时 disagreed",
+   "note": "reportedly表示“据报道”，后面用过去时，中文常直接说“据报道不同意”而忽略时态。"
+  },
+  {
+   "line": 9,
+   "point": "现在完成时 has built",
+   "note": "强调“到目前为止”的结果，中文容易漏掉has，只说“建成了”。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What approach will Europa Fusion take to fusion?",
+   "options": [
+    "A hardware-heavy approach",
+    "A pulsed-power approach",
+    "A solar-based approach"
+   ],
+   "answer": 1,
+   "explain": "答案在第六句，明确说将采用脉冲功率方案。"
+  },
+  {
+   "q": "Why did Nardelli move from AI to fusion?",
+   "options": [
+    "To build robots again",
+    "To make more money",
+    "To address climate change"
+   ],
+   "answer": 2,
+   "explain": "答案在最后两句，他说现在是彻底解决气候变化的时候。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}

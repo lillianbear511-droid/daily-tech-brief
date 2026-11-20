@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-20T15:49:54",
+ "updated": "2026-11-21T04:32:40",
  "days": [
+  {
+   "id": "2026-11-20-pm",
+   "date": "2026-11-20",
+   "slot": "pm",
+   "headline": "Daniel Ek backs AI researcher's fusion startup Europa Fusion",
+   "source": "TECHCRUNCH",
+   "duration": 89.4,
+   "sentences": 13
+  },
   {
    "id": "2026-11-20-am",
    "date": "2026-11-20",
