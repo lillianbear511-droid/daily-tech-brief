@@ -1,0 +1,141 @@
+{
+ "headline": "Meta may drop its 2030 net-zero goal as AI emissions hit a record",
+ "lines": [
+  {
+   "en": "Meta is rethinking its goal of reaching net-zero emissions by 2030.",
+   "zh": "Meta正在重新考虑其在2030年前实现净零排放的目标。",
+   "focus": "reaching 的 -ing 结尾要读出来"
+  },
+  {
+   "en": "The company said this in its latest sustainability report, published on November nineteenth, twenty twenty-six.",
+   "zh": "公司在其2026年11月19日发布的最新可持续发展报告中说明了这一点。",
+   "focus": "published 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "Net-zero means adding no more greenhouse gases to the air than you remove.",
+   "zh": "净零是指向空气中排放的温室气体不多于你清除的量。",
+   "focus": "Net-zero 两个词连读"
+  },
+  {
+   "en": "The report also showed a record jump in Meta's greenhouse gas emissions.",
+   "zh": "报告还显示，Meta的温室气体排放出现了创纪录的上升。",
+   "focus": "showed 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "Emissions rose from fifteen point six million tonnes in twenty twenty-four to over twenty-one point seven million in twenty twenty-five.",
+   "zh": "排放量从2024年的1560万吨上升到2025年的2170万吨以上。",
+   "focus": "point six 两词连读"
+  },
+  {
+   "en": "That is a rise of nearly forty percent in one year.",
+   "zh": "这意味着一年内增长了近百分之四十。",
+   "focus": "forty 的 r 音不要读成 l"
+  },
+  {
+   "en": "No other big US tech company reported a larger percentage increase.",
+   "zh": "没有其他美国大型科技公司报告过更大的百分比增幅。",
+   "focus": "reported 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "Microsoft reported twenty-five percent, Google eighteen percent, and Amazon sixteen percent.",
+   "zh": "微软报告增长百分之二十五，谷歌百分之十八，亚马逊百分之十六。",
+   "focus": "Microsoft 的 soft 读清音 s"
+  },
+  {
+   "en": "Meta blamed much of the increase on capital goods, such as servers inside data centers.",
+   "zh": "Meta将大部分增长归因于资本货物，例如数据中心里的服务器。",
+   "focus": "goods 的 -s 结尾要读出来"
+  },
+  {
+   "en": "Capital goods are long-lasting equipment a company buys and uses for years.",
+   "zh": "资本货物是公司购买并多年使用的耐用设备。",
+   "focus": "goods are 两词连读"
+  },
+  {
+   "en": "Meta said demand for AI infrastructure grew faster than almost anyone had predicted.",
+   "zh": "Meta表示，对人工智能基础设施的需求增长得比几乎所有人预测的都快。",
+   "focus": "predicted 的 -ed 结尾要读出来"
+  },
+  {
+   "en": "Amazon, Google, and Microsoft have kept their original sustainability goals so far.",
+   "zh": "亚马逊、谷歌和微软到目前为止仍坚持其最初的可持续发展目标。",
+   "focus": "kept 的 -t 结尾要读出来"
+  }
+ ],
+ "terms": [
+  {
+   "word": "net-zero",
+   "zh": "净零",
+   "note": "指向大气排放的温室气体与清除量相抵，净增量为零。"
+  },
+  {
+   "word": "greenhouse gas emissions",
+   "zh": "温室气体排放",
+   "note": "指二氧化碳等会让地球变暖的气体的排放量。"
+  },
+  {
+   "word": "capital goods",
+   "zh": "资本货物",
+   "note": "指企业购买后长期使用的设备，这里主要是数据中心的服务器。"
+  },
+  {
+   "word": "data centers",
+   "zh": "数据中心",
+   "note": "指集中放置大量服务器、为人工智能运算提供算力的场所。"
+  },
+  {
+   "word": "AI infrastructure",
+   "zh": "人工智能基础设施",
+   "note": "指支撑人工智能运行的服务器、电力和场地等硬件条件。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "动名词作介词宾语 reaching ... by 2030",
+   "note": "介词 of 后面要用动名词，中文说“实现”时容易直接接动词原形，这里必须用 reaching。"
+  },
+  {
+   "line": 5,
+   "point": "from ... to ... 表示变化区间",
+   "note": "from 和 to 搭配表示从一数变到另一数，中文常省略介词，英语里两个都不能少。"
+  },
+  {
+   "line": 11,
+   "point": "过去完成时 had predicted",
+   "note": "预测发生在需求增长之前，所以用 had predicted；中文靠“之前”表达，容易漏掉 had。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Meta's latest sustainability report show about its emissions?",
+   "options": [
+    "They fell by nearly forty percent.",
+    "They rose by nearly forty percent in one year.",
+    "They stayed the same as in 2024."
+   ],
+   "answer": 1,
+   "explain": "答案在第六句，报告显示一年内排放增长近百分之四十。"
+  },
+  {
+   "q": "Which company reported the smallest percentage increase among the four?",
+   "options": [
+    "Microsoft",
+    "Google",
+    "Amazon"
+   ],
+   "answer": 2,
+   "explain": "答案在第八句，亚马逊报告增长百分之十六，是四家中最低的。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Meta is rethinking its goal of reaching net-zero emissions by 2030. The company said this in its latest sustainability report, published on November nineteenth, twenty twenty-six. Net-zero means adding no more greenhouse gases to the air than you remove. The report also showed a record jump in Meta's greenhouse gas emissions. Emissions rose from fifteen point six million tonnes in twenty twenty-four to over twenty-one point seven million in twenty twenty-five. That is a rise of nearly forty percent in one year. No other big US tech company reported a larger percentage increase. Microsoft reported twenty-five percent, Google eighteen percent, and Amazon sixteen percent. Meta blamed much of the increase on capital goods, such as servers inside data centers. Capital goods are long-lasting equipment a company buys and uses for years. Meta said demand for AI infrastructure grew faster than almost anyone had predicted. Amazon, Google, and Microsoft have kept their original sustainability goals so far.",
+ "source": "ARS TECHNICA",
+ "source_url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
+ "date": "2026-11-21",
+ "slot": "am"
+}

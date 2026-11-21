@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-21T04:32:40",
+ "updated": "2026-11-21T12:04:08",
  "days": [
+  {
+   "id": "2026-11-21-am",
+   "date": "2026-11-21",
+   "slot": "am",
+   "headline": "Meta may drop its 2030 net-zero goal as AI emissions hit a record",
+   "source": "ARS TECHNICA",
+   "duration": 80.8,
+   "sentences": 12
+  },
   {
    "id": "2026-11-20-pm",
    "date": "2026-11-20",
