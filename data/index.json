@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-21T12:04:08",
+ "updated": "2026-11-22T03:30:07",
  "days": [
+  {
+   "id": "2026-11-21-pm",
+   "date": "2026-11-21",
+   "slot": "pm",
+   "headline": "AI agents you can text like a friend",
+   "source": "TECHCRUNCH",
+   "duration": 67.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-21-am",
    "date": "2026-11-21",

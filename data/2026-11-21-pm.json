@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-21-pm",
+ "date": "2026-11-21",
+ "slot": "pm",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+ "headline": "AI agents you can text like a friend",
+ "audio": "audio/2026-11-21-pm-full.mp3",
+ "duration": 67.6,
+ "wpm": 134.0,
+ "script": "A growing number of AI agents can now be texted like an ordinary person. You text it what you need, and it remembers context. It can connect to apps you already use and finish tasks for you. That includes scheduling appointments, organizing calendars, and researching trips. Agents can also send email, make reservations, shop online, or remind you later. Instinct is one of the buzziest agents, valued at ten billion dollars. Ask Proxy aims to anticipate your needs before you ask. You can text it like a friend for gift ideas or weekend plans. It can also reach out when it notices something you might forget. The personal version costs one dollar per day. Caddy turns scattered phone information into things you can act on. It lives in iMessage and RCS, so there is no separate app. Comma manages tasks across work and daily life, and it is free to start.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "A growing number of AI agents can now be texted like an ordinary person.",
+   "zh": "越来越多的AI智能体现在可以像普通人一样发短信联系。",
+   "audio": "audio/2026-11-21-pm-s1.mp3",
+   "duration": 5.5,
+   "focus": "texted ends with -ed, keep the final /d/"
+  },
+  {
+   "id": 2,
+   "text": "You text it what you need, and it remembers context.",
+   "zh": "你把需求发过去，它就能记住上下文。",
+   "audio": "audio/2026-11-21-pm-s2.mp3",
+   "duration": 4.0,
+   "focus": "text it links, blend the two t sounds"
+  },
+  {
+   "id": 3,
+   "text": "It can connect to apps you already use and finish tasks for you.",
+   "zh": "它可以连接你已经在用的应用，并替你完成任务。",
+   "audio": "audio/2026-11-21-pm-s3.mp3",
+   "duration": 4.3,
+   "focus": "connect to, hold the final t lightly"
+  },
+  {
+   "id": 4,
+   "text": "That includes scheduling appointments, organizing calendars, and researching trips.",
+   "zh": "这包括安排预约、整理日历和研究旅行。",
+   "audio": "audio/2026-11-21-pm-s4.mp3",
+   "duration": 6.3,
+   "focus": "appointments ends with a -ts sound"
+  },
+  {
+   "id": 5,
+   "text": "Agents can also send email, make reservations, shop online, or remind you later.",
+   "zh": "智能体还能发邮件、订位、网购，或稍后提醒你。",
+   "audio": "audio/2026-11-21-pm-s5.mp3",
+   "duration": 6.6,
+   "focus": "remind ends with a final d"
+  },
+  {
+   "id": 6,
+   "text": "Instinct is one of the buzziest agents, valued at ten billion dollars.",
+   "zh": "Instinct是眼下最受关注的智能体之一，估值一百亿美元。",
+   "audio": "audio/2026-11-21-pm-s6.mp3",
+   "duration": 5.8,
+   "focus": "valued ends with a final d"
+  },
+  {
+   "id": 7,
+   "text": "Ask Proxy aims to anticipate your needs before you ask.",
+   "zh": "Ask Proxy的目标是在你开口前就预判你的需求。",
+   "audio": "audio/2026-11-21-pm-s7.mp3",
+   "duration": 4.4,
+   "focus": "anticipate, the c sounds like /s/"
+  },
+  {
+   "id": 8,
+   "text": "You can text it like a friend for gift ideas or weekend plans.",
+   "zh": "你可以像朋友一样给它发消息，问礼物点子或周末安排。",
+   "audio": "audio/2026-11-21-pm-s8.mp3",
+   "duration": 4.7,
+   "focus": "text it links, one t sound"
+  },
+  {
+   "id": 9,
+   "text": "It can also reach out when it notices something you might forget.",
+   "zh": "当它发现你可能忘记的事，也会主动联系你。",
+   "audio": "audio/2026-11-21-pm-s9.mp3",
+   "duration": 4.1,
+   "focus": "reach out links, blend ch and out"
+  },
+  {
+   "id": 10,
+   "text": "The personal version costs one dollar per day.",
+   "zh": "个人版每天收费一美元。",
+   "audio": "audio/2026-11-21-pm-s10.mp3",
+   "duration": 3.3,
+   "focus": "costs ends with a -ts sound"
+  },
+  {
+   "id": 11,
+   "text": "Caddy turns scattered phone information into things you can act on.",
+   "zh": "Caddy把你手机里零散的信息变成可以行动的事项。",
+   "audio": "audio/2026-11-21-pm-s11.mp3",
+   "duration": 4.9,
+   "focus": "turns ends with a final z sound"
+  },
+  {
+   "id": 12,
+   "text": "It lives in iMessage and RCS, so there is no separate app.",
+   "zh": "它存在于iMessage和RCS里，所以不需要单独的应用。",
+   "audio": "audio/2026-11-21-pm-s12.mp3",
+   "duration": 4.9,
+   "focus": "lives ends with a final z sound"
+  },
+  {
+   "id": 13,
+   "text": "Comma manages tasks across work and daily life, and it is free to start.",
+   "zh": "Comma管理工作和日常生活中的任务，而且可以免费开始使用。",
+   "audio": "audio/2026-11-21-pm-s13.mp3",
+   "duration": 6.0,
+   "focus": "manages ends with a final z sound"
+  }
+ ],
+ "terms": [
+  {
+   "word": "AI agent",
+   "zh": "AI智能体",
+   "note": "指能自己记住上下文并替你完成任务的AI程序。"
+  },
+  {
+   "word": "context",
+   "zh": "上下文",
+   "note": "指之前聊过的内容，智能体靠它理解你现在的需求。"
+  },
+  {
+   "word": "proactive",
+   "zh": "主动的",
+   "note": "指不用你开口，它自己先来找你或提醒你。"
+  },
+  {
+   "word": "RCS",
+   "zh": "富通信服务",
+   "note": "安卓手机上的一种短信升级格式，能发图片和更多内容。"
+  },
+  {
+   "word": "open source",
+   "zh": "开源",
+   "note": "指代码公开，任何人都能查看和修改。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "被动语态 can be texted",
+   "note": "主语是智能体，动作是“被发短信”，中文习惯说“可以给它发短信”，容易漏掉被动结构。"
+  },
+  {
+   "line": 2,
+   "point": "并列句 and it remembers",
+   "note": "两个动作并列，第二个分句补出主语 it，中文常省略主语，英文这里不能省。"
+  },
+  {
+   "line": 5,
+   "point": "情态动词 can 后接动词原形",
+   "note": "can 后面用 send、make、shop 原形，中文学习者容易误加 -s 或 -ed。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What can these AI agents do for you?",
+   "options": [
+    "Only send text messages",
+    "Remember context and finish tasks",
+    "Replace your phone apps entirely"
+   ],
+   "answer": 1,
+   "explain": "第二、三句说明智能体能记住上下文并替你完成任务。"
+  },
+  {
+   "q": "How much does the personal version of Ask Proxy cost?",
+   "options": [
+    "Fifteen dollars a month",
+    "One dollar per day",
+    "Twenty-three dollars a month"
+   ],
+   "answer": 1,
+   "explain": "第十句直接说个人版每天一美元。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
