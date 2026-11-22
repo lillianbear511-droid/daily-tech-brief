@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-22T03:30:07",
+ "updated": "2026-11-22T15:32:25",
  "days": [
+  {
+   "id": "2026-11-22-am",
+   "date": "2026-11-22",
+   "slot": "am",
+   "headline": "Signal limits mobile screenshots over AI surveillance risk",
+   "source": "TECHCRUNCH",
+   "duration": 78.8,
+   "sentences": 13
+  },
   {
    "id": "2026-11-21-pm",
    "date": "2026-11-21",

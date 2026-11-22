@@ -1,0 +1,146 @@
+{
+ "headline": "Signal limits mobile screenshots over AI surveillance risk",
+ "lines": [
+  {
+   "en": "Signal said Friday it is limiting screenshots in its secure messaging app on mobile.",
+   "zh": "Signal周五表示，正在限制其安全通讯应用在手机上的截屏功能。",
+   "focus": "final -s in screenshots"
+  },
+  {
+   "en": "The company calls operating systems that build in AI agents an existential threat.",
+   "zh": "该公司把内置AI智能体的操作系统称为一种生存威胁。",
+   "focus": "th sound in threat"
+  },
+  {
+   "en": "President Meredith Whittaker said these systems let AI agents scan what is on your screen.",
+   "zh": "总裁梅雷迪思·惠特克表示，这些系统让AI智能体能够扫描你屏幕上的内容。",
+   "focus": "link scan what"
+  },
+  {
+   "en": "She named Windows, Android, and macOS and iOS as the systems involved.",
+   "zh": "她点名Windows、安卓以及macOS和iOS是涉及的系统。",
+   "focus": "v sound in involved"
+  },
+  {
+   "en": "She wrote that this undermines Signal's ability to guarantee privacy on its own.",
+   "zh": "她写道，这削弱了Signal独立保障隐私的能力。",
+   "focus": "final -s in undermines"
+  },
+  {
+   "en": "She said sensitive data is now captured and stored for AI agents to use.",
+   "zh": "她说，敏感数据现在会被捕获并存储起来，供AI智能体使用。",
+   "focus": "-ed ending in captured"
+  },
+  {
+   "en": "That data can sit in a local database or on a remote server.",
+   "zh": "这些数据可能存放在本地数据库或远程服务器上。",
+   "focus": "v versus w in server"
+  },
+  {
+   "en": "Once captured, she said, the data is outside Signal's control.",
+   "zh": "她说，数据一旦被捕获，就超出了Signal的控制范围。",
+   "focus": "link once captured"
+  },
+  {
+   "en": "That puts the privacy of everyone in a conversation at risk.",
+   "zh": "这会让对话中每个人的隐私都面临风险。",
+   "focus": "th sound in puts"
+  },
+  {
+   "en": "Signal had already blocked screenshots of its Windows app by default.",
+   "zh": "Signal此前已默认阻止其Windows应用的截屏。",
+   "focus": "-ed ending in blocked"
+  },
+  {
+   "en": "Now it is adding similar limits on Android and iOS.",
+   "zh": "现在它正在安卓和iOS上增加类似的限制。",
+   "focus": "link adding similar"
+  },
+  {
+   "en": "Users can still turn the setting off, but she said that breaks the privacy guarantees.",
+   "zh": "用户仍然可以关闭这一设置，但她说那会破坏隐私保障。",
+   "focus": "final -s in breaks"
+  },
+  {
+   "en": "She admitted the fix is incomplete and does not cover sneakier ways agents might reach app data.",
+   "zh": "她承认这一解决办法并不完整，无法覆盖智能体可能获取应用数据的更隐蔽方式。",
+   "focus": "final -s in ways"
+  }
+ ],
+ "terms": [
+  {
+   "word": "agentic AI",
+   "zh": "智能体AI",
+   "note": "指能自己执行任务的AI，而不只是回答问题。"
+  },
+  {
+   "word": "AI agents",
+   "zh": "AI智能体",
+   "note": "指能代替人操作软件、读取屏幕内容的程序。"
+  },
+  {
+   "word": "operating system",
+   "zh": "操作系统",
+   "note": "指管理手机或电脑硬件和软件的系统，如安卓和iOS。"
+  },
+  {
+   "word": "screenshots",
+   "zh": "截屏",
+   "note": "指把屏幕上显示的内容保存成图片。"
+  },
+  {
+   "word": "privacy guarantees",
+   "zh": "隐私保障",
+   "note": "指应用向用户承诺的隐私保护，这里指Signal的承诺。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在进行时 is limiting",
+   "note": "表示正在发生并持续的变化，中文常只说“限制”，容易漏掉 is。"
+  },
+  {
+   "line": 8,
+   "point": "被动语态 is captured",
+   "note": "强调数据被捕获，中文习惯用“被”，但英语必须保留 is。"
+  },
+  {
+   "line": 10,
+   "point": "过去完成时 had already blocked",
+   "note": "表示在另一个过去动作之前已完成，中文用“已经”即可，容易漏掉 had。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Signal limiting on mobile?",
+   "options": [
+    "Sending messages",
+    "Taking screenshots",
+    "Sharing files"
+   ],
+   "answer": 1,
+   "explain": "答案在第一条：Signal said it is limiting screenshots on mobile."
+  },
+  {
+   "q": "What can users still do with the new setting?",
+   "options": [
+    "Turn it off",
+    "Change the app language",
+    "Add more AI agents"
+   ],
+   "answer": 0,
+   "explain": "答案在第十二条：Users can still turn the setting off."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Signal said Friday it is limiting screenshots in its secure messaging app on mobile. The company calls operating systems that build in AI agents an existential threat. President Meredith Whittaker said these systems let AI agents scan what is on your screen. She named Windows, Android, and macOS and iOS as the systems involved. She wrote that this undermines Signal's ability to guarantee privacy on its own. She said sensitive data is now captured and stored for AI agents to use. That data can sit in a local database or on a remote server. Once captured, she said, the data is outside Signal's control. That puts the privacy of everyone in a conversation at risk. Signal had already blocked screenshots of its Windows app by default. Now it is adding similar limits on Android and iOS. Users can still turn the setting off, but she said that breaks the privacy guarantees. She admitted the fix is incomplete and does not cover sneakier ways agents might reach app data.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+ "date": "2026-11-22",
+ "slot": "am"
+}

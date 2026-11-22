@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-22-am",
+ "date": "2026-11-22",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+ "headline": "Signal limits mobile screenshots over AI surveillance risk",
+ "audio": "audio/2026-11-22-am-full.mp3",
+ "duration": 78.8,
+ "wpm": 127.9,
+ "script": "Signal said Friday it is limiting screenshots in its secure messaging app on mobile. The company calls operating systems that build in AI agents an existential threat. President Meredith Whittaker said these systems let AI agents scan what is on your screen. She named Windows, Android, and macOS and iOS as the systems involved. She wrote that this undermines Signal's ability to guarantee privacy on its own. She said sensitive data is now captured and stored for AI agents to use. That data can sit in a local database or on a remote server. Once captured, she said, the data is outside Signal's control. That puts the privacy of everyone in a conversation at risk. Signal had already blocked screenshots of its Windows app by default. Now it is adding similar limits on Android and iOS. Users can still turn the setting off, but she said that breaks the privacy guarantees. She admitted the fix is incomplete and does not cover sneakier ways agents might reach app data.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Signal said Friday it is limiting screenshots in its secure messaging app on mobile.",
+   "zh": "Signal周五表示，正在限制其安全通讯应用在手机上的截屏功能。",
+   "audio": "audio/2026-11-22-am-s1.mp3",
+   "duration": 6.6,
+   "focus": "final -s in screenshots"
+  },
+  {
+   "id": 2,
+   "text": "The company calls operating systems that build in AI agents an existential threat.",
+   "zh": "该公司把内置AI智能体的操作系统称为一种生存威胁。",
+   "audio": "audio/2026-11-22-am-s2.mp3",
+   "duration": 6.7,
+   "focus": "th sound in threat"
+  },
+  {
+   "id": 3,
+   "text": "President Meredith Whittaker said these systems let AI agents scan what is on your screen.",
+   "zh": "总裁梅雷迪思·惠特克表示，这些系统让AI智能体能够扫描你屏幕上的内容。",
+   "audio": "audio/2026-11-22-am-s3.mp3",
+   "duration": 7.0,
+   "focus": "link scan what"
+  },
+  {
+   "id": 4,
+   "text": "She named Windows, Android, and macOS and iOS as the systems involved.",
+   "zh": "她点名Windows、安卓以及macOS和iOS是涉及的系统。",
+   "audio": "audio/2026-11-22-am-s4.mp3",
+   "duration": 6.4,
+   "focus": "v sound in involved"
+  },
+  {
+   "id": 5,
+   "text": "She wrote that this undermines Signal's ability to guarantee privacy on its own.",
+   "zh": "她写道，这削弱了Signal独立保障隐私的能力。",
+   "audio": "audio/2026-11-22-am-s5.mp3",
+   "duration": 6.1,
+   "focus": "final -s in undermines"
+  },
+  {
+   "id": 6,
+   "text": "She said sensitive data is now captured and stored for AI agents to use.",
+   "zh": "她说，敏感数据现在会被捕获并存储起来，供AI智能体使用。",
+   "audio": "audio/2026-11-22-am-s6.mp3",
+   "duration": 6.2,
+   "focus": "-ed ending in captured"
+  },
+  {
+   "id": 7,
+   "text": "That data can sit in a local database or on a remote server.",
+   "zh": "这些数据可能存放在本地数据库或远程服务器上。",
+   "audio": "audio/2026-11-22-am-s7.mp3",
+   "duration": 4.7,
+   "focus": "v versus w in server"
+  },
+  {
+   "id": 8,
+   "text": "Once captured, she said, the data is outside Signal's control.",
+   "zh": "她说，数据一旦被捕获，就超出了Signal的控制范围。",
+   "audio": "audio/2026-11-22-am-s8.mp3",
+   "duration": 5.6,
+   "focus": "link once captured"
+  },
+  {
+   "id": 9,
+   "text": "That puts the privacy of everyone in a conversation at risk.",
+   "zh": "这会让对话中每个人的隐私都面临风险。",
+   "audio": "audio/2026-11-22-am-s9.mp3",
+   "duration": 4.7,
+   "focus": "th sound in puts"
+  },
+  {
+   "id": 10,
+   "text": "Signal had already blocked screenshots of its Windows app by default.",
+   "zh": "Signal此前已默认阻止其Windows应用的截屏。",
+   "audio": "audio/2026-11-22-am-s10.mp3",
+   "duration": 4.9,
+   "focus": "-ed ending in blocked"
+  },
+  {
+   "id": 11,
+   "text": "Now it is adding similar limits on Android and iOS.",
+   "zh": "现在它正在安卓和iOS上增加类似的限制。",
+   "audio": "audio/2026-11-22-am-s11.mp3",
+   "duration": 4.2,
+   "focus": "link adding similar"
+  },
+  {
+   "id": 12,
+   "text": "Users can still turn the setting off, but she said that breaks the privacy guarantees.",
+   "zh": "用户仍然可以关闭这一设置，但她说那会破坏隐私保障。",
+   "audio": "audio/2026-11-22-am-s12.mp3",
+   "duration": 6.1,
+   "focus": "final -s in breaks"
+  },
+  {
+   "id": 13,
+   "text": "She admitted the fix is incomplete and does not cover sneakier ways agents might reach app data.",
+   "zh": "她承认这一解决办法并不完整，无法覆盖智能体可能获取应用数据的更隐蔽方式。",
+   "audio": "audio/2026-11-22-am-s13.mp3",
+   "duration": 7.1,
+   "focus": "final -s in ways"
+  }
+ ],
+ "terms": [
+  {
+   "word": "agentic AI",
+   "zh": "智能体AI",
+   "note": "指能自己执行任务的AI，而不只是回答问题。"
+  },
+  {
+   "word": "AI agents",
+   "zh": "AI智能体",
+   "note": "指能代替人操作软件、读取屏幕内容的程序。"
+  },
+  {
+   "word": "operating system",
+   "zh": "操作系统",
+   "note": "指管理手机或电脑硬件和软件的系统，如安卓和iOS。"
+  },
+  {
+   "word": "screenshots",
+   "zh": "截屏",
+   "note": "指把屏幕上显示的内容保存成图片。"
+  },
+  {
+   "word": "privacy guarantees",
+   "zh": "隐私保障",
+   "note": "指应用向用户承诺的隐私保护，这里指Signal的承诺。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在进行时 is limiting",
+   "note": "表示正在发生并持续的变化，中文常只说“限制”，容易漏掉 is。"
+  },
+  {
+   "line": 8,
+   "point": "被动语态 is captured",
+   "note": "强调数据被捕获，中文习惯用“被”，但英语必须保留 is。"
+  },
+  {
+   "line": 10,
+   "point": "过去完成时 had already blocked",
+   "note": "表示在另一个过去动作之前已完成，中文用“已经”即可，容易漏掉 had。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is Signal limiting on mobile?",
+   "options": [
+    "Sending messages",
+    "Taking screenshots",
+    "Sharing files"
+   ],
+   "answer": 1,
+   "explain": "答案在第一条：Signal said it is limiting screenshots on mobile."
+  },
+  {
+   "q": "What can users still do with the new setting?",
+   "options": [
+    "Turn it off",
+    "Change the app language",
+    "Add more AI agents"
+   ],
+   "answer": 0,
+   "explain": "答案在第十二条：Users can still turn the setting off."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
