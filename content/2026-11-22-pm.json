@@ -1,0 +1,146 @@
+{
+ "headline": "Why data centers are at the center of the Big Tech backlash",
+ "lines": [
+  {
+   "en": "Data centers have become a political landmine for Big Tech.",
+   "zh": "数据中心已经成为大型科技公司的一个政治雷区。",
+   "focus": "final -s in centers"
+  },
+  {
+   "en": "Journalist Paris Marx explores this in his new book Hyperscale.",
+   "zh": "记者帕里斯·马克思在他的新书《超大规模》中探讨了这一点。",
+   "focus": "th in Paris"
+  },
+  {
+   "en": "The book arrives as data center backlash helped drive a massive blue wave in the midterms.",
+   "zh": "这本书出版之际，数据中心引发的反弹助推了中期选举中的大规模蓝色浪潮。",
+   "focus": "link arrives as"
+  },
+  {
+   "en": "Those debates will likely continue as Democrats wield more governmental power.",
+   "zh": "随着民主党掌握更多政府权力，这些争论可能会继续下去。",
+   "focus": "final -s in Democrats"
+  },
+  {
+   "en": "Marx calls the data center buildout fundamentally unsustainable and out of line with a livable planet.",
+   "zh": "马克思称数据中心的扩张从根本上不可持续，与宜居星球的目标完全不符。",
+   "focus": "th in fundamentally"
+  },
+  {
+   "en": "He argues these facilities are an obvious target amid broader anger at the tech industry.",
+   "zh": "他认为，在对科技行业更广泛的愤怒中，这些设施是明显的靶子。",
+   "focus": "final -s in facilities"
+  },
+  {
+   "en": "A data center built in your community is very physical and very material.",
+   "zh": "建在你社区里的数据中心是非常具体、非常实在的。",
+   "focus": "link built in"
+  },
+  {
+   "en": "Marx says you will feel its effects in your quality of life and your power bill.",
+   "zh": "马克思说，你会在生活质量和电费上感受到它的影响。",
+   "focus": "final -l in bill"
+  },
+  {
+   "en": "You may also feel it in your access to water or in noise from rooftop air conditioning units.",
+   "zh": "你也可能在用水方面，或数据中心屋顶空调机组的噪音中感受到它。",
+   "focus": ""
+  },
+  {
+   "en": "He says data center opposition is only the most visible piece of a wider movement.",
+   "zh": "他说，反对数据中心只是更广泛运动中最显眼的一部分。",
+   "focus": "final -s in opposition"
+  },
+  {
+   "en": "That movement targets the physical manifestations of the tech industry.",
+   "zh": "这场运动针对的是科技行业的有形表现。",
+   "focus": "final -s in manifestations"
+  },
+  {
+   "en": "Examples include Flock cameras, Meta's smart glasses, and Waymo's self-driving cars.",
+   "zh": "例子包括Flock摄像头、Meta的智能眼镜和Waymo的自动驾驶汽车。",
+   "focus": "link Meta's smart"
+  },
+  {
+   "en": "Marx described the heavy security inside a hyperscale data center.",
+   "zh": "马克思描述了超大规模数据中心内部严密的安保措施。",
+   "focus": "final -y in security"
+  }
+ ],
+ "terms": [
+  {
+   "word": "data center",
+   "zh": "数据中心",
+   "note": "存放大量计算机服务器、处理数据的设施。"
+  },
+  {
+   "word": "hyperscale",
+   "zh": "超大规模",
+   "note": "指规模极大、由大型科技公司运营的数据中心。"
+  },
+  {
+   "word": "generative AI",
+   "zh": "生成式人工智能",
+   "note": "能生成文本、图像等内容的AI技术。"
+  },
+  {
+   "word": "buildout",
+   "zh": "扩建",
+   "note": "指大规模建设和扩张数据中心的过程。"
+  },
+  {
+   "word": "backlash",
+   "zh": "反弹",
+   "note": "公众对某项做法或行业的强烈反对。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "现在完成时 helped drive",
+   "note": "helped 是过去式，但这里用完成时强调对选举结果的影响，中文容易漏掉时态。"
+  },
+  {
+   "line": 5,
+   "point": "call + 宾语 + 形容词",
+   "note": "call something unsustainable 表示“称某物不可持续”，中文习惯加“是”，容易说成 call it is。"
+  },
+  {
+   "line": 8,
+   "point": "will feel 将来时",
+   "note": "表示对未来的预测，中文常省略“会”，但英语必须用 will。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Marx call the data center buildout?",
+   "options": [
+    "Fundamentally unsustainable",
+    "A necessary investment",
+    "A temporary trend"
+   ],
+   "answer": 0,
+   "explain": "Sentence 5 states Marx calls the buildout fundamentally unsustainable."
+  },
+  {
+   "q": "What surprised Marx most inside a hyperscale data center?",
+   "options": [
+    "The noise level",
+    "The level of security",
+    "The size of the servers"
+   ],
+   "answer": 1,
+   "explain": "Sentence 13 says the thing that struck him most was the level of security."
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Data centers have become a political landmine for Big Tech. Journalist Paris Marx explores this in his new book Hyperscale. The book arrives as data center backlash helped drive a massive blue wave in the midterms. Those debates will likely continue as Democrats wield more governmental power. Marx calls the data center buildout fundamentally unsustainable and out of line with a livable planet. He argues these facilities are an obvious target amid broader anger at the tech industry. A data center built in your community is very physical and very material. Marx says you will feel its effects in your quality of life and your power bill. You may also feel it in your access to water or in noise from rooftop air conditioning units. He says data center opposition is only the most visible piece of a wider movement. That movement targets the physical manifestations of the tech industry. Examples include Flock cameras, Meta's smart glasses, and Waymo's self-driving cars. Marx described the heavy security inside a hyperscale data center.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+ "date": "2026-11-22",
+ "slot": "pm"
+}
