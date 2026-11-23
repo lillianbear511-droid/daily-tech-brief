@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-23T03:52:45",
+ "updated": "2026-11-23T16:21:03",
  "days": [
+  {
+   "id": "2026-11-23-am",
+   "date": "2026-11-23",
+   "slot": "am",
+   "headline": "Waymo leads Tesla in robotaxi race despite freeway setback",
+   "source": "TECHCRUNCH",
+   "duration": 84.2,
+   "sentences": 12
+  },
   {
    "id": "2026-11-22-pm",
    "date": "2026-11-22",

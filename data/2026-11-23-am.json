@@ -1,0 +1,176 @@
+{
+ "id": "2026-11-23-am",
+ "date": "2026-11-23",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/22/techcrunch-mobility-a-b-testing-robots-vs-humans/",
+ "headline": "Waymo leads Tesla in robotaxi race despite freeway setback",
+ "audio": "audio/2026-11-23-am-full.mp3",
+ "duration": 84.2,
+ "wpm": 112.6,
+ "script": "Waymo still leads Tesla in driverless miles, even after pulling its robotaxis off freeways again. Tesla has registered 1,507 robotaxis in Texas, while Waymo has 1,345. But registration numbers do not show market dominance, because commercial driverless miles matter more. Cost-efficiency is better measured by driverless miles per vehicle. By those measures, Waymo is still ahead, based on available data. But Waymo's freeway setback and Tesla's Cybercab expansion could shrink that lead. Uber added Zoox robotaxis to its app in Las Vegas, creating a real-world A/B test. Riders can increase their chances of getting a Zoox, but they cannot directly select one. Uber plans a dedicated autonomous option as availability and reliability improve. Las Vegas will be the first U.S. city with two fully driverless partners on Uber. That gives riders a meaningful choice between a human driver and a robotaxi. Price could tip the balance, and Las Vegas may become a battleground for organized labor.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Waymo still leads Tesla in driverless miles, even after pulling its robotaxis off freeways again.",
+   "zh": "尽管Waymo再次将自动驾驶出租车撤出高速公路，它在无人驾驶里程上仍领先特斯拉。",
+   "audio": "audio/2026-11-23-am-s1.mp3",
+   "duration": 8.0,
+   "focus": "final -s in miles"
+  },
+  {
+   "id": 2,
+   "text": "Tesla has registered 1,507 robotaxis in Texas, while Waymo has 1,345.",
+   "zh": "特斯拉在得克萨斯州注册了1507辆自动驾驶出租车，而Waymo注册了1345辆。",
+   "audio": "audio/2026-11-23-am-s2.mp3",
+   "duration": 9.6,
+   "focus": ""
+  },
+  {
+   "id": 3,
+   "text": "But registration numbers do not show market dominance, because commercial driverless miles matter more.",
+   "zh": "但注册数量并不代表市场主导地位，因为商业无人驾驶里程更重要。",
+   "audio": "audio/2026-11-23-am-s3.mp3",
+   "duration": 7.8,
+   "focus": "final -s in numbers"
+  },
+  {
+   "id": 4,
+   "text": "Cost-efficiency is better measured by driverless miles per vehicle.",
+   "zh": "成本效率更适合用每辆车的无人驾驶里程来衡量。",
+   "audio": "audio/2026-11-23-am-s4.mp3",
+   "duration": 5.1,
+   "focus": "v in vehicle"
+  },
+  {
+   "id": 5,
+   "text": "By those measures, Waymo is still ahead, based on available data.",
+   "zh": "根据现有数据，按这些指标衡量，Waymo仍然领先。",
+   "audio": "audio/2026-11-23-am-s5.mp3",
+   "duration": 5.2,
+   "focus": "th in those"
+  },
+  {
+   "id": 6,
+   "text": "But Waymo's freeway setback and Tesla's Cybercab expansion could shrink that lead.",
+   "zh": "但Waymo的高速公路挫折和特斯拉Cybercab的扩张可能会缩小这一领先优势。",
+   "audio": "audio/2026-11-23-am-s6.mp3",
+   "duration": 6.3,
+   "focus": "final -d in shrink? no, focus on lead"
+  },
+  {
+   "id": 7,
+   "text": "Uber added Zoox robotaxis to its app in Las Vegas, creating a real-world A/B test.",
+   "zh": "优步在拉斯维加斯的应用中加入了Zoox自动驾驶出租车，形成了一场现实世界的A/B测试。",
+   "audio": "audio/2026-11-23-am-s7.mp3",
+   "duration": 7.8,
+   "focus": "link added Zoox"
+  },
+  {
+   "id": 8,
+   "text": "Riders can increase their chances of getting a Zoox, but they cannot directly select one.",
+   "zh": "乘客可以提高获得Zoox的机会，但不能直接选择。",
+   "audio": "audio/2026-11-23-am-s8.mp3",
+   "duration": 6.5,
+   "focus": "final -t in select"
+  },
+  {
+   "id": 9,
+   "text": "Uber plans a dedicated autonomous option as availability and reliability improve.",
+   "zh": "随着可用性和可靠性的提高，优步计划推出专门的自动驾驶选项。",
+   "audio": "audio/2026-11-23-am-s9.mp3",
+   "duration": 6.5,
+   "focus": "v in availability"
+  },
+  {
+   "id": 10,
+   "text": "Las Vegas will be the first U.S. city with two fully driverless partners on Uber.",
+   "zh": "拉斯维加斯将成为首个在优步平台上拥有两家完全无人驾驶合作伙伴的美国城市。",
+   "audio": "audio/2026-11-23-am-s10.mp3",
+   "duration": 6.3,
+   "focus": "final -s in partners"
+  },
+  {
+   "id": 11,
+   "text": "That gives riders a meaningful choice between a human driver and a robotaxi.",
+   "zh": "这为乘客提供了在人类司机和自动驾驶出租车之间的有意义选择。",
+   "audio": "audio/2026-11-23-am-s11.mp3",
+   "duration": 5.8,
+   "focus": "th in that"
+  },
+  {
+   "id": 12,
+   "text": "Price could tip the balance, and Las Vegas may become a battleground for organized labor.",
+   "zh": "价格可能打破平衡，拉斯维加斯可能成为工会劳工的战场。",
+   "audio": "audio/2026-11-23-am-s12.mp3",
+   "duration": 6.8,
+   "focus": "final -e in balance? no, focus on labor"
+  }
+ ],
+ "terms": [
+  {
+   "word": "robotaxi",
+   "zh": "自动驾驶出租车",
+   "note": "指没有人类司机、完全自动驾驶的出租车服务。"
+  },
+  {
+   "word": "driverless miles",
+   "zh": "无人驾驶里程",
+   "note": "指车辆在完全没有人类干预下行驶的里程数。"
+  },
+  {
+   "word": "A/B test",
+   "zh": "A/B测试",
+   "note": "指同时比较两种方案，看哪种效果更好。"
+  },
+  {
+   "word": "autonomous",
+   "zh": "自动驾驶的",
+   "note": "指车辆能自己感知环境并行驶，不需要人操作。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has registered",
+   "note": "强调到目前为止的注册结果，中文常漏掉 has 直接说“注册了”。"
+  },
+  {
+   "line": 2,
+   "point": "while 表示对比",
+   "note": "while 在这里不是“当……时”，而是对比两方数字，中文要用“而”。"
+  },
+  {
+   "line": 5,
+   "point": "被动语态 is measured",
+   "note": "主语是成本效率，动作是衡量，中文习惯说“用……来衡量”，容易漏掉 be 动词。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "How many robotaxis has Tesla registered in Texas?",
+   "options": [
+    "1,345",
+    "1,507",
+    "1,345,000"
+   ],
+   "answer": 1,
+   "explain": "答案在第二句，特斯拉注册了1,507辆。"
+  },
+  {
+   "q": "What can Uber riders in Las Vegas do now?",
+   "options": [
+    "Directly select a robotaxi",
+    "Increase their chances of getting a Zoox",
+    "Request a human driver only"
+   ],
+   "answer": 1,
+   "explain": "答案在第八句，乘客可以提高获得Zoox的机会但不能直接选择。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
