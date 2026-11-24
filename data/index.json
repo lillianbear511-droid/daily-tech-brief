@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-24T20:24:41",
+ "updated": "2026-11-25T07:18:16",
  "days": [
+  {
+   "id": "2026-11-25-am",
+   "date": "2026-11-25",
+   "slot": "am",
+   "headline": "UK warns AI hacking tools are exposing old weaknesses",
+   "source": "TECHCRUNCH",
+   "duration": 96.1,
+   "sentences": 13
+  },
   {
    "id": "2026-11-24-pm",
    "date": "2026-11-24",

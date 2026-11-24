@@ -1,0 +1,189 @@
+{
+ "id": "2026-11-25-am",
+ "date": "2026-11-25",
+ "slot": "am",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/",
+ "headline": "UK warns AI hacking tools are exposing old weaknesses",
+ "audio": "audio/2026-11-25-am-full.mp3",
+ "duration": 96.1,
+ "wpm": 123.0,
+ "script": "The UK government's cybersecurity unit says AI-driven cyberattacks have risen sharply in recent months. Hackers are increasingly using autonomous hacking tools to find and exploit simple weaknesses. These tools break into systems and networks without a person guiding each step. The National Cybersecurity Center says it has seen several incidents since September involving autonomous hacking tools. Some of those tools are penetration testing tools, which defenders use to stress-test their own defenses. These incidents caused intrusions at organizations and led to downtime. None of the vulnerabilities being exploited are new, but the speed of these tools has changed. The rise comes as open source autonomous penetration testing tools like Artex and Cairn became free to download this year. The FBI recently warned that malicious hackers are using AI penetration testing tools at unprecedented speeds. London says many of these attacks are preventable with basic cybersecurity defenses and best practices. The center says the weaknesses being exploited are not new memory corruption bugs or known but unpatched flaws. Instead, they are unmitigated weaknesses that often come from years of technical debt. Agentic tools look for internet-facing systems, then try weak passwords or abuse API endpoints.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "The UK government's cybersecurity unit says AI-driven cyberattacks have risen sharply in recent months.",
+   "zh": "英国政府的网络安全机构表示，近几个月由人工智能驱动的网络攻击明显增多。",
+   "audio": "audio/2026-11-25-am-s1.mp3",
+   "duration": 7.9,
+   "focus": "link \"driven\" into the next word: AI-driven attacks"
+  },
+  {
+   "id": 2,
+   "text": "Hackers are increasingly using autonomous hacking tools to find and exploit simple weaknesses.",
+   "zh": "黑客越来越多地使用自主运行的黑客工具，去寻找并利用简单的漏洞。",
+   "audio": "audio/2026-11-25-am-s2.mp3",
+   "duration": 6.9,
+   "focus": ""
+  },
+  {
+   "id": 3,
+   "text": "These tools break into systems and networks without a person guiding each step.",
+   "zh": "这些工具无需人工逐步操作，就能侵入系统和网络。",
+   "audio": "audio/2026-11-25-am-s3.mp3",
+   "duration": 5.5,
+   "focus": "final \"t\" in \"without\" and \"step\""
+  },
+  {
+   "id": 4,
+   "text": "The National Cybersecurity Center says it has seen several incidents since September involving autonomous hacking tools.",
+   "zh": "英国国家网络安全中心表示，自九月以来已发生数起涉及自主黑客工具的事件。",
+   "audio": "audio/2026-11-25-am-s4.mp3",
+   "duration": 8.4,
+   "focus": ""
+  },
+  {
+   "id": 5,
+   "text": "Some of those tools are penetration testing tools, which defenders use to stress-test their own defenses.",
+   "zh": "其中一些是渗透测试工具，防御方用它们来对自己的防御系统做压力测试。",
+   "audio": "audio/2026-11-25-am-s5.mp3",
+   "duration": 7.2,
+   "focus": "final \"s\" in \"tools\" and \"defenses\""
+  },
+  {
+   "id": 6,
+   "text": "These incidents caused intrusions at organizations and led to downtime.",
+   "zh": "这些事件导致多家机构被入侵，并造成服务中断。",
+   "audio": "audio/2026-11-25-am-s6.mp3",
+   "duration": 5.0,
+   "focus": "link \"caused\" and \"intrusions\": causedintrusions"
+  },
+  {
+   "id": 7,
+   "text": "None of the vulnerabilities being exploited are new, but the speed of these tools has changed.",
+   "zh": "被利用的漏洞本身都不新，但这些工具的执行速度已经改变。",
+   "audio": "audio/2026-11-25-am-s7.mp3",
+   "duration": 6.4,
+   "focus": "v sound in \"vulnerabilities\" and \"exploited\""
+  },
+  {
+   "id": 8,
+   "text": "The rise comes as open source autonomous penetration testing tools like Artex and Cairn became free to download this year.",
+   "zh": "这一上升恰逢今年Artex和Cairn等开源自主渗透测试工具可以免费下载。",
+   "audio": "audio/2026-11-25-am-s8.mp3",
+   "duration": 8.7,
+   "focus": "final \"d\" in \"download\""
+  },
+  {
+   "id": 9,
+   "text": "The FBI recently warned that malicious hackers are using AI penetration testing tools at unprecedented speeds.",
+   "zh": "美国联邦调查局最近警告说，恶意黑客正以前所未有的速度使用人工智能渗透测试工具。",
+   "audio": "audio/2026-11-25-am-s9.mp3",
+   "duration": 8.3,
+   "focus": "link \"at\" and \"unprecedented\": atunprecedented"
+  },
+  {
+   "id": 10,
+   "text": "London says many of these attacks are preventable with basic cybersecurity defenses and best practices.",
+   "zh": "伦敦方面表示，其中许多攻击都可以通过基础的网络安全防御和最佳实践来防范。",
+   "audio": "audio/2026-11-25-am-s10.mp3",
+   "duration": 7.7,
+   "focus": "final \"s\" in \"defenses\" and \"practices\""
+  },
+  {
+   "id": 11,
+   "text": "The center says the weaknesses being exploited are not new memory corruption bugs or known but unpatched flaws.",
+   "zh": "该中心表示，被利用的弱点并不是新的内存破坏漏洞，也不是已知但未修补的缺陷。",
+   "audio": "audio/2026-11-25-am-s11.mp3",
+   "duration": 7.8,
+   "focus": "final \"d\" in \"unpatched\""
+  },
+  {
+   "id": 12,
+   "text": "Instead, they are unmitigated weaknesses that often come from years of technical debt.",
+   "zh": "它们其实是长期未处理的弱点，往往源于多年积累的技术债。",
+   "audio": "audio/2026-11-25-am-s12.mp3",
+   "duration": 6.0,
+   "focus": ""
+  },
+  {
+   "id": 13,
+   "text": "Agentic tools look for internet-facing systems, then try weak passwords or abuse API endpoints.",
+   "zh": "智能体工具会寻找暴露在互联网上的系统，然后尝试弱密码或滥用API接口。",
+   "audio": "audio/2026-11-25-am-s13.mp3",
+   "duration": 7.7,
+   "focus": "final \"s\" in \"systems\" and \"endpoints\""
+  }
+ ],
+ "terms": [
+  {
+   "word": "autonomous hacking tools",
+   "zh": "自主黑客工具",
+   "note": "指能自己完成扫描、尝试和入侵步骤、不需要人一步步操作的工具。"
+  },
+  {
+   "word": "penetration testing",
+   "zh": "渗透测试",
+   "note": "指模拟攻击来检查自家系统是否容易被攻破。"
+  },
+  {
+   "word": "vulnerabilities",
+   "zh": "漏洞",
+   "note": "指系统里可被利用的安全弱点。"
+  },
+  {
+   "word": "technical debt",
+   "zh": "技术债",
+   "note": "指过去为省事留下的旧问题，时间越久越难处理。"
+  },
+  {
+   "word": "API endpoints",
+   "zh": "API接口",
+   "note": "指程序之间交换数据的入口，开发者常用它来取数据。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "现在完成时 has seen",
+   "note": "强调从九月到现在累积的结果；中文常说“已经”，容易漏掉 has。"
+  },
+  {
+   "line": 7,
+   "point": "被动语态 being exploited",
+   "note": "being exploited 表示“正在被利用”，中文习惯用主动说法，容易漏掉 being。"
+  },
+  {
+   "line": 12,
+   "point": "定语从句 that often come from",
+   "note": "that 指代 weaknesses，从句谓语用复数 come；中文没有这种主谓一致，容易写成 comes。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the UK center say about the vulnerabilities being exploited?",
+   "options": [
+    "They are all brand new bugs.",
+    "They are not new, but the speed has changed.",
+    "They were fixed years ago."
+   ],
+   "answer": 1,
+   "explain": "答案在第七句：漏洞不新，但工具速度变了。"
+  },
+  {
+   "q": "According to the center, what do agentic tools often do first?",
+   "options": [
+    "They call the FBI.",
+    "They patch old systems.",
+    "They look for internet-facing systems."
+   ],
+   "answer": 2,
+   "explain": "答案在最后一句：智能体工具先找暴露在互联网上的系统。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
