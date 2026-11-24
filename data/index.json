@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-23T16:21:03",
+ "updated": "2026-11-24T08:03:00",
  "days": [
+  {
+   "id": "2026-11-24-am",
+   "date": "2026-11-24",
+   "slot": "am",
+   "headline": "Ladybird, a new independent browser engine, opens for testing",
+   "source": "THE VERGE",
+   "duration": 66.9,
+   "sentences": 12
+  },
   {
    "id": "2026-11-23-am",
    "date": "2026-11-23",

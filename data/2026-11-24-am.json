@@ -1,0 +1,176 @@
+{
+ "id": "2026-11-24-am",
+ "date": "2026-11-24",
+ "slot": "am",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/tech/1040872/ladybird-indie-browser-engine-alpha-testing",
+ "headline": "Ladybird, a new independent browser engine, opens for testing",
+ "audio": "audio/2026-11-24-am-full.mp3",
+ "duration": 66.9,
+ "wpm": 135.4,
+ "script": "Ladybird, a browser built on a brand-new engine, is now available to test. Its developer, Andreas Kling, announced the alpha release on Monday. It runs on macOS and Linux after more than four years of work. This makes it the first browser in years with an entirely new engine. An engine is the core software that turns web code into the pages you see. Today most browsers rely on just three engines: Gecko, Blink, and WebKit. Gecko powers Firefox, WebKit powers Safari, and Blink powers Chrome and Edge. Ladybird is backed by a nonprofit that wants a fast, private, independent browser. The project started in C++ and later moved its code to Rust with help from AI. Kling calls the alpha build modest but functional. He warns that some websites will not work during this early alpha stage. A Windows version is planned for a later stage of the project.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Ladybird, a browser built on a brand-new engine, is now available to test.",
+   "zh": "Ladybird 是一款基于全新引擎打造的浏览器，现在可以下载测试了。",
+   "audio": "audio/2026-11-24-am-s1.mp3",
+   "duration": 5.8,
+   "focus": "brand-new links the d to the n"
+  },
+  {
+   "id": 2,
+   "text": "Its developer, Andreas Kling, announced the alpha release on Monday.",
+   "zh": "其开发者安德烈亚斯·克林周一宣布了 alpha 版本的发布。",
+   "audio": "audio/2026-11-24-am-s2.mp3",
+   "duration": 5.4,
+   "focus": "announced ends on a final d sound"
+  },
+  {
+   "id": 3,
+   "text": "It runs on macOS and Linux after more than four years of work.",
+   "zh": "经过四年多的开发，它现在可以在 macOS 和 Linux 上运行。",
+   "audio": "audio/2026-11-24-am-s3.mp3",
+   "duration": 4.8,
+   "focus": "runs on links the s to the o"
+  },
+  {
+   "id": 4,
+   "text": "This makes it the first browser in years with an entirely new engine.",
+   "zh": "这使它成为多年来第一款搭载全新引擎的浏览器。",
+   "audio": "audio/2026-11-24-am-s4.mp3",
+   "duration": 4.7,
+   "focus": "first ends on a final t sound"
+  },
+  {
+   "id": 5,
+   "text": "An engine is the core software that turns web code into the pages you see.",
+   "zh": "引擎是核心软件，负责把网页代码变成你看到的页面。",
+   "audio": "audio/2026-11-24-am-s5.mp3",
+   "duration": 5.2,
+   "focus": "turns web links the s to the w"
+  },
+  {
+   "id": 6,
+   "text": "Today most browsers rely on just three engines: Gecko, Blink, and WebKit.",
+   "zh": "如今大多数浏览器只依赖三个引擎：Gecko、Blink 和 WebKit。",
+   "audio": "audio/2026-11-24-am-s6.mp3",
+   "duration": 6.4,
+   "focus": "just three links the t to the th"
+  },
+  {
+   "id": 7,
+   "text": "Gecko powers Firefox, WebKit powers Safari, and Blink powers Chrome and Edge.",
+   "zh": "Gecko 驱动 Firefox，WebKit 驱动 Safari，Blink 驱动 Chrome 和 Edge。",
+   "audio": "audio/2026-11-24-am-s7.mp3",
+   "duration": 6.5,
+   "focus": "powers ends on a final z sound"
+  },
+  {
+   "id": 8,
+   "text": "Ladybird is backed by a nonprofit that wants a fast, private, independent browser.",
+   "zh": "Ladybird 由一家非营利组织支持，该组织希望打造一款快速、保护隐私的独立浏览器。",
+   "audio": "audio/2026-11-24-am-s8.mp3",
+   "duration": 6.5,
+   "focus": "backed by links the d to the b"
+  },
+  {
+   "id": 9,
+   "text": "The project started in C++ and later moved its code to Rust with help from AI.",
+   "zh": "该项目最初用 C++ 编写，后来借助人工智能把代码迁移到了 Rust。",
+   "audio": "audio/2026-11-24-am-s9.mp3",
+   "duration": 6.2,
+   "focus": "started in links the d to the i"
+  },
+  {
+   "id": 10,
+   "text": "Kling calls the alpha build modest but functional.",
+   "zh": "克林称这个 alpha 版本虽然简陋，但已经能正常使用。",
+   "audio": "audio/2026-11-24-am-s10.mp3",
+   "duration": 3.5,
+   "focus": "modest but links the t to the b"
+  },
+  {
+   "id": 11,
+   "text": "He warns that some websites will not work during this early alpha stage.",
+   "zh": "他提醒说，在这个早期 alpha 阶段，有些网站会无法正常使用。",
+   "audio": "audio/2026-11-24-am-s11.mp3",
+   "duration": 5.0,
+   "focus": "will not links the l to the n"
+  },
+  {
+   "id": 12,
+   "text": "A Windows version is planned for a later stage of the project.",
+   "zh": "Windows 版本计划在项目的后期阶段推出。",
+   "audio": "audio/2026-11-24-am-s12.mp3",
+   "duration": 4.5,
+   "focus": "planned for links the d to the f"
+  }
+ ],
+ "terms": [
+  {
+   "word": "engine",
+   "zh": "浏览器引擎",
+   "note": "指把网页代码渲染成页面的核心软件，不是汽车发动机。"
+  },
+  {
+   "word": "alpha",
+   "zh": "内测版",
+   "note": "指开发早期对外放出的测试版本，功能还不完整。"
+  },
+  {
+   "word": "nonprofit",
+   "zh": "非营利组织",
+   "note": "指不以赚钱为目的、靠捐赠等资金运作的机构。"
+  },
+  {
+   "word": "Rust",
+   "zh": "Rust 语言",
+   "note": "一种注重内存安全的编程语言，这里指把代码改写过去。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 3,
+   "point": "现在完成时隐含的 after 短语",
+   "note": "after more than four years of work 表示“经过四年多之后”，中文常直接说“四年多后”，容易漏掉 after 引导的时间关系。"
+  },
+  {
+   "line": 5,
+   "point": "定语从句 that turns web code into the pages you see",
+   "note": "that 引导的从句修饰 software，中文习惯把修饰语放前面，容易把从句拆成独立句子。"
+  },
+  {
+   "line": 8,
+   "point": "被动语态 is backed by",
+   "note": "英文用被动强调“由谁支持”，中文更常说“由……支持”，注意别漏掉 by。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did Andreas Kling announce on Monday?",
+   "options": [
+    "The alpha release of Ladybird",
+    "A new version of Firefox",
+    "The end of the Ladybird project"
+   ],
+   "answer": 0,
+   "explain": "答案在第二句，克林周一宣布了 alpha 版本的发布。"
+  },
+  {
+   "q": "Which platforms can run Ladybird right now?",
+   "options": [
+    "Windows and Linux",
+    "macOS and Linux",
+    "macOS and Windows"
+   ],
+   "answer": 1,
+   "explain": "答案在第三句，目前支持 macOS 和 Linux，Windows 版本要等后期。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
