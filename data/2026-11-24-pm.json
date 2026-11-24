@@ -1,0 +1,181 @@
+{
+ "id": "2026-11-24-pm",
+ "date": "2026-11-24",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
+ "headline": "AI data centers complicate UN climate talks",
+ "audio": "audio/2026-11-24-pm-full.mp3",
+ "duration": 83.5,
+ "wpm": 127.2,
+ "script": "Global climate negotiations fell apart as delegates tried to tackle AI's growing carbon footprint. The talks closed in a chaotic and unsatisfying way in Antalya, Turkey, on Sunday. This was the United Nations climate conference, known as COP31. Each year, attendees try to meet the 2015 Paris climate accord's commitment to stop climate change. That requires slashing greenhouse gas emissions to prevent worse extreme weather, coastal flooding, and droughts. But powering homes and cars with solar and wind instead of oil and gas means going electric. One of the most anticipated outcomes was a deal to raise electricity's share of global energy consumption to thirty-five percent by 2035. Today that share is about twenty percent. But data centers are causing electricity demand to skyrocket, making that goal harder to reach. That made the rush of new AI data centers a climate issue alongside talks on moving from fossil fuels to renewable energy. Every climate minister in the world is thinking about this, and it will inevitably come up in discussions. It is part of the broader energy transformation.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Global climate negotiations fell apart as delegates tried to tackle AI's growing carbon footprint.",
+   "zh": "全球气候谈判破裂，而代表们正试图应对人工智能日益增长的碳足迹。",
+   "audio": "audio/2026-11-24-pm-s1.mp3",
+   "duration": 7.2,
+   "focus": "final -s in delegates"
+  },
+  {
+   "id": 2,
+   "text": "The talks closed in a chaotic and unsatisfying way in Antalya, Turkey, on Sunday.",
+   "zh": "谈判于周日在土耳其安塔利亚以混乱且令人不满的方式收场。",
+   "audio": "audio/2026-11-24-pm-s2.mp3",
+   "duration": 6.6,
+   "focus": "th in chaotic"
+  },
+  {
+   "id": 3,
+   "text": "This was the United Nations climate conference, known as COP31.",
+   "zh": "这就是被称为COP31的联合国气候大会。",
+   "audio": "audio/2026-11-24-pm-s3.mp3",
+   "duration": 5.3,
+   "focus": "link known as"
+  },
+  {
+   "id": 4,
+   "text": "Each year, attendees try to meet the 2015 Paris climate accord's commitment to stop climate change.",
+   "zh": "每年，与会者都试图兑现2015年《巴黎气候协定》中阻止气候变化的承诺。",
+   "audio": "audio/2026-11-24-pm-s4.mp3",
+   "duration": 7.6,
+   "focus": "final -s in attendees"
+  },
+  {
+   "id": 5,
+   "text": "That requires slashing greenhouse gas emissions to prevent worse extreme weather, coastal flooding, and droughts.",
+   "zh": "这需要大幅削减温室气体排放，以防止更严重的极端天气、沿海洪水和干旱。",
+   "audio": "audio/2026-11-24-pm-s5.mp3",
+   "duration": 7.8,
+   "focus": "final -s in emissions"
+  },
+  {
+   "id": 6,
+   "text": "But powering homes and cars with solar and wind instead of oil and gas means going electric.",
+   "zh": "但用太阳能和风能而非石油和天然气为家庭和汽车供电，意味着要转向电气化。",
+   "audio": "audio/2026-11-24-pm-s6.mp3",
+   "duration": 6.6,
+   "focus": "v in electric"
+  },
+  {
+   "id": 7,
+   "text": "One of the most anticipated outcomes was a deal to raise electricity's share of global energy consumption to thirty-five percent by 2035.",
+   "zh": "最受期待的成果之一是一项协议，到2035年将电力在全球能源消费中的占比提高到百分之三十五。",
+   "audio": "audio/2026-11-24-pm-s7.mp3",
+   "duration": 10.5,
+   "focus": "th in thirty"
+  },
+  {
+   "id": 8,
+   "text": "Today that share is about twenty percent.",
+   "zh": "目前这一占比约为百分之二十。",
+   "audio": "audio/2026-11-24-pm-s8.mp3",
+   "duration": 3.1,
+   "focus": "th in twenty"
+  },
+  {
+   "id": 9,
+   "text": "But data centers are causing electricity demand to skyrocket, making that goal harder to reach.",
+   "zh": "但数据中心正导致电力需求飙升，使这一目标更难实现。",
+   "audio": "audio/2026-11-24-pm-s9.mp3",
+   "duration": 7.0,
+   "focus": "final -s in centers"
+  },
+  {
+   "id": 10,
+   "text": "That made the rush of new AI data centers a climate issue alongside talks on moving from fossil fuels to renewable energy.",
+   "zh": "这使得新人工智能数据中心的热潮与从化石燃料转向可再生能源的讨论并列，成为一个气候问题。",
+   "audio": "audio/2026-11-24-pm-s10.mp3",
+   "duration": 8.7,
+   "focus": "link made the"
+  },
+  {
+   "id": 11,
+   "text": "Every climate minister in the world is thinking about this, and it will inevitably come up in discussions.",
+   "zh": "世界上每一位气候部长都在思考这个问题，它不可避免地会在讨论中出现。",
+   "audio": "audio/2026-11-24-pm-s11.mp3",
+   "duration": 7.0,
+   "focus": "final -s in discussions"
+  },
+  {
+   "id": 12,
+   "text": "It is part of the broader energy transformation.",
+   "zh": "这是更广泛能源转型的一部分。",
+   "audio": "audio/2026-11-24-pm-s12.mp3",
+   "duration": 3.5,
+   "focus": "final -s in part"
+  }
+ ],
+ "terms": [
+  {
+   "word": "carbon footprint",
+   "zh": "碳足迹",
+   "note": "指某项活动产生的温室气体排放总量。"
+  },
+  {
+   "word": "data centers",
+   "zh": "数据中心",
+   "note": "存放大量服务器、用于处理和存储数据的设施。"
+  },
+  {
+   "word": "greenhouse gas emissions",
+   "zh": "温室气体排放",
+   "note": "指二氧化碳等导致气候变暖的气体排放。"
+  },
+  {
+   "word": "electricity demand",
+   "zh": "电力需求",
+   "note": "指社会对电力的总需求量。"
+  },
+  {
+   "word": "energy transformation",
+   "zh": "能源转型",
+   "note": "指从化石燃料转向可再生能源的能源结构变化。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "as 引导时间状语从句",
+   "note": "as 表示“当……时”，强调两个动作同时发生；中文习惯用“随着”或“当……时”，注意不要把 as 误用为“因为”。"
+  },
+  {
+   "line": 5,
+   "point": "不定式表目的 to prevent",
+   "note": "to prevent 表示目的“为了防止”，中文常省略“为了”，导致逻辑不清。"
+  },
+  {
+   "line": 9,
+   "point": "现在分词作结果状语 making that goal harder",
+   "note": "making 引导的分词短语表示前面动作带来的结果；中文习惯用“使得”另起一句，容易漏掉这种结果关系。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What was one of the most anticipated outcomes of this year's negotiations?",
+   "options": [
+    "A deal to raise electricity's share of global energy consumption to thirty-five percent by 2035",
+    "A deal to ban all new AI data centers",
+    "A deal to increase fossil fuel use"
+   ],
+   "answer": 0,
+   "explain": "答案在第七句，提到最受期待的成果是到2035年将电力占比提高到百分之三十五。"
+  },
+  {
+   "q": "Why is reaching the electricity goal harder?",
+   "options": [
+    "Because solar and wind are too expensive",
+    "Because data centers are causing electricity demand to skyrocket",
+    "Because delegates refused to discuss AI"
+   ],
+   "answer": 1,
+   "explain": "答案在第九句，指出数据中心导致电力需求飙升，使目标更难实现。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
