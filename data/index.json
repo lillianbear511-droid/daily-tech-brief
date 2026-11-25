@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-26T05:51:05",
+ "updated": "2026-11-26T07:36:33",
  "days": [
+  {
+   "id": "2026-11-26-am",
+   "date": "2026-11-26",
+   "slot": "am",
+   "headline": "FCC approves SpaceX plan for up to one million AI satellites",
+   "source": "THE VERGE",
+   "duration": 83.1,
+   "sentences": 13
+  },
   {
    "id": "2026-11-25-pm",
    "date": "2026-11-25",

@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-26-am",
+ "date": "2026-11-26",
+ "slot": "am",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+ "headline": "FCC approves SpaceX plan for up to one million AI satellites",
+ "audio": "audio/2026-11-26-am-full.mp3",
+ "duration": 83.1,
+ "wpm": 117.0,
+ "script": "The FCC has authorized SpaceX to deploy up to one million AI satellites. The satellites carry AI chips and form part of SpaceX's Starmind project. This is the first approval for a full constellation of AI satellites. Google and Blue Origin are also pursuing data centers in space. The approval requires SpaceX to launch at least one satellite by 2033. SpaceX must also reach the one million satellite milestone by 2040. The FCC deferred SpaceX's request to dispose of satellites above 600 kilometers in graveyard orbits. The agency said SpaceX had not provided enough information about its disposal plans. SpaceX says Starmind will capture solar energy in space to power AI on Earth. The company plans to send data to Earth using high-speed lasers linked to Starlink. SpaceX intends to make chips for these satellites at a future Terafab facility. Google launched a Project Suncatcher AI server satellite last month. Blue Origin will carry out the first heavy-lift launch for Project Suncatcher in 2029.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "The FCC has authorized SpaceX to deploy up to one million AI satellites.",
+   "zh": "美国联邦通信委员会已批准SpaceX部署最多一百万颗人工智能卫星。",
+   "audio": "audio/2026-11-26-am-s1.mp3",
+   "duration": 6.4,
+   "focus": "final -d in authorized links to to"
+  },
+  {
+   "id": 2,
+   "text": "The satellites carry AI chips and form part of SpaceX's Starmind project.",
+   "zh": "这些卫星搭载人工智能芯片，是SpaceX“星脑”计划的一部分。",
+   "audio": "audio/2026-11-26-am-s2.mp3",
+   "duration": 6.6,
+   "focus": "final -s in chips, part of"
+  },
+  {
+   "id": 3,
+   "text": "This is the first approval for a full constellation of AI satellites.",
+   "zh": "这是该机构首次批准完整的AI卫星星座。",
+   "audio": "audio/2026-11-26-am-s3.mp3",
+   "duration": 5.3,
+   "focus": "th in the and first"
+  },
+  {
+   "id": 4,
+   "text": "Google and Blue Origin are also pursuing data centers in space.",
+   "zh": "谷歌和蓝色起源也在推进太空数据中心。",
+   "audio": "audio/2026-11-26-am-s4.mp3",
+   "duration": 4.9,
+   "focus": "final -s in centers"
+  },
+  {
+   "id": 5,
+   "text": "The approval requires SpaceX to launch at least one satellite by 2033.",
+   "zh": "批准条件要求SpaceX在2033年前至少发射一颗卫星。",
+   "audio": "audio/2026-11-26-am-s5.mp3",
+   "duration": 6.1,
+   "focus": "final -ch in launch"
+  },
+  {
+   "id": 6,
+   "text": "SpaceX must also reach the one million satellite milestone by 2040.",
+   "zh": "SpaceX还必须在2040年前达到一百万颗卫星的里程碑。",
+   "audio": "audio/2026-11-26-am-s6.mp3",
+   "duration": 5.9,
+   "focus": "final -l in milestone"
+  },
+  {
+   "id": 7,
+   "text": "The FCC deferred SpaceX's request to dispose of satellites above 600 kilometers in graveyard orbits.",
+   "zh": "FCC推迟了SpaceX关于将600公里以上卫星处置到“墓地轨道”的请求。",
+   "audio": "audio/2026-11-26-am-s7.mp3",
+   "duration": 8.8,
+   "focus": "v sound in deferred and above"
+  },
+  {
+   "id": 8,
+   "text": "The agency said SpaceX had not provided enough information about its disposal plans.",
+   "zh": "该机构表示，SpaceX没有提供足够的处置计划信息。",
+   "audio": "audio/2026-11-26-am-s8.mp3",
+   "duration": 6.4,
+   "focus": "final -d in provided"
+  },
+  {
+   "id": 9,
+   "text": "SpaceX says Starmind will capture solar energy in space to power AI on Earth.",
+   "zh": "SpaceX表示，“星脑”将在太空收集太阳能，为地球上的AI供电。",
+   "audio": "audio/2026-11-26-am-s9.mp3",
+   "duration": 6.3,
+   "focus": "v versus w in will and energy"
+  },
+  {
+   "id": 10,
+   "text": "The company plans to send data to Earth using high-speed lasers linked to Starlink.",
+   "zh": "该公司计划使用连接星链的高速激光将数据传回地球。",
+   "audio": "audio/2026-11-26-am-s10.mp3",
+   "duration": 5.9,
+   "focus": "final -s in lasers"
+  },
+  {
+   "id": 11,
+   "text": "SpaceX intends to make chips for these satellites at a future Terafab facility.",
+   "zh": "SpaceX打算在未来一座名为Terafab的工厂生产这些卫星的芯片。",
+   "audio": "audio/2026-11-26-am-s11.mp3",
+   "duration": 5.9,
+   "focus": "th in these"
+  },
+  {
+   "id": 12,
+   "text": "Google launched a Project Suncatcher AI server satellite last month.",
+   "zh": "谷歌上个月发射了一颗“太阳捕手”计划的AI服务器卫星。",
+   "audio": "audio/2026-11-26-am-s12.mp3",
+   "duration": 5.2,
+   "focus": "final -ed in launched"
+  },
+  {
+   "id": 13,
+   "text": "Blue Origin will carry out the first heavy-lift launch for Project Suncatcher in 2029.",
+   "zh": "蓝色起源将在2029年为“太阳捕手”计划执行首次重型运载发射。",
+   "audio": "audio/2026-11-26-am-s13.mp3",
+   "duration": 6.7,
+   "focus": "final -t in first and lift"
+  }
+ ],
+ "terms": [
+  {
+   "word": "constellation",
+   "zh": "星座",
+   "note": "指一组协同工作的卫星，而不是单颗卫星。"
+  },
+  {
+   "word": "graveyard orbit",
+   "zh": "墓地轨道",
+   "note": "指卫星报废后被送往的远离地球的高轨道。"
+  },
+  {
+   "word": "heavy-lift launch",
+   "zh": "重型运载发射",
+   "note": "指用大推力火箭把很重的载荷送入太空。"
+  },
+  {
+   "word": "AI chip",
+   "zh": "人工智能芯片",
+   "note": "指专门用来运行AI计算的芯片。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在完成时 has authorized",
+   "note": "强调批准已经完成并产生当前结果，中文常漏掉 has。"
+  },
+  {
+   "line": 7,
+   "point": "不定式作定语 request to dispose of",
+   "note": "to dispose of 修饰 request，说明请求的内容，中文习惯另起一句。"
+  },
+  {
+   "line": 8,
+   "point": "过去完成时 had not provided",
+   "note": "表示在机构表态之前就已没提供，中文容易误用一般过去时。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the FCC approve?",
+   "options": [
+    "SpaceX's plan for up to one million AI satellites",
+    "Google's Project Suncatcher",
+    "Blue Origin's heavy-lift rocket"
+   ],
+   "answer": 0,
+   "explain": "答案在第一条，FCC批准SpaceX部署最多一百万颗AI卫星。"
+  },
+  {
+   "q": "What did the FCC defer?",
+   "options": [
+    "The launch deadline",
+    "SpaceX's request to use graveyard orbits",
+    "The Starmind project"
+   ],
+   "answer": 1,
+   "explain": "答案在第七条，FCC推迟了SpaceX关于墓地轨道处置的请求。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
