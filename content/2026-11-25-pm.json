@@ -1,0 +1,141 @@
+{
+ "headline": "FCC Approves SpaceX Plan for Orbital AI Data Centers",
+ "lines": [
+  {
+   "en": "The Federal Communications Commission gave SpaceX conditional approval on Wednesday to deploy up to one million satellites for orbital data centers.",
+   "zh": "美国联邦通信委员会周三有条件批准SpaceX部署最多一百万颗卫星，用于轨道数据中心。",
+   "focus": "final -s in satellites"
+  },
+  {
+   "en": "This is a regulatory win for Elon Musk and his push to move AI computing into space.",
+   "zh": "这对埃隆·马斯克以及他把人工智能计算搬上太空的推动来说，是一次监管上的胜利。",
+   "focus": "link move AI as move-yai"
+  },
+  {
+   "en": "Amazon, Viasat, and the American Astronomical Society objected to the plan.",
+   "zh": "亚马逊、Viasat和美国天文学会都反对这一计划。",
+   "focus": ""
+  },
+  {
+   "en": "They raised concerns about orbital debris, congestion, radio interference, and environmental effects.",
+   "zh": "他们对轨道碎片、轨道拥堵、无线电干扰和环境影响提出了担忧。",
+   "focus": "final -s in concerns"
+  },
+  {
+   "en": "Amazon, which is building a rival to Starlink, said the application lacked basic details.",
+   "zh": "正在打造Starlink竞争对手的亚马逊表示，这份申请缺乏基本信息。",
+   "focus": "th in which"
+  },
+  {
+   "en": "The FCC dismissed some key concerns, including threats to scientific research, saying they fell outside its authority.",
+   "zh": "联邦通信委员会驳回了一些关键担忧，包括对科学研究的威胁，称这些不在其管辖范围内。",
+   "focus": "final -ed in dismissed"
+  },
+  {
+   "en": "Chair Brendan Carr said the action opens a bold new frontier for computing infrastructure.",
+   "zh": "主席布伦丹·卡尔表示，这一行动为计算基础设施开辟了大胆的新前沿。",
+   "focus": "final -s in opens"
+  },
+  {
+   "en": "Musk thanked Carr on X and called it a great asset to America and the world.",
+   "zh": "马斯克在X上感谢卡尔，称这对美国和世界都是一笔巨大的资产。",
+   "focus": "th in thanked"
+  },
+  {
+   "en": "This approval does not mean orbital data centers are coming soon.",
+   "zh": "这一批准并不意味着轨道数据中心很快就会到来。",
+   "focus": "link not mean as noc-mean"
+  },
+  {
+   "en": "SpaceX still faces technical and economic challenges, like cutting launch costs and cooling processors in space.",
+   "zh": "SpaceX仍面临技术和经济挑战，比如降低发射成本和在太空为处理器散热。",
+   "focus": "final -s in costs"
+  },
+  {
+   "en": "The FCC has not yet approved how SpaceX will handle debris for satellites above six hundred kilometers.",
+   "zh": "联邦通信委员会尚未批准SpaceX如何处理六百公里以上卫星的碎片问题。",
+   "focus": "th in hundred"
+  },
+  {
+   "en": "SpaceX has seven years to launch its first working satellite and fourteen years to deploy the whole constellation.",
+   "zh": "SpaceX有七年时间发射第一颗工作卫星，有十四年时间部署整个星座。",
+   "focus": "final -s in years"
+  }
+ ],
+ "terms": [
+  {
+   "word": "orbital data center",
+   "zh": "轨道数据中心",
+   "note": "指放在卫星上、在太空绕地球运行的数据中心。"
+  },
+  {
+   "word": "constellation",
+   "zh": "星座",
+   "note": "这里指一组协同工作的卫星，不是天上的星星。"
+  },
+  {
+   "word": "orbital debris",
+   "zh": "轨道碎片",
+   "note": "指太空中废弃卫星和碰撞产生的碎片垃圾。"
+  },
+  {
+   "word": "radiofrequency interference",
+   "zh": "射频干扰",
+   "note": "指卫星信号互相干扰，影响通信质量。"
+  },
+  {
+   "word": "waiver",
+   "zh": "豁免",
+   "note": "指官方允许不遵守某项现行规定。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "被动语态 was given",
+   "note": "这里用被动是因为重点是SpaceX获得了批准，而不是谁给的；中文常说“获批”，容易漏掉be动词。"
+  },
+  {
+   "line": 5,
+   "point": "非限制性定语从句 which is building",
+   "note": "which引导的从句补充说明亚马逊的身份，用逗号隔开；中文习惯拆成短句，容易误用that。"
+  },
+  {
+   "line": 11,
+   "point": "现在完成时 has not yet approved",
+   "note": "yet配合现在完成时表示“到目前为止还没”，中文说“尚未”，容易漏掉has。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What did the FCC approve on Wednesday?",
+   "options": [
+    "SpaceX's plan to deploy up to one million satellites for orbital data centers",
+    "Amazon's plan to build a rival to Starlink",
+    "A waiver for satellites below two thousand kilometers"
+   ],
+   "answer": 0,
+   "explain": "答案在第一句，FCC周三有条件批准了SpaceX的卫星部署计划。"
+  },
+  {
+   "q": "How long does SpaceX have to launch its first working satellite?",
+   "options": [
+    "Fourteen years",
+    "Seven years",
+    "Five years"
+   ],
+   "answer": 1,
+   "explain": "答案在最后一句，SpaceX有七年时间发射第一颗工作卫星。"
+  }
+ ],
+ "recall_prompts": [
+  "What did the FCC approve?",
+  "Who objected and why?",
+  "What challenges remain for SpaceX?"
+ ],
+ "script": "The Federal Communications Commission gave SpaceX conditional approval on Wednesday to deploy up to one million satellites for orbital data centers. This is a regulatory win for Elon Musk and his push to move AI computing into space. Amazon, Viasat, and the American Astronomical Society objected to the plan. They raised concerns about orbital debris, congestion, radio interference, and environmental effects. Amazon, which is building a rival to Starlink, said the application lacked basic details. The FCC dismissed some key concerns, including threats to scientific research, saying they fell outside its authority. Chair Brendan Carr said the action opens a bold new frontier for computing infrastructure. Musk thanked Carr on X and called it a great asset to America and the world. This approval does not mean orbital data centers are coming soon. SpaceX still faces technical and economic challenges, like cutting launch costs and cooling processors in space. The FCC has not yet approved how SpaceX will handle debris for satellites above six hundred kilometers. SpaceX has seven years to launch its first working satellite and fourteen years to deploy the whole constellation.",
+ "source": "TECHCRUNCH",
+ "source_url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
+ "date": "2026-11-25",
+ "slot": "pm"
+}

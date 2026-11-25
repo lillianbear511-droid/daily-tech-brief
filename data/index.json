@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-25T07:18:16",
+ "updated": "2026-11-26T05:51:05",
  "days": [
+  {
+   "id": "2026-11-25-pm",
+   "date": "2026-11-25",
+   "slot": "pm",
+   "headline": "FCC Approves SpaceX Plan for Orbital AI Data Centers",
+   "source": "TECHCRUNCH",
+   "duration": 89.9,
+   "sentences": 12
+  },
   {
    "id": "2026-11-25-am",
    "date": "2026-11-25",
