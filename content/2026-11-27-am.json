@@ -1,0 +1,141 @@
+{
+ "headline": "Ford unveils GT41 to chase Le Mans win",
+ "lines": [
+  {
+   "en": "Ford has unveiled a new race car called the GT41.",
+   "zh": "福特发布了一款名为GT41的新赛车。",
+   "focus": "final -ed in unveiled"
+  },
+  {
+   "en": "The company hopes it will win the 24 Hours of Le Mans overall.",
+   "zh": "公司希望它能赢得勒芒24小时耐力赛的全场冠军。",
+   "focus": ""
+  },
+  {
+   "en": "Sixty years ago, Ford won that race with the GT40 after two failed attempts.",
+   "zh": "六十年前，福特在两次失败后凭借GT40赢得了那场比赛。",
+   "focus": "th in that"
+  },
+  {
+   "en": "Since then it has returned to France many times but never won overall again.",
+   "zh": "此后它多次重返法国，但再未赢得全场冠军。",
+   "focus": "final -ed in returned"
+  },
+  {
+   "en": "The GT41 will enter the World Endurance Championship in 2027.",
+   "zh": "GT41将于2027年参加世界耐力锦标赛。",
+   "focus": ""
+  },
+  {
+   "en": "Ford chose the LMDh approach, which uses a standard carbon fiber chassis and hybrid system.",
+   "zh": "福特选择了LMDh方案，该方案使用标准碳纤维底盘和混合动力系统。",
+   "focus": "v in approach"
+  },
+  {
+   "en": "The chassis comes from Oreca, and the hybrid system and transmission are also standard parts.",
+   "zh": "底盘来自Oreca，混合动力系统和变速箱也是标准部件。",
+   "focus": "final -s in parts"
+  },
+  {
+   "en": "Ford supplies the engine, a 5.4-liter V8 based on the Mustang's Coyote engine.",
+   "zh": "福特提供发动机，这是一台基于野马Coyote发动机的5.4升V8。",
+   "focus": "v in V8"
+  },
+  {
+   "en": "Ford also writes the software that controls the hybrid powertrain.",
+   "zh": "福特还编写控制混合动力总成的软件。",
+   "focus": "final -s in controls"
+  },
+  {
+   "en": "The car will first race in Qatar in March, the opening round of nine WEC races.",
+   "zh": "该车将于三月在卡塔尔首次参赛，那是WEC九场比赛的揭幕战。",
+   "focus": ""
+  },
+  {
+   "en": "Ford has no plans yet to enter IMSA's WeatherTech championship.",
+   "zh": "福特目前还没有参加IMSA WeatherTech锦标赛的计划。",
+   "focus": "final -s in plans"
+  },
+  {
+   "en": "The Hypercar class is extremely competitive, with Toyota, Ferrari, and McLaren among the entrants.",
+   "zh": "Hypercar组别竞争极其激烈，丰田、法拉利和迈凯伦都是参赛者。",
+   "focus": "th in with"
+  }
+ ],
+ "terms": [
+  {
+   "word": "LMDh",
+   "zh": "LMDh",
+   "note": "一种耐力赛原型车规则，使用标准底盘和混合动力系统，车队可自选发动机。"
+  },
+  {
+   "word": "Hypercar",
+   "zh": "Hypercar",
+   "note": "世界耐力锦标赛的最高组别，勒芒全场冠军就在这个组别产生。"
+  },
+  {
+   "word": "chassis",
+   "zh": "底盘",
+   "note": "赛车的骨架，承载发动机和悬挂等部件。"
+  },
+  {
+   "word": "hybrid system",
+   "zh": "混合动力系统",
+   "note": "同时使用燃油发动机和电机的动力系统。"
+  },
+  {
+   "word": "powertrain",
+   "zh": "动力总成",
+   "note": "把发动机、电机和变速箱等连在一起的整体。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "现在完成时 has returned",
+   "note": "表示从过去到现在多次发生，中文常说“多次重返”而容易漏掉 has。"
+  },
+  {
+   "line": 6,
+   "point": "非限制性定语从句 which uses",
+   "note": "which 指代前面整个 LMDh 方案，中文习惯拆成两句，容易误用 that。"
+  },
+  {
+   "line": 12,
+   "point": "介词 among 表示“在……之中”",
+   "note": "among the entrants 指参赛者之一，中文容易直译成“在参赛者中间”而丢掉列举含义。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "When will the GT41 first race?",
+   "options": [
+    "In January at Daytona",
+    "In March in Qatar",
+    "In 2027 at Le Mans"
+   ],
+   "answer": 1,
+   "explain": "答案在第十句：三月在卡塔尔首次参赛。"
+  },
+  {
+   "q": "Which part does Ford supply itself?",
+   "options": [
+    "The carbon fiber chassis",
+    "The hybrid system",
+    "The engine"
+   ],
+   "answer": 2,
+   "explain": "答案在第八句：福特提供发动机。"
+  }
+ ],
+ "recall_prompts": [
+  "What did Ford unveil?",
+  "Why does it matter?",
+  "Who is affected?"
+ ],
+ "script": "Ford has unveiled a new race car called the GT41. The company hopes it will win the 24 Hours of Le Mans overall. Sixty years ago, Ford won that race with the GT40 after two failed attempts. Since then it has returned to France many times but never won overall again. The GT41 will enter the World Endurance Championship in 2027. Ford chose the LMDh approach, which uses a standard carbon fiber chassis and hybrid system. The chassis comes from Oreca, and the hybrid system and transmission are also standard parts. Ford supplies the engine, a 5.4-liter V8 based on the Mustang's Coyote engine. Ford also writes the software that controls the hybrid powertrain. The car will first race in Qatar in March, the opening round of nine WEC races. Ford has no plans yet to enter IMSA's WeatherTech championship. The Hypercar class is extremely competitive, with Toyota, Ferrari, and McLaren among the entrants.",
+ "source": "ARS TECHNICA",
+ "source_url": "https://arstechnica.com/cars/2026/11/ford-unveils-the-gt41-as-it-hopes-to-win-le-mans-again/",
+ "date": "2026-11-27",
+ "slot": "am"
+}
