@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-26-pm",
+ "date": "2026-11-26",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/games/1043169/rockstar-games-union-vote-iwgb",
+ "headline": "Rockstar workers vote against union deal",
+ "audio": "audio/2026-11-26-pm-full.mp3",
+ "duration": 67.6,
+ "wpm": 131.4,
+ "script": "Workers at Rockstar Games voted seventy-five percent against a union recognition agreement. Only twenty-five percent of the votes backed unionization. Rockstar is the studio behind Grand Theft Auto VI. The Independent Workers Union of Great Britain said its members there will keep organizing. Voting ran from November twelfth through the twenty-sixth. It covered the launch period of GTA VI. A yes vote would have set up formal talks with the studio. Those talks would have covered pay, overtime, bonuses, leave and pensions. They would also have given workers a right to be consulted on AI and layoffs. Without the agreement, Rockstar has no duty to meet union representatives. Workers can still push for change informally. Rockstar fired thirty-one union members last year, and the union called it union busting. That case is now at a UK employment tribunal, and no ruling has come yet.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Workers at Rockstar Games voted seventy-five percent against a union recognition agreement.",
+   "zh": "Rockstar Games 的员工以百分之七十五的票数否决了一项工会承认协议。",
+   "audio": "audio/2026-11-26-pm-s1.mp3",
+   "duration": 6.8,
+   "focus": "voted 的 -ed 结尾要读出来"
+  },
+  {
+   "id": 2,
+   "text": "Only twenty-five percent of the votes backed unionization.",
+   "zh": "只有百分之二十五的选票支持成立工会。",
+   "audio": "audio/2026-11-26-pm-s2.mp3",
+   "duration": 3.9,
+   "focus": "Only 和 twenty-five 连读"
+  },
+  {
+   "id": 3,
+   "text": "Rockstar is the studio behind Grand Theft Auto VI.",
+   "zh": "Rockstar 是《侠盗猎车手6》背后的开发工作室。",
+   "audio": "audio/2026-11-26-pm-s3.mp3",
+   "duration": 4.4,
+   "focus": ""
+  },
+  {
+   "id": 4,
+   "text": "The Independent Workers Union of Great Britain said its members there will keep organizing.",
+   "zh": "英国独立工人联合会表示，那里的会员将继续组织活动。",
+   "audio": "audio/2026-11-26-pm-s4.mp3",
+   "duration": 5.6,
+   "focus": "said 的 -d 结尾不要丢"
+  },
+  {
+   "id": 5,
+   "text": "Voting ran from November twelfth through the twenty-sixth.",
+   "zh": "投票从11月12日持续到26日。",
+   "audio": "audio/2026-11-26-pm-s5.mp3",
+   "duration": 3.6,
+   "focus": "twelfth 的 th 音要咬舌"
+  },
+  {
+   "id": 6,
+   "text": "It covered the launch period of GTA VI.",
+   "zh": "投票覆盖了《GTA6》的发售阶段。",
+   "audio": "audio/2026-11-26-pm-s6.mp3",
+   "duration": 3.6,
+   "focus": "covered 的 -ed 读成 /d/"
+  },
+  {
+   "id": 7,
+   "text": "A yes vote would have set up formal talks with the studio.",
+   "zh": "如果投票通过，本会建立起与工作室的正式谈判机制。",
+   "audio": "audio/2026-11-26-pm-s7.mp3",
+   "duration": 3.9,
+   "focus": "would have 连读"
+  },
+  {
+   "id": 8,
+   "text": "Those talks would have covered pay, overtime, bonuses, leave and pensions.",
+   "zh": "谈判内容本会涵盖薪酬、加班、奖金、休假和养老金。",
+   "audio": "audio/2026-11-26-pm-s8.mp3",
+   "duration": 6.3,
+   "focus": "covered 的 -ed 结尾"
+  },
+  {
+   "id": 9,
+   "text": "They would also have given workers a right to be consulted on AI and layoffs.",
+   "zh": "员工本还会获得就人工智能和裁员问题被征询意见的权利。",
+   "audio": "audio/2026-11-26-pm-s9.mp3",
+   "duration": 5.6,
+   "focus": "consulted 的 -ed 结尾"
+  },
+  {
+   "id": 10,
+   "text": "Without the agreement, Rockstar has no duty to meet union representatives.",
+   "zh": "没有这份协议，Rockstar 没有义务会见工会代表。",
+   "audio": "audio/2026-11-26-pm-s10.mp3",
+   "duration": 5.5,
+   "focus": "Without 的 th 音要咬舌"
+  },
+  {
+   "id": 11,
+   "text": "Workers can still push for change informally.",
+   "zh": "员工仍然可以非正式地争取改变。",
+   "audio": "audio/2026-11-26-pm-s11.mp3",
+   "duration": 3.5,
+   "focus": ""
+  },
+  {
+   "id": 12,
+   "text": "Rockstar fired thirty-one union members last year, and the union called it union busting.",
+   "zh": "Rockstar 去年解雇了31名工会成员，工会称这是打压工会。",
+   "audio": "audio/2026-11-26-pm-s12.mp3",
+   "duration": 6.4,
+   "focus": "fired 的 -ed 读成 /d/"
+  },
+  {
+   "id": 13,
+   "text": "That case is now at a UK employment tribunal, and no ruling has come yet.",
+   "zh": "该案目前正在英国就业法庭审理，尚未作出裁决。",
+   "audio": "audio/2026-11-26-pm-s13.mp3",
+   "duration": 5.7,
+   "focus": "That case 连读"
+  }
+ ],
+ "terms": [
+  {
+   "word": "union recognition agreement",
+   "zh": "工会承认协议",
+   "note": "指公司正式承认工会并与之谈判的协议。"
+  },
+  {
+   "word": "collective negotiation",
+   "zh": "集体谈判",
+   "note": "指工会代表全体员工与公司谈条件。"
+  },
+  {
+   "word": "union busting",
+   "zh": "打压工会",
+   "note": "指雇主用解雇等手段阻止员工组织工会。"
+  },
+  {
+   "word": "employment tribunal",
+   "zh": "就业法庭",
+   "note": "英国专门处理劳资纠纷的法庭。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 7,
+   "point": "虚拟条件 would have set up",
+   "note": "表示与过去事实相反的假设，中文常说“本会”，容易漏掉 would have。"
+  },
+  {
+   "line": 10,
+   "point": "no duty to meet 中 to 不定式作定语",
+   "note": "修饰 duty，说明义务的内容，中文习惯直接接动词，容易多加 of。"
+  },
+  {
+   "line": 13,
+   "point": "现在完成时 has come",
+   "note": "强调到现在为止的结果，中文说“尚未”，容易漏掉 has。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What share of votes supported unionization?",
+   "options": [
+    "Seventy-five percent",
+    "Twenty-five percent",
+    "Fifty percent"
+   ],
+   "answer": 1,
+   "explain": "第二句给出支持票的比例。"
+  },
+  {
+   "q": "What happens without the agreement?",
+   "options": [
+    "Rockstar must still meet union reps",
+    "Rockstar has no duty to meet union reps",
+    "The union must stop organizing"
+   ],
+   "answer": 1,
+   "explain": "第十句说明没有协议时公司没有会面义务。"
+  }
+ ],
+ "recall_prompts": [
+  "What was the vote result?",
+  "What would the agreement have covered?",
+  "What is the status of the tribunal case?"
+ ]
+}

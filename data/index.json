@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-26T07:36:33",
+ "updated": "2026-11-27T05:43:57",
  "days": [
+  {
+   "id": "2026-11-26-pm",
+   "date": "2026-11-26",
+   "slot": "pm",
+   "headline": "Rockstar workers vote against union deal",
+   "source": "THE VERGE",
+   "duration": 67.6,
+   "sentences": 13
+  },
   {
    "id": "2026-11-26-am",
    "date": "2026-11-26",
