@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-27T07:47:51",
+ "updated": "2026-11-28T05:28:10",
  "days": [
+  {
+   "id": "2026-11-27-pm",
+   "date": "2026-11-27",
+   "slot": "pm",
+   "headline": "Apple's second-gen AirTags hit an all-time low of $18",
+   "source": "THE VERGE",
+   "duration": 64.9,
+   "sentences": 12
+  },
   {
    "id": "2026-11-27-am",
    "date": "2026-11-27",

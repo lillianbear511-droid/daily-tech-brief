@@ -1,0 +1,176 @@
+{
+ "id": "2026-11-27-pm",
+ "date": "2026-11-27",
+ "slot": "pm",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/gadgets/1042841/apple-airtag-2-black-friday-deal-2026-sale",
+ "headline": "Apple's second-gen AirTags hit an all-time low of $18",
+ "audio": "audio/2026-11-27-pm-full.mp3",
+ "duration": 64.9,
+ "wpm": 143.3,
+ "script": "Apple's second-generation AirTags are now selling for eighteen dollars each, an all-time low. Amazon, Walmart, and Best Buy all offer that price for Black Friday. The list price for each tracker is twenty-nine dollars. Since Amazon Prime Day in late June, they have usually sold for around twenty-four dollars. A tracker is a small device you attach to things you often lose. The new ultra-wideband chip tracks location more precisely. Its range is one and a half times wider than the first-generation model. The built-in speaker is fifty percent louder than the original. That makes it easier to find an item buried in couch cushions or at the bottom of a bag. Even without those upgrades, AirTags remain a strong choice for Apple users hunting for keys or luggage. One coin cell battery lasts up to a year. The trackers work with iPhones and newer Apple Watch models.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Apple's second-generation AirTags are now selling for eighteen dollars each, an all-time low.",
+   "zh": "苹果第二代AirTag现在的售价是每个十八美元，创下历史新低。",
+   "audio": "audio/2026-11-27-pm-s1.mp3",
+   "duration": 6.6,
+   "focus": "final -s in AirTags"
+  },
+  {
+   "id": 2,
+   "text": "Amazon, Walmart, and Best Buy all offer that price for Black Friday.",
+   "zh": "亚马逊、沃尔玛和百思买都在黑五期间给出了这个价格。",
+   "audio": "audio/2026-11-27-pm-s2.mp3",
+   "duration": 5.7,
+   "focus": "linked: Best Buy all"
+  },
+  {
+   "id": 3,
+   "text": "The list price for each tracker is twenty-nine dollars.",
+   "zh": "每只追踪器的标价是二十九美元。",
+   "audio": "audio/2026-11-27-pm-s3.mp3",
+   "duration": 3.9,
+   "focus": "final -s in dollars"
+  },
+  {
+   "id": 4,
+   "text": "Since Amazon Prime Day in late June, they have usually sold for around twenty-four dollars.",
+   "zh": "自六月下旬的亚马逊会员日以来，它们通常卖二十四美元左右。",
+   "audio": "audio/2026-11-27-pm-s4.mp3",
+   "duration": 6.2,
+   "focus": "linked: sold for around"
+  },
+  {
+   "id": 5,
+   "text": "A tracker is a small device you attach to things you often lose.",
+   "zh": "追踪器是一种小设备，你可以把它挂在经常弄丢的东西上。",
+   "audio": "audio/2026-11-27-pm-s5.mp3",
+   "duration": 4.8,
+   "focus": "th sound in things"
+  },
+  {
+   "id": 6,
+   "text": "The new ultra-wideband chip tracks location more precisely.",
+   "zh": "新的超宽带芯片能更精准地定位。",
+   "audio": "audio/2026-11-27-pm-s6.mp3",
+   "duration": 4.4,
+   "focus": ""
+  },
+  {
+   "id": 7,
+   "text": "Its range is one and a half times wider than the first-generation model.",
+   "zh": "它的定位范围比第一代机型宽一点五倍。",
+   "audio": "audio/2026-11-27-pm-s7.mp3",
+   "duration": 5.4,
+   "focus": "final -r in wider"
+  },
+  {
+   "id": 8,
+   "text": "The built-in speaker is fifty percent louder than the original.",
+   "zh": "内置扬声器比原版响百分之五十。",
+   "audio": "audio/2026-11-27-pm-s8.mp3",
+   "duration": 4.4,
+   "focus": "final -t in percent"
+  },
+  {
+   "id": 9,
+   "text": "That makes it easier to find an item buried in couch cushions or at the bottom of a bag.",
+   "zh": "这样更容易找到埋在沙发垫里或包底的东西。",
+   "audio": "audio/2026-11-27-pm-s9.mp3",
+   "duration": 5.8,
+   "focus": "final -d in buried"
+  },
+  {
+   "id": 10,
+   "text": "Even without those upgrades, AirTags remain a strong choice for Apple users hunting for keys or luggage.",
+   "zh": "即使没有这些升级，AirTag对寻找钥匙或行李的苹果用户来说仍是好选择。",
+   "audio": "audio/2026-11-27-pm-s10.mp3",
+   "duration": 7.4,
+   "focus": "final -s in keys"
+  },
+  {
+   "id": 11,
+   "text": "One coin cell battery lasts up to a year.",
+   "zh": "一节纽扣电池最长可用一年。",
+   "audio": "audio/2026-11-27-pm-s11.mp3",
+   "duration": 3.4,
+   "focus": "linked: up to a"
+  },
+  {
+   "id": 12,
+   "text": "The trackers work with iPhones and newer Apple Watch models.",
+   "zh": "这些追踪器兼容iPhone和较新的Apple Watch机型。",
+   "audio": "audio/2026-11-27-pm-s12.mp3",
+   "duration": 4.5,
+   "focus": "final -s in iPhones"
+  }
+ ],
+ "terms": [
+  {
+   "word": "ultra-wideband chip",
+   "zh": "超宽带芯片",
+   "note": "一种用短距离无线电波测量位置的芯片，比普通蓝牙更准。"
+  },
+  {
+   "word": "tracker",
+   "zh": "追踪器",
+   "note": "挂在钥匙、行李等物品上、帮你在手机上找到它们的小设备。"
+  },
+  {
+   "word": "range",
+   "zh": "定位范围",
+   "note": "指追踪器能和手机保持联系的最远距离。"
+  },
+  {
+   "word": "coin cell battery",
+   "zh": "纽扣电池",
+   "note": "像硬币一样扁圆的小电池，这里指AirTag用的那种。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 4,
+   "point": "现在完成时 have sold",
+   "note": "表示从六月到现在一直如此，中文说“通常卖”容易漏掉have。"
+  },
+  {
+   "line": 5,
+   "point": "定语从句 you attach to things",
+   "note": "省略了that/which，中文习惯把修饰语放前面，容易读不懂后置从句。"
+  },
+  {
+   "line": 9,
+   "point": "make it easier to find",
+   "note": "it是形式宾语，真正宾语是to find，中文没有这种结构，容易误以为it指某物。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is the current sale price of one AirTag?",
+   "options": [
+    "Eighteen dollars",
+    "Twenty-four dollars",
+    "Twenty-nine dollars"
+   ],
+   "answer": 0,
+   "explain": "第一句直接给出十八美元的历史低价。"
+  },
+  {
+   "q": "How much louder is the new speaker than the original?",
+   "options": [
+    "One and a half times",
+    "Fifty percent",
+    "Twenty-four percent"
+   ],
+   "answer": 1,
+   "explain": "第八句说扬声器比原版响百分之五十。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
