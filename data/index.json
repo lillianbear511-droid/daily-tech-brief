@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-28T05:28:10",
+ "updated": "2026-11-28T07:24:35",
  "days": [
+  {
+   "id": "2026-11-28-am",
+   "date": "2026-11-28",
+   "slot": "am",
+   "headline": "New iPad Mini gets first big Black Friday discount",
+   "source": "THE VERGE",
+   "duration": 78.9,
+   "sentences": 13
+  },
   {
    "id": "2026-11-27-pm",
    "date": "2026-11-27",

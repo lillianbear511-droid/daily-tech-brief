@@ -1,0 +1,184 @@
+{
+ "id": "2026-11-28-am",
+ "date": "2026-11-28",
+ "slot": "am",
+ "source": "THE VERGE",
+ "source_url": "https://www.theverge.com/gadgets/1042705/ipad-mini-black-friday-deal-sale-2026",
+ "headline": "New iPad Mini gets first big Black Friday discount",
+ "audio": "audio/2026-11-28-am-full.mp3",
+ "duration": 78.9,
+ "wpm": 120.2,
+ "script": "Apple's new iPad Mini is already getting a sizable Black Friday discount. Amazon and Walmart now sell the 2026 iPad Mini with Wi-Fi and 128GB of storage starting at $599. That is $100 off, the lowest price so far. The new Mini has a larger 8.5-inch OLED display. OLED is a screen technology that lights each pixel itself, so blacks look deeper. The tablet is smaller and lighter than the old model, even with the bigger screen. Apple also added IP67 dust and water resistance. IP67 is a rating that means the device can survive dust and brief contact with water. A reviewer said this made a big difference in daily use. He felt more comfortable handing it to his toddler or keeping it in the kitchen. The upgraded A20 Pro chip made apps load faster and games run better. Battery life stayed at about nine hours of screentime. The older iPad Mini with the A17 Pro chip costs under $500.",
+ "sentences": [
+  {
+   "id": 1,
+   "text": "Apple's new iPad Mini is already getting a sizable Black Friday discount.",
+   "zh": "苹果新款iPad Mini在黑色星期五已经有了可观的折扣。",
+   "audio": "audio/2026-11-28-am-s1.mp3",
+   "duration": 5.6,
+   "focus": "getting a — link the two words"
+  },
+  {
+   "id": 2,
+   "text": "Amazon and Walmart now sell the 2026 iPad Mini with Wi-Fi and 128GB of storage starting at $599.",
+   "zh": "亚马逊和沃尔玛目前以599美元起售2026款Wi-Fi版128GB存储的iPad Mini。",
+   "audio": "audio/2026-11-28-am-s2.mp3",
+   "duration": 12.2,
+   "focus": "starting at — link the two words"
+  },
+  {
+   "id": 3,
+   "text": "That is $100 off, the lowest price so far.",
+   "zh": "这相当于降价100美元，是迄今为止的最低价格。",
+   "audio": "audio/2026-11-28-am-s3.mp3",
+   "duration": 4.2,
+   "focus": "off — hold the final f sound"
+  },
+  {
+   "id": 4,
+   "text": "The new Mini has a larger 8.5-inch OLED display.",
+   "zh": "新款Mini配备了更大的8.5英寸OLED显示屏。",
+   "audio": "audio/2026-11-28-am-s4.mp3",
+   "duration": 4.7,
+   "focus": "OLED — say each letter clearly"
+  },
+  {
+   "id": 5,
+   "text": "OLED is a screen technology that lights each pixel itself, so blacks look deeper.",
+   "zh": "OLED是一种让每个像素自行发光的屏幕技术，因此黑色显得更深。",
+   "audio": "audio/2026-11-28-am-s5.mp3",
+   "duration": 6.3,
+   "focus": "lights — hold the final ts sound"
+  },
+  {
+   "id": 6,
+   "text": "The tablet is smaller and lighter than the old model, even with the bigger screen.",
+   "zh": "尽管屏幕更大，这款平板比旧款更小也更轻。",
+   "audio": "audio/2026-11-28-am-s6.mp3",
+   "duration": 5.5,
+   "focus": "lighter — hold the final r sound"
+  },
+  {
+   "id": 7,
+   "text": "Apple also added IP67 dust and water resistance.",
+   "zh": "苹果还加入了IP67防尘防水功能。",
+   "audio": "audio/2026-11-28-am-s7.mp3",
+   "duration": 5.2,
+   "focus": "added — say the -ed ending"
+  },
+  {
+   "id": 8,
+   "text": "IP67 is a rating that means the device can survive dust and brief contact with water.",
+   "zh": "IP67是一项防护等级，意味着设备能防尘并能短时间接触水。",
+   "audio": "audio/2026-11-28-am-s8.mp3",
+   "duration": 7.4,
+   "focus": "that means — link the two words"
+  },
+  {
+   "id": 9,
+   "text": "A reviewer said this made a big difference in daily use.",
+   "zh": "一位评测者说这在日常使用中带来了很大差别。",
+   "audio": "audio/2026-11-28-am-s9.mp3",
+   "duration": 4.0,
+   "focus": "this — hold the final s sound"
+  },
+  {
+   "id": 10,
+   "text": "He felt more comfortable handing it to his toddler or keeping it in the kitchen.",
+   "zh": "他觉得把它交给幼儿或放在厨房里更放心。",
+   "audio": "audio/2026-11-28-am-s10.mp3",
+   "duration": 5.1,
+   "focus": "handing it — link the two words"
+  },
+  {
+   "id": 11,
+   "text": "The upgraded A20 Pro chip made apps load faster and games run better.",
+   "zh": "升级后的A20 Pro芯片让应用加载更快，游戏运行更流畅。",
+   "audio": "audio/2026-11-28-am-s11.mp3",
+   "duration": 5.8,
+   "focus": "faster — hold the final r sound"
+  },
+  {
+   "id": 12,
+   "text": "Battery life stayed at about nine hours of screentime.",
+   "zh": "电池续航保持在约九小时的屏幕使用时间。",
+   "audio": "audio/2026-11-28-am-s12.mp3",
+   "duration": 3.9,
+   "focus": "stayed — say the -ed ending"
+  },
+  {
+   "id": 13,
+   "text": "The older iPad Mini with the A17 Pro chip costs under $500.",
+   "zh": "搭载A17 Pro芯片的旧款iPad Mini售价不到500美元。",
+   "audio": "audio/2026-11-28-am-s13.mp3",
+   "duration": 6.4,
+   "focus": "costs under — link the two words"
+  }
+ ],
+ "terms": [
+  {
+   "word": "OLED",
+   "zh": "OLED屏幕",
+   "note": "一种每个像素自己发光的屏幕技术，黑色更纯、对比度更高。"
+  },
+  {
+   "word": "IP67",
+   "zh": "IP67防护等级",
+   "note": "表示设备能防尘，并能在浅水中短时间浸泡而不损坏。"
+  },
+  {
+   "word": "A20 Pro chip",
+   "zh": "A20 Pro芯片",
+   "note": "苹果为新款iPad Mini配备的处理器，负责运行应用和游戏。"
+  },
+  {
+   "word": "Black Friday",
+   "zh": "黑色星期五",
+   "note": "美国感恩节后的大型促销日，电子产品通常大幅降价。"
+  }
+ ],
+ "grammar": [
+  {
+   "line": 1,
+   "point": "现在进行时 is getting",
+   "note": "表示正在发生的变化，中文说“已经有了折扣”时容易漏掉 is。"
+  },
+  {
+   "line": 6,
+   "point": "比较级 smaller and lighter",
+   "note": "比较级后接 than 引出比较对象，中文习惯省略 than，英语不能省。"
+  },
+  {
+   "line": 11,
+   "point": "make + 宾语 + 动词原形 make apps load",
+   "note": "make 后接不带 to 的不定式，中文学习者常误加 to。"
+  }
+ ],
+ "questions": [
+  {
+   "q": "What is the starting price of the new iPad Mini at Amazon and Walmart?",
+   "options": [
+    "$699",
+    "$599",
+    "$500"
+   ],
+   "answer": 1,
+   "explain": "第二句提到 starting at $599。"
+  },
+  {
+   "q": "What did the reviewer say about the IP67 rating?",
+   "options": [
+    "It made the tablet heavier.",
+    "It made a big difference in daily use.",
+    "It reduced battery life."
+   ],
+   "answer": 1,
+   "explain": "第九句说 this made a big difference in daily use。"
+  }
+ ],
+ "recall_prompts": [
+  "What changed?",
+  "Why does it matter?",
+  "Who is affected?"
+ ]
+}
